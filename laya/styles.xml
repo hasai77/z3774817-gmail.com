@@ -1,0 +1,13 @@
+<res>
+   <item name="images/nodeLabaBg.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/kuang-set.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/AlertBg.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/AlertTitleBg.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/LobbyBg.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/bg_bindup.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/bdsj_yzm.png" type="Sprite" compress="0" pack="1" quality="80" props="sizeGrid=5,18,7,15" picType="1" scale="0"/>
+   <item name="images/bdsj_sjh.png" type="Image" compress="0" pack="1" quality="80" props="sizeGrid=0,17,0,17" picType="0" scale="0"/>
+   <item name="images/HD_YOU.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/bg_edit.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="images/sjh.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+</res>

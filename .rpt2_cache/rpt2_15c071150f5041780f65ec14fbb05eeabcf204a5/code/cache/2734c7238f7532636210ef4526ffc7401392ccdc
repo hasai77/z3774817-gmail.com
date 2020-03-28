@@ -1,0 +1,7 @@
+{
+  "code": "import { ui } from \"./../ui/layaMaxUI\";\r\nimport base from \"../base/base\";\r\nvar Event = Laya.Event;\r\nexport default class LobbyScene extends ui.lobbySceneUI {\r\n    constructor() {\r\n        super();\r\n        this.base = base.getinstance();\r\n    }\r\n    onAwake() {\r\n        this.startGame.on(Event.CLICK, this, () => {\r\n            this.base.scene.changeScene(\"./playScene.scene\");\r\n        });\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/Administrator/Documents/majiang/src/ui/layaMaxUI.ts",
+    "C:/Users/Administrator/Documents/majiang/src/base/base.ts"
+  ]
+}

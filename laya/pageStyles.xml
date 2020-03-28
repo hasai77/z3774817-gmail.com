@@ -1,0 +1,5 @@
+<page>
+   <item name="playScene.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="lobbyScene.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="login.scene" props="" ifExport="分离模式" aName=""/>
+</page>

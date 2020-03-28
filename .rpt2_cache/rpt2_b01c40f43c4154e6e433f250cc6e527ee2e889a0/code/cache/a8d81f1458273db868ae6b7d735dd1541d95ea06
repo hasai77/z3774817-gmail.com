@@ -1,0 +1,4 @@
+{
+  "code": "export default class playScene extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n        console.log(\"lalalalal\");\r\n    }\r\n    onAwake() {\r\n        console.log(\"awake\");\r\n        console.log(this);\r\n        Laya.Scene3D.load(\"res/LayaScene_playScene/Conventional/playScene.ls\", Laya.Handler.create(this, this.onCreated));\r\n    }\r\n    onCreated(scene) {\r\n        console.log(scene);\r\n        scene.zOrder = -1;\r\n        Laya.stage.addChild(scene);\r\n    }\r\n}\r\n",
+  "references": []
+}
