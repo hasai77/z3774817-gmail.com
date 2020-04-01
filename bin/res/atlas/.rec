@@ -1,4 +1,67 @@
 D .
+D AgentPromotion
+R 7EB5750D Agent promotion.png
+P 69AEB50D Apply for withdrawal.png
+P C7C7EF90 Applyfor accrual.png
+P EB1818D5 ask.png
+R 73DD5820 Background.png
+P B4800082 Balance.png
+P 7D8DA7A3 Cashwithdrawal game.png
+P D4992B0E Close.png
+R F089CB37 Earningmoney advertising.png
+R C32868F9 Flower.png
+R 97F5DC72 form.png
+R 76E9CE6D Iconform.png
+P 6CE2C607 IconImage.png
+R 0E80EBDF IconIncome form.png
+R 7E73583A IconMyreward form.png
+R 8D00B284 IconQRcode.png
+P 7AC54E37 Inquire.png
+P 33CF004A Link.png
+P 67DEFA17 Money withdraw.png
+P 289261E4 My accrued.png
+P 5415D0F1 My embodiment.png
+P 1EBC94CA My performance.png
+P 64028A32 My promotion.png
+P C1A680BA My withdrawal.png
+P E5D3717A Myplayer.png
+P 6FA74392 MyPlayer_36.png
+P B15EC9CC Myreward.png
+P 60FB399E Next page.png
+P 54187E69 Previous page.png
+P 578E90E6 Promotion.png
+P 581071FF Purple.png
+P D0DACC75 Return.png
+P 019F0632 Reward description.png
+R 956E133C Reward text.png
+P 2C38A1D4 Reward.png
+P 5FC7CED3 Selected.png
+P 475B862B SelectedCountdownAlarm.png
+P AAB30B42 ShareQR code.png
+P 6365CF38 Unelected.png
+P D2D2D74D VolumeBox.png
+D APP_Loading
+P 879CAD19 Background.png
+P BBFB433C HintLoading.png
+P AD12B6F5 IconBeauty.png
+P 3DF24B20 Iconlogin_logo.png
+P 41C00809 LogoLogin.png
+P C40AD25D progress$bar.png
+P 3B9301A2 progress.png
+D APP_Update
+P 879CAD19 Background.png
+P 019082B7 HintGame update.png
+P BEE2C4D7 iconHomeIcon.png
+P B133A5DD iconHomeIconONE.png
+P 915A429B iconUpdatebeauty.png
+D Button
+P AA0BAD40 button_down.png
+P 66C34920 button_up.png
+D CheckBox
+P 689921C8 checkbox_select_disabled.png
+P 3CE277AD checkbox_select_down.png
+P F83BA2F6 checkbox_select_up.png
+P 2BC5E460 checkbox_unselect.png
 D comp
 P 316AD948 btn_close.png
 P 5B258D17 button.png
@@ -38,6 +101,66 @@ P 0587871F vscroll$up.png
 P 5FD17798 vscroll.png
 P DDDDFB9E vslider$bar.png
 P 01BAE7F5 vslider.png
+D CustomerService
+P B171226F Avatar.png
+R 2890D743 Background.png
+P 691DFA5C ClpseButton.png
+P 8420ADC5 Customer ServiceButton.png
+R F28EBD99 Dialog.png
+P C1AC75A8 DialogUI.png
+P CB463C74 SubmitButton.png
+P 5AA05037 TextHint.png
+D DissolutionRoom
+P B3BE7F3D Avatar.png
+P 07AE2D12 AvatarBackgroundSelected.png
+P 2D829F42 AvatarBackgroundUnselected .png
+P 2F8C263B Cancel.png
+P 814B7DFC Close.png
+P 64FEF5B0 DecorationLine.png
+R A4702C1D Drcf_bg.png
+P E399F298 licationDissolution.png
+P A7105AE5 Ok.png
+D Hall
+P EE4DEF91 Add.png
+P 9DDFA8DF Avatar.png
+P A7A3320F Background strip.png
+R ED64F702 Background.jpg
+P 2DD2534C BenzBmw.png
+R 12EF9A5E Blank.png
+R DBAB551D Bottom.png
+R DBDF6FD8 BottomONE.png
+P 1AF55D37 Customer service.png
+P 2C251D88 Dividingline.png
+P 5529C9C9 DragonTiger.png
+P A15546E7 FiveArching.png
+P E2D842D1 FiveTenK.png
+P B8C6B6C7 Fruit.png
+P 56441EC2 Gold.png
+P 1337C9EA GoldenFlower.png
+P 771F65CD Horn.png
+R CB745169 Hundred games.png
+P A859E1AE HundredsCow.png
+P D7B6D9FD HundredsGoldenFlower.png
+P 3E705A86 HundredsRedBlack.png
+P 4B2CE450 Invitation code.png
+R C7A49A75 Landlord.png
+P 68C315C5 Mall.png
+P CC914C58 Masonry.png
+P D91C338B Message.png
+P FEDA0CE6 progress$bar.png
+P 105D0CCC progress.png
+P BF833D2D Record.png
+P 4AB35838 RobThancow.png
+P 87D3C970 RunsFast.png
+P D1EEF02A Setting.png
+P 44AC1298 Stud.png
+P C3A659B5 TenHalf.png
+P 24D947C4 Texas.png
+P D9DCEF0A ThanChicken.png
+P EE334529 ThirteenBets.png
+P D8B8C3E9 ThreeArching.png
+P DE52822E ThreeDuke.png
+P 4997FD33 TwoEight.png
 D images
 P DE121E2E 1.png
 R B20B375B 1584538781(1).jpg
@@ -212,4 +335,187 @@ R 5CA78E2E zrphb.png
 P 85C09EA0 zrpm.png
 P 59880FF9 zryjphb.png
 R 2409ADD2 ZUOKUANG.png
-D plist
+D ItemRenderer
+P 7DB3FA94 selected.png
+D Login
+P 2F2CD5C3 Account.png
+R 56744D00 AccountInputBackground.png
+P B91483F7 AccountLogin.png
+R D04F02F6 Background.jpg
+R EC4F2E7E Background.png
+R 0D530F5E Beauty.png
+P 5BDD6AFC ChipGreen.png
+P 00258DDE ChipOrange.png
+P 2D8BE967 ChipPurple.png
+P 1B5F7FD9 ChipRed.png
+P 3C912126 Close.png
+P 2BEA251E ForgetPassword.png
+P 1BB6E743 GetVerification CodeBackground.png
+P 06AB5D61 GetVerificationCode.png
+R A284639E Login.png
+P 05FC83B7 LoginButtonBackgroun.png
+P 4E286C4D LoginConfirm.png
+R 33126C2A MiddleBackground.png
+R 25B9830A MiddleLoginBackground.png
+P EA65FBF9 Modify.png
+P A16DBA6F NewPasswordInputBackground.png
+P BE46E753 Password.png
+R 0C2CACFB PasswordBackground.png
+P 42DEAC9E QQlogin.png
+R 3A07AB61 Registered.png
+P DC1C60F5 RegisteredConfirm.png
+P 9D8F56C1 TouristsLogin.png
+P CDD1C951 VerificationCodeBackground.png
+P 9BA57C64 WechatLogin.png
+D Panel
+P C1365A48 border.png
+P EE4B876F header.png
+D ProgressBar
+P 09A65835 thumb_pb.png
+P 16ECD68E track_pb.png
+D RadioButton
+P CAC29C4F radiobutton_select_disabled.png
+P CAC29C4F radiobutton_select_down.png
+P ADE68D7B radiobutton_select_up.png
+P 266AAA05 radiobutton_unselect.png
+D ScrollBar
+P 03D29393 roundthumb.png
+P 9E16C2E5 track_sb.png
+D Slider
+P 11C22217 thumb.png
+P 9E16C2E5 track.png
+P 03D29393 tracklight.png
+D TeaHouse
+P 171B02C7 Arching.png
+R 41412472 AvataiBackgroundSelected.png
+P A20F0F24 Avatar.png
+P 4DEB8AB7 Background border.png
+R 4AB1EFFD Background.png
+R 95D41C85 Background3.png
+P D35651B6 BenzBmw.png
+P 580663E6 BigGold.png
+P 4AB550CD Biglevel.png
+P 7C06D084 bottomIcon.png
+P B3A114AC ButtonApplicationsfor Membership.png
+P DE35EC57 ButtonCancelTheadd.png
+P E95E16CC ButtonClose.png
+P EA15A05E ButtonCloseButton.png
+P 8D8C6BBA ButtonCreate.png
+P 9BA28441 ButtonEnter.png
+P ED74B3DE ButtonFive.png
+P 4ABDC10C ButtonFour.png
+P 3294BF3B Buttonight.png
+P 20F1E510 ButtonNine.png
+P 4DC7B5F1 ButtonOne.png
+P 3D7CC31B ButtonSearchfor.png
+P 49F1F03D ButtonSeven.png
+P 08C3CEE1 ButtonSix.png
+P D3C1416B ButtonThree.png
+P 8B69A3B6 ButtonTwo.png
+P 635A3996 ButtonZero.png
+P 3A9B7C5B ChooseApply.png
+P 231CAA8E CloseButton.png
+P 3E686DF7 ConfirmToAdd.png
+P C16AC319 Cow.png
+P 0E8AF78F CreateionButtonCreate.png
+P 76C8A0ED CreateRoomButton.png
+R B5EF9A7E CreateTeaHouseBackground.png
+P 7F5B1B17 DetermineButton.png
+R AF12A514 DialogueBackground.png
+P 0D224E07 Enter ID.png
+P B70941EB FiveTenK.png
+R 13AC07A5 Fourlistbackground.png.png
+R 864BED2E Fourlisttext background.png.png
+P FE1213C7 Fourperson table.png
+R 387241CE Frame.png
+P 27559539 Fruit.png
+P 6D223611 GoldenFlower.png
+P 91E7070B HintBackground.png
+P 14952E7A HintGold.png
+R 3F962498 Horizontal line.png
+P 4F75AC12 HundredsCow.png
+P 44807C55 HundredsDragonTiger.png
+P 19B967FA HundredsGoldenFlower.png
+P A24A3B09 HundredsRedBlack.png
+P DDE20E96 IconAvatar.png
+P B7A3FCEC IconCrown.png
+P 70CCF41F Iconheads.png
+P BC33DBA7 IconInformation.png
+R 6AB82D85 IconLine.png
+P 6F916756 IconMobile phone.png
+P C2BD4236 IconModify.png
+P D87D83E1 IconSearchtea house.png
+P 49E66E4C IconUser.png
+P 9EAED266 JoinButtonJoin.png
+P B0411C55 Landlord.png
+P B1B0801D LeftSwitchButton.png
+R A0019646 Line.png
+R D4F2A156 listline.png
+P 5417170C LogoCreatetea house.png
+P AC97BA7F LogoJointea house.png
+P 1C94B311 LogoSettingHint.png
+P EFCA6CBD LogoTeahouse.png
+R CDF4040C LowBackground.png
+P 54BD8FB3 Notonthelist.png
+P FF188994 Number4.png
+P 528D465F OneCrown.png
+P C0DA2C32 Onelistbackground.png
+R 9495F515 Onelisttext background.png
+P 1BAC7CA7 PlayerOne.png
+P 8D64DEF2 return.png
+P A7916F74 rgdgdf.png
+P C1915EE1 SelectedButton.png
+P B0DEFA74 SetButton.png
+P 602B9820 SmallGold.png
+P 77F73DFE Smalllevel.png
+P AC81794A SwitchButton.png
+P 0D43DA93 SwitchButton3.png
+P 8EFD0AB6 Symbol.png
+R A984B050 TeaHouse.jpg
+P D8439F3F TeaHousehall.png
+P 06F82D08 TeaHousehallTrue.png
+P 8BB5BFDD Texas.png
+P B125E875 ThirteenBets.png
+P 005A0920 ThreeCrown.png
+P D62004E9 ThreeDuke.png
+P 00016E37 Threelistbackground.png.png
+R 247E8C58 Threelisttext background.png.png
+P 7F9A368D Triple table.png
+P 83F33937 TwentyOne.png
+P 61FDFC71 Two person table.png
+P 84455D70 TwoCrown.png
+P F9C9C12A TwoEight.png
+P 6C4A7F4F Twolistbackground.png.png
+R 3F1CA67D Twolisttext background.png.png
+P 66584719 VictoryRecord.png
+P D494530C VictoryRecordFalse.png
+D ToggleSwitch
+P 15A6E8D8 handle.png
+P 6A9EBBA9 off.png
+P 86511D9C on.png
+D VictoryShow
+P 9697814B Avatar.png
+R EAF261F8 Background.png
+P FB454DB8 Close.png
+R A7E7372D darkgrey.png
+R D7D25BD9 FiveViolet.png
+R 978B264E FourViolet.png
+P 38D87E82 gold.png
+P 3528E1F1 gray.png
+P 32665712 Light blue box.png
+P E295B911 NotOnTheList.png
+P 88F79385 Number4.png
+P 8E1E6BDA OneCrown .png
+R 436F0AD8 OneOrange.png
+P 21DB050A OneViolet.png
+P 9909F12C Own.png
+P B1A4060C SixViolet.png
+P 00600D17 Threecrown.png
+P 5F01EF23 ThreeOrange.png
+P 5DBE0EA0 TwoCrown.png
+R 6D16CFCF TwoOrange.png
+P 39F2972F TwoViolet.png
+P 055FB3FC Victory listShow.png
+P D01C1969 VIPone.png
+P A0DB89B1 VIPSix.png
+P 04A2DAE5 VIPZero.png

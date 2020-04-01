@@ -4,16 +4,22 @@ import Dialog=Laya.Dialog;
 import Scene=Laya.Scene;
 var REG: Function = Laya.ClassUtils.regClass;
 export module ui {
-    export class lobbySceneUI extends Laya.Scene {
-		public head:Laya.Sprite;
-		public startGame:any;
+    export class APP_LoadingUI extends Laya.Scene {
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.loadScene("lobbyScene");
+            this.loadScene("APP_Loading");
         }
     }
-    REG("ui.lobbySceneUI",lobbySceneUI);
+    REG("ui.APP_LoadingUI",APP_LoadingUI);
+    export class HallUI extends Laya.Scene {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall");
+        }
+    }
+    REG("ui.HallUI",HallUI);
     export class loginUI extends Laya.Scene {
 		public login_change:any;
 		public quikeStart:any;

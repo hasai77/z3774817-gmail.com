@@ -2,4 +2,7 @@
    <item name="playScene.scene" props="" ifExport="分离模式" aName=""/>
    <item name="lobbyScene.scene" props="" ifExport="分离模式" aName=""/>
    <item name="login.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="APP_Loading.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="cowScene.scene" props="" ifExport="分离模式" aName=""/>
 </page>
