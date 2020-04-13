@@ -88,7 +88,7 @@
             "x":15,
             "type":"ProgressBar",
             "searchKey":"ProgressBar",
-            "props":{"y":985,"x":500.5,"width":841,"value":0.6,"skin":"APP_Loading/progress.png","height":35},
+            "props":{"y":985,"x":500.5,"width":841,"value":0.8,"skin":"APP_Loading/progress.png","height":35},
             "nodeParent":2,
             "label":"ProgressBar",
             "isDirectory":false,

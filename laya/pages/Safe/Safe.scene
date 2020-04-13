@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":114,
-    "selecteID":112,
+    "selectedBox":62,
+    "selecteID":115,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
-    "maxID":115,
+    "maxID":119,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -325,13 +325,14 @@
                     "props":{"y":118,"x":413},
                     "nodeParent":4,
                     "label":"Sprite",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":62,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":291,"x":14,"texture":"Safe/InputAmountBackground.png"},
@@ -358,6 +359,7 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":389,"stateNum":"1","skin":"Safe/Subtract.png","runtime":"script/Button.ts"},
@@ -371,6 +373,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":389,"x":566,"stateNum":"1","skin":"Safe/Add.png","runtime":"script/Button.ts"},
@@ -384,45 +387,7 @@
                                 ]
                         },
                         {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":404,"x":137,"texture":"Safe/ProgressBarOneBackground.png"},
-                            "nodeParent":62,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":75,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":407,"x":132,"texture":"Safe/ProgressBarOne.png"},
-                            "nodeParent":62,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":76,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":398,"x":322,"texture":"Safe/ProgressBarTwo.png"},
-                            "nodeParent":62,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":77,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":520,"stateNum":"1","skin":"Safe/MessageContentConfirm button.png","runtime":"script/Button.ts"},
@@ -436,6 +401,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":517,"x":370,"stateNum":"1","skin":"Safe/Cancel.png","runtime":"script/Button.ts"},
@@ -447,8 +413,61 @@
                             "compId":79,
                             "child":[
                                 ]
+                        },
+                        {
+                            "x":45,
+                            "type":"Sprite",
+                            "searchKey":"Sprite",
+                            "props":{"y":410,"x":132,"presetID":1,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                            "nodeParent":62,
+                            "label":"CommonSlider",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":115,
+                            "child":[
+                                {
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"presetID":2,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                    "nodeParent":115,
+                                    "label":"bar",
+                                    "isOpen":true,
+                                    "isDirectory":true,
+                                    "isAniNode":true,
+                                    "hasChild":true,
+                                    "compId":18,
+                                    "child":[
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"presetID":3,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                            "nodeParent":18,
+                                            "label":"Image(CommonSlider)",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":19,
+                                            "child":[
+                                                ]
+                                        }]
+                                },
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"presetID":4,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                    "nodeParent":115,
+                                    "label":"icon",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":11,
+                                    "child":[
+                                        ]
+                                }]
                         }],
-                    "$HIDDEN":true
+                    "$HIDDEN":false
                 },
                 {
                     "x":30,
@@ -610,7 +629,7 @@
                             "child":[
                                 ]
                         }],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
                     "x":30,
@@ -715,7 +734,7 @@
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
-                                    "compId":11,
+                                    "compId":116,
                                     "child":[
                                         ],
                                     "$HIDDEN":true
@@ -812,7 +831,7 @@
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
-                                    "compId":18,
+                                    "compId":117,
                                     "child":[
                                         ],
                                     "$HIDDEN":true
@@ -826,7 +845,7 @@
                                     "isDirectory":false,
                                     "isAniNode":true,
                                     "hasChild":false,
-                                    "compId":19,
+                                    "compId":118,
                                     "child":[
                                         ],
                                     "$HIDDEN":false
@@ -979,14 +998,13 @@
                     "props":{"y":118,"x":427},
                     "nodeParent":4,
                     "label":"Sprite",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":114,
                     "child":[
                         {
-                            "x":45,
                             "type":"Text",
                             "searchKey":"Text",
                             "props":{"y":22,"width":115,"text":"携带金额","height":50,"fontSize":40,"font":"Microsoft YaHei","color":"#e6c9f2"},
@@ -1000,7 +1018,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"x":248,"texture":"Safe/AmountBackground.png"},
@@ -1040,7 +1057,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Text",
                             "searchKey":"Text",
                             "props":{"y":114,"width":115,"text":"保险箱金额","height":50,"fontSize":40,"font":"Microsoft YaHei","color":"#e6c9f2"},
@@ -1055,7 +1071,6 @@
                                 ]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":90,"x":249,"texture":"Safe/AmountBackground.png"},
@@ -1095,7 +1110,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":-140,"x":795,"stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts"},
@@ -1107,7 +1121,8 @@
                             "compId":112,
                             "child":[
                                 ]
-                        }]
+                        }],
+                    "$HIDDEN":true
                 }]
         }],
     "animations":[

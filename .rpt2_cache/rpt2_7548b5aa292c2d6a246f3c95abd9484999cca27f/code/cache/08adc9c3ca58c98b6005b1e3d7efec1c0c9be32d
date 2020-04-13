@@ -1,0 +1,4 @@
+{
+  "code": "export default class CommonProgress extends Laya.Sprite {\r\n    constructor() {\r\n        super();\r\n        this.m_percent = 0;\r\n    }\r\n    get percent() {\r\n        return this.m_percent;\r\n    }\r\n    set percent(perc) {\r\n        this.m_percent = perc > 100 ? 100 : perc;\r\n        this.bar.width = this.width / 100 * this.m_percent;\r\n    }\r\n    onAwake() {\r\n        this.bar = this.getChildByName(\"bar\");\r\n        this.imgmask = this.bar.mask;\r\n        this.imgmask.width = 300;\r\n        this.on(Laya.Event.MOUSE_DOWN, this, (e) => {\r\n            this.imgmask.width = e.target.mouseX;\r\n        });\r\n        this.on(Laya.Event.MOUSE_MOVE, this, (e) => {\r\n            this.imgmask.width = e.target.mouseX;\r\n        });\r\n    }\r\n}\r\n",
+  "references": []
+}

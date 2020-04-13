@@ -1,0 +1,22 @@
+{
+  "code": "import Button from \"./script/Button\";\r\nimport CommonCheck from \"./script/CommonCheck\";\r\nimport BetButton from \"./script/Application/Game/Common/Game/BetButton\";\r\nimport Chip from \"./script/Application/Game/Common/Game/Chip\";\r\nimport Deal from \"./script/Application/Game/Common/Game/Deal\";\r\nimport Prop from \"./script/Application/Game/Common/Game/Prop\";\r\nimport PropList from \"./script/Application/Game/Common/Game/PropList\";\r\nimport TransAni from \"./script/Application/Game/Common/Game/TransAni\";\r\nimport User from \"./script/Application/Game/Common/User/User\";\r\nimport CommonRadioGroup from \"./script/CommonRadioGroup\";\r\nimport CommonRadio from \"./script/CommonRadio\";\r\nimport CommonTabButtons from \"./script/CommonTabButtons\";\r\nimport Announcement from \"./script/Application/Hall/Announcement/Announcement\";\r\nimport CreateTeaHouse from \"./script/Application/Hall/TeaHouse/CreateTeaHouse\";\r\nimport Hall from \"./script/Application/Hall/Hall\";\r\nimport login from \"./script/login\";\r\nimport playScene from \"./script/playScene\";\r\nexport default class GameConfig {\r\n    constructor() {\r\n    }\r\n    static init() {\r\n        var reg = Laya.ClassUtils.regClass;\r\n        reg(\"script/Button.ts\", Button);\r\n        reg(\"script/CommonCheck.ts\", CommonCheck);\r\n        reg(\"script/Application/Game/Common/Game/BetButton.ts\", BetButton);\r\n        reg(\"script/Application/Game/Common/Game/Chip.ts\", Chip);\r\n        reg(\"script/Application/Game/Common/Game/Deal.ts\", Deal);\r\n        reg(\"script/Application/Game/Common/Game/Prop.ts\", Prop);\r\n        reg(\"script/Application/Game/Common/Game/PropList.ts\", PropList);\r\n        reg(\"script/Application/Game/Common/Game/TransAni.ts\", TransAni);\r\n        reg(\"script/Application/Game/Common/User/User.ts\", User);\r\n        reg(\"script/CommonRadioGroup.ts\", CommonRadioGroup);\r\n        reg(\"script/CommonRadio.ts\", CommonRadio);\r\n        reg(\"script/CommonTabButtons.ts\", CommonTabButtons);\r\n        reg(\"script/Application/Hall/Announcement/Announcement.ts\", Announcement);\r\n        reg(\"script/Application/Hall/TeaHouse/CreateTeaHouse.ts\", CreateTeaHouse);\r\n        reg(\"script/Application/Hall/Hall.ts\", Hall);\r\n        reg(\"script/login.ts\", login);\r\n        reg(\"script/playScene.ts\", playScene);\r\n    }\r\n}\r\nGameConfig.width = 1920;\r\nGameConfig.height = 1080;\r\nGameConfig.scaleMode = \"fixedwidth\";\r\nGameConfig.screenMode = \"none\";\r\nGameConfig.alignV = \"top\";\r\nGameConfig.alignH = \"left\";\r\nGameConfig.startScene = \"BenzBmw/BenzBmwloading.scene\";\r\nGameConfig.sceneRoot = \"\";\r\nGameConfig.debug = false;\r\nGameConfig.stat = false;\r\nGameConfig.physicsDebug = false;\r\nGameConfig.exportSceneToJson = true;\r\nGameConfig.init();\r\n",
+  "references": [
+    "C:/Users/Administrator/Documents/majiang/src/script/Button.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/CommonCheck.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/BetButton.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/Chip.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/Deal.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/Prop.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/PropList.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/TransAni.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/User/User.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/CommonRadioGroup.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/CommonRadio.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/CommonTabButtons.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Hall/Announcement/Announcement.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Hall/TeaHouse/CreateTeaHouse.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Hall/Hall.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/login.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/playScene.ts"
+  ]
+}

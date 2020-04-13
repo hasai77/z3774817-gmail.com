@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":3,
-    "selecteID":42,
+    "selectedBox":15,
+    "selecteID":48,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
-    "maxID":48,
+    "maxID":52,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -34,13 +34,14 @@
                     "props":{"y":79,"x":403,"texture":"Withdrawal/MiddleBackground.png"},
                     "nodeParent":3,
                     "label":"Sprite",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":15,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":239,"x":209,"texture":"Withdrawal/WithdrawalBackground.png"},
@@ -56,6 +57,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":15,"x":44,"texture":"Withdrawal/Gold.png"},
@@ -69,6 +71,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":26,"x":133,"texture":"Withdrawal/Amount.png"},
@@ -82,6 +85,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":27,"x":873,"stateNum":"1","skin":"Withdrawal/WithdrawalsDetail.png","runtime":"script/Button.ts"},
@@ -95,6 +99,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":523,"x":242,"texture":"Withdrawal/WithdrawalBackground.png"},
@@ -108,6 +113,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":515,"x":948,"stateNum":"1","skin":"Withdrawal/Binding.png","runtime":"script/Button.ts"},
@@ -121,6 +127,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":774,"x":458,"stateNum":"1","skin":"Withdrawal/ConfirmWithdrawal.png","runtime":"script/Button.ts"},
@@ -134,45 +141,7 @@
                                 ]
                         },
                         {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":388,"x":207,"texture":"Withdrawal/ProgressBarBackground.png"},
-                            "nodeParent":15,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":30,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Image",
-                            "searchKey":"Image",
-                            "props":{"y":388,"x":226,"skin":"Withdrawal/ProgressBar.png"},
-                            "nodeParent":15,
-                            "label":"Image",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":31,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":380,"x":472,"texture":"Withdrawal/ProgressBarTwo.png"},
-                            "nodeParent":15,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":32,
-                            "child":[
-                                ]
-                        },
-                        {
+                            "x":45,
                             "type":"Button",
                             "searchKey":"Button",
                             "props":{"y":368,"x":873,"stateNum":"1","skin":"Withdrawal/AllSelected.png","runtime":"script/Button.ts"},
@@ -186,6 +155,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":239,"x":222,"texture":"Withdrawal/Gold.png"},
@@ -199,6 +169,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":253,"x":519,"texture":"Withdrawal/Close.png"},
@@ -212,6 +183,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Text",
                             "searchKey":"Text",
                             "props":{"y":267,"x":620,"width":148,"text":"请输入或拖选提现数量","height":31,"fontSize":35,"font":"Microsoft YaHei","color":"#e6c9f2"},
@@ -226,6 +198,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":542,"x":79,"texture":"Withdrawal/PaymentAccount.png"},
@@ -239,6 +212,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":245,"x":44,"texture":"Withdrawal/WithdrawalAmount.png"},
@@ -252,6 +226,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":130,"x":54},
@@ -292,6 +267,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":130,"x":54.5,"mouseEnabled":false,"hitTestPrior":false},
@@ -330,6 +306,59 @@
                                         ]
                                 }],
                             "$HIDDEN":false
+                        },
+                        {
+                            "x":45,
+                            "type":"Sprite",
+                            "searchKey":"Sprite",
+                            "props":{"y":399,"x":253.5,"width":600,"presetID":1,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                            "nodeParent":15,
+                            "label":"CommonSlider",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":48,
+                            "child":[
+                                {
+                                    "type":"Image",
+                                    "searchKey":"Image",
+                                    "props":{"width":600,"presetID":2,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                    "nodeParent":48,
+                                    "label":"bar",
+                                    "isOpen":true,
+                                    "isDirectory":true,
+                                    "isAniNode":true,
+                                    "hasChild":true,
+                                    "compId":49,
+                                    "child":[
+                                        {
+                                            "type":"Image",
+                                            "searchKey":"Image",
+                                            "props":{"width":600,"presetID":3,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                            "nodeParent":49,
+                                            "label":"Image(CommonSlider)",
+                                            "isDirectory":false,
+                                            "isAniNode":true,
+                                            "hasChild":false,
+                                            "compId":50,
+                                            "child":[
+                                                ]
+                                        }]
+                                },
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"presetID":4,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                    "nodeParent":48,
+                                    "label":"icon",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":51,
+                                    "child":[
+                                        ]
+                                }]
                         }],
                     "$HIDDEN":false
                 },
