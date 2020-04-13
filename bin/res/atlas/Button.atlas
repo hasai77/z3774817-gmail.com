@@ -1,1 +1,0 @@
-{"frames":{"button_down.png":{"frame":{"h":16,"idx":0,"w":16,"x":0,"y":0},"sourceSize":{"h":16,"w":16},"spriteSourceSize":{"x":0,"y":0}},"button_up.png":{"frame":{"h":16,"idx":0,"w":16,"x":0,"y":17},"sourceSize":{"h":16,"w":16},"spriteSourceSize":{"x":0,"y":0}}},"meta":{"image":"Button.png","prefix":"Button/"}}

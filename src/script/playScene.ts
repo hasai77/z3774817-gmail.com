@@ -1,8 +1,8 @@
 
 import { ui } from "./../ui/layaMaxUI";
 import Handler = Laya.Handler;
-import Button = Laya.Button;
 import Tween = Laya.Tween;
+import Button = Laya.Button;
 import Event = Laya.Event;
 import Ease = Laya.Ease;
 export default class playScene extends ui.playSceneUI {

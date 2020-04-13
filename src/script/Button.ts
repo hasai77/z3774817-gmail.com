@@ -1,11 +1,11 @@
 
 import Event = Laya.Event;
 import Tween = Laya.Tween;
-export default class ActionButton extends Laya.Sprite {
+export default class ActionButton extends Laya.Button {
     constructor() {
         super()
 
-
+        
         this.on(Event.MOUSE_DOWN, this, () => {
             Tween.to(this, { scaleX: 0.9, scaleY: 0.9 }, 100)
         })

@@ -42,6 +42,14 @@ export default class PublicFun{
             node.visible = false;
         });
     }
+    
+    public setCenter(node:Laya.Sprite):void{
+        node.pivotX = node.width / 2;
+        node.pivotY = node.height / 2;
+   
+        node.x += node.pivotX;
+        node.y += node.pivotY;
+    }
     private onComplete():void
     {
         console.log("timeLine complete!!!!");
