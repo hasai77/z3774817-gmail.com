@@ -39,16 +39,7 @@ export default class network {
         this.socket.endian = Laya.Byte.LITTLE_ENDIAN;
         //建立连接
         this.connect()
-
-        Laya.timer.frameLoop(1,this,()=>{
-         
-            if(!this.types||this.eList.length == 0)
-            return;
-            while(this.eList.length){
-                this.types[this.eList[0]];
-                this.eList.shift()
-            }
-        })
+        
     }
     public connect(): void {
         this.socket.connectByUrl("ws://localhost:8989");
@@ -59,7 +50,15 @@ export default class network {
     }
     private openHandler(event: any = null): void {
         //正确建立连接；
-
+        Laya.timer.frameLoop(1,this,()=>{
+         
+            if(!this.types||this.eList.length == 0)
+            return;
+            while(this.eList.length){
+                this.types[this.eList[0]];
+                this.eList.shift()
+            }
+        })
     }
     private receiveHandler(msg: any = null): void {
         ///接收到数据触发函数

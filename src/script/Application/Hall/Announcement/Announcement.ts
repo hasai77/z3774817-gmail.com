@@ -1,21 +1,25 @@
 import { ui } from "../../../../ui/layaMaxUI";
+import CommonTabButtons from "../../../CommonTabButtons"
 import Event = Laya.Event;
 export default class Announcement extends ui.Hall.Announcement.AnnouncementUI{
-    constructor(){
+    constructor() {
         super();
-       
     }
-    onAwake(){
-       
- 
-        this.close_btn.on(Event.CLICK,this,()=>{
-            console.log("close")
-        })
+    onAwake() {
+        this.hideAllGroup();
+        this.setGroup(0);
+        (<CommonTabButtons>this.tabButtons).changeHandle = (index) => {
+            this.setGroup(index);
+        }
     }
-    private hideAllGroup(){
-        this.group_0.visible = false;
-        this.group_1.visible = false;
-        this.group_2.visible = false;
+    setGroup(index) {
+        this.hideAllGroup();
+        (<Laya.Sprite>this.groups.getChildAt(index)).visible = true;
+    }
+    private hideAllGroup(): void {
+        for (let index = 0; index < this.groups.numChildren; index++) {
+            (<Laya.Sprite>this.groups.getChildAt(index)).visible = false;
+        }
     }
  
 }

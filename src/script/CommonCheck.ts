@@ -10,9 +10,13 @@ export default class CommonCheck extends Laya.Sprite{
         this.isCheck = ischeck;
         this.unSelect.visible = !ischeck;
         this.selected.visible = ischeck;
+        this.changeHandle(ischeck);
     }
     public get checked():boolean{
         return this.isCheck;
+    }
+    public changeHandle(check):void{
+
     }
     onAwake(){
         this.unSelect = <Laya.Sprite>this.getChildByName("unSelect")

@@ -11,7 +11,7 @@ export default class TransAni extends ui.Common.Game.TansAniUI{
     }
     public doAction(image?){
         image&&this.setImage(image)
-        Base.getinstance().publicFun.setCenter(this.image);
+        Base.publicFun.setCenter(this.image);
         this.image.x = this.width + this.image.width/2;
 
         Tween.to(this.image,{x:this.width/2},300, null, Handler.create(this,()=>{

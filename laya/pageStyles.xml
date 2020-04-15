@@ -99,4 +99,26 @@
    <item name="BenzBmw/Textfailure.scene" props="" ifExport="分离模式" aName=""/>
    <item name="BenzBmw/Withdrawmoney.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Login/Login.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/AgentPromotion/AgentPromotion.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Cow/CowCreateRoom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Cow/CowLoading.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Cow/CowRoomSelection.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Banker.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/BenzBmwloading.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/List.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Player.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Playerlist.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Roomselection.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Rule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Setting.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Speak.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Table.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Textfailure.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/Withdrawmoney.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/loading.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/victory.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Recharge/Recharge.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Withdrawal/Withdrawal.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/UserInfo/UserInfo.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/CustomerService/CustomerService.scene" props="" ifExport="分离模式" aName=""/>
 </page>

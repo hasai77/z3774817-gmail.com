@@ -18,37 +18,23 @@ P 8D00B284 IconQRcode.png
 P 7AC54E37 Inquire.png
 P 33CF004A Link.png
 P 67DEFA17 Money withdraw.png
-P 289261E4 My accrued (2).png
-P 0937B3E0 My accrued.png
-P 5415D0F1 My embodiment.png
-P 1EBC94CA My performance (2).png
-P 2659C789 My performance.png
-P 64028A32 My promotion (2).png
-P CF81BE3D My promotion.png
-P C1A680BA My withdrawal.png
-P E5D3717A Myplayer.png
-P 6FA74392 MyPlayer_36.png
-P B15EC9CC Myreward (2).png
-P 944E11DC Myreward.png
 P 60FB399E Next page.png
 P 54187E69 Previous page.png
 P 578E90E6 Promotion.png
 P 581071FF Purple.png
 P D0DACC75 Return.png
-P 019F0632 Reward description (2).png
-P 272957DF Reward description.png
 P 956E133C Reward text.png
 P 2C38A1D4 Reward.png
 P 475B862B SelectedCountdownAlarm.png
 P AAB30B42 ShareQR code.png
 P D2D2D74D VolumeBox.png
 D Announcement
-R 818E01DD Background strip.png
-R C3BDB785 Background.png
+P 818E01DD Background strip.png
+P C3BDB785 Background.png
 P E94D5690 ButtonClose.png
 P 730406F2 Buttonselectsd.png
 P 82D98BAB Buttonunelected.png
-R 9EE05493 Description.png
+P 9EE05493 Description.png
 P 63225FF2 IconBeginners Guide.png
 P EBF0BC92 IconBeginners Guide3.png
 P 57CB288B IconCompany qualification.png
@@ -58,7 +44,7 @@ P 86D1F743 IconGame statement66.png
 P B33C7FB5 IconNew yellowBeginner's guide.png
 P 43E13768 IconYellow company qualification.png
 P D48BBEEB IconYellowgameStatement.png
-R 818E01DD ListPurpleStrip.png
+P 818E01DD ListPurpleStrip.png
 P 8B2021AC LogoAnnouncement.png
 D APP_Loading
 P 879CAD19 Background.png
@@ -294,14 +280,9 @@ P 2B2D09AE BeautyThree.png
 P 91ED7BDA BeautyTwo.png
 P 034A8985 Chips.png
 P 551165DF Cow.png
-P 67854629 CowBanker.png
 P 8B965287 Creatroom.png
 P 0EB61E8D fgfgyhy.png
-P 1FA1C923 FixedBanker.png
-P 9702F1CC GeneralBanker.png
 P 56441EC2 GoldCoin.png
-P 6D09BC18 GrabBanker.png
-P E6B1F501 GrabBankerFree.png
 P 771F65CD Hint.png
 P AB4DBA2F IntermediateField.png
 P 9FB150D0 IntermediateField2.png
@@ -316,7 +297,6 @@ P AE8F5B52 LowlevelField5.png
 P 15E4C98B MiddleBackground.png
 P B57D2B6C Ok.png
 P 9DDFA8DF Player.png
-P BF833D2D Record.png
 P 932972CB SeniorField.png
 P 8D97F17E SeniorField2.png
 P 2D198676 SeniorField3.png
@@ -326,8 +306,8 @@ D CustomerService
 P B171226F Avatar.png
 P 2890D743 Background.png
 P 8420ADC5 Customer ServiceButton.png
-P F28EBD99 Dialog.png
-P C1AC75A8 DialogUI.png
+P 5F01AA52 Dialog.png
+P 230246BD DialogUI.png
 P CB463C74 SubmitButton.png
 P 5AA05037 TextHint.png
 D DissolutionRoom
@@ -523,7 +503,7 @@ P 96F91AEC AccountInputBackground.png
 P B91483F7 AccountLogin.png
 P D04F02F6 Background.jpg
 P EC4F2E7E Background22.png
-R 0D530F5E Beauty.png
+P 0D530F5E Beauty.png
 P 0AF79592 Beauty6.png
 P 5BDD6AFC ChipGreen.png
 P 00258DDE ChipOrange.png
@@ -544,48 +524,38 @@ P BE46E753 Password.png
 P 0C2CACFB PasswordBackground.png
 P 42DEAC9E QQlogin.png
 P 83427C80 QrCode.png
-R 3320C3C2 QrCodeBackground.png
+P 3320C3C2 QrCodeBackground.png
 P 3A07AB61 Registered.png
 P DC1C60F5 RegisteredConfirm.png
 P 9D8F56C1 TouristsLogin.png
 P CDD1C951 VerificationCodeBackground.png
-R F705E2B0 WechatLogin.png
+P F705E2B0 WechatLogin.png
 P 9BA57C64 WechatLoginbtn.png
 D MailBox
 P 19997713 CloseButton.png
-P 23D10F2A DefaulPrivate message.png
-P 584A8E56 DefaulSystem message.png
 P 45D31200 DefaultButton.png
 P D8331291 DidnotreceiveIcon.png
-R 96761C97 List Background.png
+P 96761C97 List Background.png
 P 2153502D MessageContentBack button.png
-R B8D78042 MessageContentbackground.png
+P B8D78042 MessageContentbackground.png
 P FC7CBAD4 MessageContentConfirm button.png
 P 2C7A006A MessageContentMail logo.png
-R A79171E9 PrivateMessageBackground.png
+P A79171E9 PrivateMessageBackground.png
 P E3270E74 PrivateMessageCheckbutton.png
 P 8278E6C9 PrivateMessageEmailLogo.png
 P E1285209 ReceiveIcon.png
 P D667703E SelectButton.png
-P BBAB8023 SelectPrivate message.png
-P 4E131971 SelectSystem message.png
 P 3E171930 SystemMessageDelete Button.png
 D Mall
 P 16D7323A Add.png
 P 8C0BC989 Background.png
 P 79326731 BuyNumber.png
 P 5EAD0A1F BuyNumberBackground.png
-P E36BF217 ChipZoneSelected.png
-P EFB3F115 ChipZoneUnelected.png
 P 15401D28 CoinsBackground.png
 P 43E2E8FC CoinsOne.png
 P 8D03EF8F CoinsThree.png
 P 2354C385 CoinsTwo.png
 P B4DA608F Diamond.png
-P B8F7B27F GiftExchangeSelected.png
-P 46BF81FC GiftZone.png
-P AF27E026 GoldZoneSelected.png
-P D8260816 GoldZoneUnselected.png
 P 645CA43D Mall.png
 P 321515B2 PositionNumber.png
 P D71AD120 SingleNumber.png
@@ -649,35 +619,25 @@ R A0DC8752 8.png
 R 2AC6E4D6 9.png
 D Promotions
 P 04A05CE7 Activity.png
-R DE4E1162 Ad.png
+P DE4E1162 Ad.png
 P 4C63749D Agency activity.png
-P 67355575 Agency activityone.png
-P 536B9846 Agency activityone33.png
-R 7BC8A03B Background.png
-R 263C9F34 Background3.png
+P 7BC8A03B Background.png
+P 263C9F34 Background3.png
 P 222406BF Character.png
 P 56763D70 Close.png
 P 45D31200 DefaultButton.png
-R B0988717 Icon.png
-R 174D7843 Image.png
-R B8714769 Pictureturntable.png
+P B0988717 Icon.png
+P 174D7843 Image.png
+P B8714769 Pictureturntable.png
 P D667703E SelectButton.png
-R 82EC7C6C Staytuned.png
+P 82EC7C6C Staytuned.png
 P FE6E2250 Text.png
-P 55478B6C Waterturntable33.png
-P F0D328C4 Waterturntableone.png
 D Recharge
-P E38E72B4 AlipayFive.png
-P 453144F7 Alipayone.png
-P 86D56E5E AlipayThree.png
 P 0D5B559B Amount.png
 P A2A2EEB8 Background strip.png
 P 7CA913F8 Background.png
 P DB973EE0 Backgroundperson.png
-P 0B96B54A BankTransfer.png
-P C56E5B88 BankTransferone.png
 P 8BD3E591 Bluebutton.png
-P 3DDBB0C4 ButtonAlipaytwo.png
 P E874579B Buttonchip five.png
 P AFAB7D3C Buttonchip three.png
 P 1124E2E3 Buttonchip.png
@@ -687,7 +647,6 @@ P 3F9EB50B ButtonCopy.png
 P 4ACA7BC4 Buttonfour chips.png
 P 6842B453 ButtonRecharge.png
 P 46FBF9D4 ButtonRefresh.png
-P DF44728E Buy.png
 P B50DF9D8 Character.png
 P 3F02ACAA Clear.png
 P B5799328 Customer service.png
@@ -700,7 +659,6 @@ P 24C2730B Iconone.png
 P EC152084 Icontwo.png
 P 147AD652 IconUnionPay.png
 P 4F842BA7 Label.png
-P 104B0D1F Literalnumber.png
 P A2BC8753 Mall.png
 P 0E24C64B MiddleLoginBackground.png
 P 44DAF9A1 Money (2).png
@@ -708,8 +666,6 @@ P D0041D14 Money.png
 P 51E5FF9B Recharge (2).png
 P 8FB2CCAC Recharge.png
 P 240B78CD Text.png
-P 6F34347F VIPrecharge.png
-P 22607DDC VIPrechargeone.png
 P D32FCB6D VIPVolumeBox.png
 P DBC4927D VolumeBox.png
 P ABE82CBF VolumeBoxONE.png
@@ -738,19 +694,12 @@ R CF9E79A4 Intermediatefield.png
 P 763CE329 Primaryfield.png
 P F9D8E554 RunsFast.png
 D Safe
-P 9B566CFA AccessDetail.png
 P CD0B9B47 Add.png
 P 59B60172 AmountBackground (2).png
 P DD314C52 AmountBackground.png
 P 17B45BCE Background.png
 P 12CBC54E Cancel.png
 P 244ED275 ConfirmGift.png
-P 4671FC71 DantianGift.png
-P 217FEEFB DantianGifts.png
-P 9C89B342 DantianGiftsDetail (2).png
-P 2B8EEA05 DantianGiftsDetail.png
-P 409516B9 Deposit (2).png
-P 754BB4CE Deposit.png
 P 847FAB2F DepositAmountBackground.png
 P D973C456 DepositConfirm.png
 P D7DF9AE6 EnterAmount.png
@@ -772,17 +721,12 @@ P D8307654 Safe.png
 P F13F08D5 Subtract.png
 P D3096BC2 TopProgressBar.png
 P D3096BC2 TopStatusBar.png
-P 853594BE Withdrawals.png
 P B382BA61 WithdrawalsConfrim.png
-P 853594BE WithdrawalsSelected.png
-P CEB96DFA WithdrawalsUnselected.png
 D Set
 P B65CCA5F Adduser.png
 P 6DE439DF Background music.png
 P 23AE64D7 Background.png
 P 2613D6FD Binding button.png
-P 531DDC2D Binding WeChaticondefault.png
-P 9792A618 Binding WeChaticonSelect.png
 P 4B42144D Delete button.png
 P 237B3778 HeadIcon.png
 P 7F4F6838 Listbackground.png
@@ -791,13 +735,9 @@ P 6F0A9887 Onebackground.png
 P 0E2B9AC9 OneVolumeSound_43.png
 P 883A9C78 SoundSettings.png
 P B801D305 SwitchConfirmation_36.png
-P E8E565EB Switchthe userdefault.png
-P 94893235 Switchthe userSelect.png
 P 51653A15 ThreeYellow progress bar.png
 P 73B05657 Twobackground.png
 P 9FC79352 TwoDefault progress bar.png
-P 1D39E5CF VolumeSounddefault.png
-P E473D337 VolumeSoundiconSelect.png
 P FC024288 Yellowicon.png
 D Stud
 P B167A70E Background.jpg
@@ -950,7 +890,6 @@ P 8D439E3C Advancedfield (2).png
 P D410CD78 Advancedfield (3).png
 P 9610B8E0 Advancedfield.png
 P 4FC54663 AlternateBankerThirteenBets (2).png
-P 75846536 AlternateBankerThirteenBets.png
 P C2A382AC Background frame.png
 P 827ED581 Background.jpg
 P 640D9C74 Createroom.png
@@ -960,12 +899,10 @@ P 2A2E8A2F Intermediatefield.png
 P D3D0E258 Primaryfield (2).png
 P AF515CEC Primaryfield (3).png
 P 765BCA84 Primaryfield.png
-P 4E02FFFA RobThan ThirteenBets.png
 P 9CD851EB RobThanThirteenBets.png
 P 57F12930 Text.png
 P 7BCF4A24 TextIntroduction.png
 P 0879BC66 ThanThirteenBets (2).png
-P 10D37209 ThanThirteenBets.png
 P 9A7E1F52 ThirteenBets.png
 D ThreeDuke
 P 26A66C42 1.PNG
@@ -976,7 +913,6 @@ P A33891D8 Advancedfield (4).png
 P 27C2A3A5 Advancedfield (5).png
 P F6BA3E0B Advancedfield.png
 P 3D4CA205 AlternateBankerThreeDuke (2).png
-P 8C16A50A AlternateBankerThreeDuke.png
 P C2A382AC Background frame.png
 P ABF13F70 Background.jpg
 P 9DC34B13 Createroom.png
@@ -988,7 +924,6 @@ P 14E7E4CB Intermediatefield (4).png
 P A88F94E8 Intermediatefield (5).png
 P 69A0933B Intermediatefield.png
 P 0C072644 NoScoreBankerThreeDuke (2).png
-P 10E8179C NoScoreBankerThreeDuke.png
 P 688DBC1B Ok.png
 P DA5D649D Primaryfield (2).png
 P 6DCB80F9 Primaryfield (3).png
@@ -998,11 +933,8 @@ P 8D9E0BCF Primaryfield.png
 P 511482A5 Prohibited.png
 P 17BAFACD Prompttext.png
 P 4755F1E4 RobThanThreeDuke (2).png
-P 0D5716CC RobThanThreeDuke.png
 P 03EAFAA3 ScoreBankThreeDuke (2).png
-P 028A80FA ScoreBankThreeDuke.png
 P EA948E1B ThanThreeDuke (2).png
-P 6768E6FD ThanThreeDuke.png
 P 9DE4D359 ThreeDuke (2).png
 P 5FC74CC8 Threehundred.png
 P F2615D34 Twohundred.png
@@ -1013,7 +945,6 @@ P EAE1CCF6 Advancedfield (4).png
 P 72357C73 Advancedfield (5).png
 P ECD47BAE Advancedfield.png
 P 3D30528C AlternateBankerTwentyOne (2).png
-P 078AD8AE AlternateBankerTwentyOne.png
 P 5B0D4373 Background frame.png
 P 259FCF3C Background.jpg
 P 855C03D3 ButtonClear.png
@@ -1025,15 +956,12 @@ P 1F52C364 Intermediatefield (4).png
 P 8815200D Intermediatefield (5).png
 P D8BC1226 Intermediatefield.png
 P 2E21235D NoScoreBankerTwentyOne (2).png
-P E7751B5D NoScoreBankerTwentyOne.png
 P D2D1B386 Primaryfield (2).png
 P 8B8717D8 Primaryfield (3).png
 P D1AE8E77 Primaryfield (4).png
 P F4FE448A Primaryfield (5).png
 P 14EF0431 Primaryfield.png
-P BF833D2D Record.png
 P 192DCD0E RobThanTwentyOne (2).png
-P 2EB8A0E2 RobThanTwentyOne.png
 P 8F715078 ScoreBankTwentyOne (2).png
 P C0FA7D85 Text.png
 P 943AB7EE TextAvailable.png
@@ -1041,7 +969,6 @@ P DD2F7CBE Textlimit.png
 P 2813958B TextNo.png
 P 7BCF4A24 Textprompt.png
 P 10808DE3 ThanTwentyOne (2).png
-P F4F10411 ThanTwentyOne.png
 P 8C7724C7 TwentyOne.png
 D TwoEight
 P EE2F069C 1.png
@@ -1060,7 +987,6 @@ P 000D2FB1 Advancedfield (3).png
 P C81B2A7A Advancedfield (4).png
 P EEB299D6 Advancedfield (5).png
 P E0963B3F Advancedfield.png
-P 36E280F2 AlternateBankerTwoEight (2).png
 P 0325F1DD AlternateBankerTwoEight.png
 P 13AE4B0E Background frame.png
 P 5C8BC767 Background.jpg
@@ -1076,35 +1002,28 @@ P 4629BDBE Intermediatefield (4).png
 P 111EFE73 Intermediatefield (5).png
 P CA6EFE19 Intermediatefield.png
 P 980F7A68 NO.png
-P 9FC3F65D NoScoreBankerTwoEight (2).png
 P CCB208EE NoScoreBankerTwoEight.png
 P 3E068682 Primaryfield (2).png
 P D340A896 Primaryfield (3).png
 P 3F90F247 Primaryfield (4).png
 P 19B840FE Primaryfield (5).png
 P CFD85553 Primaryfield.png
-P 0C6642CD RobThanTwoEight (2).png
 P C5055BAB RobThanTwoEight.png
-P C85EE3DB ScoreBankTwoEight (2).png
 P A2305148 ScoreBankTwoEight.png
 P B1E0F106 Text.png
-P CAB4E3B0 ThanTwoEight (2).png
 P EFD4A101 ThanTwoEight.png
 P AC38421A TwoEight.png
 D UserInfo
 P CE8C5604 Avatar.png
 P DA296464 Background.png
-P E40D550F BindAlipay.png
 P 882BBA82 ButtonOK.png
 P 5C1E23AC Caution.png
-P 0ADADC9A ChangePassword.png
 P 4AD9A349 Diamond.png
 P DE1B91E6 Gold.png
 P DF8FC4F6 Icon.png
 P 5312360F Modifyavatar.png
 P B35D68A3 Negative.png
 P 702F412A PersonalCenter.png
-P 53B41966 PersonalinfSelected.png
 P 9272FE4F Privilege.png
 P A2BB6726 Signature.png
 P C5AED56D Text (2).png
@@ -1142,14 +1061,9 @@ P D01C1969 VIPone.png
 P A0DB89B1 VIPSix.png
 P 04A2DAE5 VIPZero.png
 D Withdrawal
-P 2A233890 AlipayWithdrawal (2).png
-P 7A3B551A AlipayWithdrawalUnselected.png
 P 3A355A99 AllSelected.png
 P 751C7EB4 Amount.png
 P 6A56EF51 Background.png
-P 2FFE1794 BankCardWithdrawal.png
-P 44EACCD1 BankCardWithdrawalUnselected.png
-P E51EF4CC BankWithdrawalSelected.png
 P 1DC5AA84 Binding.png
 P 6AA6F388 Close.png
 P 0AF56EFC ConfirmWithdrawal.png

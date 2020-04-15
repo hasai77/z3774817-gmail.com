@@ -27,7 +27,7 @@ export default class CommonRadioGroup extends Laya.Sprite {
                 forChild.checked = true
                 this.checkNum = i;
             }
-
         }
+        
     }
 }

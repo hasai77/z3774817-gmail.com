@@ -29,6 +29,10 @@ export default class CommonTabButton extends Laya.Sprite {
             unselect.visible = !isShow;
             unselect_text.visible = !isShow;
         }
+        this.changeHandle(index)
+    }
+    public changeHandle(index:number){
+        console.log(index)
     }
 
 }

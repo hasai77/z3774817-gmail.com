@@ -1,7 +1,8 @@
 import network from "./network"
 import PublicFun from "./public"
 import SceneManager from "./sceneManager"
-export default class base{
+import userInfoData from "./userInfoData"
+ class base{
     
     private static  instance:base;
     public static  getinstance():base{
@@ -12,10 +13,13 @@ export default class base{
     public netWork:network;
     public publicFun:PublicFun;
     public scene:SceneManager;
+    public userInfo:userInfoData;
     constructor(){
         this.netWork = network.getinstance();
         this.publicFun = PublicFun.getinstance();
         this.scene = SceneManager.getinstance();
+        this.userInfo = userInfoData.getinstance();
     }
 
 }
+export default base.getinstance();

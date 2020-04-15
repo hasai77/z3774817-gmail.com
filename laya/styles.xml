@@ -454,4 +454,21 @@
    <item name="RoomHall/Create room.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="RoomHall/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Background (3).jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="MailBox/List Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="MailBox/MessageContentbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="MailBox/PrivateMessageBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Ad.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Background3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Image.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Pictureturntable.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Promotions/Staytuned.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/QrCodeBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/WechatLogin.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Announcement/Background strip.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Announcement/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Announcement/Description.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Announcement/ListPurpleStrip.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
 </res>

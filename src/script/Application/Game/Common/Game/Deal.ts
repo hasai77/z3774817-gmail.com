@@ -19,7 +19,7 @@ export default class Deal extends ui.Common.Game.DealUI{
         let user = userList[index%leng]
         card.prop_Number = 0;
         this.addChild(card)
-        Base.getinstance().publicFun.setCenter(card);
+        Base.publicFun.setCenter(card);
         this.dealToUser(card,user);
         (++index>total)&& Laya.timer.clear(this,this.loopFun)
     }
