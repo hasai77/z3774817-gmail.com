@@ -13,7 +13,7 @@ export default class CowCreateRoom extends ui.Games.Cow.CowCreateRoomUI {
           
         }
         this.close_btn.on(Event.CLICK,this,()=>{
-            Base.publicFun.hideAlert(this)
+            Base.publicFun.hideAlert(this,()=>{this.removeSelf()})
         })
         this.confirm_btn.on(Event.CLICK,this,()=>{
             for (let index = 0; index < this.radios.numChildren; index++) {

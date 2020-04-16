@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":100,
+    "selecteID":101,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Hall/AgentPromotion/AgentPromotion.ts","height":1080},
     "nodeParent":-1,
-    "maxID":101,
+    "maxID":102,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -525,7 +525,6 @@
             "compId":87,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":0,"x":-5,"texture":"AgentPromotion/IconQRcode.png"},
@@ -540,7 +539,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":-5,"x":-20},
@@ -646,7 +644,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":-33,"x":-55},
@@ -687,7 +684,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":12,"x":0},
@@ -754,7 +750,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":12,"x":51},
@@ -912,7 +907,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":-18,"x":-32},
@@ -992,7 +986,6 @@
                     "$HIDDEN":true
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":0,"x":0},
@@ -1057,6 +1050,20 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":100,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,close_btn,close_btn",
+            "props":{"y":19,"x":1688,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+            "nodeParent":2,
+            "label":"close_btn",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":101,
             "child":[
                 ]
         }],

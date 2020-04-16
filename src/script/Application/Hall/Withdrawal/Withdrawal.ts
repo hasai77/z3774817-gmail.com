@@ -15,10 +15,6 @@ export default class Withdrawal extends ui.Hall.Withdrawal.WithdrawalUI {
       
         this.userMoney_text.text = Base.userInfo.money + "";
 
-        // this.buyed_list.vScrollBarSkin = "";
-        // this.buyed_list.renderHandler = new Handler(this, this.updateItem);
-        // this.buyed_list.array = [3, 3, 3, 3, 3, 33, 3, 3, 3, 3, 3,];
-
         (<CommonTabButtons>this.tabButtons).changeHandle = (index) => {
             if(this.record_group.visible)
             return;
@@ -46,7 +42,7 @@ export default class Withdrawal extends ui.Hall.Withdrawal.WithdrawalUI {
         })
         
         this.close_btn.on(Event.CLICK, this, () => {
-            Base.publicFun.hideAlert(this)
+            Base.publicFun.hideAlert(this,()=>{this.removeSelf()})
         })
 
         this.clearInput_btn.on(Event.CLICK, this, () => {

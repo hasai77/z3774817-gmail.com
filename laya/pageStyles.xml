@@ -121,4 +121,13 @@
    <item name="Hall/Withdrawal/Withdrawal.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Hall/UserInfo/UserInfo.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Hall/CustomerService/CustomerService.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/DissolutionRoom/DissolutionRoom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/DissolutionRoom/DissolutionRoomConfirm.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Hundredsofpeople/HundredsSelection.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Hundredsofpeople/Hundredspk.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/MailBox/Mail.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Mall/Mall.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Promotions/Promotions.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Safe/Safe.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Set/Set.scene" props="" ifExport="分离模式" aName=""/>
 </page>

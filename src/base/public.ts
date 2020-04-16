@@ -26,7 +26,7 @@ export default class PublicFun {
         this.startAlert(node);
     }
     private startAlert(node: Laya.Sprite): void {
-        let rect = node.getBounds();
+        this.setCenter(node);
         let x = Laya.stage.width / 2;
         let y = Laya.stage.height / 2;
         node.visible = true;
@@ -35,8 +35,7 @@ export default class PublicFun {
         node.y = y;
         node.scaleX = 0;
         node.scaleY = 0;
-        node.pivotX = rect.width / 2;
-        node.pivotY = rect.height / 2;
+       
         this.timeLine = new TimeLine()
         this.timeLine.addLabel("turnRight", 0).to(node, { scaleX: 1.1, scaleY: 1.1 }, 200, null, 0)
             // .addLabel("turnDown",0).to(node,{ scaleX:0.9, scaleY:0.9},200,null,0)
@@ -67,9 +66,15 @@ export default class PublicFun {
         node.y += node.pivotY;
     }
     private onComplete(): void {
-        console.log("timeLine complete!!!!");
+        // console.log("timeLine complete!!!!");
     }
     private onLabel(label: String): void {
-        console.log("LabelName:" + label);
+        // console.log("LabelName:" + label);
+    }
+
+    public selectionAdmission(node:Laya.Sprite):void{
+        this.setCenter(node)
+        node.x = Laya.stage.width+node.width /2;
+        Laya.Tween.to(node,{x:Laya.stage.width/2 -60},300);
     }
 }

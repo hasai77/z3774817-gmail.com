@@ -25,7 +25,15 @@ import CowRoomSelection from "./script/Application/Game/Cow/CowRoomSelection"
 import AgentPromotion from "./script/Application/Hall/AgentPromotion/AgentPromotion"
 import Announcement from "./script/Application/Hall/Announcement/Announcement"
 import CustomerService from "./script/Application/Hall/CustomerService/CustomerService"
+import DissolutionRoom from "./script/Application/Hall/DissolutionRoom/DissolutionRoom"
+import Hundredspk from "./script/Application/Hall/Hundredsofpeople/Hundredspk"
+import HundredsSelection from "./script/Application/Hall/Hundredsofpeople/HundredsSelection"
+import Mail from "./script/Application/Hall/MailBox/Mail"
+import Mall from "./script/Application/Hall/Mall/Mall"
+import Promotions from "./script/Application/Hall/Promotions/Promotions"
 import Recharge from "./script/Application/Hall/Recharge/Recharge"
+import Safe from "./script/Application/Hall/Safe/Safe"
+import Set from "./script/Application/Hall/Set/Set"
 import CreateTeaHouse from "./script/Application/Hall/TeaHouse/CreateTeaHouse"
 import UserInfo from "./script/Application/Hall/UserInfo/UserInfo"
 import Withdrawal from "./script/Application/Hall/Withdrawal/Withdrawal"
@@ -42,7 +50,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Hall/Withdrawal/Withdrawal.scene";
+    static startScene:any="Hall/Set/Set.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -77,7 +85,15 @@ export default class GameConfig{
         reg("script/Application/Hall/AgentPromotion/AgentPromotion.ts",AgentPromotion);
         reg("script/Application/Hall/Announcement/Announcement.ts",Announcement);
         reg("script/Application/Hall/CustomerService/CustomerService.ts",CustomerService);
+        reg("script/Application/Hall/DissolutionRoom/DissolutionRoom.ts",DissolutionRoom);
+        reg("script/Application/Hall/Hundredsofpeople/Hundredspk.ts",Hundredspk);
+        reg("script/Application/Hall/Hundredsofpeople/HundredsSelection.ts",HundredsSelection);
+        reg("script/Application/Hall/MailBox/Mail.ts",Mail);
+        reg("script/Application/Hall/Mall/Mall.ts",Mall);
+        reg("script/Application/Hall/Promotions/Promotions.ts",Promotions);
         reg("script/Application/Hall/Recharge/Recharge.ts",Recharge);
+        reg("script/Application/Hall/Safe/Safe.ts",Safe);
+        reg("script/Application/Hall/Set/Set.ts",Set);
         reg("script/Application/Hall/TeaHouse/CreateTeaHouse.ts",CreateTeaHouse);
         reg("script/Application/Hall/UserInfo/UserInfo.ts",UserInfo);
         reg("script/Application/Hall/Withdrawal/Withdrawal.ts",Withdrawal);

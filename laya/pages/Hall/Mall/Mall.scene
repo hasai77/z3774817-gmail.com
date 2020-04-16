@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":29,
-    "selecteID":14,
+    "selectedBox":30,
+    "selecteID":42,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Hall/Mall/Mall.ts","height":1080},
     "nodeParent":-1,
-    "maxID":37,
+    "maxID":43,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -34,13 +34,14 @@
                     "props":{"y":30,"x":370,"texture":"Mall/TopBackground.png"},
                     "nodeParent":3,
                     "label":"Sprite",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":21,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":-9,"x":0,"texture":"Mall/TopGold.png"},
@@ -54,11 +55,12 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":6.5,"x":64,"width":192,"text":"9999999999","height":33,"fontSize":30,"font":"Arial","color":"#ffffff"},
+                            "searchKey":"Text,money_text,money_text",
+                            "props":{"y":6.5,"x":64,"width":192,"var":"money_text","text":"9999999999","name":"money_text","height":33,"fontSize":30,"font":"Arial","color":"#ffffff"},
                             "nodeParent":21,
-                            "label":"Text",
+                            "label":"money_text",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -95,10 +97,10 @@
                         },
                         {
                             "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":6.5,"x":64,"width":192,"text":"9999999999","height":33,"fontSize":30,"font":"Arial","color":"#ffffff"},
+                            "searchKey":"Text,diamond_text,diamond_text",
+                            "props":{"y":6.5,"x":64,"width":192,"var":"diamond_text","text":"9999999999","name":"diamond_text","height":33,"fontSize":30,"font":"Arial","color":"#ffffff"},
                             "nodeParent":23,
-                            "label":"Text",
+                            "label":"diamond_text",
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
@@ -124,18 +126,17 @@
                 {
                     "x":30,
                     "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":89,"x":30,"runtime":"script/CommonTabButtons.ts"},
+                    "searchKey":"Sprite,tabButtons,tabButtons",
+                    "props":{"y":89,"x":30,"var":"tabButtons","runtime":"script/CommonTabButtons.ts","name":"tabButtons"},
                     "nodeParent":3,
-                    "label":"Sprite",
-                    "isOpen":true,
+                    "label":"tabButtons",
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":29,
                     "child":[
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_0,btn_0",
                             "props":{"zOrder":2,"width":252,"var":"btn_0","name":"btn_0","height":84},
@@ -205,7 +206,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_0,btn_1",
                             "props":{"zOrder":2,"y":107,"width":252,"var":"btn_1","name":"btn_0","height":84},
@@ -275,7 +275,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_0,btn_2",
                             "props":{"zOrder":2,"y":212,"width":252,"var":"btn_2","name":"btn_0","height":84},
@@ -344,39 +343,68 @@
                                     "$HIDDEN":false
                                 }]
                         }]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,close_btn,close_btn",
+                    "props":{"y":-17,"x":992,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+                    "nodeParent":3,
+                    "label":"close_btn",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":41,
+                    "child":[
+                        ]
                 }]
         },
         {
             "x":15,
             "type":"List",
-            "searchKey":"List",
-            "props":{"y":293,"x":738},
+            "searchKey":"List,buyitem_lsit,buyitem_lsit",
+            "props":{"y":281,"x":718,"width":756,"var":"buyitem_lsit","repeatY":2,"repeatX":3,"name":"buyitem_lsit","height":555},
             "nodeParent":2,
-            "label":"List",
-            "isOpen":null,
+            "label":"buyitem_lsit",
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":30,
             "child":[
                 {
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"texture":"Mall/CoinsBackground.png"},
+                    "x":30,
+                    "type":"Box",
+                    "searchKey":"Box",
+                    "props":{"y":0,"x":0,"renderType":"render"},
                     "nodeParent":30,
-                    "label":"Sprite",
+                    "label":"Box",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":false,
                     "hasChild":true,
-                    "compId":26,
+                    "compId":42,
                     "child":[
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":26,"x":0,"texture":"Mall/CoinsOne.png"},
-                            "nodeParent":26,
+                            "props":{"texture":"Mall/CoinsBackground.png","renderType":"render"},
+                            "nodeParent":42,
                             "label":"Sprite",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":false,
+                            "hasChild":false,
+                            "compId":26,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Sprite",
+                            "searchKey":"Sprite,level_0_image",
+                            "props":{"y":26,"x":0,"texture":"Mall/CoinsOne.png","name":"level_0_image"},
+                            "nodeParent":42,
+                            "label":"level_0_image",
                             "isDirectory":false,
                             "isAniNode":false,
                             "hasChild":false,
@@ -385,17 +413,56 @@
                                 ]
                         },
                         {
-                            "type":"Button",
-                            "searchKey":"Button",
-                            "props":{"y":174,"x":23,"stateNum":"1","skin":"Mall/BuyNumberBackground.png","runtime":"script/Button.ts"},
-                            "nodeParent":26,
-                            "label":"Button",
+                            "type":"Sprite",
+                            "searchKey":"Sprite,level_1_image",
+                            "props":{"y":31,"x":63,"texture":"Mall/CoinsTwo.png","name":"level_1_image"},
+                            "nodeParent":42,
+                            "label":"level_1_image",
                             "isDirectory":false,
                             "isAniNode":false,
                             "hasChild":false,
-                            "compId":28,
+                            "compId":39,
                             "child":[
                                 ]
+                        },
+                        {
+                            "type":"Sprite",
+                            "searchKey":"Sprite,level_2_image",
+                            "props":{"y":24,"x":36,"texture":"Mall/CoinsThree.png","name":"level_2_image"},
+                            "nodeParent":42,
+                            "label":"level_2_image",
+                            "isDirectory":false,
+                            "isAniNode":false,
+                            "hasChild":false,
+                            "compId":40,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Button",
+                            "searchKey":"Button,buy_btn",
+                            "props":{"y":174,"x":23,"stateNum":"1","skin":"Mall/BuyNumberBackground.png","runtime":"script/Button.ts","name":"buy_btn"},
+                            "nodeParent":42,
+                            "label":"buy_btn",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":false,
+                            "hasChild":true,
+                            "compId":28,
+                            "child":[
+                                {
+                                    "type":"Text",
+                                    "searchKey":"Text,price_text",
+                                    "props":{"y":22,"x":42,"width":125,"text":"text","name":"price_text","height":30,"fontSize":30,"font":"Microsoft YaHei","color":"#ffffff","align":"center"},
+                                    "nodeParent":28,
+                                    "label":"price_text",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":38,
+                                    "child":[
+                                        ]
+                                }]
                         }]
                 }]
         }],

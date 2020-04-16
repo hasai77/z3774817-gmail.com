@@ -372,6 +372,7 @@ export module ui.Hall.AgentPromotion {
 		public btn_5:Laya.Sprite;
 		public btn_6:Laya.Sprite;
 		public groups:Laya.Sprite;
+		public close_btn:any;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -413,6 +414,110 @@ export module ui.Hall.CustomerService {
     }
     REG("ui.Hall.CustomerService.CustomerServiceUI",CustomerServiceUI);
 }
+export module ui.Hall.DissolutionRoom {
+    export class DissolutionRoomUI extends Laya.View {
+		public cancel_btn:any;
+		public confirm_btn:any;
+		public close_btn:any;
+		public users_group:Laya.Sprite;
+		public header_image:Laya.Sprite;
+		public name_text:laya.display.Text;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/DissolutionRoom/DissolutionRoom");
+        }
+    }
+    REG("ui.Hall.DissolutionRoom.DissolutionRoomUI",DissolutionRoomUI);
+    export class DissolutionRoomConfirmUI extends Laya.View {
+		public close_btn:any;
+		public confirm_btn:any;
+		public cancel_btn:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/DissolutionRoom/DissolutionRoomConfirm");
+        }
+    }
+    REG("ui.Hall.DissolutionRoom.DissolutionRoomConfirmUI",DissolutionRoomConfirmUI);
+}
+export module ui.Hall.Hundredsofpeople {
+    export class HundredspkUI extends Laya.View {
+		public btn_0:any;
+		public btn_1:any;
+		public btn_2:any;
+		public btn_3:any;
+		public btn_4:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/Hundredsofpeople/Hundredspk");
+        }
+    }
+    REG("ui.Hall.Hundredsofpeople.HundredspkUI",HundredspkUI);
+    export class HundredsSelectionUI extends Laya.View {
+		public select_group:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/Hundredsofpeople/HundredsSelection");
+        }
+    }
+    REG("ui.Hall.Hundredsofpeople.HundredsSelectionUI",HundredsSelectionUI);
+}
+export module ui.Hall.MailBox {
+    export class MailUI extends Laya.View {
+		public msgBox:Laya.Sprite;
+		public alMsgName_text:laya.display.Text;
+		public msgContent_text:laya.display.Text;
+		public cancel_btn:any;
+		public confirm_btn:any;
+		public tabButtons:any;
+		public btn_0:Laya.Sprite;
+		public btn_1:Laya.Sprite;
+		public msg_list:Laya.List;
+		public close_btn:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/MailBox/Mail");
+        }
+    }
+    REG("ui.Hall.MailBox.MailUI",MailUI);
+}
+export module ui.Hall.Mall {
+    export class MallUI extends Laya.View {
+		public money_text:laya.display.Text;
+		public diamond_text:laya.display.Text;
+		public tabButtons:any;
+		public btn_0:Laya.Sprite;
+		public btn_1:Laya.Sprite;
+		public btn_2:Laya.Sprite;
+		public close_btn:any;
+		public buyitem_lsit:Laya.List;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/Mall/Mall");
+        }
+    }
+    REG("ui.Hall.Mall.MallUI",MallUI);
+}
+export module ui.Hall.Promotions {
+    export class PromotionsUI extends Laya.View {
+		public close_btn:any;
+		public tabButtons:any;
+		public btn_0:Laya.Sprite;
+		public btn_1:Laya.Sprite;
+		public groups:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/Promotions/Promotions");
+        }
+    }
+    REG("ui.Hall.Promotions.PromotionsUI",PromotionsUI);
+}
 export module ui.Hall.Recharge {
     export class RechargeUI extends Laya.View {
 		public userMoney_text:laya.display.Text;
@@ -438,6 +543,60 @@ export module ui.Hall.Recharge {
         }
     }
     REG("ui.Hall.Recharge.RechargeUI",RechargeUI);
+}
+export module ui.Hall.Safe {
+    export class SafeUI extends Laya.View {
+		public tabButtons:any;
+		public btn_0:Laya.Sprite;
+		public btn_1:Laya.Sprite;
+		public btn_2:Laya.Sprite;
+		public btn_3:Laya.Sprite;
+		public btn_4:Laya.Sprite;
+		public close_btn:any;
+		public groups:Laya.Sprite;
+		public access_group:Laya.Sprite;
+		public money_input:Laya.TextInput;
+		public reduce_btn:any;
+		public plus_btn:any;
+		public accessConfirm_btn:any;
+		public clearInput_btn:any;
+		public money_slider:any;
+		public give_group:Laya.Sprite;
+		public giveConfirm_btn:any;
+		public giveCancel_btn:any;
+		public giveRecords_btn:any;
+		public recordUser_btn:any;
+		public give_input:Laya.TextInput;
+		public userid_input:Laya.TextInput;
+		public moneys_group:Laya.Sprite;
+		public money_text:laya.display.Text;
+		public safe_text:laya.display.Text;
+		public giveDetail_group:Laya.Sprite;
+		public giveDetail_list:Laya.List;
+		public access_list:Laya.List;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/Safe/Safe");
+        }
+    }
+    REG("ui.Hall.Safe.SafeUI",SafeUI);
+}
+export module ui.Hall.Set {
+    export class SetUI extends Laya.View {
+		public close_btn:any;
+		public tabButtons:any;
+		public btn_0:Laya.Sprite;
+		public btn_1:Laya.Sprite;
+		public btn_2:Laya.Sprite;
+		public groups:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/Set/Set");
+        }
+    }
+    REG("ui.Hall.Set.SetUI",SetUI);
 }
 export module ui.Hall.TeaHouse {
     export class CreateTeaHouseUI extends Laya.View {

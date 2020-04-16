@@ -8,4 +8,6 @@ export default class userInfoData{
     public id:number = 888889;
     public money:number = 675412;
     public nickName:string = "啦啦啦";
+    public diamond:number = 45623;
+    public safeMoney:number = 6541;
 }

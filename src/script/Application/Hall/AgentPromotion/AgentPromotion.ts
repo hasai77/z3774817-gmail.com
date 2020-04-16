@@ -1,5 +1,8 @@
 import CommonTabButtons from "../../../CommonTabButtons"
 import { ui } from "../../../../ui/layaMaxUI";
+import Base from "../../../../base/base"
+import Event = Laya.Event;
+
 export default class AgentPromotion extends ui.Hall.AgentPromotion.AgentPromotionUI {
     constructor() {
         super();
@@ -10,6 +13,9 @@ export default class AgentPromotion extends ui.Hall.AgentPromotion.AgentPromotio
         (<CommonTabButtons>this.tabButtons).changeHandle = (index) => {
             this.setGroup(index);
         }
+        this.close_btn.on(Event.CLICK,this,()=>{
+            Base.publicFun.hideAlert(this,()=>{this.removeSelf()})
+        })
     }
     setGroup(index) {
         this.hideAllGroup();

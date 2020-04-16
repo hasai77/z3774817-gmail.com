@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":37,
-    "selecteID":25,
+    "selectedBox":2,
+    "selecteID":3,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Hall/MailBox/Mail.ts","height":1080},
     "nodeParent":-1,
-    "maxID":44,
+    "maxID":60,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -17,10 +17,10 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"zOrder":666,"y":124.5,"x":285},
+            "searchKey":"Sprite,msgBox,msgBox",
+            "props":{"zOrder":666,"y":125,"x":285,"width":1346,"visible":false,"var":"msgBox","name":"msgBox","height":829},
             "nodeParent":2,
-            "label":"Sprite",
+            "label":"msgBox",
             "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
@@ -55,10 +55,10 @@
                 },
                 {
                     "type":"Text",
-                    "searchKey":"Text",
-                    "props":{"y":136,"x":575,"text":"系统邮件","fontSize":45,"font":"Microsoft YaHei","color":"#ffffff","align":"center"},
+                    "searchKey":"Text,alMsgName_text,alMsgName_text",
+                    "props":{"y":136,"x":575,"var":"alMsgName_text","text":"系统邮件","name":"alMsgName_text","fontSize":45,"font":"Microsoft YaHei","color":"#ffffff","align":"center"},
                     "nodeParent":3,
-                    "label":"Text",
+                    "label":"alMsgName_text",
                     "isOpen":true,
                     "isDirectory":false,
                     "isAniNode":true,
@@ -69,10 +69,10 @@
                 },
                 {
                     "type":"Text",
-                    "searchKey":"Text",
-                    "props":{"y":200,"x":119,"wordWrap":true,"width":1119,"text":"系统邮件 333333.。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。","height":415,"fontSize":30,"font":"Microsoft YaHei","color":"#EF99EA","align":"left"},
+                    "searchKey":"Text,msgContent_text,msgContent_text",
+                    "props":{"y":200,"x":119,"wordWrap":true,"width":1119,"var":"msgContent_text","text":"系统邮件 333333.。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。","name":"msgContent_text","height":415,"fontSize":30,"font":"Microsoft YaHei","color":"#EF99EA","align":"left"},
                     "nodeParent":3,
-                    "label":"Text",
+                    "label":"msgContent_text",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -82,10 +82,10 @@
                 },
                 {
                     "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":640,"x":818,"stateNum":"1","skin":"MailBox/MessageContentBack button.png","runtime":"script/Button.ts"},
+                    "searchKey":"Button,cancel_btn,cancel_btn",
+                    "props":{"y":640,"x":818,"var":"cancel_btn","stateNum":"1","skin":"MailBox/MessageContentBack button.png","runtime":"script/Button.ts","name":"cancel_btn"},
                     "nodeParent":3,
-                    "label":"Button",
+                    "label":"cancel_btn",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -95,10 +95,10 @@
                 },
                 {
                     "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":640,"x":291,"stateNum":"1","skin":"MailBox/MessageContentConfirm button.png","runtime":"script/Button.ts"},
+                    "searchKey":"Button,confirm_btn,confirm_btn",
+                    "props":{"y":640,"x":291,"var":"confirm_btn","stateNum":"1","skin":"MailBox/MessageContentConfirm button.png","runtime":"script/Button.ts","name":"confirm_btn"},
                     "nodeParent":3,
-                    "label":"Button",
+                    "label":"confirm_btn",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -106,7 +106,7 @@
                     "child":[
                         ]
                 }],
-            "$HIDDEN":true
+            "$HIDDEN":false
         },
         {
             "x":15,
@@ -115,7 +115,7 @@
             "props":{"y":134,"x":196.5},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
@@ -138,98 +138,17 @@
                 {
                     "x":30,
                     "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":95,"x":341,"texture":"MailBox/List Background.png"},
+                    "searchKey":"Sprite,tabButtons,tabButtons",
+                    "props":{"y":95,"x":31,"var":"tabButtons","runtime":"script/CommonTabButtons.ts","name":"tabButtons"},
                     "nodeParent":36,
-                    "label":"Sprite",
+                    "label":"tabButtons",
                     "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":30,
-                    "child":[
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"texture":"MailBox/DidnotreceiveIcon.png"},
-                            "nodeParent":30,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":31,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":-3,"x":4,"texture":"MailBox/ReceiveIcon.png"},
-                            "nodeParent":30,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":32,
-                            "child":[
-                                ],
-                            "$HIDDEN":true
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":24,"x":100,"width":170,"valign":"middle","text":"私信消息","height":45,"fontSize":35,"font":"Microsoft YaHei","color":"#E6B0E8"},
-                            "nodeParent":30,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":33,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":25,"x":684,"width":252,"valign":"middle","text":"2019.3.3","height":45,"fontSize":35,"font":"Microsoft YaHei","color":"#E6B0E8"},
-                            "nodeParent":30,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":34,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Button",
-                            "searchKey":"Button",
-                            "props":{"y":8.5,"x":923,"stateNum":"1","skin":"MailBox/PrivateMessageCheckbutton.png","runtime":"script/Button.ts"},
-                            "nodeParent":30,
-                            "label":"Button",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":35,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":95,"x":31,"runtime":"script/CommonTabButtons.ts"},
-                    "nodeParent":36,
-                    "label":"Sprite",
-                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":37,
                     "child":[
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_0,btn_0",
                             "props":{"zOrder":2,"width":276,"var":"btn_0","name":"btn_0","height":108},
@@ -299,7 +218,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_1,btn_1",
                             "props":{"zOrder":2,"y":126,"width":276,"var":"btn_1","name":"btn_1","height":108},
@@ -368,7 +286,135 @@
                                     "$HIDDEN":false
                                 }]
                         }]
+                },
+                {
+                    "x":30,
+                    "type":"List",
+                    "searchKey":"List,msg_list,msg_list",
+                    "props":{"y":95,"x":341,"width":1136,"var":"msg_list","name":"msg_list","height":668},
+                    "nodeParent":36,
+                    "label":"msg_list",
+                    "isOpen":true,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":44,
+                    "child":[
+                        {
+                            "x":45,
+                            "type":"Box",
+                            "searchKey":"Box",
+                            "props":{"y":-3,"x":0,"renderType":"render"},
+                            "nodeParent":44,
+                            "label":"Box",
+                            "isOpen":true,
+                            "isDirectory":true,
+                            "isAniNode":false,
+                            "hasChild":true,
+                            "compId":57,
+                            "child":[
+                                {
+                                    "x":60,
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"y":3,"texture":"MailBox/List Background.png"},
+                                    "nodeParent":57,
+                                    "label":"Sprite",
+                                    "isOpen":true,
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":30,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite,notread_image",
+                                    "props":{"y":3,"texture":"MailBox/DidnotreceiveIcon.png","name":"notread_image"},
+                                    "nodeParent":57,
+                                    "label":"notread_image",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":31,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite,readed_image",
+                                    "props":{"y":-2,"x":3,"texture":"MailBox/ReceiveIcon.png","name":"readed_image"},
+                                    "nodeParent":57,
+                                    "label":"readed_image",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":32,
+                                    "child":[
+                                        ],
+                                    "$HIDDEN":false
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Text",
+                                    "searchKey":"Text,msgName_text",
+                                    "props":{"y":27,"x":100,"width":170,"valign":"middle","text":"私信消息","name":"msgName_text","height":45,"fontSize":35,"font":"Microsoft YaHei","color":"#E6B0E8"},
+                                    "nodeParent":57,
+                                    "label":"msgName_text",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":33,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Text",
+                                    "searchKey":"Text,date_text",
+                                    "props":{"y":28,"x":684,"width":252,"valign":"middle","text":"2019.3.3","name":"date_text","height":45,"fontSize":35,"font":"Microsoft YaHei","color":"#E6B0E8"},
+                                    "nodeParent":57,
+                                    "label":"date_text",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":34,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "x":60,
+                                    "type":"Button",
+                                    "searchKey":"Button,lookup_btn",
+                                    "props":{"y":12,"x":923,"stateNum":"1","skin":"MailBox/PrivateMessageCheckbutton.png","runtime":"script/Button.ts","name":"lookup_btn"},
+                                    "nodeParent":57,
+                                    "label":"lookup_btn",
+                                    "isDirectory":false,
+                                    "isAniNode":false,
+                                    "hasChild":false,
+                                    "compId":35,
+                                    "child":[
+                                        ]
+                                }]
+                        }]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,close_btn,close_btn",
+            "props":{"y":97,"x":1607,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+            "nodeParent":2,
+            "label":"close_btn",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":59,
+            "child":[
+                ]
         }],
     "animations":[
         {
