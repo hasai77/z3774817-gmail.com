@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":7,
+    "selecteID":8,
     "searchKey":"Scene",
-    "props":{"width":1810,"sceneColor":"#000000","height":642},
+    "props":{"width":1810,"sceneColor":"#000000","runtime":"script/Application/Game/ThreeDuke/ThreeDuke.ts","height":642},
     "nodeParent":-1,
-    "maxID":8,
+    "maxID":9,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -16,73 +16,82 @@
     "child":[
         {
             "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":35,"stateNum":"1","skin":"ThreeDuke/ThanThreeDuke (2).png","runtime":"script/Button.ts"},
+            "type":"Sprite",
+            "searchKey":"Sprite,btns_group,btns_group",
+            "props":{"y":10,"x":0,"width":1810,"var":"btns_group","name":"btns_group","height":622},
             "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
+            "label":"btns_group",
+            "isOpen":null,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
+            "hasChild":true,
+            "compId":8,
             "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":405,"stateNum":"1","skin":"ThreeDuke/ScoreBankThreeDuke (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":4,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":771,"stateNum":"1","skin":"ThreeDuke/RobThanThreeDuke (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":5,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":1133,"stateNum":"1","skin":"ThreeDuke/NoScoreBankerThreeDuke (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":6,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":1499,"stateNum":"1","skin":"ThreeDuke/AlternateBankerThreeDuke (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":7,
-            "child":[
-                ]
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"stateNum":"1","skin":"ThreeDuke/ThanThreeDuke (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":370,"stateNum":"1","skin":"ThreeDuke/ScoreBankThreeDuke (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":736,"stateNum":"1","skin":"ThreeDuke/RobThanThreeDuke (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":1098,"stateNum":"1","skin":"ThreeDuke/NoScoreBankerThreeDuke (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":6,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":1464,"stateNum":"1","skin":"ThreeDuke/AlternateBankerThreeDuke (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":7,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

@@ -75,6 +75,6 @@ export default class PublicFun {
     public selectionAdmission(node:Laya.Sprite):void{
         this.setCenter(node)
         node.x = Laya.stage.width+node.width /2;
-        Laya.Tween.to(node,{x:Laya.stage.width/2 -60},300);
+        Laya.Tween.to(node,{x:Laya.stage.width/2},300);
     }
 }

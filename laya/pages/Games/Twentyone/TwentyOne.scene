@@ -1,13 +1,13 @@
 {
     "x":0,
-    "type":"Scene",
+    "type":"View",
     "selectedBox":2,
-    "selecteID":3,
-    "searchKey":"Scene",
-    "props":{"width":1810,"sceneColor":"#000000","height":642},
+    "selecteID":8,
+    "searchKey":"View",
+    "props":{"width":1810,"sceneColor":"#000000","runtime":"script/Application/Game/Twentyone/Twentyone.ts","height":642},
     "nodeParent":-1,
-    "maxID":8,
-    "label":"Scene",
+    "maxID":9,
+    "label":"View",
     "isOpen":true,
     "isDirectory":true,
     "isAniNode":true,
@@ -16,73 +16,82 @@
     "child":[
         {
             "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":35,"stateNum":"1","skin":"Twentyone/ThanTwentyOne (2).png","runtime":"script/Button.ts"},
+            "type":"Sprite",
+            "searchKey":"Sprite,btns_group,btns_group",
+            "props":{"y":16.5,"x":-9,"width":1803,"var":"btns_group","name":"btns_group","height":609},
             "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
+            "label":"btns_group",
+            "isOpen":null,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
+            "hasChild":true,
+            "compId":8,
             "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":411,"stateNum":"1","skin":"Twentyone/ScoreBankTwentyOne (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":4,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":751,"stateNum":"1","skin":"Twentyone/RobThanTwentyOne (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":5,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":1130,"stateNum":"1","skin":"Twentyone/NoScoreBankerTwentyOne (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":6,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":0,"x":1489,"stateNum":"1","skin":"Twentyone/AlternateBankerTwentyOne (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":7,
-            "child":[
-                ]
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"stateNum":"1","skin":"Twentyone/ThanTwentyOne (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":376,"stateNum":"1","skin":"Twentyone/ScoreBankTwentyOne (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":716,"stateNum":"1","skin":"Twentyone/RobThanTwentyOne (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":1095,"stateNum":"1","skin":"Twentyone/NoScoreBankerTwentyOne (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":6,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":1454,"stateNum":"1","skin":"Twentyone/AlternateBankerTwentyOne (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":8,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":7,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

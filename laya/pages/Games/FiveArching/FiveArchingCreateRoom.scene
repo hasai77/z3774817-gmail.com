@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":89,
-    "selecteID":9,
+    "selectedBox":2,
+    "selecteID":19,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Game/FiveArching/FiveArchingCreateRoom.ts","height":1080},
     "nodeParent":-1,
-    "maxID":99,
+    "maxID":101,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -58,18 +58,17 @@
                 {
                     "x":30,
                     "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":89,"x":47,"runtime":"script/CommonTabButtons.ts"},
+                    "searchKey":"Sprite,tabButtons,tabButtons",
+                    "props":{"y":89,"x":47,"var":"tabButtons","runtime":"script/CommonTabButtons.ts","name":"tabButtons"},
                     "nodeParent":3,
-                    "label":"Sprite",
-                    "isOpen":true,
+                    "label":"tabButtons",
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":89,
                     "child":[
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_0,btn_0",
                             "props":{"zOrder":2,"width":252,"var":"btn_0","name":"btn_0","height":84},
@@ -139,7 +138,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,btn_1,btn_1",
                             "props":{"zOrder":2,"y":105,"width":252,"var":"btn_1","name":"btn_1","height":84},
@@ -273,13 +271,242 @@
                             "compId":28,
                             "child":[
                                 ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":258,"x":529},
+                    "nodeParent":3,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":16,
+                    "child":[
+                        {
+                            "type":"Sprite",
+                            "searchKey":"Sprite",
+                            "props":{"y":9.5,"x":226,"texture":"FiveArching/ddddd.png"},
+                            "nodeParent":16,
+                            "label":"Sprite",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":74,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":371,"x":529},
+                    "nodeParent":3,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":17,
+                    "child":[
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":8,"x":214,"width":128,"text":"可用","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":17,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":39,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":7,"x":508,"width":128,"text":"不可用","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":17,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":42,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":498,"x":529},
+                    "nodeParent":3,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":19,
+                    "child":[
+                        {
+                            "type":"Sprite",
+                            "searchKey":"Sprite,check_1,check_1",
+                            "props":{"y":-7,"x":135,"var":"check_1","presetID":1,"preset":"laya/pages/prefab/creatRoomCheck.prefab","name":"check_1"},
+                            "nodeParent":19,
+                            "label":"check_1",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":78,
+                            "child":[
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"presetID":2,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
+                                    "nodeParent":78,
+                                    "label":"selected",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":77,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"presetID":3,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
+                                    "nodeParent":78,
+                                    "label":"unSelect",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":82,
+                                    "child":[
+                                        ]
+                                }]
+                        },
+                        {
+                            "type":"Sprite",
+                            "searchKey":"Sprite,check_2,check_2",
+                            "props":{"y":-7,"x":430,"var":"check_2","presetID":1,"preset":"laya/pages/prefab/creatRoomCheck.prefab","name":"check_2"},
+                            "nodeParent":19,
+                            "label":"check_2",
+                            "isOpen":false,
+                            "isDirectory":true,
+                            "isAniNode":true,
+                            "hasChild":true,
+                            "compId":79,
+                            "child":[
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"presetID":2,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
+                                    "nodeParent":79,
+                                    "label":"selected",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":80,
+                                    "child":[
+                                        ]
+                                },
+                                {
+                                    "type":"Sprite",
+                                    "searchKey":"Sprite",
+                                    "props":{"presetID":3,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
+                                    "nodeParent":79,
+                                    "label":"unSelect",
+                                    "isDirectory":false,
+                                    "isAniNode":true,
+                                    "hasChild":false,
+                                    "compId":83,
+                                    "child":[
+                                        ]
+                                }]
                         },
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":0,"x":138,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":15,
+                            "props":{"y":9.5,"x":219,"texture":"FiveArching/limit.png"},
+                            "nodeParent":19,
                             "label":"Sprite",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":75,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":150,"x":486,"texture":"FiveArching/Textlist.png"},
+                    "nodeParent":3,
+                    "label":"Sprite",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":72,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,close_btn,close_btn",
+                    "props":{"y":-37,"x":1516,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+                    "nodeParent":3,
+                    "label":"close_btn",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":81,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,confirm_btn,confirm_btn",
+                    "props":{"y":727,"x":719,"var":"confirm_btn","stateNum":"1","skin":"FiveArching/ButtonOK.png","runtime":"script/Button.ts","name":"confirm_btn"},
+                    "nodeParent":3,
+                    "label":"confirm_btn",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":90,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite,radios,radios",
+                    "props":{"y":141,"x":666,"var":"radios","name":"radios"},
+                    "nodeParent":3,
+                    "label":"radios",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":100,
+                    "child":[
+                        {
+                            "type":"Sprite",
+                            "searchKey":"Sprite",
+                            "props":{"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":100,
+                            "label":"Sprite",
+                            "isOpen":null,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -363,40 +590,14 @@
                                                 ]
                                         }]
                                 }]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":258,"x":529},
-                    "nodeParent":3,
-                    "label":"Sprite",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":16,
-                    "child":[
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":9.5,"x":226,"texture":"FiveArching/ddddd.png"},
-                            "nodeParent":16,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":74,
-                            "child":[
-                                ]
                         },
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":0,"x":138,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":16,
+                            "props":{"y":117,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":100,
                             "label":"Sprite",
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -441,53 +642,14 @@
                                                 ]
                                         }]
                                 }]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":371,"x":529},
-                    "nodeParent":3,
-                    "label":"Sprite",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":17,
-                    "child":[
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":8,"x":214,"width":128,"text":"可用","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":17,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":39,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":7,"x":508,"width":128,"text":"不可用","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":17,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":42,
-                            "child":[
-                                ]
                         },
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":3,"x":138,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":17,
+                            "props":{"y":233,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":100,
                             "label":"Sprite",
+                            "isOpen":null,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -572,153 +734,6 @@
                                         }]
                                 }]
                         }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":498,"x":529},
-                    "nodeParent":3,
-                    "label":"Sprite",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":19,
-                    "child":[
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":-7,"x":135,"presetID":1,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
-                            "nodeParent":19,
-                            "label":"creatRoomCheck",
-                            "isOpen":false,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":78,
-                            "child":[
-                                {
-                                    "type":"Sprite",
-                                    "searchKey":"Sprite",
-                                    "props":{"presetID":2,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
-                                    "nodeParent":78,
-                                    "label":"selected",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":77,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Sprite",
-                                    "searchKey":"Sprite",
-                                    "props":{"presetID":3,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
-                                    "nodeParent":78,
-                                    "label":"unSelect",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":82,
-                                    "child":[
-                                        ]
-                                }]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":-7,"x":430,"presetID":1,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
-                            "nodeParent":19,
-                            "label":"creatRoomCheck",
-                            "isOpen":false,
-                            "isDirectory":true,
-                            "isAniNode":true,
-                            "hasChild":true,
-                            "compId":79,
-                            "child":[
-                                {
-                                    "type":"Sprite",
-                                    "searchKey":"Sprite",
-                                    "props":{"presetID":2,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
-                                    "nodeParent":79,
-                                    "label":"selected",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":80,
-                                    "child":[
-                                        ]
-                                },
-                                {
-                                    "type":"Sprite",
-                                    "searchKey":"Sprite",
-                                    "props":{"presetID":3,"preset":"laya/pages/prefab/creatRoomCheck.prefab"},
-                                    "nodeParent":79,
-                                    "label":"unSelect",
-                                    "isDirectory":false,
-                                    "isAniNode":true,
-                                    "hasChild":false,
-                                    "compId":83,
-                                    "child":[
-                                        ]
-                                }]
-                        },
-                        {
-                            "type":"Sprite",
-                            "searchKey":"Sprite",
-                            "props":{"y":9.5,"x":219,"texture":"FiveArching/limit.png"},
-                            "nodeParent":19,
-                            "label":"Sprite",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":75,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":150,"x":486,"texture":"FiveArching/Textlist.png"},
-                    "nodeParent":3,
-                    "label":"Sprite",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":72,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":-37,"x":1516,"stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts"},
-                    "nodeParent":3,
-                    "label":"Button",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":81,
-                    "child":[
-                        ]
-                },
-                {
-                    "x":30,
-                    "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":727,"x":719,"stateNum":"1","skin":"FiveArching/ButtonOK.png","runtime":"script/Button.ts"},
-                    "nodeParent":3,
-                    "label":"Button",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":90,
-                    "child":[
-                        ]
                 }]
         }],
     "animations":[

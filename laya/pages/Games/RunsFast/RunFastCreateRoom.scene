@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":11,
-    "selecteID":88,
+    "selectedBox":2,
+    "selecteID":3,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
-    "maxID":89,
+    "maxID":90,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -58,14 +58,28 @@
                 {
                     "x":30,
                     "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":0,"x":1179,"stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts"},
+                    "searchKey":"Button,close_btn,close_btn",
+                    "props":{"y":0,"x":1179,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
                     "nodeParent":4,
-                    "label":"Button",
+                    "label":"close_btn",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":6,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,confirm_btn,confirm_btn",
+                    "props":{"y":760,"x":482,"var":"confirm_btn","stateNum":"1","skin":"RunFast/ButtonOK.png","runtime":"script/Button.ts","name":"confirm_btn"},
+                    "nodeParent":4,
+                    "label":"confirm_btn",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":67,
                     "child":[
                         ]
                 },
@@ -146,13 +160,319 @@
                             "compId":20,
                             "child":[
                                 ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":294,"x":243},
+                    "nodeParent":4,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":8,
+                    "child":[
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":-84,"width":128,"text":"玩法选择","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":8,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":21,
+                            "child":[
+                                ]
                         },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":214,"width":128,"text":"比大小","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":8,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":24,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":6,"x":464,"width":128,"text":"比花色","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":8,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":27,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":2,"x":726,"width":128,"text":"全比","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":8,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":30,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":88,"x":214,"width":128,"text":"豹子额外奖励","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":8,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":33,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":451,"x":233,"name":""},
+                    "nodeParent":4,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":9,
+                    "child":[
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":-73,"width":128,"text":"封顶开牌","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":9,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":34,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":3,"x":223,"width":128,"text":"5轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":9,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":37,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":2,"x":412,"width":128,"text":"10轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":9,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":40,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":2,"x":617,"width":128,"text":"15轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":9,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":43,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":543,"x":233,"name":""},
+                    "nodeParent":4,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":10,
+                    "child":[
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":-74,"width":128,"text":"比牌轮数","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":10,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":44,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":222,"width":128,"text":"5轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":10,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":47,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":4,"x":411,"width":128,"text":"10轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":10,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":50,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":4,"x":616,"width":128,"text":"15轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":10,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":53,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite",
+                    "props":{"y":653,"x":219,"name":""},
+                    "nodeParent":4,
+                    "label":"Sprite",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":11,
+                    "child":[
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":-59,"width":128,"text":"蒙牌轮数","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":11,
+                            "label":"Text",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":54,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":5,"x":237,"width":128,"text":"不闷","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":11,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":57,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":4,"x":426,"width":128,"text":"2轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":11,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":60,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":4,"x":631,"width":128,"text":"3轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":11,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":63,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"Text",
+                            "searchKey":"Text",
+                            "props":{"y":4,"x":836,"width":128,"text":"5轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
+                            "nodeParent":11,
+                            "label":"Text",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":66,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite,radios,radios",
+                    "props":{"y":180,"x":379,"var":"radios","name":"radios"},
+                    "nodeParent":4,
+                    "label":"radios",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":89,
+                    "child":[
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":0,"x":138,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":7,
+                            "props":{"x":2,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":89,
                             "label":"Sprite",
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -236,92 +556,14 @@
                                                 ]
                                         }]
                                 }]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":294,"x":243},
-                    "nodeParent":4,
-                    "label":"Sprite",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":8,
-                    "child":[
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":-84,"width":128,"text":"玩法选择","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":8,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":21,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":214,"width":128,"text":"比大小","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":8,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":24,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":6,"x":464,"width":128,"text":"比花色","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":8,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":27,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":2,"x":726,"width":128,"text":"全比","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":8,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":30,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":88,"x":214,"width":128,"text":"豹子额外奖励","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":8,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":33,
-                            "child":[
-                                ]
                         },
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-3,"x":137,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":8,
+                            "props":{"y":111,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":89,
                             "label":"Sprite",
+                            "isOpen":null,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -483,79 +725,14 @@
                                                 ]
                                         }]
                                 }]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":451,"x":233,"name":""},
-                    "nodeParent":4,
-                    "label":"Sprite",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":9,
-                    "child":[
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":-73,"width":128,"text":"封顶开牌","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":9,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":34,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":3,"x":223,"width":128,"text":"5轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":9,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":37,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":2,"x":412,"width":128,"text":"10轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":9,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":40,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":2,"x":617,"width":128,"text":"15轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":9,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":43,
-                            "child":[
-                                ]
                         },
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-2,"x":147,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":9,
+                            "props":{"y":269,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":89,
                             "label":"Sprite",
+                            "isOpen":null,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -678,79 +855,14 @@
                                                 ]
                                         }]
                                 }]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":543,"x":233,"name":""},
-                    "nodeParent":4,
-                    "label":"Sprite",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":10,
-                    "child":[
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":-74,"width":128,"text":"比牌轮数","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":10,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":44,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":222,"width":128,"text":"5轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":10,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":47,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":4,"x":411,"width":128,"text":"10轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":10,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":50,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":4,"x":616,"width":128,"text":"15轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":10,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":53,
-                            "child":[
-                                ]
                         },
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":0,"x":146,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":10,
+                            "props":{"y":363,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":89,
                             "label":"Sprite",
+                            "isOpen":null,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -873,107 +985,20 @@
                                                 ]
                                         }]
                                 }]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":653,"x":219,"name":""},
-                    "nodeParent":4,
-                    "label":"Sprite",
-                    "isOpen":true,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":11,
-                    "child":[
-                        {
-                            "x":45,
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":-59,"width":128,"text":"蒙牌轮数","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":11,
-                            "label":"Text",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":54,
-                            "child":[
-                                ]
                         },
                         {
-                            "x":45,
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":5,"x":237,"width":128,"text":"不闷","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":11,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":57,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":4,"x":426,"width":128,"text":"2轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":11,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":60,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":4,"x":631,"width":128,"text":"3轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":11,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":63,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
-                            "type":"Text",
-                            "searchKey":"Text",
-                            "props":{"y":4,"x":836,"width":128,"text":"5轮","height":52,"fontSize":50,"font":"Arial","color":"#ffffff"},
-                            "nodeParent":11,
-                            "label":"Text",
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":66,
-                            "child":[
-                                ]
-                        },
-                        {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":0,"x":161,"runtime":"script/CommonRadioGroup.ts"},
-                            "nodeParent":11,
+                            "props":{"y":473,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                            "nodeParent":89,
                             "label":"Sprite",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
                             "compId":88,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"presetID":1,"preset":"laya/pages/prefab/creatRoomRadio.prefab"},
@@ -1013,7 +1038,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"x":192,"presetID":1,"preset":"laya/pages/prefab/creatRoomRadio.prefab"},
@@ -1053,7 +1077,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":0,"x":393,"presetID":1,"preset":"laya/pages/prefab/creatRoomRadio.prefab"},
@@ -1093,7 +1116,6 @@
                                         }]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":0,"x":598,"presetID":1,"preset":"laya/pages/prefab/creatRoomRadio.prefab"},
@@ -1133,20 +1155,6 @@
                                         }]
                                 }]
                         }]
-                },
-                {
-                    "x":30,
-                    "type":"Button",
-                    "searchKey":"Button",
-                    "props":{"y":760,"x":482,"stateNum":"1","skin":"RunFast/ButtonOK.png","runtime":"script/Button.ts","name":""},
-                    "nodeParent":4,
-                    "label":"Button",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":67,
-                    "child":[
-                        ]
                 }]
         }],
     "animations":[

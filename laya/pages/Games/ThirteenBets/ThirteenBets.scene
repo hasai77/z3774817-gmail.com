@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":5,
+    "selecteID":6,
     "searchKey":"Scene",
-    "props":{"width":1810,"sceneColor":"#000000","height":642},
+    "props":{"width":1810,"sceneColor":"#000000","runtime":"script/Application/Game/ThirteenBets/ThirteenBets.ts","height":642},
     "nodeParent":-1,
-    "maxID":6,
+    "maxID":7,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -16,45 +16,56 @@
     "child":[
         {
             "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":20,"x":106,"stateNum":"1","skin":"ThirteenBets/ThanThirteenBets (2).png","runtime":"script/Button.ts"},
+            "type":"Sprite",
+            "searchKey":"Sprite,btns_group,btns_group",
+            "props":{"y":20,"x":106,"width":1627,"var":"btns_group","name":"btns_group","height":598},
             "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
+            "label":"btns_group",
+            "isOpen":null,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
+            "hasChild":true,
+            "compId":6,
             "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":20,"x":715,"stateNum":"1","skin":"ThirteenBets/RobThanThirteenBets.png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":4,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":20,"x":1309,"stateNum":"1","skin":"ThirteenBets/AlternateBankerThirteenBets (2).png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":5,
-            "child":[
-                ]
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"stateNum":"1","skin":"ThirteenBets/ThanThirteenBets (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":6,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":609,"stateNum":"1","skin":"ThirteenBets/RobThanThirteenBets.png","runtime":"script/Button.ts"},
+                    "nodeParent":6,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"x":1203,"stateNum":"1","skin":"ThirteenBets/AlternateBankerThirteenBets (2).png","runtime":"script/Button.ts"},
+                    "nodeParent":6,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

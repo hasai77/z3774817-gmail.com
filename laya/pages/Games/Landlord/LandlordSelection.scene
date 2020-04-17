@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":8,
+    "selecteID":9,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
-    "maxID":9,
+    "maxID":10,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -30,73 +30,82 @@
         },
         {
             "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":262,"x":147,"stateNum":"1","skin":"Landlord/Primaryfield.png","runtime":"script/Button.ts"},
+            "type":"Sprite",
+            "searchKey":"Sprite,btns_group,btns_group",
+            "props":{"y":262,"x":147,"width":1639,"var":"btns_group","name":"btns_group","height":583},
             "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
+            "label":"btns_group",
+            "isOpen":null,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
-            "compId":4,
+            "hasChild":true,
+            "compId":9,
             "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":265,"x":566,"stateNum":"1","skin":"Landlord/Intermediatefield.png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":5,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":265,"x":986,"stateNum":"1","skin":"Landlord/Advancedfield.png","runtime":"script/Button.ts","name":""},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":6,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":265,"x":1412,"stateNum":"1","skin":"Landlord/CreateRoom.png","runtime":"script/Button.ts","name":""},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":7,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":567.5,"x":1412,"stateNum":"1","skin":"Landlord/Joinroom.png","runtime":"script/Button.ts"},
-            "nodeParent":2,
-            "label":"Button",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":8,
-            "child":[
-                ]
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"stateNum":"1","skin":"Landlord/Primaryfield.png","runtime":"script/Button.ts"},
+                    "nodeParent":9,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":4,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"y":3,"x":419,"stateNum":"1","skin":"Landlord/Intermediatefield.png","runtime":"script/Button.ts"},
+                    "nodeParent":9,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":5,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"y":3,"x":839,"stateNum":"1","skin":"Landlord/Advancedfield.png","runtime":"script/Button.ts","name":""},
+                    "nodeParent":9,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":6,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"y":3,"x":1265,"stateNum":"1","skin":"Landlord/CreateRoom.png","runtime":"script/Button.ts","name":""},
+                    "nodeParent":9,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":7,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Button",
+                    "searchKey":"Button",
+                    "props":{"y":305,"x":1265,"stateNum":"1","skin":"Landlord/Joinroom.png","runtime":"script/Button.ts"},
+                    "nodeParent":9,
+                    "label":"Button",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":8,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

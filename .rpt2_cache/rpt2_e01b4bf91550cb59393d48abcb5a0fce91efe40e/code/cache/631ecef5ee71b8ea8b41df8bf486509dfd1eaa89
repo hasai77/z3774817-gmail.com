@@ -1,0 +1,6 @@
+{
+  "code": "import { ui } from \"../../../../ui/layaMaxUI\";\r\nvar Event = Laya.Event;\r\nexport default class Dicetable extends ui.Games.Dice.DiceUI {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        this.play_btn.on(Event.CLICK, this, () => {\r\n            this.startX = this.diceCup_group.x + this.diceCup_group.width / 2;\r\n            this.toLeft();\r\n            setTimeout(() => {\r\n                Laya.Tween.clear(this.tweenObj);\r\n                this.dice_ani.play();\r\n            }, 2000);\r\n            for (let i = 0; i < 3; i++) {\r\n                this[`dice_${i}`].loadImage(`Dice/dice/shaizi_${Math.floor((Math.random() * 5)) + 1}.png`);\r\n            }\r\n        });\r\n    }\r\n    toLeft() {\r\n        this.tweenObj = Laya.Tween.to(this.diceCup_group, { x: this.startX - 50 }, 100, null, Laya.Handler.create(this, () => {\r\n            this.toRight();\r\n        }));\r\n    }\r\n    toRight() {\r\n        this.tweenObj = Laya.Tween.to(this.diceCup_group, { x: this.startX + 50 }, 100, null, Laya.Handler.create(this, () => {\r\n            this.toLeft();\r\n        }));\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/Administrator/Documents/majiang/src/ui/layaMaxUI.ts"
+  ]
+}

@@ -22,6 +22,33 @@ import CommonRadioGroup from "./script/CommonRadioGroup"
 import CommonRadio from "./script/CommonRadio"
 import CowLoading from "./script/Application/Game/Cow/CowLoading"
 import CowRoomSelection from "./script/Application/Game/Cow/CowRoomSelection"
+import DiceTable from "./script/Application/Game/Dice/DiceTable"
+import FiftyCreateRoom from "./script/Application/Game/FiftyK/FiftyCreateRoom"
+import FiveTenKloading from "./script/Application/Game/FiftyK/FiveTenKloading"
+import FiveTenKSelection from "./script/Application/Game/FiftyK/FiveTenKSelection"
+import FiveArchingCreateRoom from "./script/Application/Game/FiveArching/FiveArchingCreateRoom"
+import FiveArchingselection from "./script/Application/Game/FiveArching/FiveArchingselection"
+import FruitLoading from "./script/Application/Game/Fruit/FruitLoading"
+import FruitSelection from "./script/Application/Game/Fruit/FruitSelection"
+import GoldenFlowerCreateRoom from "./script/Application/Game/GoldenFlower/GoldenFlowerCreateRoom"
+import LandlordCreateRoom from "./script/Application/Game/Landlord/LandlordCreateRoom"
+import ThanchickenCreateroom from "./script/Application/Game/Thanchicken/ThanchickenCreateroom"
+import ThirteenBets from "./script/Application/Game/ThirteenBets/ThirteenBets"
+import ThirteenBetsCreateroom from "./script/Application/Game/ThirteenBets/ThirteenBetsCreateroom"
+import ThirteenBetsLoading from "./script/Application/Game/ThirteenBets/ThirteenBetsLoading"
+import ThirteenBetsSelection from "./script/Application/Game/ThirteenBets/ThirteenBetsSelection"
+import ThreeDuke from "./script/Application/Game/ThreeDuke/ThreeDuke"
+import ThreeDukeCreateroom from "./script/Application/Game/ThreeDuke/ThreeDukeCreateroom"
+import ThreeDukeLoading from "./script/Application/Game/ThreeDuke/ThreeDukeLoading"
+import ThreeDukeSelection from "./script/Application/Game/ThreeDuke/ThreeDukeSelection"
+import Twentyone from "./script/Application/Game/Twentyone/Twentyone"
+import TwentyoneCreateroom from "./script/Application/Game/Twentyone/TwentyoneCreateroom"
+import TwentyoneLoading from "./script/Application/Game/Twentyone/TwentyoneLoading"
+import TwentyoneSelection from "./script/Application/Game/Twentyone/TwentyoneSelection"
+import TwoEight from "./script/Application/Game/TwoEight/TwoEight"
+import TwoEightCreateroom from "./script/Application/Game/TwoEight/TwoEightCreateroom"
+import TwoEightLoading from "./script/Application/Game/TwoEight/TwoEightLoading"
+import TwoEightSelection from "./script/Application/Game/TwoEight/TwoEightSelection"
 import AgentPromotion from "./script/Application/Hall/AgentPromotion/AgentPromotion"
 import Announcement from "./script/Application/Hall/Announcement/Announcement"
 import CustomerService from "./script/Application/Hall/CustomerService/CustomerService"
@@ -50,7 +77,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Hall/Set/Set.scene";
+    static startScene:any="Games/Dice/Dice.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -82,6 +109,33 @@ export default class GameConfig{
         reg("script/CommonRadio.ts",CommonRadio);
         reg("script/Application/Game/Cow/CowLoading.ts",CowLoading);
         reg("script/Application/Game/Cow/CowRoomSelection.ts",CowRoomSelection);
+        reg("script/Application/Game/Dice/DiceTable.ts",DiceTable);
+        reg("script/Application/Game/FiftyK/FiftyCreateRoom.ts",FiftyCreateRoom);
+        reg("script/Application/Game/FiftyK/FiveTenKloading.ts",FiveTenKloading);
+        reg("script/Application/Game/FiftyK/FiveTenKSelection.ts",FiveTenKSelection);
+        reg("script/Application/Game/FiveArching/FiveArchingCreateRoom.ts",FiveArchingCreateRoom);
+        reg("script/Application/Game/FiveArching/FiveArchingselection.ts",FiveArchingselection);
+        reg("script/Application/Game/Fruit/FruitLoading.ts",FruitLoading);
+        reg("script/Application/Game/Fruit/FruitSelection.ts",FruitSelection);
+        reg("script/Application/Game/GoldenFlower/GoldenFlowerCreateRoom.ts",GoldenFlowerCreateRoom);
+        reg("script/Application/Game/Landlord/LandlordCreateRoom.ts",LandlordCreateRoom);
+        reg("script/Application/Game/Thanchicken/ThanchickenCreateroom.ts",ThanchickenCreateroom);
+        reg("script/Application/Game/ThirteenBets/ThirteenBets.ts",ThirteenBets);
+        reg("script/Application/Game/ThirteenBets/ThirteenBetsCreateroom.ts",ThirteenBetsCreateroom);
+        reg("script/Application/Game/ThirteenBets/ThirteenBetsLoading.ts",ThirteenBetsLoading);
+        reg("script/Application/Game/ThirteenBets/ThirteenBetsSelection.ts",ThirteenBetsSelection);
+        reg("script/Application/Game/ThreeDuke/ThreeDuke.ts",ThreeDuke);
+        reg("script/Application/Game/ThreeDuke/ThreeDukeCreateroom.ts",ThreeDukeCreateroom);
+        reg("script/Application/Game/ThreeDuke/ThreeDukeLoading.ts",ThreeDukeLoading);
+        reg("script/Application/Game/ThreeDuke/ThreeDukeSelection.ts",ThreeDukeSelection);
+        reg("script/Application/Game/Twentyone/Twentyone.ts",Twentyone);
+        reg("script/Application/Game/Twentyone/TwentyoneCreateroom.ts",TwentyoneCreateroom);
+        reg("script/Application/Game/Twentyone/TwentyoneLoading.ts",TwentyoneLoading);
+        reg("script/Application/Game/Twentyone/TwentyoneSelection.ts",TwentyoneSelection);
+        reg("script/Application/Game/TwoEight/TwoEight.ts",TwoEight);
+        reg("script/Application/Game/TwoEight/TwoEightCreateroom.ts",TwoEightCreateroom);
+        reg("script/Application/Game/TwoEight/TwoEightLoading.ts",TwoEightLoading);
+        reg("script/Application/Game/TwoEight/TwoEightSelection.ts",TwoEightSelection);
         reg("script/Application/Hall/AgentPromotion/AgentPromotion.ts",AgentPromotion);
         reg("script/Application/Hall/Announcement/Announcement.ts",Announcement);
         reg("script/Application/Hall/CustomerService/CustomerService.ts",CustomerService);

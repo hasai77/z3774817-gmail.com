@@ -310,6 +310,15 @@ P 5F01AA52 Dialog.png
 P 230246BD DialogUI.png
 P CB463C74 SubmitButton.png
 P 5AA05037 TextHint.png
+D Dice
+P AEFDBF05 btn_customPlayer_1.png
+P E065CC31 btn_shangzhaung_1.png
+P 4C68289B frame_head.png
+P 7FF50DFA Frame_User.png
+P 2725B3DE frame_zhuang.png
+P F031A9AE img_banker.png
+P 3C07B171 shaizhong_3_218.png
+P C59CAD5F table_bg.png
 D DissolutionRoom
 P B3BE7F3D Avatar.png
 P 07AE2D12 AvatarBackgroundSelected.png
@@ -892,6 +901,7 @@ P 9610B8E0 Advancedfield.png
 P 4FC54663 AlternateBankerThirteenBets (2).png
 P C2A382AC Background frame.png
 P 827ED581 Background.jpg
+P 688DBC1B ButtonOK.png
 P 640D9C74 Createroom.png
 P 248AF579 Intermediatefield (2).png
 P 516B74B3 Intermediatefield (3).png
@@ -1111,6 +1121,40 @@ R 06B39297 7.png
 R 59B588B0 8.png
 R A3813AA2 9.png
 P 0307ED3C Check.png
+D Dice/animation
+P 5C0F6743 1.png
+P 34AA4DDD 10.png
+P D1A87EB7 11.png
+P D9C0C1A9 12.png
+P BB376E23 13.png
+P 564507AC 2.png
+P E9CC5EF3 3.png
+P C45CA921 4.png
+P B65E5F21 5.png
+P 0FEC3BB4 6.png
+P DAB722F4 7.png
+P DAC98F71 8.png
+P FC6D3533 9.png
+D Dice/dice
+R 0B38E9CA shaizi_0.png
+R 082D835A shaizi_1.png
+R 70D8CE69 shaizi_2.png
+R 2E7470B6 shaizi_3.png
+R 08B5C764 shaizi_4.png
+R AF1D571E shaizi_5.png
+D Dice/record
+R B8C14BAC cn_baozi.png
+R 2D8062D2 cn_baozi_b.png
+R 663BB649 cn_da.png
+R 561C942C cn_da_s.png
+R 8BBB17A5 cn_dan.png
+R 0C05C7E3 cn_dan_b.png
+R 3106FBB7 cn_shuang.png
+R 02CE86A6 cn_shuang_b.png
+R 179FA8EB cn_xiao.png
+R C1EC0CCC cn_xiao_s.png
+R 40DA12D8 title_shengfujil.png
+R 1D56E3C1 ui_history_block.png
 D Games/GameThanChicken
 P 0DF43926 PlacePropBox.png
 R 7F9EC8D0 table_bg.jpg
