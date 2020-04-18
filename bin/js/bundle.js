@@ -1528,19 +1528,41 @@
        }
    }
 
+   var Handler$2 = Laya.Handler;
    class SceneManager {
        constructor() {
-           this.sceneList = [];
+           this.sceneList = {};
+           this.init();
        }
+       ;
        static getinstance() {
            if (this.instance == null)
                this.instance = new SceneManager();
            return this.instance;
        }
-       rigesterScene(name) {
+       rigesterScene(name, param) {
+           this.sceneList[name] = param;
        }
-       changeScene(name) {
-           Laya.Scene.open(name);
+       init() {
+           this.rigesterScene("Login", { url: "./Login/Login.scene" });
+       }
+       changeScene(name, loadPage, removeCur = true) {
+           loadPage.onAwake = () => {
+               Laya.Scene.open;
+               Laya.Scene.load(this.sceneList[name].url, Handler$2.create(this, (scene) => {
+                   if (this.curScene) {
+                       this.curScene.destroy();
+                   }
+                   Laya.timer.once(500, this, () => {
+                       Laya.Scene.root.addChild(scene);
+                       this.curScene = scene;
+                       loadPage.removeSelf();
+                   });
+               }), Handler$2.create(this, (e) => {
+                   loadPage.setPercent(e * 100);
+               }, null, false));
+           };
+           Laya.stage.addChild(loadPage);
        }
    }
 
@@ -1563,7 +1585,7 @@
        constructor() {
            this.netWork = network.getinstance();
            this.publicFun = PublicFun.getinstance();
-           this.scene = SceneManager.getinstance();
+           this.sceneManager = SceneManager.getinstance();
            this.userInfo = userInfoData.getinstance();
        }
        static getinstance() {
@@ -1574,7 +1596,7 @@
    }
    var Base = base.getinstance();
 
-   var Handler$2 = Laya.Handler;
+   var Handler$3 = Laya.Handler;
    var Tween$3 = Laya.Tween;
    class Deal extends ui.Common.Game.DealUI {
        constructor() {
@@ -1596,7 +1618,7 @@
        }
        dealToUser(card, user, speed = 300) {
            let pos = user.curtDealPos();
-           Tween$3.to(card, { x: pos.x, y: pos.y }, speed, null, Handler$2.create(this, () => {
+           Tween$3.to(card, { x: pos.x, y: pos.y }, speed, null, Handler$3.create(this, () => {
                user.recvCard(card.prop_Number);
                card.removeSelf();
            }));
@@ -1644,7 +1666,7 @@
        }
    }
 
-   var Handler$3 = Laya.Handler;
+   var Handler$4 = Laya.Handler;
    var Tween$4 = Laya.Tween;
    class TransAni extends ui.Common.Game.TansAniUI {
        constructor() {
@@ -1656,8 +1678,8 @@
            image && this.setImage(image);
            Base.publicFun.setCenter(this.image);
            this.image.x = this.width + this.image.width / 2;
-           Tween$4.to(this.image, { x: this.width / 2 }, 300, null, Handler$3.create(this, () => {
-               Tween$4.to(this.image, { x: -this.image.width / 2 }, 300, null, Handler$3.create(this, () => {
+           Tween$4.to(this.image, { x: this.width / 2 }, 300, null, Handler$4.create(this, () => {
+               Tween$4.to(this.image, { x: -this.image.width / 2 }, 300, null, Handler$4.create(this, () => {
                    this.removeSelf();
                }), 1000);
            }));
@@ -1787,16 +1809,11 @@
        onAwake() {
            this.bar = this.getChildByName("bar");
            this.imgmask = this.bar.mask;
-           Laya.timer.frameLoop(2, this, () => {
-               if (this.m_percent >= 100)
-                   this.m_percent = 0;
-               this.percent = this.m_percent + 1;
-           });
        }
    }
 
    var Event$3 = Laya.Event;
-   var Handler$4 = Laya.Handler;
+   var Handler$5 = Laya.Handler;
    class Player extends ui.Games.BenzBmw.PlayerUI {
        constructor() {
            super();
@@ -1816,7 +1833,7 @@
                Base.publicFun.hideAlert(this);
            });
            this.player_list.vScrollBarSkin = "";
-           this.player_list.renderHandler = new Handler$4(this, this.updateItem);
+           this.player_list.renderHandler = new Handler$5(this, this.updateItem);
            this.playerList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
        }
        updateItem(cell, index) {
@@ -2084,17 +2101,7 @@
        }
        onAwake() {
            this.play_btn.on(Event$9.CLICK, this, () => {
-               this.dice_ani.index = 0;
-               this.tweenStop = false;
-               this.tweenSpeed = 200;
-               this.originX = this.diceCup_group.x;
-               this.toLeft();
-               setTimeout(() => {
-                   this.tweenStop = true;
-               }, 4000);
-               for (let i = 0; i < 3; i++) {
-                   this[`dice_${i}`].loadImage(`Dice/dice/shaizi_${Math.floor((Math.random() * 5)) + 1}.png`);
-               }
+               Base.sceneManager.changeScene("Login", new CowLoading());
            });
        }
        toLeft() {
@@ -2613,7 +2620,7 @@
    }
 
    var Event$v = Laya.Event;
-   var Handler$5 = Laya.Handler;
+   var Handler$6 = Laya.Handler;
    class CustomerService extends ui.Hall.CustomerService.CustomerServiceUI {
        constructor() {
            super();
@@ -2637,7 +2644,7 @@
                    type: 1,
                    text: "您好 请问有什么可以帮助您"
                }];
-           this.chat_list.renderHandler = new Handler$5(this, this.updateItem);
+           this.chat_list.renderHandler = new Handler$6(this, this.updateItem);
        }
        updateItem(cell, index) {
            let data = this.chat_list.array[index];
@@ -2743,7 +2750,7 @@
        }
    }
 
-   var Handler$6 = Laya.Handler;
+   var Handler$7 = Laya.Handler;
    var Event$z = Laya.Event;
    class Mail extends ui.Hall.MailBox.MailUI {
        constructor() {
@@ -2763,7 +2770,7 @@
                Base.publicFun.hideAlert(this.msgBox);
            });
            this.msg_list.vScrollBarSkin = "";
-           this.msg_list.renderHandler = new Handler$6(this, this.updateItem);
+           this.msg_list.renderHandler = new Handler$7(this, this.updateItem);
            this.tabButtons.checkIndex = 0;
        }
        updateItem(cell, index) {
@@ -2773,7 +2780,7 @@
            let dateText = cell.getChildByName("date_text");
            let lookupBtn = cell.getChildByName("lookup_btn");
            msgNameText.text = this.msg_list.array[index];
-           lookupBtn.clickHandler = new Handler$6(this, (e) => {
+           lookupBtn.clickHandler = new Handler$7(this, (e) => {
                Base.publicFun.showAlert(this.msgBox);
                this.alMsgName_text.text = this.msg_list.array[index];
                this.msgContent_text.text = this.msg_list.array[index];
@@ -2782,7 +2789,7 @@
    }
 
    var Event$A = Laya.Event;
-   var Handler$7 = Laya.Handler;
+   var Handler$8 = Laya.Handler;
    class Mall extends ui.Hall.Mall.MallUI {
        constructor() {
            super();
@@ -2796,7 +2803,7 @@
                Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
            });
            this.buyitem_lsit.vScrollBarSkin = "";
-           this.buyitem_lsit.renderHandler = new Handler$7(this, this.updateItem);
+           this.buyitem_lsit.renderHandler = new Handler$8(this, this.updateItem);
            this.buyitem_lsit.array = [6, 8888, 122, 122, 666, 47];
            this.tabButtons.checkIndex = 0;
        }
@@ -2845,7 +2852,7 @@
    }
 
    var Event$C = Laya.Event;
-   var Handler$8 = Laya.Handler;
+   var Handler$9 = Laya.Handler;
    class Recharge extends ui.Hall.Recharge.RechargeUI {
        constructor() {
            super();
@@ -2857,7 +2864,7 @@
            this.userid_text.text = Base.userInfo.id + "";
            this.userMoney_text.text = Base.userInfo.money + "";
            this.buyed_list.vScrollBarSkin = "";
-           this.buyed_list.renderHandler = new Handler$8(this, this.updateItem);
+           this.buyed_list.renderHandler = new Handler$9(this, this.updateItem);
            this.buyed_list.array = [3, 3, 3, 3, 3, 33, 3, 3, 3, 3, 3,];
            this.tabButtons.changeHandle = (index) => {
                let isvip = (index == 0);
@@ -2886,7 +2893,7 @@
    }
 
    var Event$D = Laya.Event;
-   var Handler$9 = Laya.Handler;
+   var Handler$a = Laya.Handler;
    class Safe extends ui.Hall.Safe.SafeUI {
        constructor() {
            super();
@@ -2951,10 +2958,10 @@
            };
            this.money_slider.percent = 0;
            this.access_list.vScrollBarSkin = "";
-           this.access_list.renderHandler = new Handler$9(this, this.updateItem);
+           this.access_list.renderHandler = new Handler$a(this, this.updateItem);
            this.access_list.array = [6, 8888, 122, 122, 666, 47];
            this.giveDetail_list.vScrollBarSkin = "";
-           this.giveDetail_list.renderHandler = new Handler$9(this, this.giveDetialUpdateItem);
+           this.giveDetail_list.renderHandler = new Handler$a(this, this.giveDetialUpdateItem);
            this.giveDetail_list.array = [6, 3, 44, 22, 666, 476, 8888, 122, 122, 666, 476, 3, 44, 22, 666, 476, 8888, 122, 122, 666, 4];
            this.recordUser_btn.on(Event$D.CLICK, this, () => {
                console.log(this.userid_input.text);
@@ -3024,7 +3031,7 @@
        }
    }
 
-   var Handler$a = Laya.Handler;
+   var Handler$b = Laya.Handler;
    var HouseItem = ui.Hall.TeaHouse.HouseItemUI;
    var Event$F = Laya.Event;
    class CreateTeaHouse extends ui.Hall.TeaHouse.CreateTeaHouseUI {
@@ -3072,8 +3079,8 @@
            this.houseList.selectEnable = true;
            this.houseList.itemRender = HouseItem;
            this.houseList.vScrollBarSkin = "";
-           this.houseList.selectHandler = new Handler$a(this, this.onSelect, null, false);
-           this.houseList.renderHandler = new Handler$a(this, this.updateItem);
+           this.houseList.selectHandler = new Handler$b(this, this.onSelect, null, false);
+           this.houseList.renderHandler = new Handler$b(this, this.updateItem);
            this.houseList.repeatX = 1;
            this.houseList.repeatY = 6;
            setTimeout(() => {
@@ -3231,7 +3238,7 @@
        }
    }
 
-   var Handler$b = Laya.Handler;
+   var Handler$c = Laya.Handler;
    var Tween$5 = Laya.Tween;
    var Event$J = Laya.Event;
    class playScene extends ui.playSceneUI {
@@ -3260,9 +3267,9 @@
            }
            Laya.loader.create(["res/LayaScene_playScene/Conventional/playScene.ls", ...this.cardMeshName], Laya.Handler.create(this, this.onCreated), Laya.Handler.create(this, (e) => {
            }));
-           this.fapai.clickHandler = new Handler$b(this, this.onClickButton, [this.fapai]);
-           this.mopai.clickHandler = new Handler$b(this, this.onClickMopai, [this.mopai]);
-           this.dapai.clickHandler = new Handler$b(this, this.onClickDapai, [this.dapai]);
+           this.fapai.clickHandler = new Handler$c(this, this.onClickButton, [this.fapai]);
+           this.mopai.clickHandler = new Handler$c(this, this.onClickMopai, [this.mopai]);
+           this.dapai.clickHandler = new Handler$c(this, this.onClickDapai, [this.dapai]);
            this._ray = new Laya.Ray(new Laya.Vector3(0, 0, 0), new Laya.Vector3(0, 0, 0));
            this.point = new Laya.Vector2();
            this._outHitResult = new Laya.HitResult();
@@ -3271,8 +3278,8 @@
            let card5 = this.downHand[5];
            card5.active = false;
            let card13 = this.downHand[13];
-           Tween$5.to(card13.transform, { localPositionZ: card13.transform.localPositionZ - 0.05, localRotationEulerY: 30 }, 300, null, Handler$b.create(this, () => {
-               Tween$5.to(card13.transform, { localPositionX: card5.transform.localPositionX, localRotationEulerY: 0 }, 500, null, Handler$b.create(this, () => {
+           Tween$5.to(card13.transform, { localPositionZ: card13.transform.localPositionZ - 0.05, localRotationEulerY: 30 }, 300, null, Handler$c.create(this, () => {
+               Tween$5.to(card13.transform, { localPositionX: card5.transform.localPositionX, localRotationEulerY: 0 }, 500, null, Handler$c.create(this, () => {
                    Tween$5.to(card13.transform, { localPositionZ: 0 }, 300);
                }));
            }));
@@ -3421,10 +3428,10 @@
            if (this._outHitResult.succeeded) {
                let index = this._outHitResult.collider.owner["index"];
                let clicked = this._outHitResult.collider.owner["clicked"];
-               Tween$5.to(this.downHand[index].transform, { localPositionZ: clicked ? -0.00 : -0.015 }, 200, null, Handler$b.create(this, () => { }));
+               Tween$5.to(this.downHand[index].transform, { localPositionZ: clicked ? -0.00 : -0.015 }, 200, null, Handler$c.create(this, () => { }));
                this.downHand.forEach(element => {
                    if (element["index"] != index && element["clicked"]) {
-                       Tween$5.to(element.transform, { localPositionZ: 0 }, 200, null, Handler$b.create(this, () => { }));
+                       Tween$5.to(element.transform, { localPositionZ: 0 }, 200, null, Handler$c.create(this, () => { }));
                        element["clicked"] = false;
                    }
                });

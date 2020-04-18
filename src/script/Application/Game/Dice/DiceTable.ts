@@ -1,4 +1,6 @@
 import { ui } from "../../../../ui/layaMaxUI";
+import Base from "../../../../base/base"
+import loading from "../Cow/CowLoading"
 import Event = Laya.Event;
 
 export default class Dicetable extends ui.Games.Dice.DiceUI{
@@ -10,21 +12,23 @@ export default class Dicetable extends ui.Games.Dice.DiceUI{
     private tweenSpeed:number;
     private originX:number;
     onAwake(){
+
        this.play_btn.on(Event.CLICK,this,()=>{
          
-          this.dice_ani.index = 0;
-          this.tweenStop = false;
-          this.tweenSpeed = 200;
-          this.originX = this.diceCup_group.x;
-          this.toLeft();
+        Base.sceneManager.changeScene("Login",new loading())
+        //   this.dice_ani.index = 0;
+        //   this.tweenStop = false;
+        //   this.tweenSpeed = 200;
+        //   this.originX = this.diceCup_group.x;
+        //   this.toLeft();
           
-          setTimeout(() => {
-            this.tweenStop = true
+        //   setTimeout(() => {
+        //     this.tweenStop = true
               
-          }, 4000);
-          for(let i = 0;i<3;i++){
-              this[`dice_${i}`].loadImage(`Dice/dice/shaizi_${Math.floor((Math.random()*5)) + 1}.png`);
-          }
+        //   }, 4000);
+        //   for(let i = 0;i<3;i++){
+        //       this[`dice_${i}`].loadImage(`Dice/dice/shaizi_${Math.floor((Math.random()*5)) + 1}.png`);
+        //   }
        })
     }
     private toLeft(){

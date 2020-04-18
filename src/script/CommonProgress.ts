@@ -15,10 +15,10 @@ export default class CommonProgress extends Laya.Sprite{
     onAwake(){
         this.bar = <Laya.Image>this.getChildByName("bar");
         this.imgmask  = this.bar.mask ;
-        Laya.timer.frameLoop(2,this,()=>{
-            if(this.m_percent>=100)
-                this.m_percent = 0;
-            this.percent = this.m_percent +1;
-        })
+        // Laya.timer.frameLoop(2,this,()=>{
+        //     if(this.m_percent>=100)
+        //         this.m_percent = 0;
+        //     this.percent = this.m_percent +1;
+        // })
     }
 }

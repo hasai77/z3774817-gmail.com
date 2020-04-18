@@ -12,12 +12,12 @@ import userInfoData from "./userInfoData"
     }
     public netWork:network;
     public publicFun:PublicFun;
-    public scene:SceneManager;
+    public sceneManager:SceneManager;
     public userInfo:userInfoData;
     constructor(){
         this.netWork = network.getinstance();
         this.publicFun = PublicFun.getinstance();
-        this.scene = SceneManager.getinstance();
+        this.sceneManager = SceneManager.getinstance();
         this.userInfo = userInfoData.getinstance();
     }
 
