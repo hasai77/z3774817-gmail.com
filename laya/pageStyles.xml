@@ -181,4 +181,11 @@
    <item name="Common/Game/BetButton/BetButton.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Common/Game/Rob/Rob.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Common/Game/UserRight.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/InvitationCode.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Common/VictoryShow.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Common/RecordShow.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Login/accountLogin.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Login/rigisteraccount.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Login/forgetPass.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Login/wachatLogin.scene" props="" ifExport="分离模式" aName=""/>
 </page>

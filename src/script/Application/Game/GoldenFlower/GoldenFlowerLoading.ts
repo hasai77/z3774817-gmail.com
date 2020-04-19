@@ -1,6 +1,6 @@
 import { ui } from "../../../../ui/layaMaxUI";
 import CommonProgress from "../../../CommonProgress"
-export default class GoldenFlowerLoading extends ui.Games.GoldenFlower.GoldenFlowerLoadingUI {
+export default class GoldenFlowerLoading extends ui.Games.GoldenFlower.GoldenFlowerLoadingUI implements interFaces.Loading {
     constructor(){
         super();
     }

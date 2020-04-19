@@ -1,6 +1,6 @@
 import { ui } from "../../../../ui/layaMaxUI";
 import CommonProgress from "../../../CommonProgress"
-export default  class BenzBmwloading extends ui.Games.BenzBmw.BenzBmwloadingUI {
+export default  class BenzBmwloading extends ui.Games.BenzBmw.BenzBmwloadingUI implements interFaces.Loading {
     constructor() {
         super();
     }

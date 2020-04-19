@@ -59,8 +59,10 @@ export default class PublicFun {
     }
 
     public setCenter(node: Laya.Sprite): void {
-        node.pivotX = node.width / 2;
-        node.pivotY = node.height / 2;
+        let rect = node.getBounds()
+        console.log(rect)
+        node.pivotX = rect.width / 2;
+        node.pivotY = rect.height / 2;
 
         node.x += node.pivotX;
         node.y += node.pivotY;

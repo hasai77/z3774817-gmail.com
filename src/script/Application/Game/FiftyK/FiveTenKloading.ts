@@ -1,6 +1,6 @@
 import { ui } from "../../../../ui/layaMaxUI";
 import CommonProgress from "../../../CommonProgress"
-export default class FiveTenKloading extends ui.Games.FiftyK.FiveTenKloadingUI {
+export default class FiveTenKloading extends ui.Games.FiftyK.FiveTenKloadingUI implements interFaces.Loading {
     constructor(){
         super();
     }

@@ -5,6 +5,7 @@ import Scene=Laya.Scene;
 var REG: Function = Laya.ClassUtils.regClass;
 export module ui {
     export class APP_LoadingUI extends Laya.Scene {
+		public progress:any;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -13,6 +14,7 @@ export module ui {
     }
     REG("ui.APP_LoadingUI",APP_LoadingUI);
     export class APP_UpdateUI extends Laya.Scene {
+		public progress:any;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -42,14 +44,6 @@ export module ui {
         }
     }
     REG("ui.playSceneUI",playSceneUI);
-    export class RecordShowUI extends Laya.Scene {
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("RecordShow");
-        }
-    }
-    REG("ui.RecordShowUI",RecordShowUI);
     export class RoomHallUI extends Laya.View {
         constructor(){ super()}
         createChildren():void {
@@ -58,14 +52,6 @@ export module ui {
         }
     }
     REG("ui.RoomHallUI",RoomHallUI);
-    export class VictoryShowUI extends Laya.Scene {
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("VictoryShow");
-        }
-    }
-    REG("ui.VictoryShowUI",VictoryShowUI);
 }
 export module ui.Common.Game.Bet {
     export class BetUI extends Laya.Scene {
@@ -208,14 +194,26 @@ export module ui.Common {
         }
     }
     REG("ui.Common.HealthGameReminderUI",HealthGameReminderUI);
-    export class InvitationCodeUI extends Laya.Scene {
+    export class RecordShowUI extends Laya.View {
+		public players:Laya.Sprite;
+		public close_btn:any;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.loadScene("Common/InvitationCode");
+            this.loadScene("Common/RecordShow");
         }
     }
-    REG("ui.Common.InvitationCodeUI",InvitationCodeUI);
+    REG("ui.Common.RecordShowUI",RecordShowUI);
+    export class VictoryShowUI extends Laya.View {
+		public players:Laya.Sprite;
+		public close_btn:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Common/VictoryShow");
+        }
+    }
+    REG("ui.Common.VictoryShowUI",VictoryShowUI);
 }
 export module ui.Common.User {
     export class UserUI extends Laya.View {
@@ -1019,6 +1017,16 @@ export module ui.Hall.Hundredsofpeople {
     }
     REG("ui.Hall.Hundredsofpeople.HundredsSelectionUI",HundredsSelectionUI);
 }
+export module ui.Hall {
+    export class InvitationCodeUI extends Laya.Scene {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Hall/InvitationCode");
+        }
+    }
+    REG("ui.Hall.InvitationCodeUI",InvitationCodeUI);
+}
 export module ui.Hall.MailBox {
     export class MailUI extends Laya.View {
 		public msgBox:Laya.Sprite;
@@ -1290,7 +1298,38 @@ export module ui.HundredsBull {
     REG("ui.HundredsBull.HundredsBullUI",HundredsBullUI);
 }
 export module ui.Login {
+    export class accountLoginUI extends Laya.View {
+		public close_btn:any;
+		public account_input:Laya.TextInput;
+		public password_input:Laya.TextInput;
+		public confirm_btn:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Login/accountLogin");
+        }
+    }
+    REG("ui.Login.accountLoginUI",accountLoginUI);
+    export class forgetPassUI extends Laya.View {
+		public close_btn:any;
+		public getCaptcha_btn:any;
+		public confirm_btn:any;
+		public account_input:Laya.TextInput;
+		public captcha_input:Laya.TextInput;
+		public confirmpass_input:Laya.TextInput;
+		public password_input:Laya.TextInput;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Login/forgetPass");
+        }
+    }
+    REG("ui.Login.forgetPassUI",forgetPassUI);
     export class LoginUI extends Laya.Scene {
+		public chatLogin_btn:any;
+		public QQLogin_btn:any;
+		public quickLogin_btn:any;
+		public accountLogin_btn:any;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
@@ -1298,4 +1337,29 @@ export module ui.Login {
         }
     }
     REG("ui.Login.LoginUI",LoginUI);
+    export class rigisteraccountUI extends Laya.View {
+		public close_btn:any;
+		public account_input:Laya.TextInput;
+		public captcha_input:Laya.TextInput;
+		public confirmpass_input:Laya.TextInput;
+		public password_input:Laya.TextInput;
+		public getCaptcha_btn:any;
+		public confirm_btn:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Login/rigisteraccount");
+        }
+    }
+    REG("ui.Login.rigisteraccountUI",rigisteraccountUI);
+    export class wachatLoginUI extends Laya.View {
+		public chat_image:Laya.Sprite;
+		public close_btn:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Login/wachatLogin");
+        }
+    }
+    REG("ui.Login.wachatLoginUI",wachatLoginUI);
 }
