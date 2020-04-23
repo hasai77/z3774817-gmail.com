@@ -359,6 +359,16 @@ export module ui.Games.BenzBmw {
     }
     REG("ui.Games.BenzBmw.SpeakUI",SpeakUI);
     export class TableUI extends Laya.Scene {
+		public go_btn:any;
+		public car_image:Laya.Sprite;
+		public dabaoshijie:Laya.Button;
+		public dabenchi:Laya.Button;
+		public dabaoma:Laya.Button;
+		public dadazhong:Laya.Button;
+		public baoshijie:Laya.Button;
+		public benchi:Laya.Button;
+		public baoma:Laya.Button;
+		public dazhong:Laya.Button;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();

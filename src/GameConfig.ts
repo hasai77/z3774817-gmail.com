@@ -21,6 +21,7 @@ import Roomselection from "./script/Application/Game/BenzBmw/Roomselection"
 import Rule from "./script/Application/Game/BenzBmw/Rule"
 import Setting from "./script/Application/Game/BenzBmw/Setting"
 import CommonCheck from "./script/CommonCheck"
+import Table from "./script/Application/Game/BenzBmw/Table"
 import CowCreateRoom from "./script/Application/Game/Cow/CowCreateRoom"
 import CommonTabButtons from "./script/CommonTabButtons"
 import CommonRadioGroup from "./script/CommonRadioGroup"
@@ -85,7 +86,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Login/Login.scene";
+    static startScene:any="Games/BenzBmw/Table.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -116,6 +117,7 @@ export default class GameConfig{
         reg("script/Application/Game/BenzBmw/Rule.ts",Rule);
         reg("script/Application/Game/BenzBmw/Setting.ts",Setting);
         reg("script/CommonCheck.ts",CommonCheck);
+        reg("script/Application/Game/BenzBmw/Table.ts",Table);
         reg("script/Application/Game/Cow/CowCreateRoom.ts",CowCreateRoom);
         reg("script/CommonTabButtons.ts",CommonTabButtons);
         reg("script/CommonRadioGroup.ts",CommonRadioGroup);

@@ -1,11 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
+    "selectedBox":38,
+    "selecteID":49,
     "searchKey":"Scene",
-    "props":{"width":1920,"sceneColor":"#000000","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Game/BenzBmw/Table.ts","height":1080},
     "nodeParent":-1,
-    "maxID":37,
+    "maxID":50,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -30,10 +31,10 @@
         {
             "x":15,
             "type":"Button",
-            "searchKey":"Button",
-            "props":{"y":857,"x":1531,"stateNum":"1","skin":"BenzBmw/Continuouspressure.png","runtime":"script/Button.ts"},
+            "searchKey":"Button,go_btn",
+            "props":{"y":857,"x":1531,"var":"go_btn","stateNum":"1","skin":"BenzBmw/Continuouspressure.png","runtime":"script/Button.ts"},
             "nodeParent":2,
-            "label":"Button",
+            "label":"go_btn",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -233,10 +234,10 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"y":400,"x":1686,"texture":"BenzBmw/Car.png"},
+            "searchKey":"Sprite,car_image,car_image",
+            "props":{"y":413.75,"x":1720.5,"width":69,"var":"car_image","texture":"BenzBmw/Car.png","rotation":358,"pivotY":76,"pivotX":35,"name":"car_image","height":151},
             "nodeParent":2,
-            "label":"Sprite",
+            "label":"car_image",
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -331,14 +332,13 @@
             "props":{"y":857,"x":423},
             "nodeParent":2,
             "label":"List",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":36,
             "child":[
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"y":9,"x":0,"stateNum":"1","skin":"BenzBmw/Chipone.png","runtime":"script/Button.ts"},
@@ -352,7 +352,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"y":0,"x":191,"stateNum":"1","skin":"BenzBmw/Chipfive.png","runtime":"script/Button.ts"},
@@ -366,7 +365,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"y":0,"x":372,"stateNum":"1","skin":"BenzBmw/Chipten.png","runtime":"script/Button.ts"},
@@ -380,7 +378,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"y":0,"x":545,"stateNum":"1","skin":"BenzBmw/Fiftychips.png","runtime":"script/Button.ts"},
@@ -394,7 +391,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"y":0,"x":739,"stateNum":"1","skin":"BenzBmw/Onehundred chips.png","runtime":"script/Button.ts"},
@@ -408,7 +404,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
                     "props":{"y":0,"x":916,"stateNum":"1","skin":"BenzBmw/Fivehundred chipsOne.png","runtime":"script/Button.ts"},
@@ -418,6 +413,146 @@
                     "isAniNode":false,
                     "hasChild":false,
                     "compId":8,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":172,"x":1593.5,"width":130,"height":110},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":37,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":343,"x":540},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isOpen":true,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":38,
+            "child":[
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,dabaoshijie,dabaoshijie",
+                    "props":{"var":"dabaoshijie","skin":"comp/button.png","name":"dabaoshijie","labelSize":30,"label":"大保时捷"},
+                    "nodeParent":38,
+                    "label":"dabaoshijie",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":39,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,dabenchi,dabenchi",
+                    "props":{"y":0,"x":216,"var":"dabenchi","skin":"comp/button.png","name":"dabenchi","labelSize":30,"label":"大奔驰"},
+                    "nodeParent":38,
+                    "label":"dabenchi",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":43,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,dabaoma,dabaoma",
+                    "props":{"y":0,"x":518,"var":"dabaoma","skin":"comp/button.png","name":"dabaoma","labelSize":30,"label":"大宝马"},
+                    "nodeParent":38,
+                    "label":"dabaoma",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":44,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,dadazhong,dadazhong",
+                    "props":{"y":0,"x":838,"var":"dadazhong","skin":"comp/button.png","name":"dadazhong","labelSize":30,"label":"大大众"},
+                    "nodeParent":38,
+                    "label":"dadazhong",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":45,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,baoshijie,baoshijie",
+                    "props":{"y":222,"x":0,"var":"baoshijie","skin":"comp/button.png","name":"baoshijie","labelSize":30,"label":"保时捷"},
+                    "nodeParent":38,
+                    "label":"baoshijie",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":46,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,benchi,benchi",
+                    "props":{"y":222,"x":216,"var":"benchi","skin":"comp/button.png","name":"benchi","labelSize":30,"label":"奔驰"},
+                    "nodeParent":38,
+                    "label":"benchi",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":47,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,baoma,baoma",
+                    "props":{"y":222,"x":518,"var":"baoma","skin":"comp/button.png","name":"baoma","labelSize":30,"label":"宝马"},
+                    "nodeParent":38,
+                    "label":"baoma",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":48,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Button",
+                    "searchKey":"Button,dazhong,dazhong",
+                    "props":{"y":222,"x":838,"var":"dazhong","skin":"comp/button.png","name":"dazhong","labelSize":30,"label":"大众"},
+                    "nodeParent":38,
+                    "label":"dazhong",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":49,
                     "child":[
                         ]
                 }]
