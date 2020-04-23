@@ -1590,7 +1590,6 @@
         }
         setCenter(node) {
             let rect = node.getBounds();
-            console.log(rect);
             node.pivotX = rect.width / 2;
             node.pivotY = rect.height / 2;
             node.x += node.pivotX;
@@ -2447,25 +2446,66 @@
     }
 
     var Event$i = Laya.Event;
-    class GoldenFlowerCreateRoom extends ui.Games.GoldenFlower.GoldenFlowerCreateRoomUI {
+    class FruitTable extends ui.Games.Fruit.FruitTableUI {
         constructor() {
             super();
+            this.fruitList = [];
+            this.curIndex = 0;
         }
         onAwake() {
-            this.close_btn.on(Event$i.CLICK, this, () => {
-                Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
+            for (let i = 0; i < this.items_group.numChildren; i++) {
+                this.fruitList.push(this.items_group.getChildAt(i));
+                Base.publicFun.setCenter(this.fruitList[i]);
+            }
+            this.start_btn.on(Event$i.CLICK, this, () => {
+                this.startAni();
             });
-            this.confirm_btn.on(Event$i.CLICK, this, () => {
-                for (let index = 0; index < this.radios.numChildren; index++) {
-                    let checkIndex = this.radios.getChildAt(index).checkIndex;
-                    console.log(checkIndex);
+            this.clear_btn.on(Event$i.CLICK, this, () => {
+                this.stopIndex = Math.floor((Math.random() * this.fruitList.length + 1));
+                console.log(this.stopIndex);
+            });
+        }
+        startAni() {
+            this.delay = 10;
+            this.stopIndex = -1;
+            this.changeOnce();
+        }
+        changeOnce() {
+            Laya.timer.frameOnce(this.delay, this, () => {
+                Laya.Tween.to(this.fruitList[this.curIndex], { scaleX: 1, scaleY: 1 }, 200);
+                this.curIndex = ++this.curIndex % this.fruitList.length;
+                Laya.Tween.to(this.fruitList[this.curIndex], { scaleX: 1.5, scaleY: 1.5 }, 200);
+                if (this.stopIndex > -1) {
+                    if (this.delay < 10) {
+                        this.delay += 2;
+                    }
+                    else if (this.delay < 20) {
+                        this.delay += 0.8;
+                    }
+                    else if (this.delay < 30) {
+                        this.delay += 0.5;
+                    }
+                }
+                else {
+                    if (this.delay > 8) {
+                        this.delay -= 0.8;
+                    }
+                    else if (this.delay > 5) {
+                        this.delay -= 0.5;
+                    }
+                    else if (this.delay > 2) {
+                        this.delay -= 0.2;
+                    }
+                }
+                if (this.stopIndex != this.curIndex || this.delay < 10) {
+                    this.changeOnce();
                 }
             });
         }
     }
 
     var Event$j = Laya.Event;
-    class LandlordCreateRoom extends ui.Games.Landlord.LandlordCreateRoomUI {
+    class GoldenFlowerCreateRoom extends ui.Games.GoldenFlower.GoldenFlowerCreateRoomUI {
         constructor() {
             super();
         }
@@ -2483,6 +2523,24 @@
     }
 
     var Event$k = Laya.Event;
+    class LandlordCreateRoom extends ui.Games.Landlord.LandlordCreateRoomUI {
+        constructor() {
+            super();
+        }
+        onAwake() {
+            this.close_btn.on(Event$k.CLICK, this, () => {
+                Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
+            });
+            this.confirm_btn.on(Event$k.CLICK, this, () => {
+                for (let index = 0; index < this.radios.numChildren; index++) {
+                    let checkIndex = this.radios.getChildAt(index).checkIndex;
+                    console.log(checkIndex);
+                }
+            });
+        }
+    }
+
+    var Event$l = Laya.Event;
     class ThanchickenCreateroom extends ui.Games.Thanchicken.ThanchickenCreateroomUI {
         constructor() {
             super();
@@ -2496,10 +2554,10 @@
             this.check_2.changeHandle = (check) => {
                 console.log(check);
             };
-            this.close_btn.on(Event$k.CLICK, this, () => {
+            this.close_btn.on(Event$l.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.confirm_btn.on(Event$k.CLICK, this, () => {
+            this.confirm_btn.on(Event$l.CLICK, this, () => {
                 for (let index = 0; index < this.radios.numChildren; index++) {
                     let checkIndex = this.radios.getChildAt(index).checkIndex;
                     console.log(checkIndex);
@@ -2510,7 +2568,7 @@
         }
     }
 
-    var Event$l = Laya.Event;
+    var Event$m = Laya.Event;
     class ThirteenBets extends ui.Games.ThirteenBets.ThirteenBetsUI {
         constructor() {
             super();
@@ -2518,14 +2576,14 @@
         onAwake() {
             Base.publicFun.selectionAdmission(this.btns_group);
             for (let index = 0; index < this.btns_group.numChildren; index++) {
-                this.btns_group.getChildAt(index).on(Event$l.CLICK, this, () => {
+                this.btns_group.getChildAt(index).on(Event$m.CLICK, this, () => {
                     console.log(index);
                 });
             }
         }
     }
 
-    var Event$m = Laya.Event;
+    var Event$n = Laya.Event;
     class ThirteenBetsCreateroom extends ui.Games.ThirteenBets.ThirteenBetsCreateRoomUI {
         constructor() {
             super();
@@ -2533,10 +2591,10 @@
         onAwake() {
             this.tabButtons.changeHandle = (index) => {
             };
-            this.close_btn.on(Event$m.CLICK, this, () => {
+            this.close_btn.on(Event$n.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.confirm_btn.on(Event$m.CLICK, this, () => {
+            this.confirm_btn.on(Event$n.CLICK, this, () => {
                 for (let index = 0; index < this.radios.numChildren; index++) {
                     let checkIndex = this.radios.getChildAt(index).checkIndex;
                     console.log(checkIndex);
@@ -2554,7 +2612,7 @@
         }
     }
 
-    var Event$n = Laya.Event;
+    var Event$o = Laya.Event;
     class ThirteenBetsSelection extends ui.Games.ThirteenBets.ThirteenBetsSelectionUI {
         constructor(index) {
             super();
@@ -2565,7 +2623,7 @@
             let showView = this.select_group.getChildAt(this.showIndex);
             showView.visible = true;
             for (let index = 0; index < showView.numChildren; index++) {
-                showView.getChildAt(index).on(Event$n.CLICK, this, () => {
+                showView.getChildAt(index).on(Event$o.CLICK, this, () => {
                     console.log(index);
                 });
             }
@@ -2578,7 +2636,7 @@
         }
     }
 
-    var Event$o = Laya.Event;
+    var Event$p = Laya.Event;
     class ThreeDuke extends ui.Games.ThreeDuke.ThreeDukeUI {
         constructor() {
             super();
@@ -2586,14 +2644,14 @@
         onAwake() {
             Base.publicFun.selectionAdmission(this.btns_group);
             for (let index = 0; index < this.btns_group.numChildren; index++) {
-                this.btns_group.getChildAt(index).on(Event$o.CLICK, this, () => {
+                this.btns_group.getChildAt(index).on(Event$p.CLICK, this, () => {
                     console.log(index);
                 });
             }
         }
     }
 
-    var Event$p = Laya.Event;
+    var Event$q = Laya.Event;
     class ThreeDukeCreateroom extends ui.Games.ThreeDuke.ThreeDukeCreateRoomUI {
         constructor() {
             super();
@@ -2601,10 +2659,10 @@
         onAwake() {
             this.tabButtons.changeHandle = (index) => {
             };
-            this.close_btn.on(Event$p.CLICK, this, () => {
+            this.close_btn.on(Event$q.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.confirm_btn.on(Event$p.CLICK, this, () => {
+            this.confirm_btn.on(Event$q.CLICK, this, () => {
                 for (let index = 0; index < this.radios.numChildren; index++) {
                     let checkIndex = this.radios.getChildAt(index).checkIndex;
                     console.log(checkIndex);
@@ -2622,7 +2680,7 @@
         }
     }
 
-    var Event$q = Laya.Event;
+    var Event$r = Laya.Event;
     class ThreeDukeSelection extends ui.Games.ThreeDuke.ThreeDukeSelectionUI {
         constructor(index) {
             super();
@@ -2633,7 +2691,7 @@
             let showView = this.select_group.getChildAt(this.showIndex);
             showView.visible = true;
             for (let index = 0; index < showView.numChildren; index++) {
-                showView.getChildAt(index).on(Event$q.CLICK, this, () => {
+                showView.getChildAt(index).on(Event$r.CLICK, this, () => {
                     console.log(index);
                 });
             }
@@ -2646,7 +2704,7 @@
         }
     }
 
-    var Event$r = Laya.Event;
+    var Event$s = Laya.Event;
     class Twentyone extends ui.Games.Twentyone.TwentyOneUI {
         constructor() {
             super();
@@ -2654,14 +2712,14 @@
         onAwake() {
             Base.publicFun.selectionAdmission(this.btns_group);
             for (let index = 0; index < this.btns_group.numChildren; index++) {
-                this.btns_group.getChildAt(index).on(Event$r.CLICK, this, () => {
+                this.btns_group.getChildAt(index).on(Event$s.CLICK, this, () => {
                     console.log(index);
                 });
             }
         }
     }
 
-    var Event$s = Laya.Event;
+    var Event$t = Laya.Event;
     class TwentyoneCreateroom extends ui.Games.Twentyone.TwentyoneCreateroomUI {
         constructor() {
             super();
@@ -2669,10 +2727,10 @@
         onAwake() {
             this.tabButtons.changeHandle = (index) => {
             };
-            this.close_btn.on(Event$s.CLICK, this, () => {
+            this.close_btn.on(Event$t.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.confirm_btn.on(Event$s.CLICK, this, () => {
+            this.confirm_btn.on(Event$t.CLICK, this, () => {
                 for (let index = 0; index < this.radios.numChildren; index++) {
                     let checkIndex = this.radios.getChildAt(index).checkIndex;
                     console.log(checkIndex);
@@ -2690,7 +2748,7 @@
         }
     }
 
-    var Event$t = Laya.Event;
+    var Event$u = Laya.Event;
     class TwentyoneSelection extends ui.Games.Twentyone.TwentyOneSelectionUI {
         constructor(index) {
             super();
@@ -2701,7 +2759,7 @@
             let showView = this.select_group.getChildAt(this.showIndex);
             showView.visible = true;
             for (let index = 0; index < showView.numChildren; index++) {
-                showView.getChildAt(index).on(Event$t.CLICK, this, () => {
+                showView.getChildAt(index).on(Event$u.CLICK, this, () => {
                     console.log(index);
                 });
             }
@@ -2714,7 +2772,7 @@
         }
     }
 
-    var Event$u = Laya.Event;
+    var Event$v = Laya.Event;
     class TwoEight extends ui.Games.TwoEight.TwoEightUI {
         constructor() {
             super();
@@ -2722,14 +2780,14 @@
         onAwake() {
             Base.publicFun.selectionAdmission(this.btns_group);
             for (let index = 0; index < this.btns_group.numChildren; index++) {
-                this.btns_group.getChildAt(index).on(Event$u.CLICK, this, () => {
+                this.btns_group.getChildAt(index).on(Event$v.CLICK, this, () => {
                     console.log(index);
                 });
             }
         }
     }
 
-    var Event$v = Laya.Event;
+    var Event$w = Laya.Event;
     class TwoEightCreateroom extends ui.Games.TwoEight.TwoEightCreateroomUI {
         constructor() {
             super();
@@ -2737,10 +2795,10 @@
         onAwake() {
             this.tabButtons.changeHandle = (index) => {
             };
-            this.close_btn.on(Event$v.CLICK, this, () => {
+            this.close_btn.on(Event$w.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.confirm_btn.on(Event$v.CLICK, this, () => {
+            this.confirm_btn.on(Event$w.CLICK, this, () => {
                 for (let index = 0; index < this.radios.numChildren; index++) {
                     let checkIndex = this.radios.getChildAt(index).checkIndex;
                     console.log(checkIndex);
@@ -2758,7 +2816,7 @@
         }
     }
 
-    var Event$w = Laya.Event;
+    var Event$x = Laya.Event;
     class TwoEightSelection extends ui.Games.TwoEight.TwoEightSelectionUI {
         constructor(index) {
             super();
@@ -2769,7 +2827,7 @@
             let showView = this.select_group.getChildAt(this.showIndex);
             showView.visible = true;
             for (let index = 0; index < showView.numChildren; index++) {
-                showView.getChildAt(index).on(Event$w.CLICK, this, () => {
+                showView.getChildAt(index).on(Event$x.CLICK, this, () => {
                     console.log(index);
                 });
             }
@@ -2782,7 +2840,7 @@
         }
     }
 
-    var Event$x = Laya.Event;
+    var Event$y = Laya.Event;
     class AgentPromotion extends ui.Hall.AgentPromotion.AgentPromotionUI {
         constructor() {
             super();
@@ -2793,7 +2851,7 @@
             this.tabButtons.changeHandle = (index) => {
                 this.setGroup(index);
             };
-            this.close_btn.on(Event$x.CLICK, this, () => {
+            this.close_btn.on(Event$y.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
         }
@@ -2830,7 +2888,7 @@
         }
     }
 
-    var Event$y = Laya.Event;
+    var Event$z = Laya.Event;
     var Handler$6 = Laya.Handler;
     class CustomerService extends ui.Hall.CustomerService.CustomerServiceUI {
         constructor() {
@@ -2838,10 +2896,10 @@
             this.maxWidch = 388;
         }
         onAwake() {
-            this.close_btn.on(Event$y.CLICK, this, () => {
+            this.close_btn.on(Event$z.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.send_btn.on(Event$y.CLICK, this, () => {
+            this.send_btn.on(Event$z.CLICK, this, () => {
                 if (this.ask_input.text)
                     this.chat_list.array = [...this.chat_list.array, {
                             type: 0,
@@ -2894,19 +2952,19 @@
         }
     }
 
-    var Event$z = Laya.Event;
+    var Event$A = Laya.Event;
     class DissolutionRoom extends ui.Hall.DissolutionRoom.DissolutionRoomUI {
         constructor() {
             super();
             this.userList = [2, 6];
         }
         onAwake() {
-            this.close_btn.on(Event$z.CLICK, this, () => {
+            this.close_btn.on(Event$A.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.cancel_btn.on(Event$z.CLICK, this, () => {
+            this.cancel_btn.on(Event$A.CLICK, this, () => {
             });
-            this.confirm_btn.on(Event$z.CLICK, this, () => {
+            this.confirm_btn.on(Event$A.CLICK, this, () => {
             });
             for (let i = 0; i < this.users_group.numChildren; i++) {
                 let user = this.users_group.getChildAt(i);
@@ -2923,21 +2981,21 @@
         }
     }
 
-    var Event$A = Laya.Event;
+    var Event$B = Laya.Event;
     class Hundredspk extends ui.Hall.Hundredsofpeople.HundredspkUI {
         constructor() {
             super();
         }
         onAwake() {
             for (let index = 0; index < 5; index++) {
-                this[`btn_${index}`].on(Event$A.CLICK, this, () => {
+                this[`btn_${index}`].on(Event$B.CLICK, this, () => {
                     console.log(index);
                 });
             }
         }
     }
 
-    var Event$B = Laya.Event;
+    var Event$C = Laya.Event;
     class HundredsSelection extends ui.Hall.Hundredsofpeople.HundredsSelectionUI {
         constructor(index) {
             super();
@@ -2948,7 +3006,7 @@
             let showView = this.select_group.getChildAt(this.showIndex);
             showView.visible = true;
             for (let index = 0; index < showView.numChildren; index++) {
-                showView.getChildAt(index).on(Event$B.CLICK, this, () => {
+                showView.getChildAt(index).on(Event$C.CLICK, this, () => {
                     console.log(index);
                 });
             }
@@ -2962,7 +3020,7 @@
     }
 
     var Handler$7 = Laya.Handler;
-    var Event$C = Laya.Event;
+    var Event$D = Laya.Event;
     class Mail extends ui.Hall.MailBox.MailUI {
         constructor() {
             super();
@@ -2974,10 +3032,10 @@
             this.tabButtons.changeHandle = (index) => {
                 this.msg_list.array = this.dataArr[index];
             };
-            this.confirm_btn.on(Event$C.CLICK, this, () => {
+            this.confirm_btn.on(Event$D.CLICK, this, () => {
                 Base.publicFun.hideAlert(this.msgBox);
             });
-            this.cancel_btn.on(Event$C.CLICK, this, () => {
+            this.cancel_btn.on(Event$D.CLICK, this, () => {
                 Base.publicFun.hideAlert(this.msgBox);
             });
             this.msg_list.vScrollBarSkin = "";
@@ -2999,7 +3057,7 @@
         }
     }
 
-    var Event$D = Laya.Event;
+    var Event$E = Laya.Event;
     var Handler$8 = Laya.Handler;
     class Mall extends ui.Hall.Mall.MallUI {
         constructor() {
@@ -3010,7 +3068,7 @@
             this.diamond_text.text = Base.userInfo.diamond + "";
             this.tabButtons.changeHandle = (index) => {
             };
-            this.close_btn.on(Event$D.CLICK, this, () => {
+            this.close_btn.on(Event$E.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
             this.buyitem_lsit.vScrollBarSkin = "";
@@ -3023,7 +3081,7 @@
             let priceText = butBtn.getChildByName("price_text");
             priceText.text = this.buyitem_lsit.array[index];
             this.showItemImage(cell, (index % 3));
-            butBtn.on(Event$D.CLICK, this, () => {
+            butBtn.on(Event$E.CLICK, this, () => {
                 console.log(this.buyitem_lsit.array[index]);
             });
         }
@@ -3035,7 +3093,7 @@
         }
     }
 
-    var Event$E = Laya.Event;
+    var Event$F = Laya.Event;
     class Promotion extends ui.Hall.Promotions.PromotionsUI {
         constructor() {
             super();
@@ -3046,7 +3104,7 @@
             this.tabButtons.changeHandle = (index) => {
                 this.setGroup(index);
             };
-            this.close_btn.on(Event$E.CLICK, this, () => {
+            this.close_btn.on(Event$F.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
             this.tabButtons.checkIndex = 0;
@@ -3062,7 +3120,7 @@
         }
     }
 
-    var Event$F = Laya.Event;
+    var Event$G = Laya.Event;
     var Handler$9 = Laya.Handler;
     class Recharge extends ui.Hall.Recharge.RechargeUI {
         constructor() {
@@ -3082,17 +3140,17 @@
                 this.vipRecharge_group.visible = isvip;
                 this.otherRecharge_group.visible = !isvip;
             };
-            this.close_btn.on(Event$F.CLICK, this, () => {
+            this.close_btn.on(Event$G.CLICK, this, () => {
                 Base.publicFun.hideAlert(this);
             });
-            this.clearInput_btn.on(Event$F.CLICK, this, () => {
+            this.clearInput_btn.on(Event$G.CLICK, this, () => {
                 this.money_input.text = "";
             });
-            this.confirm_btn.on(Event$F.CLICK, this, () => {
+            this.confirm_btn.on(Event$G.CLICK, this, () => {
                 console.log(this.money_input.text);
             });
             for (let i = 0; i < this.quickPush_btns.numChildren; i++) {
-                this.quickPush_btns.getChildAt(i).on(Event$F.CLICK, this, () => {
+                this.quickPush_btns.getChildAt(i).on(Event$G.CLICK, this, () => {
                     this.money_input.text = this.quickNumbers[i] + "";
                 });
             }
@@ -3103,7 +3161,7 @@
         }
     }
 
-    var Event$G = Laya.Event;
+    var Event$H = Laya.Event;
     var Handler$a = Laya.Handler;
     class Safe extends ui.Hall.Safe.SafeUI {
         constructor() {
@@ -3145,22 +3203,22 @@
                 }
             };
             this.tabButtons.checkIndex = 0;
-            this.close_btn.on(Event$G.CLICK, this, () => {
+            this.close_btn.on(Event$H.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.plus_btn.on(Event$G.CLICK, this, () => {
+            this.plus_btn.on(Event$H.CLICK, this, () => {
                 this.money_slider.percent = this.money_slider.percent + 1;
             });
-            this.reduce_btn.on(Event$G.CLICK, this, () => {
+            this.reduce_btn.on(Event$H.CLICK, this, () => {
                 this.money_slider.percent = this.money_slider.percent - 1;
             });
-            this.clearInput_btn.on(Event$G.CLICK, this, () => {
+            this.clearInput_btn.on(Event$H.CLICK, this, () => {
                 this.money_slider.percent = 0;
             });
-            this.accessConfirm_btn.on(Event$G.CLICK, this, () => {
+            this.accessConfirm_btn.on(Event$H.CLICK, this, () => {
                 console.log(this.money_input.text);
             });
-            this.money_input.on(Event$G.INPUT, this, (e) => {
+            this.money_input.on(Event$H.INPUT, this, (e) => {
                 let number = e.text ? parseInt(e.text) : 0;
                 this.money_slider.percent = number / Base.userInfo.money * 100;
             });
@@ -3174,17 +3232,17 @@
             this.giveDetail_list.vScrollBarSkin = "";
             this.giveDetail_list.renderHandler = new Handler$a(this, this.giveDetialUpdateItem);
             this.giveDetail_list.array = [6, 3, 44, 22, 666, 476, 8888, 122, 122, 666, 476, 3, 44, 22, 666, 476, 8888, 122, 122, 666, 4];
-            this.recordUser_btn.on(Event$G.CLICK, this, () => {
+            this.recordUser_btn.on(Event$H.CLICK, this, () => {
                 console.log(this.userid_input.text);
             });
-            this.giveRecords_btn.on(Event$G.CLICK, this, () => {
+            this.giveRecords_btn.on(Event$H.CLICK, this, () => {
                 this.tabButtons.checkIndex = 4;
             });
-            this.giveCancel_btn.on(Event$G.CLICK, this, () => {
+            this.giveCancel_btn.on(Event$H.CLICK, this, () => {
                 this.give_input.text = "";
                 this.userid_input.text = "";
             });
-            this.giveConfirm_btn.on(Event$G.CLICK, this, () => {
+            this.giveConfirm_btn.on(Event$H.CLICK, this, () => {
                 console.log(this.give_input.text);
                 console.log(this.userid_input.text);
             });
@@ -3216,7 +3274,7 @@
         }
     }
 
-    var Event$H = Laya.Event;
+    var Event$I = Laya.Event;
     class Set extends ui.Hall.Set.SetUI {
         constructor() {
             super();
@@ -3227,7 +3285,7 @@
             this.tabButtons.changeHandle = (index) => {
                 this.setGroup(index);
             };
-            this.close_btn.on(Event$H.CLICK, this, () => {
+            this.close_btn.on(Event$I.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
         }
@@ -3244,45 +3302,45 @@
 
     var Handler$b = Laya.Handler;
     var HouseItem = ui.Hall.TeaHouse.HouseItemUI;
-    var Event$I = Laya.Event;
+    var Event$J = Laya.Event;
     class CreateTeaHouse extends ui.Hall.TeaHouse.CreateTeaHouseUI {
         constructor() {
             super();
             this.houseSelect = -1;
-            this.military_btn.on(Event$I.CLICK, this, this.clickMilitary);
-            this.hall_btn.on(Event$I.CLICK, this, this.clickHall);
-            this.creat_btn.on(Event$I.CLICK, this, () => {
+            this.military_btn.on(Event$J.CLICK, this, this.clickMilitary);
+            this.hall_btn.on(Event$J.CLICK, this, this.clickHall);
+            this.creat_btn.on(Event$J.CLICK, this, () => {
                 this.creatHouse.visible = true;
                 this.joinHouse.visible = false;
             });
-            this.creat_close_btn.on(Event$I.CLICK, this, () => {
+            this.creat_close_btn.on(Event$J.CLICK, this, () => {
                 this.creatHouse.visible = false;
             });
-            this.join_btn.on(Event$I.CLICK, this, () => {
+            this.join_btn.on(Event$J.CLICK, this, () => {
                 this.creatHouse.visible = false;
                 this.joinHouse.visible = true;
             });
-            this.join_close_btn.on(Event$I.CLICK, this, () => {
+            this.join_close_btn.on(Event$J.CLICK, this, () => {
                 this.joinHouse.visible = false;
             });
             for (let i = 0; i < 10; i++) {
-                this[`num_${i}`].on(Event$I.CLICK, this, () => {
+                this[`num_${i}`].on(Event$J.CLICK, this, () => {
                     console.log(i);
                     if (this.search_text.text.length < 6)
                         this.search_text.text += i;
                 });
             }
-            this.backspace.on(Event$I.CLICK, this, () => {
+            this.backspace.on(Event$J.CLICK, this, () => {
                 if (this.search_text.text.length > 0)
                     this.search_text.text = this.search_text.text.slice(0, this.search_text.text.length - 1);
             });
-            this.search_btn.on(Event$I.CLICK, this, () => {
+            this.search_btn.on(Event$J.CLICK, this, () => {
                 console.log(parseInt(this.search_text.text));
             });
-            this.set_btn.on(Event$I.CLICK, this, () => {
+            this.set_btn.on(Event$J.CLICK, this, () => {
                 this.houseSet.visible = true;
             });
-            this.house_set_close.on(Event$I.CLICK, this, () => {
+            this.house_set_close.on(Event$J.CLICK, this, () => {
                 this.houseSet.visible = false;
             });
         }
@@ -3324,7 +3382,7 @@
         }
     }
 
-    var Event$J = Laya.Event;
+    var Event$K = Laya.Event;
     class UserInfo extends ui.Hall.UserInfo.UserInfoUI {
         constructor(index) {
             super();
@@ -3338,14 +3396,14 @@
                 this.groups.getChildAt(index).visible = true;
             };
             this.setGroupShow(this.selectIndex);
-            this.close_btn.on(Event$J.CLICK, this, () => {
+            this.close_btn.on(Event$K.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.confirmzfb_btn.on(Event$J.CLICK, this, () => {
+            this.confirmzfb_btn.on(Event$K.CLICK, this, () => {
                 console.log("姓名", this.zfbName_input.text);
                 console.log("账号", this.zfbAccount_input.text);
             });
-            this.confirmPass_btn.on(Event$J.CLICK, this, () => {
+            this.confirmPass_btn.on(Event$K.CLICK, this, () => {
                 console.log("老密码", this.oldPass_input.text);
                 console.log("新密码", this.newPass_input.text);
                 console.log("确认密码", this.confirmPass_input.text);
@@ -3362,7 +3420,7 @@
         }
     }
 
-    var Event$K = Laya.Event;
+    var Event$L = Laya.Event;
     class Withdrawal extends ui.Hall.Withdrawal.WithdrawalUI {
         constructor() {
             super();
@@ -3378,36 +3436,36 @@
                 this.yhk_group.visible = !iszfb;
                 this.zfb_group.visible = iszfb;
             };
-            this.record_btn.on(Event$K.CLICK, this, () => {
+            this.record_btn.on(Event$L.CLICK, this, () => {
                 this.widthDraw_group.visible = false;
                 this.record_group.visible = true;
             });
-            this.recordg_btn.on(Event$K.CLICK, this, () => {
+            this.recordg_btn.on(Event$L.CLICK, this, () => {
                 this.widthDraw_group.visible = true;
                 this.record_group.visible = false;
                 this.tabButtons.checkIndex = this.tabButtons.checkIndex;
             });
-            this.contact_btn.on(Event$K.CLICK, this, () => {
+            this.contact_btn.on(Event$L.CLICK, this, () => {
                 Base.publicFun.showAlert(this.addChild(new CustomerService()));
             });
-            this.bind_btn.on(Event$K.CLICK, this, () => {
+            this.bind_btn.on(Event$L.CLICK, this, () => {
                 let userView = this.addChild(new UserInfo(2));
                 userView.visible = false;
                 Base.publicFun.showAlert(userView);
             });
-            this.close_btn.on(Event$K.CLICK, this, () => {
+            this.close_btn.on(Event$L.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.clearInput_btn.on(Event$K.CLICK, this, () => {
+            this.clearInput_btn.on(Event$L.CLICK, this, () => {
                 this.money_slider.percent = 0;
             });
-            this.confirm_btn.on(Event$K.CLICK, this, () => {
+            this.confirm_btn.on(Event$L.CLICK, this, () => {
                 console.log(this.money_input.text);
             });
-            this.selectAll_btn.on(Event$K.CLICK, this, () => {
+            this.selectAll_btn.on(Event$L.CLICK, this, () => {
                 this.money_slider.percent = 100;
             });
-            this.money_input.on(Event$K.INPUT, this, (e) => {
+            this.money_input.on(Event$L.INPUT, this, (e) => {
                 let number = e.text ? parseInt(e.text) : 0;
                 this.money_slider.percent = number / Base.userInfo.money * 100;
             });
@@ -3420,7 +3478,7 @@
         }
     }
 
-    var Event$L = Laya.Event;
+    var Event$M = Laya.Event;
     class Hall extends ui.HallUI {
         constructor() {
             super();
@@ -3428,8 +3486,8 @@
         onAwake() {
             this.card = this.getChildByName("card");
             this.cardList = this.getChildByName("cardList");
-            this.market.on(Event$L.CLICK, this, this.onClickButton);
-            this.combat.on(Event$L.CLICK, this, this.onClickCombat);
+            this.market.on(Event$M.CLICK, this, this.onClickButton);
+            this.combat.on(Event$M.CLICK, this, this.onClickCombat);
         }
         onClickButton() {
             this.card.prop_topToDown("pockCard/5.png");
@@ -3439,19 +3497,19 @@
         }
     }
 
-    var Event$M = Laya.Event;
+    var Event$N = Laya.Event;
     class forgetPass extends ui.Login.forgetPassUI {
         constructor() {
             super();
         }
         onAwake() {
-            this.close_btn.on(Event$M.CLICK, this, () => {
+            this.close_btn.on(Event$N.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.getCaptcha_btn.on(Event$M.CLICK, this, () => {
+            this.getCaptcha_btn.on(Event$N.CLICK, this, () => {
                 console.log("颜真吗");
             });
-            this.confirm_btn.on(Event$M.CLICK, this, () => {
+            this.confirm_btn.on(Event$N.CLICK, this, () => {
                 console.log(this.account_input.text);
                 console.log(this.password_input.text);
                 console.log(this.confirmpass_input.text);
@@ -3460,24 +3518,8 @@
         }
     }
 
-    var Event$N = Laya.Event;
-    class accountLogin extends ui.Login.accountLoginUI {
-        constructor() {
-            super();
-        }
-        onAwake() {
-            this.close_btn.on(Event$N.CLICK, this, () => {
-                Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
-            });
-            this.confirm_btn.on(Event$N.CLICK, this, () => {
-                console.log(this.account_input.text);
-                console.log(this.password_input.text);
-            });
-        }
-    }
-
     var Event$O = Laya.Event;
-    class wachatLogin extends ui.Login.wachatLoginUI {
+    class accountLogin extends ui.Login.accountLoginUI {
         constructor() {
             super();
         }
@@ -3485,41 +3527,57 @@
             this.close_btn.on(Event$O.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
+            this.confirm_btn.on(Event$O.CLICK, this, () => {
+                console.log(this.account_input.text);
+                console.log(this.password_input.text);
+            });
         }
     }
 
     var Event$P = Laya.Event;
-    class Login extends ui.Login.LoginUI {
+    class wachatLogin extends ui.Login.wachatLoginUI {
         constructor() {
             super();
         }
         onAwake() {
-            this.accountLogin_btn.on(Event$P.CLICK, this, () => {
-                Base.publicFun.showAlert(this.addChild(new accountLogin()));
-            });
-            this.QQLogin_btn.on(Event$P.CLICK, this, () => {
-            });
-            this.chatLogin_btn.on(Event$P.CLICK, this, () => {
-                Base.publicFun.showAlert(this.addChild(new wachatLogin()));
-            });
-            this.quickLogin_btn.on(Event$P.CLICK, this, () => {
+            this.close_btn.on(Event$P.CLICK, this, () => {
+                Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
         }
     }
 
     var Event$Q = Laya.Event;
+    class Login extends ui.Login.LoginUI {
+        constructor() {
+            super();
+        }
+        onAwake() {
+            this.accountLogin_btn.on(Event$Q.CLICK, this, () => {
+                Base.publicFun.showAlert(this.addChild(new accountLogin()));
+            });
+            this.QQLogin_btn.on(Event$Q.CLICK, this, () => {
+            });
+            this.chatLogin_btn.on(Event$Q.CLICK, this, () => {
+                Base.publicFun.showAlert(this.addChild(new wachatLogin()));
+            });
+            this.quickLogin_btn.on(Event$Q.CLICK, this, () => {
+            });
+        }
+    }
+
+    var Event$R = Laya.Event;
     class rigisteraccount extends ui.Login.rigisteraccountUI {
         constructor() {
             super();
         }
         onAwake() {
-            this.close_btn.on(Event$Q.CLICK, this, () => {
+            this.close_btn.on(Event$R.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.getCaptcha_btn.on(Event$Q.CLICK, this, () => {
+            this.getCaptcha_btn.on(Event$R.CLICK, this, () => {
                 console.log("颜真吗");
             });
-            this.confirm_btn.on(Event$Q.CLICK, this, () => {
+            this.confirm_btn.on(Event$R.CLICK, this, () => {
                 console.log(this.account_input.text);
                 console.log(this.password_input.text);
                 console.log(this.confirmpass_input.text);
@@ -3530,7 +3588,7 @@
 
     var Handler$c = Laya.Handler;
     var Tween$5 = Laya.Tween;
-    var Event$R = Laya.Event;
+    var Event$S = Laya.Event;
     class playScene extends ui.playSceneUI {
         constructor() {
             super();
@@ -3705,7 +3763,7 @@
         onCreated() {
             let scene = Laya.stage.addChild(Laya.Loader.getRes("res/LayaScene_playScene/Conventional/playScene.ls"));
             scene.zOrder = -1;
-            Laya.stage.on(Event$R.MOUSE_UP, this, this.sceneClick);
+            Laya.stage.on(Event$S.MOUSE_UP, this, this.sceneClick);
             this.init(scene);
         }
         sceneClick(e) {
@@ -3771,6 +3829,7 @@
             reg("script/Application/Game/FiveArching/FiveArchingselection.ts", FiveArchingselection);
             reg("script/Application/Game/Fruit/FruitLoading.ts", FruitLoading);
             reg("script/Application/Game/Fruit/FruitSelection.ts", FruitSelection);
+            reg("script/Application/Game/Fruit/FruitTable.ts", FruitTable);
             reg("script/Application/Game/GoldenFlower/GoldenFlowerCreateRoom.ts", GoldenFlowerCreateRoom);
             reg("script/Application/Game/Landlord/LandlordCreateRoom.ts", LandlordCreateRoom);
             reg("script/Application/Game/Thanchicken/ThanchickenCreateroom.ts", ThanchickenCreateroom);
@@ -3819,7 +3878,7 @@
     GameConfig.screenMode = "none";
     GameConfig.alignV = "top";
     GameConfig.alignH = "left";
-    GameConfig.startScene = "Games/BenzBmw/Table.scene";
+    GameConfig.startScene = "Games/Fruit/FruitTable.scene";
     GameConfig.sceneRoot = "";
     GameConfig.debug = false;
     GameConfig.stat = false;

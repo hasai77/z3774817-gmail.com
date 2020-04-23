@@ -52,7 +52,7 @@ export default class PublicFun {
         this.timeLine.on(Event.COMPLETE, this, () => {
             node.active = false;
             node.visible = false;
-            completeFun && completeFun();
+            completeFun && completeFun(); 
             let view = this.viewList.pop();
             view && view.onHide && view.onHide();
         });
@@ -60,7 +60,6 @@ export default class PublicFun {
 
     public setCenter(node: Laya.Sprite): void {
         let rect = node.getBounds()
-        console.log(rect)
         node.pivotX = rect.width / 2;
         node.pivotY = rect.height / 2;
 

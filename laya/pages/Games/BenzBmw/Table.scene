@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":38,
-    "selecteID":49,
+    "selectedBox":2,
+    "selecteID":37,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Game/BenzBmw/Table.ts","height":1080},
     "nodeParent":-1,
@@ -421,7 +421,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":172,"x":1593.5,"width":130,"height":110},
+            "props":{"y":694,"x":1707,"width":130,"height":110},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -438,14 +438,13 @@
             "props":{"y":343,"x":540},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":38,
             "child":[
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,dabaoshijie,dabaoshijie",
                     "props":{"var":"dabaoshijie","skin":"comp/button.png","name":"dabaoshijie","labelSize":30,"label":"大保时捷"},
@@ -459,7 +458,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,dabenchi,dabenchi",
                     "props":{"y":0,"x":216,"var":"dabenchi","skin":"comp/button.png","name":"dabenchi","labelSize":30,"label":"大奔驰"},
@@ -473,7 +471,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,dabaoma,dabaoma",
                     "props":{"y":0,"x":518,"var":"dabaoma","skin":"comp/button.png","name":"dabaoma","labelSize":30,"label":"大宝马"},
@@ -487,7 +484,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,dadazhong,dadazhong",
                     "props":{"y":0,"x":838,"var":"dadazhong","skin":"comp/button.png","name":"dadazhong","labelSize":30,"label":"大大众"},
@@ -501,7 +497,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,baoshijie,baoshijie",
                     "props":{"y":222,"x":0,"var":"baoshijie","skin":"comp/button.png","name":"baoshijie","labelSize":30,"label":"保时捷"},
@@ -515,7 +510,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,benchi,benchi",
                     "props":{"y":222,"x":216,"var":"benchi","skin":"comp/button.png","name":"benchi","labelSize":30,"label":"奔驰"},
@@ -529,7 +523,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,baoma,baoma",
                     "props":{"y":222,"x":518,"var":"baoma","skin":"comp/button.png","name":"baoma","labelSize":30,"label":"宝马"},
@@ -543,7 +536,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,dazhong,dazhong",
                     "props":{"y":222,"x":838,"var":"dazhong","skin":"comp/button.png","name":"dazhong","labelSize":30,"label":"大众"},

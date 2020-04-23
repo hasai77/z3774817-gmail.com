@@ -36,6 +36,7 @@ import FiveArchingCreateRoom from "./script/Application/Game/FiveArching/FiveArc
 import FiveArchingselection from "./script/Application/Game/FiveArching/FiveArchingselection"
 import FruitLoading from "./script/Application/Game/Fruit/FruitLoading"
 import FruitSelection from "./script/Application/Game/Fruit/FruitSelection"
+import FruitTable from "./script/Application/Game/Fruit/FruitTable"
 import GoldenFlowerCreateRoom from "./script/Application/Game/GoldenFlower/GoldenFlowerCreateRoom"
 import LandlordCreateRoom from "./script/Application/Game/Landlord/LandlordCreateRoom"
 import ThanchickenCreateroom from "./script/Application/Game/Thanchicken/ThanchickenCreateroom"
@@ -86,7 +87,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Games/BenzBmw/Table.scene";
+    static startScene:any="Games/Fruit/FruitTable.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -132,6 +133,7 @@ export default class GameConfig{
         reg("script/Application/Game/FiveArching/FiveArchingselection.ts",FiveArchingselection);
         reg("script/Application/Game/Fruit/FruitLoading.ts",FruitLoading);
         reg("script/Application/Game/Fruit/FruitSelection.ts",FruitSelection);
+        reg("script/Application/Game/Fruit/FruitTable.ts",FruitTable);
         reg("script/Application/Game/GoldenFlower/GoldenFlowerCreateRoom.ts",GoldenFlowerCreateRoom);
         reg("script/Application/Game/Landlord/LandlordCreateRoom.ts",LandlordCreateRoom);
         reg("script/Application/Game/Thanchicken/ThanchickenCreateroom.ts",ThanchickenCreateroom);

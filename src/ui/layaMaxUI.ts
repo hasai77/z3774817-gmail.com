@@ -540,6 +540,9 @@ export module ui.Games.Fruit {
     }
     REG("ui.Games.Fruit.FruitSelectionUI",FruitSelectionUI);
     export class FruitTableUI extends Laya.Scene {
+		public clear_btn:any;
+		public start_btn:any;
+		public items_group:Laya.Sprite;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
