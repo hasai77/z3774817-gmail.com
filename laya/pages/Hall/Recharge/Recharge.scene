@@ -853,7 +853,7 @@
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,close_btn,close_btn",
-                    "props":{"y":-17,"x":1569,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+                    "props":{"y":-17,"x":1569,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
                     "nodeParent":3,
                     "label":"close_btn",
                     "isDirectory":false,
@@ -891,7 +891,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected","height":80},
+                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected","height":80},
                                     "nodeParent":5,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -905,7 +905,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect","height":80},
+                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect","height":80},
                                     "nodeParent":5,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -960,7 +960,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected","height":80},
+                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected","height":80},
                                     "nodeParent":10,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -974,7 +974,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect","height":80},
+                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect","height":80},
                                     "nodeParent":10,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -1029,7 +1029,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected","height":80},
+                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected","height":80},
                                     "nodeParent":15,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -1043,7 +1043,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect","height":80},
+                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect","height":80},
                                     "nodeParent":15,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -1098,7 +1098,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected","height":80},
+                                    "props":{"y":-2,"x":0,"width":295,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected","height":80},
                                     "nodeParent":20,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -1112,7 +1112,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect","height":80},
+                                    "props":{"y":-3,"x":0,"width":295,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect","height":80},
                                     "nodeParent":20,
                                     "label":"unselect",
                                     "isDirectory":false,

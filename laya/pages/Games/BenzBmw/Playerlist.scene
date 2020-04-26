@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":70,
-    "selecteID":49,
+    "selectedBox":2,
+    "selecteID":3,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Game/BenzBmw/Playerlist.ts","height":1080},
     "nodeParent":-1,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":3.5,"x":63,"texture":"BenzBmw/Background (2).png"},
+            "props":{"y":3.5,"x":63,"texture":"BenzBmw/Playerlist/Background (2).png"},
             "nodeParent":2,
             "label":"Sprite",
             "isOpen":true,
@@ -34,14 +34,13 @@
                     "props":{"y":255,"x":260,"width":1298,"var":"player_list","height":654},
                     "nodeParent":3,
                     "label":"player_list",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":70,
                     "child":[
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":0,"x":258,"width":156,"visible":false,"height":190},
@@ -108,7 +107,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":28,"x":-226,"texture":"BenzBmw/Godoperator.png"},
+                                    "props":{"y":28,"x":-226,"texture":"BenzBmw/Playerlist/Godoperator.png"},
                                     "nodeParent":4,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -120,7 +119,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":166,"x":258,"width":156,"visible":false,"height":190},
@@ -148,7 +146,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":28,"x":-226,"texture":"BenzBmw/Regal.png"},
+                                    "props":{"y":28,"x":-226,"texture":"BenzBmw/Playerlist/Regal.png"},
                                     "nodeParent":10,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -199,7 +197,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":166,"x":882,"width":156,"visible":false,"height":190},
@@ -227,7 +224,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":53,"x":-167,"texture":"BenzBmw/TwoCrown.png"},
+                                    "props":{"y":53,"x":-167,"texture":"BenzBmw/Playerlist/TwoCrown.png"},
                                     "nodeParent":47,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -278,7 +275,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":2,"x":882,"width":156,"visible":false,"height":190},
@@ -306,7 +302,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":53,"x":-168,"texture":"BenzBmw/OneCrown.png"},
+                                    "props":{"y":53,"x":-168,"texture":"BenzBmw/Playerlist/OneCrown.png"},
                                     "nodeParent":46,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -357,7 +353,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":318,"x":882,"width":156,"visible":false,"height":190},
@@ -385,7 +380,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":57,"x":-166,"texture":"BenzBmw/Threecrown.png"},
+                                    "props":{"y":57,"x":-166,"texture":"BenzBmw/Playerlist/Threecrown.png"},
                                     "nodeParent":48,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -436,7 +431,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":318,"x":258,"width":156,"visible":false,"height":190},
@@ -464,7 +458,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":52,"x":-168,"texture":"BenzBmw/FourCrown.png"},
+                                    "props":{"y":52,"x":-168,"texture":"BenzBmw/Playerlist/FourCrown.png"},
                                     "nodeParent":16,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -515,7 +509,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":464,"x":258,"width":156,"visible":false,"height":190},
@@ -543,7 +536,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"y":52,"x":-168,"texture":"BenzBmw/FivesCrown.png"},
+                                    "props":{"y":52,"x":-168,"texture":"BenzBmw/Playerlist/FivesCrown.png"},
                                     "nodeParent":22,
                                     "label":"Sprite",
                                     "isDirectory":false,
@@ -594,7 +587,6 @@
                                 }]
                         },
                         {
-                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":464,"x":882,"width":156,"visible":false,"height":190},

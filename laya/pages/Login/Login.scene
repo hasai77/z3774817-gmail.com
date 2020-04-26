@@ -45,7 +45,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":119,"x":600,"width":725,"texture":"Login/Beauty6.png","height":966},
+                    "props":{"y":119,"x":600,"width":725,"texture":"Login/AccountLogin/Beauty6.png","height":966},
                     "nodeParent":37,
                     "label":"Sprite",
                     "isDirectory":false,

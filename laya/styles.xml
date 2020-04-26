@@ -28,14 +28,14 @@
    <item name="AgentPromotion/IconMyreward form.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="AgentPromotion/IconQRcode.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="AgentPromotion/Iconform.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/Registered.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/RigisterAccount/Registered.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Login/PasswordBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/MiddleLoginBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/Login.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/Beauty6.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/AccountLogin/MiddleLoginBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/RigisterAccount/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/AccountLogin/Login.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/AccountLogin/Beauty6.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Login/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/Background22.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/ForgetPassWord/Background22.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Login/AccountInputBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="AgentPromotion/Reward text.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="AgentPromotion/form.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -108,61 +108,61 @@
    <item name="images/ytk.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="images/yzm.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="images/zrphb.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/9.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/8.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/7.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/6.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/53.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/52.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/51.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/50.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/5.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/49.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/48.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/-1.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/0.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/1.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/10.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/11.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/12.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/13.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/14.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/15.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/16.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/17.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/18.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/19.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/2.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/20.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/21.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/22.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/23.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/24.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/25.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/26.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/27.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/28.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/29.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/30.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/31.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/32.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/33.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/34.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/35.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/36.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/37.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/38.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/39.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/4.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/40.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/41.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/42.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/43.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/44.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/45.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/46.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="pockCard/47.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/9.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/8.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/7.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/6.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/53.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/52.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/51.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/50.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/5.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/49.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/48.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/-1.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/0.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/1.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/10.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/11.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/12.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/13.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/14.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/15.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/16.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/17.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/18.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/19.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/2.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/20.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/21.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/22.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/23.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/24.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/25.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/26.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/27.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/28.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/29.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/30.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/31.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/32.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/33.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/34.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/35.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/36.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/37.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/38.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/39.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/4.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/40.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/41.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/42.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/43.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/44.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/45.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/46.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Props/47.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Games/Hundreds/Apply_Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Games/Hundreds/Bet_Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Games/Hundreds/Other_Player_Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -173,10 +173,10 @@
    <item name="TeaHouse/TeaHousehallTrue.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="TeaHouse/VictoryRecord.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="TeaHouse/VictoryRecordFalse.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="common/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="common/ProgressBar.png" type="ProgressBar" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="common/ProgressBarBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/CommonCreatRoom/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/ProgressSlider/ProgressBar.png" type="ProgressBar" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/ProgressSlider/ProgressBarBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="FiftyK/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="FiftyK/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="FiftyK/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -362,40 +362,40 @@
    <item name="TwoEight/Text.png" type="Text" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="TwoEight/ThanTwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="TwoEight/TwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Background (2).jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Background (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Background (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Background (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Background (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Playerlist/Background (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Textfailure/Background (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/victory/Background (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Banker/Background (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Backgroundstrip.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Table/Backgroundstrip.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Backgroundstrip (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Bottom.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Button.png" type="Button" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/Bottom.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/Button.png" type="Button" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Bottomstrip.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/ButtonOK.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Chatbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Dialogue.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Introductionplay.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Speak/Chatbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Table/Dialogue.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Rule/Introductionplay.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Loadbar.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/People.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Player (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Setting.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/People.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Player/Player (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Roomselection/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Setting/Setting.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/TextONE.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/TextWithdrawmoney.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Textbox.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Textrule.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Whitebox.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/jkjkj.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/line (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/line (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Withdrawmoney/TextWithdrawmoney.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/ListMenu/Textbox.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Rule/Textrule.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Speak/Whitebox.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Setting/jkjkj.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Textfailure/line (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/victory/line (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/line.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/lineOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/lineOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/victory/lineOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Textfailure/lineOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/load.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Recharge/Text.png" type="Text" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Recharge/MiddleLoginBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -441,8 +441,8 @@
    <item name="Withdrawal/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Withdrawal/TopStatusBar.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Withdrawal/MiddleBackground (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="common/Listbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="common/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Listbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="InvitationCode/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="InvitationCode/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="InvitationCode/Digital.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -453,7 +453,7 @@
    <item name="RoomHall/Moregames.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="RoomHall/Create room.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="RoomHall/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="BenzBmw/Background (3).jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="BenzBmw/Table/Background (3).jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="MailBox/List Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="MailBox/MessageContentbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="MailBox/PrivateMessageBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -464,9 +464,9 @@
    <item name="Promotions/Image.png" type="Image" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Promotions/Pictureturntable.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Promotions/Staytuned.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/QrCodeBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/WechatLogin.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Login/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/WachatLogin/QrCodeBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/WachatLogin/WechatLogin.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Login/RigisterAccount/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Announcement/Background strip.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Announcement/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Announcement/Description.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -491,4 +491,5 @@
    <item name="Dice/record/cn_xiao_s.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Dice/record/title_shengfujil.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Dice/record/ui_history_block.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Common/Popup/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
 </res>

@@ -1,0 +1,1 @@
+{"type":"View","props":{"width":1920,"height":1080},"compId":2,"child":[{"type":"Sprite","props":{"y":239,"x":454.5,"texture":"Common/Popup/Background.png"},"compId":3},{"type":"Sprite","props":{"y":200,"x":1380,"texture":"Common/Popup/CloseButton.png"},"compId":4}],"loadList":["Common/Popup/Background.png","Common/Popup/CloseButton.png"],"loadList3D":[]}

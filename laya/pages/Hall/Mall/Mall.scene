@@ -151,7 +151,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-1,"x":0,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected"},
+                                    "props":{"y":-1,"x":0,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected"},
                                     "nodeParent":4,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -165,7 +165,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":0,"x":1,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect"},
+                                    "props":{"y":0,"x":1,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect"},
                                     "nodeParent":4,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -220,7 +220,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-1,"x":0,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected"},
+                                    "props":{"y":-1,"x":0,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected"},
                                     "nodeParent":9,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -234,7 +234,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":0,"x":1,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect"},
+                                    "props":{"y":0,"x":1,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect"},
                                     "nodeParent":9,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -289,7 +289,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-1,"x":0,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected"},
+                                    "props":{"y":-1,"x":0,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected"},
                                     "nodeParent":14,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -303,7 +303,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":0,"x":1,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect"},
+                                    "props":{"y":0,"x":1,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect"},
                                     "nodeParent":14,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -348,7 +348,7 @@
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,close_btn,close_btn",
-                    "props":{"y":-17,"x":992,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+                    "props":{"y":-17,"x":992,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
                     "nodeParent":3,
                     "label":"close_btn",
                     "isDirectory":false,

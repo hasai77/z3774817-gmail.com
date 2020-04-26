@@ -100,12 +100,12 @@
    <item name="BenzBmw/Withdrawmoney.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Login/Login.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Hall/AgentPromotion/AgentPromotion.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="Games/Cow/CowCreateRoom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Cow/RoomRule.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Cow/CowLoading.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Cow/CowRoomSelection.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/BenzBmw/Banker.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/BenzBmw/BenzBmwloading.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="Games/BenzBmw/List.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/BenzBmw/ListMenu.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/BenzBmw/Player.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/BenzBmw/Playerlist.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/BenzBmw/Roomselection.scene" props="" ifExport="分离模式" aName=""/>
@@ -130,10 +130,10 @@
    <item name="Hall/Promotions/Promotions.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Hall/Safe/Safe.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Hall/Set/Set.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="Games/FiftyK/FiftyCreateRoom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/FiftyK/FiftyRoomRule.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/FiftyK/FiveTenKSelection.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/FiftyK/FiveTenKloading.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="Games/FiveArching/FiveArchingCreateRoom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/FiveArching/FiveArchingRoomRule.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/FiveArching/FiveArchingloading.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/FiveArching/FiveArchingselection.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Fruit/FruitSelection.scene" props="" ifExport="分离模式" aName=""/>
@@ -165,18 +165,18 @@
    <item name="Games/ThreeDuke/ThreeDukeSelection.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/ThreeDuke/ThreeDukeCreateRoom.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/ThreeDuke/ThreeDuke.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="Games/Twentyone/TwentyoneCreateroom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Twentyone/TwentyoneroomRule.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Twentyone/TwentyOneloading.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Twentyone/TwentyOneSelection.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Twentyone/TwentyOne.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/TwoEight/TwoEight.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/TwoEight/TwoEightSelection.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="Games/TwoEight/TwoEightCreateroom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/TwoEight/TwoEightroomRule.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/TwoEight/TwoEightloading.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/Dice/Dice.scene" props="" ifExport="分离模式" aName=""/>
    <item name="APP_Update.scene" props="" ifExport="分离模式" aName=""/>
    <item name="VictoryShow.scene" props="" ifExport="分离模式" aName=""/>
-   <item name="GameBull/DiskTop.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Bull/BullGame.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Common/Game/Bet/Bet.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Common/Game/BetButton/BetButton.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Common/Game/Rob/Rob.scene" props="" ifExport="分离模式" aName=""/>
@@ -188,4 +188,7 @@
    <item name="Login/rigisteraccount.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Login/forgetPass.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Login/wachatLogin.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Common/PopUp.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/CommonCreatRoom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/CommonSelectiion.scene" props="" ifExport="分离模式" aName=""/>
 </page>

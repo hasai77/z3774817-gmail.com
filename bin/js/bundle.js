@@ -305,15 +305,15 @@
                 }
                 BenzBmw.BenzBmwloadingUI = BenzBmwloadingUI;
                 REG("ui.Games.BenzBmw.BenzBmwloadingUI", BenzBmwloadingUI);
-                class ListUI extends Laya.View {
+                class ListMenuUI extends Laya.View {
                     constructor() { super(); }
                     createChildren() {
                         super.createChildren();
-                        this.loadScene("Games/BenzBmw/List");
+                        this.loadScene("Games/BenzBmw/ListMenu");
                     }
                 }
-                BenzBmw.ListUI = ListUI;
-                REG("ui.Games.BenzBmw.ListUI", ListUI);
+                BenzBmw.ListMenuUI = ListMenuUI;
+                REG("ui.Games.BenzBmw.ListMenuUI", ListMenuUI);
                 class loadingUI extends Laya.View {
                     constructor() { super(); }
                     createChildren() {
@@ -3789,7 +3789,8 @@
     }
 
     class GameConfig {
-        constructor() { }
+        constructor() {
+        }
         static init() {
             var reg = Laya.ClassUtils.regClass;
             reg("script/Application/APP_Loading.ts", APP_Loading);
@@ -3878,7 +3879,7 @@
     GameConfig.screenMode = "none";
     GameConfig.alignV = "top";
     GameConfig.alignH = "left";
-    GameConfig.startScene = "Games/Fruit/FruitTable.scene";
+    GameConfig.startScene = "Games/BenzBmw/victory.scene";
     GameConfig.sceneRoot = "";
     GameConfig.debug = false;
     GameConfig.stat = false;

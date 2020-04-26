@@ -11,8 +11,6 @@ import Prop from "./script/Application/Game/Common/Game/Prop"
 import PropList from "./script/Application/Game/Common/Game/PropList"
 import TransAni from "./script/Application/Game/Common/Game/TransAni"
 import User from "./script/Application/Game/Common/User/User"
-import RecordShow from "./script/Application/Game/Common/RecordShow"
-import VictoryShow from "./script/Application/Game/Common/VictoryShow"
 import Banker from "./script/Application/Game/BenzBmw/Banker"
 import CommonSlider from "./script/CommonSlider"
 import Player from "./script/Application/Game/BenzBmw/Player"
@@ -66,10 +64,12 @@ import Mail from "./script/Application/Hall/MailBox/Mail"
 import Mall from "./script/Application/Hall/Mall/Mall"
 import Promotions from "./script/Application/Hall/Promotions/Promotions"
 import Recharge from "./script/Application/Hall/Recharge/Recharge"
+import RecordShow from "./script/Application/Game/Common/RecordShow"
 import Safe from "./script/Application/Hall/Safe/Safe"
 import Set from "./script/Application/Hall/Set/Set"
 import CreateTeaHouse from "./script/Application/Hall/TeaHouse/CreateTeaHouse"
 import UserInfo from "./script/Application/Hall/UserInfo/UserInfo"
+import VictoryShow from "./script/Application/Game/Common/VictoryShow"
 import Withdrawal from "./script/Application/Hall/Withdrawal/Withdrawal"
 import Hall from "./script/Application/Hall/Hall"
 import forgetPass from "./script/Application/Login/forgetPass"
@@ -87,7 +87,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Games/Fruit/FruitTable.scene";
+    static startScene:any="Games/Cow/CowCreateRoom.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -108,8 +108,6 @@ export default class GameConfig{
         reg("script/Application/Game/Common/Game/PropList.ts",PropList);
         reg("script/Application/Game/Common/Game/TransAni.ts",TransAni);
         reg("script/Application/Game/Common/User/User.ts",User);
-        reg("script/Application/Game/Common/RecordShow.ts",RecordShow);
-        reg("script/Application/Game/Common/VictoryShow.ts",VictoryShow);
         reg("script/Application/Game/BenzBmw/Banker.ts",Banker);
         reg("script/CommonSlider.ts",CommonSlider);
         reg("script/Application/Game/BenzBmw/Player.ts",Player);
@@ -163,10 +161,12 @@ export default class GameConfig{
         reg("script/Application/Hall/Mall/Mall.ts",Mall);
         reg("script/Application/Hall/Promotions/Promotions.ts",Promotions);
         reg("script/Application/Hall/Recharge/Recharge.ts",Recharge);
+        reg("script/Application/Game/Common/RecordShow.ts",RecordShow);
         reg("script/Application/Hall/Safe/Safe.ts",Safe);
         reg("script/Application/Hall/Set/Set.ts",Set);
         reg("script/Application/Hall/TeaHouse/CreateTeaHouse.ts",CreateTeaHouse);
         reg("script/Application/Hall/UserInfo/UserInfo.ts",UserInfo);
+        reg("script/Application/Game/Common/VictoryShow.ts",VictoryShow);
         reg("script/Application/Hall/Withdrawal/Withdrawal.ts",Withdrawal);
         reg("script/Application/Hall/Hall.ts",Hall);
         reg("script/Application/Login/forgetPass.ts",forgetPass);

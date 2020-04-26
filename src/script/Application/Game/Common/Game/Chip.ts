@@ -17,4 +17,5 @@ export default class Chip extends ui.Common.Game.ChipUI {
            this.removeSelf()
         }));
     }
+   
 }

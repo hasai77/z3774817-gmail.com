@@ -311,7 +311,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite,money_slider,money_slider",
-                            "props":{"y":399,"x":253.5,"width":600,"var":"money_slider","presetID":1,"preset":"laya/pages/prefab/CommonSlider.prefab","name":"money_slider"},
+                            "props":{"y":399,"x":253.5,"width":600,"var":"money_slider","presetID":1,"preset":"laya/pages/Common/prefab/CommonSlider.prefab","name":"money_slider"},
                             "nodeParent":15,
                             "label":"money_slider",
                             "isOpen":false,
@@ -323,7 +323,7 @@
                                 {
                                     "type":"Image",
                                     "searchKey":"Image",
-                                    "props":{"width":600,"presetID":2,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                    "props":{"width":600,"presetID":2,"preset":"laya/pages/Common/prefab/CommonSlider.prefab"},
                                     "nodeParent":48,
                                     "label":"bar",
                                     "isOpen":true,
@@ -335,7 +335,7 @@
                                         {
                                             "type":"Image",
                                             "searchKey":"Image",
-                                            "props":{"width":600,"presetID":3,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                            "props":{"width":600,"presetID":3,"preset":"laya/pages/Common/prefab/CommonSlider.prefab"},
                                             "nodeParent":49,
                                             "label":"Image(CommonSlider)",
                                             "isDirectory":false,
@@ -349,7 +349,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
-                                    "props":{"presetID":4,"preset":"laya/pages/prefab/CommonSlider.prefab"},
+                                    "props":{"presetID":4,"preset":"laya/pages/Common/prefab/CommonSlider.prefab"},
                                     "nodeParent":48,
                                     "label":"icon",
                                     "isDirectory":false,
@@ -445,7 +445,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-1,"x":0,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected"},
+                                    "props":{"y":-1,"x":0,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected"},
                                     "nodeParent":4,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -459,7 +459,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":0,"x":1,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect"},
+                                    "props":{"y":0,"x":1,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect"},
                                     "nodeParent":4,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -514,7 +514,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,selected",
-                                    "props":{"y":-1,"x":0,"visible":true,"texture":"common/CowBankerBackground.png","name":"selected"},
+                                    "props":{"y":-1,"x":0,"visible":true,"texture":"GameCommon/CommonCreatRoom/CowBankerBackground.png","name":"selected"},
                                     "nodeParent":9,
                                     "label":"selected",
                                     "isDirectory":false,
@@ -528,7 +528,7 @@
                                 {
                                     "type":"Sprite",
                                     "searchKey":"Sprite,unselect",
-                                    "props":{"y":0,"x":1,"visible":false,"texture":"common/FixedBankerBackground.png","name":"unselect"},
+                                    "props":{"y":0,"x":1,"visible":false,"texture":"GameCommon/CommonCreatRoom/FixedBankerBackground.png","name":"unselect"},
                                     "nodeParent":9,
                                     "label":"unselect",
                                     "isDirectory":false,
@@ -573,7 +573,7 @@
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,close_btn,close_btn",
-                    "props":{"y":-9,"x":1579,"var":"close_btn","stateNum":"1","skin":"common/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+                    "props":{"y":-9,"x":1579,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
                     "nodeParent":3,
                     "label":"close_btn",
                     "isDirectory":false,

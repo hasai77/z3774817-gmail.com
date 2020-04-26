@@ -2,6 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
+    "selecteID":17,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
@@ -31,7 +32,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":100,"x":498,"texture":"BenzBmw/TextWithdrawmoney.png"},
+            "props":{"y":100,"x":498,"texture":"BenzBmw/Withdrawmoney/TextWithdrawmoney.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -175,6 +176,7 @@
             "compId":17,
             "child":[
                 {
+                    "x":30,
                     "type":"Text",
                     "searchKey":"Text",
                     "props":{"y":12,"width":164,"text":"联系邮箱","height":44,"fontSize":40,"font":"Arial","color":"#8EA6ED","align":"center"},
@@ -188,6 +190,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"x":175,"width":436,"texture":"BenzBmw/Backgroundstrip (2).png","height":69},
@@ -200,6 +203,7 @@
                     "compId":19,
                     "child":[
                         {
+                            "x":45,
                             "type":"Text",
                             "searchKey":"Text",
                             "props":{"y":12.5,"x":18,"width":164,"text":"请输入联系邮箱","height":44,"fontSize":40,"font":"Arial","color":"#ffffff","align":"center"},

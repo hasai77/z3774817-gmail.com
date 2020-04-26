@@ -1,7 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":2,
+    "selectedBox":75,
+    "selecteID":81,
     "searchKey":"View",
     "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
@@ -17,7 +18,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":42,"x":77.5,"texture":"BenzBmw/Background (4).png"},
+            "props":{"y":42,"x":77.5,"texture":"BenzBmw/victory/Background (4).png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -31,7 +32,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":287,"x":468,"texture":"BenzBmw/Textvictory.png"},
+            "props":{"y":287,"x":468,"texture":"BenzBmw/victory/Textvictory.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -45,7 +46,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":701.5,"x":641,"texture":"BenzBmw/XFive (2).png"},
+            "props":{"y":701.5,"x":641,"texture":"BenzBmw/victory/XFive (2).png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -90,16 +91,17 @@
             "props":{"y":307,"x":721},
             "nodeParent":2,
             "label":"List",
-            "isOpen":null,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":83,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"x":187,"texture":"BenzBmw/line (3).png"},
+                    "props":{"x":187,"texture":"BenzBmw/victory/line (3).png"},
                     "nodeParent":83,
                     "label":"Sprite",
                     "isOpen":false,
@@ -188,9 +190,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":89,"x":144,"texture":"BenzBmw/line (3).png"},
+                    "props":{"y":89,"x":144,"texture":"BenzBmw/victory/line (3).png"},
                     "nodeParent":83,
                     "label":"Sprite",
                     "isOpen":false,
@@ -279,9 +282,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":188,"x":127,"texture":"BenzBmw/lineOne (2).png"},
+                    "props":{"y":188,"x":127,"texture":"BenzBmw/victory/lineOne (2).png"},
                     "nodeParent":83,
                     "label":"Sprite",
                     "isOpen":false,
@@ -358,7 +362,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-4,"x":16,"texture":"BenzBmw/One.png"},
+                            "props":{"y":-4,"x":16,"texture":"BenzBmw/victory/One (2).png"},
                             "nodeParent":47,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -370,9 +374,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":252,"x":97,"texture":"BenzBmw/lineOne (2).png"},
+                    "props":{"y":252,"x":97,"texture":"BenzBmw/victory/lineOne (2).png"},
                     "nodeParent":83,
                     "label":"Sprite",
                     "isOpen":false,
@@ -449,7 +454,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-4,"x":16,"texture":"BenzBmw/Two.png"},
+                            "props":{"y":-12,"x":13,"texture":"BenzBmw/victory/Two (2).png"},
                             "nodeParent":54,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -461,9 +466,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":315,"x":65,"texture":"BenzBmw/lineOne (2).png"},
+                    "props":{"y":315,"x":65,"texture":"BenzBmw/victory/lineOne (2).png"},
                     "nodeParent":83,
                     "label":"Sprite",
                     "isOpen":false,
@@ -540,7 +546,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-4,"x":22,"texture":"BenzBmw/Three.png"},
+                            "props":{"y":-4,"x":18,"texture":"BenzBmw/victory/Three (2).png"},
                             "nodeParent":61,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -552,9 +558,10 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":379,"x":32,"texture":"BenzBmw/lineOne (2).png"},
+                    "props":{"y":379,"x":32,"texture":"BenzBmw/victory/lineOne (2).png"},
                     "nodeParent":83,
                     "label":"Sprite",
                     "isOpen":false,
@@ -631,7 +638,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":9,"x":46,"texture":"BenzBmw/Four.png"},
+                            "props":{"y":9,"x":46,"texture":"BenzBmw/victory/Four (2).png"},
                             "nodeParent":68,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -643,18 +650,20 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":443,"texture":"BenzBmw/lineOne (2).png"},
+                    "props":{"y":443,"texture":"BenzBmw/victory/lineOne (2).png"},
                     "nodeParent":83,
                     "label":"Sprite",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":false,
                     "hasChild":true,
                     "compId":75,
                     "child":[
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
                             "props":{"y":0,"x":112,"width":476,"height":89},
@@ -667,6 +676,7 @@
                             "compId":76,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":2,"x":0,"width":52,"texture":"BenzBmw/AvatarONE.png","height":53},
@@ -680,6 +690,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Text",
                                     "searchKey":"Text",
                                     "props":{"y":20,"x":89,"width":128,"text":"啦啦啦啦","height":30,"fontSize":30,"font":"Arial","color":"#ffffff","align":"center"},
@@ -693,6 +704,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Text",
                                     "searchKey":"Text",
                                     "props":{"y":20,"x":243,"width":156,"text":"123456789","height":30,"fontSize":30,"font":"Arial","color":"#4696ea","align":"center"},
@@ -706,6 +718,7 @@
                                         ]
                                 },
                                 {
+                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":14,"x":415,"texture":"BenzBmw/Gold (2).png"},
@@ -720,9 +733,10 @@
                                 }]
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":9,"x":46,"texture":"BenzBmw/Five.png"},
+                            "props":{"y":9,"x":46,"texture":"BenzBmw/victory/Five (2).png"},
                             "nodeParent":75,
                             "label":"Sprite",
                             "isDirectory":false,
