@@ -1,6 +1,12 @@
-import { ui } from "../../../ui/layaMaxUI";
+import { ui } from "../../ui/layaMaxUI";
 import Handler = Laya.Handler;
 import Event = Laya.Event;
+
+
+
+
+
+
 export default class CommonCreatRoom extends ui.GameCommonUI.CommonCreatRoomUI {
     constructor() {
         super()

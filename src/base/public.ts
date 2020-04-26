@@ -78,4 +78,10 @@ export default class PublicFun {
         node.x = Laya.stage.width+node.width /2;
         Laya.Tween.to(node,{x:Laya.stage.width/2},300);
     }
+     public getRecvPos(target:Laya.Sprite){
+     
+        let x = Math.random()*(target.width-20)+10 ;
+        let y = Math.random()*(target.height-20)+10 
+        return {x,y}
+    }
 }

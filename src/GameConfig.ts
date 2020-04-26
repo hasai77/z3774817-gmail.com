@@ -2,15 +2,18 @@
 import APP_Loading from "./script/Application/APP_Loading"
 import CommonProgress from "./script/CommonProgress"
 import APP_Update from "./script/Application/APP_Update"
+import CowLoading from "./script/Application/Game/Cow/CowLoading"
+import CommonRadioGroup from "./script/CommonRadioGroup"
+import CommonRadio from "./script/CommonRadio"
 import Button from "./script/Button"
 import BetButton from "./script/Application/Game/Common/Game/BetButton"
 import Chip from "./script/Application/Game/Common/Game/Chip"
 import Deal from "./script/Application/Game/Common/Game/Deal"
 import Flicker from "./script/Application/Game/Common/Game/Flicker"
 import Prop from "./script/Application/Game/Common/Game/Prop"
-import PropList from "./script/Application/Game/Common/Game/PropList"
 import TransAni from "./script/Application/Game/Common/Game/TransAni"
 import User from "./script/Application/Game/Common/User/User"
+import FlutterText from "./script/Application/Game/Common/Game/FlutterText"
 import Banker from "./script/Application/Game/BenzBmw/Banker"
 import CommonSlider from "./script/CommonSlider"
 import Player from "./script/Application/Game/BenzBmw/Player"
@@ -20,10 +23,6 @@ import Rule from "./script/Application/Game/BenzBmw/Rule"
 import Setting from "./script/Application/Game/BenzBmw/Setting"
 import CommonCheck from "./script/CommonCheck"
 import Table from "./script/Application/Game/BenzBmw/Table"
-import CowLoading from "./script/Application/Game/Cow/CowLoading"
-import CowRoomSelection from "./script/Application/Game/Cow/CowRoomSelection"
-import CommonRadioGroup from "./script/CommonRadioGroup"
-import CommonRadio from "./script/CommonRadio"
 import DiceTable from "./script/Application/Game/Dice/DiceTable"
 import FiveTenKloading from "./script/Application/Game/FiftyK/FiveTenKloading"
 import FiveTenKSelection from "./script/Application/Game/FiftyK/FiveTenKSelection"
@@ -31,6 +30,7 @@ import FiveArchingselection from "./script/Application/Game/FiveArching/FiveArch
 import FruitLoading from "./script/Application/Game/Fruit/FruitLoading"
 import FruitSelection from "./script/Application/Game/Fruit/FruitSelection"
 import FruitTable from "./script/Application/Game/Fruit/FruitTable"
+import GoldenFlowerGame from "./script/Application/Game/GoldenFlower/GoldenFlowerGame"
 import ThirteenBets from "./script/Application/Game/ThirteenBets/ThirteenBets"
 import ThirteenBetsLoading from "./script/Application/Game/ThirteenBets/ThirteenBetsLoading"
 import ThirteenBetsSelection from "./script/Application/Game/ThirteenBets/ThirteenBetsSelection"
@@ -75,7 +75,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Hall/GameQuickChat.scene";
+    static startScene:any="Games/GoldenFlower/GoldenFlowerGame.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -87,15 +87,18 @@ export default class GameConfig{
         reg("script/Application/APP_Loading.ts",APP_Loading);
         reg("script/CommonProgress.ts",CommonProgress);
         reg("script/Application/APP_Update.ts",APP_Update);
+        reg("script/Application/Game/Cow/CowLoading.ts",CowLoading);
+        reg("script/CommonRadioGroup.ts",CommonRadioGroup);
+        reg("script/CommonRadio.ts",CommonRadio);
         reg("script/Button.ts",Button);
         reg("script/Application/Game/Common/Game/BetButton.ts",BetButton);
         reg("script/Application/Game/Common/Game/Chip.ts",Chip);
         reg("script/Application/Game/Common/Game/Deal.ts",Deal);
         reg("script/Application/Game/Common/Game/Flicker.ts",Flicker);
         reg("script/Application/Game/Common/Game/Prop.ts",Prop);
-        reg("script/Application/Game/Common/Game/PropList.ts",PropList);
         reg("script/Application/Game/Common/Game/TransAni.ts",TransAni);
         reg("script/Application/Game/Common/User/User.ts",User);
+        reg("script/Application/Game/Common/Game/FlutterText.ts",FlutterText);
         reg("script/Application/Game/BenzBmw/Banker.ts",Banker);
         reg("script/CommonSlider.ts",CommonSlider);
         reg("script/Application/Game/BenzBmw/Player.ts",Player);
@@ -105,10 +108,6 @@ export default class GameConfig{
         reg("script/Application/Game/BenzBmw/Setting.ts",Setting);
         reg("script/CommonCheck.ts",CommonCheck);
         reg("script/Application/Game/BenzBmw/Table.ts",Table);
-        reg("script/Application/Game/Cow/CowLoading.ts",CowLoading);
-        reg("script/Application/Game/Cow/CowRoomSelection.ts",CowRoomSelection);
-        reg("script/CommonRadioGroup.ts",CommonRadioGroup);
-        reg("script/CommonRadio.ts",CommonRadio);
         reg("script/Application/Game/Dice/DiceTable.ts",DiceTable);
         reg("script/Application/Game/FiftyK/FiveTenKloading.ts",FiveTenKloading);
         reg("script/Application/Game/FiftyK/FiveTenKSelection.ts",FiveTenKSelection);
@@ -116,6 +115,7 @@ export default class GameConfig{
         reg("script/Application/Game/Fruit/FruitLoading.ts",FruitLoading);
         reg("script/Application/Game/Fruit/FruitSelection.ts",FruitSelection);
         reg("script/Application/Game/Fruit/FruitTable.ts",FruitTable);
+        reg("script/Application/Game/GoldenFlower/GoldenFlowerGame.ts",GoldenFlowerGame);
         reg("script/Application/Game/ThirteenBets/ThirteenBets.ts",ThirteenBets);
         reg("script/Application/Game/ThirteenBets/ThirteenBetsLoading.ts",ThirteenBetsLoading);
         reg("script/Application/Game/ThirteenBets/ThirteenBetsSelection.ts",ThirteenBetsSelection);

@@ -1,0 +1,4 @@
+{
+  "code": "export default class RecvCoinPanel extends Laya.Sprite {\r\n    constructor() {\r\n        super();\r\n    }\r\n    getPos() {\r\n        let x = Math.random() * (this.width - 20) + 10;\r\n        let y = Math.random() * (this.height - 20) + 10;\r\n        return { x, y };\r\n    }\r\n    recvCoin(coin) {\r\n    }\r\n}\r\n",
+  "references": []
+}

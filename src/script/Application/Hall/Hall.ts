@@ -12,15 +12,15 @@ export default class Hall extends ui.HallUI{
     }
     onAwake():void{
         this.card = <Prop>this.getChildByName("card");
-        this.cardList=<PropList>this.getChildByName("cardList");
+       
         (<ActionButton>this.market).on(Event.CLICK,this,this.onClickButton);
         (<ActionButton>this.combat).on(Event.CLICK,this,this.onClickCombat);
         
     }
     private onClickButton():void{
-        this.card.prop_topToDown("pockCard/5.png");
+    
     }
     private onClickCombat():void{
-        this.cardList.propCard([]);
+       
     }
 }

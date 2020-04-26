@@ -1052,6 +1052,8 @@ D GameCommon/CheckBox
 P 38DEAE06 Selected.png
 P C32CAF73 Unselected.png
 D GameCommon/CommonCreatRoom
+P 00C590C4 ButtonClear.png
+P 948B5A8F ButtonOK.png
 P 5727DEF7 CowBankerBackground.png
 P 8B965287 Creatroom.png
 P 00CAD331 FixedBankerBackground.png

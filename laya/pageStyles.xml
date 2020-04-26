@@ -204,4 +204,7 @@
    <item name="GameCommonUI/Athletics/User.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameCommonUI/Athletics/UserLeft.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameCommonUI/Athletics/UserRight.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Bull/BullLoading.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/GoldenFlower/GoldenFlowerGame.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/FlutterText.scene" props="" ifExport="分离模式" aName=""/>
 </page>

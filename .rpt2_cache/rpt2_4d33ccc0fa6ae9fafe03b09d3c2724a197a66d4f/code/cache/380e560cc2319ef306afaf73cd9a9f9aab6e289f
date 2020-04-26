@@ -1,0 +1,7 @@
+{
+  "code": "import { ui } from \"../../../../ui/layaMaxUI\";\r\nimport Chip from \"../Common/Game/Chip\";\r\nvar Event = Laya.Event;\r\nexport default class GoldenFlowerGame extends ui.Games.GoldenFlower.GoldenFlowerGameUI {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onAwake() {\r\n        this.putChip_btn.on(Event.CLICK, this, () => {\r\n            let chip = new Chip();\r\n            this.addChild(chip);\r\n            chip.x = this.user_0.x;\r\n            chip.y = this.user_0.y;\r\n            chip.toTargerShow({ x: 555, y: 555 });\r\n        });\r\n    }\r\n}\r\n",
+  "references": [
+    "C:/Users/Administrator/Documents/majiang/src/ui/layaMaxUI.ts",
+    "C:/Users/Administrator/Documents/majiang/src/script/Application/Game/Common/Game/Chip.ts"
+  ]
+}
