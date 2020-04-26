@@ -191,4 +191,17 @@
    <item name="Common/PopUp.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameCommonUI/CommonCreatRoom.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameCommonUI/CommonSelectiion.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/Bet.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/BetButton.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/Chip.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/Deal.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/Flicker.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/PlayProp.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/Prop.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/PropList.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/Rob.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/TansAni.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/User.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/UserLeft.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/Athletics/UserRight.scene" props="" ifExport="分离模式" aName=""/>
 </page>

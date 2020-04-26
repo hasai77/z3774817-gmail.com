@@ -1,5 +1,5 @@
 import { ui } from "../../../../../ui/layaMaxUI";
-export default class User extends ui.Common.Game.UserLeftUI {
+export default class User extends ui.GameCommonUI.Athletics.UserLeftUI {
     constructor() {
         super()
     }

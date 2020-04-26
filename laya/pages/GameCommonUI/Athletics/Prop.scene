@@ -2,7 +2,6 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":3,
     "searchKey":"View",
     "props":{"width":177,"sceneColor":"#000000","runtime":"script/Application/Game/Common/Game/Prop.ts","height":244},
     "nodeParent":-1,

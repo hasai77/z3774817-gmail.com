@@ -2,7 +2,6 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":3,
     "searchKey":"View",
     "props":{"width":50,"sceneColor":"#000000","runtime":"script/Application/Game/Common/Game/Chip.ts","height":50},
     "nodeParent":-1,

@@ -2,7 +2,7 @@ import { ui } from "../../../../../ui/layaMaxUI";
  import Base from "../../../../../base/base"
  import Handler = Laya.Handler;
 import Tween = Laya.Tween;
-export default class TransAni extends ui.Common.Game.TansAniUI{
+export default class TransAni extends ui.GameCommonUI.Athletics.TansAniUI{
     constructor(){
         super()
     }

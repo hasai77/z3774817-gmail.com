@@ -1,6 +1,6 @@
 import { ui } from "../../../../../ui/layaMaxUI";
 
-export default class Flicker extends ui.Common.Game.FlickerUI{
+export default class Flicker extends ui.GameCommonUI.Athletics.FlickerUI{
     constructor(){
         super()
     }

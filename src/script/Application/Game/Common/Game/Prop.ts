@@ -2,7 +2,7 @@ import { ui } from "../../../../../ui/layaMaxUI";
 import Handler = Laya.Handler;
 import Tween = Laya.Tween;
 import Button = Laya.Button;
-export default  class Prop extends ui.Common.Game.PropUI{
+export default  class Prop extends ui.GameCommonUI.Athletics.PropUI{
     constructor(){
         super();
     }

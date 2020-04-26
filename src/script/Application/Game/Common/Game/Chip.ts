@@ -1,7 +1,7 @@
 import { ui } from "../../../../../ui/layaMaxUI";
 import Handler = Laya.Handler;
 import Tween = Laya.Tween;
-export default class Chip extends ui.Common.Game.ChipUI {
+export default class Chip extends ui.GameCommonUI.Athletics.ChipUI {
     constructor() {
         super()
     }

@@ -4,7 +4,7 @@ import User from "./User"
 import Base from "../../../../../base/base"
 import Handler = Laya.Handler;
 import Tween = Laya.Tween;
-export default class Deal extends ui.Common.Game.DealUI{
+export default class Deal extends ui.GameCommonUI.Athletics.DealUI{
     constructor(){
         super()
     }

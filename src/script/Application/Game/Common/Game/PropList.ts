@@ -1,6 +1,6 @@
 import { ui } from "../../../../../ui/layaMaxUI";
 import Prop from "./Prop"
-export default class PropList extends ui.Common.Game.PropListUI {
+export default class PropList extends ui.GameCommonUI.Athletics.PropListUI {
     constructor() {
         super()
     }

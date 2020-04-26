@@ -2,8 +2,9 @@
 import View=Laya.View;
 import Dialog=Laya.Dialog;
 import Scene=Laya.Scene;
+var REG: Function = Laya.ClassUtils.regClass;
 export module ui {
-    export class APP_LoadingUI extends Scene {
+    export class APP_LoadingUI extends Laya.Scene {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -12,7 +13,7 @@ export module ui {
         }
     }
     REG("ui.APP_LoadingUI",APP_LoadingUI);
-    export class APP_UpdateUI extends Scene {
+    export class APP_UpdateUI extends Laya.Scene {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -21,7 +22,7 @@ export module ui {
         }
     }
     REG("ui.APP_UpdateUI",APP_UpdateUI);
-    export class HallUI extends Scene {
+    export class HallUI extends Laya.Scene {
 		public combat:any;
 		public market:any;
 		public card:any;
@@ -52,6 +53,16 @@ export module ui {
     }
     REG("ui.RoomHallUI",RoomHallUI);
 }
+export module ui.Bull {
+    export class BullGameUI extends Laya.Scene {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("Bull/BullGame");
+        }
+    }
+    REG("ui.Bull.BullGameUI",BullGameUI);
+}
 export module ui.Common {
     export class PopUpUI extends Laya.View {
         constructor(){ super()}
@@ -62,15 +73,133 @@ export module ui.Common {
     }
     REG("ui.Common.PopUpUI",PopUpUI);
 }
-export module ui.GameBull {
-    export class DiskTopUI extends Scene {
+export module ui.GameCommonUI.Athletics {
+    export class BetUI extends Laya.View {
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
-            this.loadScene("GameBull/DiskTop");
+            this.loadScene("GameCommonUI/Athletics/Bet");
         }
     }
-    REG("ui.GameBull.DiskTopUI",DiskTopUI);
+    REG("ui.GameCommonUI.Athletics.BetUI",BetUI);
+    export class BetButtonUI extends Laya.View {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/BetButton");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.BetButtonUI",BetButtonUI);
+    export class ChipUI extends Laya.View {
+		public gold:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/Chip");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.ChipUI",ChipUI);
+    export class DealUI extends Laya.View {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/Deal");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.DealUI",DealUI);
+    export class FlickerUI extends Laya.View {
+		public image_0:Laya.Sprite;
+		public image_1:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/Flicker");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.FlickerUI",FlickerUI);
+    export class PlayPropUI extends Laya.View {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/PlayProp");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.PlayPropUI",PlayPropUI);
+    export class PropUI extends Laya.View {
+		public card:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/Prop");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.PropUI",PropUI);
+    export class PropListUI extends Laya.View {
+		public card_0:any;
+		public card_1:any;
+		public card_2:any;
+		public card_3:any;
+		public card_4:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/PropList");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.PropListUI",PropListUI);
+    export class RobUI extends Laya.Scene {
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/Rob");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.RobUI",RobUI);
+    export class TansAniUI extends Laya.View {
+		public image:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/TansAni");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.TansAniUI",TansAniUI);
+    export class UserUI extends Laya.View {
+		public UserImage:Laya.Image;
+		public UserName:laya.display.Text;
+		public UserScore:laya.display.Text;
+		public ShowReady:any;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/User");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.UserUI",UserUI);
+    export class UserLeftUI extends Laya.View {
+		public userInfo:any;
+		public propList:any;
+		public rush:Laya.Sprite;
+		public banker:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/UserLeft");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.UserLeftUI",UserLeftUI);
+    export class UserRightUI extends Laya.View {
+		public userInfo:any;
+		public propList:any;
+		public rush:Laya.Sprite;
+		public banker:Laya.Sprite;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/UserRight");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.UserRightUI",UserRightUI);
 }
 export module ui.GameCommonUI {
     export class CommonCreatRoomUI extends Laya.View {
@@ -92,7 +221,7 @@ export module ui.GameCommonUI {
     REG("ui.GameCommonUI.CommonSelectiionUI",CommonSelectiionUI);
 }
 export module ui.Games.BenzBmw {
-    export class BankerUI extends View {
+    export class BankerUI extends Laya.View {
 		public plus_btn:any;
 		public reduce_btn:any;
 		public money_slider:any;
@@ -106,7 +235,7 @@ export module ui.Games.BenzBmw {
         }
     }
     REG("ui.Games.BenzBmw.BankerUI",BankerUI);
-    export class BenzBmwloadingUI extends View {
+    export class BenzBmwloadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -156,7 +285,7 @@ export module ui.Games.BenzBmw {
         }
     }
     REG("ui.Games.BenzBmw.PlayerlistUI",PlayerlistUI);
-    export class RoomselectionUI extends View {
+    export class RoomselectionUI extends Laya.View {
 		public back_btn:any;
 		public about_btn:any;
 		public senior_btn:any;
@@ -184,7 +313,7 @@ export module ui.Games.BenzBmw {
         }
     }
     REG("ui.Games.BenzBmw.RuleUI",RuleUI);
-    export class SettingUI extends View {
+    export class SettingUI extends Laya.View {
 		public confirm_btn:any;
 		public close_btn:any;
 		public music_check:any;
@@ -254,24 +383,7 @@ export module ui.Games.BenzBmw {
     REG("ui.Games.BenzBmw.WithdrawmoneyUI",WithdrawmoneyUI);
 }
 export module ui.Games.Cow {
-    export class CowCreateRoomUI extends View {
-		public close_btn:any;
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public btn_2:Laya.Sprite;
-		public btn_3:Laya.Sprite;
-		public btn_4:Laya.Sprite;
-		public confirm_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/Cow/CowCreateRoom");
-        }
-    }
-    REG("ui.Games.Cow.CowCreateRoomUI",CowCreateRoomUI);
-    export class CowLoadingUI extends View {
+    export class CowLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -306,18 +418,7 @@ export module ui.Games.Dice {
     REG("ui.Games.Dice.DiceUI",DiceUI);
 }
 export module ui.Games.FiftyK {
-    export class FiftyCreateRoomUI extends View {
-		public confirm_btn:any;
-		public close_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/FiftyK/FiftyCreateRoom");
-        }
-    }
-    REG("ui.Games.FiftyK.FiftyCreateRoomUI",FiftyCreateRoomUI);
-    export class FiveTenKloadingUI extends View {
+    export class FiveTenKloadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -337,23 +438,7 @@ export module ui.Games.FiftyK {
     REG("ui.Games.FiftyK.FiveTenKSelectionUI",FiveTenKSelectionUI);
 }
 export module ui.Games.FiveArching {
-    export class FiveArchingCreateRoomUI extends View {
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public check_1:any;
-		public check_2:any;
-		public close_btn:any;
-		public confirm_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/FiveArching/FiveArchingCreateRoom");
-        }
-    }
-    REG("ui.Games.FiveArching.FiveArchingCreateRoomUI",FiveArchingCreateRoomUI);
-    export class FiveArchingloadingUI extends View {
+    export class FiveArchingloadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -373,7 +458,7 @@ export module ui.Games.FiveArching {
     REG("ui.Games.FiveArching.FiveArchingselectionUI",FiveArchingselectionUI);
 }
 export module ui.Games.Fruit {
-    export class FruitLoadingUI extends View {
+    export class FruitLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -404,18 +489,7 @@ export module ui.Games.Fruit {
     REG("ui.Games.Fruit.FruitTableUI",FruitTableUI);
 }
 export module ui.Games.GoldenFlower {
-    export class GoldenFlowerCreateRoomUI extends View {
-		public confirm_btn:any;
-		public close_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/GoldenFlower/GoldenFlowerCreateRoom");
-        }
-    }
-    REG("ui.Games.GoldenFlower.GoldenFlowerCreateRoomUI",GoldenFlowerCreateRoomUI);
-    export class GoldenFlowerLoadingUI extends View {
+    export class GoldenFlowerLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -435,18 +509,7 @@ export module ui.Games.GoldenFlower {
     REG("ui.Games.GoldenFlower.GoldenFlowerSelectionUI",GoldenFlowerSelectionUI);
 }
 export module ui.Games.Landlord {
-    export class LandlordCreateRoomUI extends View {
-		public confirm_btn:any;
-		public close_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/Landlord/LandlordCreateRoom");
-        }
-    }
-    REG("ui.Games.Landlord.LandlordCreateRoomUI",LandlordCreateRoomUI);
-    export class LandlordLoadingUI extends View {
+    export class LandlordLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -466,18 +529,7 @@ export module ui.Games.Landlord {
     REG("ui.Games.Landlord.LandlordSelectionUI",LandlordSelectionUI);
 }
 export module ui.Games.RunsFast {
-    export class RunFastCreateRoomUI extends View {
-		public close_btn:any;
-		public confirm_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/RunsFast/RunFastCreateRoom");
-        }
-    }
-    REG("ui.Games.RunsFast.RunFastCreateRoomUI",RunFastCreateRoomUI);
-    export class RunsFastLoadingUI extends View {
+    export class RunsFastLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -497,7 +549,7 @@ export module ui.Games.RunsFast {
     REG("ui.Games.RunsFast.RunsFastSelectionUI",RunsFastSelectionUI);
 }
 export module ui.Games.Stud {
-    export class StudLoadingUI extends View {
+    export class StudLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -508,7 +560,7 @@ export module ui.Games.Stud {
     REG("ui.Games.Stud.StudLoadingUI",StudLoadingUI);
 }
 export module ui.Games.TenHalf {
-    export class TenHalfLoadingUI extends Scene {
+    export class TenHalfLoadingUI extends Laya.Scene {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -519,18 +571,7 @@ export module ui.Games.TenHalf {
     REG("ui.Games.TenHalf.TenHalfLoadingUI",TenHalfLoadingUI);
 }
 export module ui.Games.Texas {
-    export class TexasCreateRoomUI extends View {
-		public close_btn:any;
-		public confirm_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/Texas/TexasCreateRoom");
-        }
-    }
-    REG("ui.Games.Texas.TexasCreateRoomUI",TexasCreateRoomUI);
-    export class TexasLoadingUI extends View {
+    export class TexasLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -559,24 +600,7 @@ export module ui.Games.Thanchicken {
         }
     }
     REG("ui.Games.Thanchicken.ThanChickenUI",ThanChickenUI);
-    export class ThanchickenCreateroomUI extends View {
-		public check_1:any;
-		public check_2:any;
-		public close_btn:any;
-		public confirm_btn:any;
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public btn_2:Laya.Sprite;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/Thanchicken/ThanchickenCreateroom");
-        }
-    }
-    REG("ui.Games.Thanchicken.ThanchickenCreateroomUI",ThanchickenCreateroomUI);
-    export class ThanChickenLoadingUI extends View {
+    export class ThanChickenLoadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -605,22 +629,7 @@ export module ui.Games.ThirteenBets {
         }
     }
     REG("ui.Games.ThirteenBets.ThirteenBetsUI",ThirteenBetsUI);
-    export class ThirteenBetsCreateRoomUI extends View {
-		public close_btn:any;
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public btn_2:Laya.Sprite;
-		public confirm_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/ThirteenBets/ThirteenBetsCreateRoom");
-        }
-    }
-    REG("ui.Games.ThirteenBets.ThirteenBetsCreateRoomUI",ThirteenBetsCreateRoomUI);
-    export class ThirteenBetsloadingUI extends View {
+    export class ThirteenBetsloadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -649,24 +658,7 @@ export module ui.Games.ThreeDuke {
         }
     }
     REG("ui.Games.ThreeDuke.ThreeDukeUI",ThreeDukeUI);
-    export class ThreeDukeCreateRoomUI extends Scene {
-		public confirm_btn:any;
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public btn_2:Laya.Sprite;
-		public btn_3:Laya.Sprite;
-		public btn_4:Laya.Sprite;
-		public close_btn:any;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/ThreeDuke/ThreeDukeCreateRoom");
-        }
-    }
-    REG("ui.Games.ThreeDuke.ThreeDukeCreateRoomUI",ThreeDukeCreateRoomUI);
-    export class ThreeDukeloadingUI extends Scene {
+    export class ThreeDukeloadingUI extends Laya.Scene {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -695,25 +687,7 @@ export module ui.Games.Twentyone {
         }
     }
     REG("ui.Games.Twentyone.TwentyOneUI",TwentyOneUI);
-    export class TwentyoneCreateroomUI extends View {
-		public check_1:any;
-		public check_2:any;
-		public close_btn:any;
-		public confirm_btn:any;
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public btn_2:Laya.Sprite;
-		public btn_3:Laya.Sprite;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/Twentyone/TwentyoneCreateroom");
-        }
-    }
-    REG("ui.Games.Twentyone.TwentyoneCreateroomUI",TwentyoneCreateroomUI);
-    export class TwentyOneloadingUI extends View {
+    export class TwentyOneloadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -742,24 +716,7 @@ export module ui.Games.TwoEight {
         }
     }
     REG("ui.Games.TwoEight.TwoEightUI",TwoEightUI);
-    export class TwoEightCreateroomUI extends View {
-		public confirm_btn:any;
-		public close_btn:any;
-		public tabButtons:any;
-		public btn_0:Laya.Sprite;
-		public btn_1:Laya.Sprite;
-		public btn_2:Laya.Sprite;
-		public btn_3:Laya.Sprite;
-		public btn_4:Laya.Sprite;
-		public radios:Laya.Sprite;
-        constructor(){ super()}
-        createChildren():void {
-            super.createChildren();
-            this.loadScene("Games/TwoEight/TwoEightCreateroom");
-        }
-    }
-    REG("ui.Games.TwoEight.TwoEightCreateroomUI",TwoEightCreateroomUI);
-    export class TwoEightloadingUI extends View {
+    export class TwoEightloadingUI extends Laya.View {
 		public progress:any;
         constructor(){ super()}
         createChildren():void {
@@ -972,7 +929,7 @@ export module ui.Hall.Recharge {
     REG("ui.Hall.Recharge.RechargeUI",RechargeUI);
 }
 export module ui.Hall.Safe {
-    export class SafeUI extends View {
+    export class SafeUI extends Laya.View {
 		public tabButtons:any;
 		public btn_0:Laya.Sprite;
 		public btn_1:Laya.Sprite;
@@ -1010,7 +967,7 @@ export module ui.Hall.Safe {
     REG("ui.Hall.Safe.SafeUI",SafeUI);
 }
 export module ui.Hall.Set {
-    export class SetUI extends View {
+    export class SetUI extends Laya.View {
 		public close_btn:any;
 		public tabButtons:any;
 		public btn_0:Laya.Sprite;
@@ -1106,7 +1063,7 @@ export module ui.Hall.UserInfo {
     REG("ui.Hall.UserInfo.UserInfoUI",UserInfoUI);
 }
 export module ui.Hall.Withdrawal {
-    export class WithdrawalUI extends View {
+    export class WithdrawalUI extends Laya.View {
 		public widthDraw_group:Laya.Sprite;
 		public money_input:Laya.TextInput;
 		public userMoney_text:laya.display.Text;
@@ -1134,7 +1091,7 @@ export module ui.Hall.Withdrawal {
     REG("ui.Hall.Withdrawal.WithdrawalUI",WithdrawalUI);
 }
 export module ui.HundredsBull {
-    export class HundredsBullUI extends Scene {
+    export class HundredsBullUI extends Laya.Scene {
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
