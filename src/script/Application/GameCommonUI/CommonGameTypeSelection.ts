@@ -61,7 +61,7 @@ export default class CommonGameTypeSelection extends ui.GameCommonUI.CommonGameT
             let button = new ActionButton(list[i]);
             button.visible = false;
             sprite.addChild(button);
-            Laya.timer.once(50, this, () => {
+            Laya.timer.once(200, this, () => {
                 base.publicFun.setCenter(button)
                 button.x = sprite.width / 2;
                 button.y = sprite.height / 2;

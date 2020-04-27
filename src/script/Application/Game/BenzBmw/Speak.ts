@@ -1,6 +1,6 @@
 import { ui } from "../../../../ui/layaMaxUI";
 
-export default class Speak extends ui.Games.BenzBmw.SpeakUI{
+export default class Speak extends ui.GameHundredsBenzBmw.SpeakUI{
     constructor(){
         super();
     }

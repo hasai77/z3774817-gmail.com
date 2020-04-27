@@ -3,7 +3,7 @@ import Chip from "../Common/Game/Chip"
 import Base from "../../../../base/base"
 import FlutterText from "../../Game/Common/Game/FlutterText"
 import Event = Laya.Event;
-export default class GoldenFlowerGame extends ui.Games.GoldenFlower.GoldenFlowerGameUI {
+export default class GoldenFlowerGame extends ui.GameAthleticsGoldenFlower.GoldenFlowerGameUI {
     constructor() {
         super()
     }

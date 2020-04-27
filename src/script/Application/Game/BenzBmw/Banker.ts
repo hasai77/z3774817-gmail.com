@@ -2,7 +2,7 @@ import { ui } from "../../../../ui/layaMaxUI";
 import CommonSlider from "../../../CommonSlider"
 import Base from "../../../../base/base"
 import Event = Laya.Event;
-export default class Banker extends ui.Games.BenzBmw.BankerUI{
+export default class Banker extends ui.GameHundredsBenzBmw.BankerUI{
     constructor(){
         super()
     }

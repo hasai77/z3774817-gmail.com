@@ -1,6 +1,329 @@
 (function () {
     'use strict';
 
+    class CommonProgress extends Laya.Sprite {
+        constructor() {
+            super();
+            this.m_percent = 0;
+        }
+        get percent() {
+            return this.m_percent;
+        }
+        set percent(perc) {
+            this.m_percent = perc > 100 ? 100 : perc;
+            this.imgmask.width = this.width / 100 * this.m_percent;
+        }
+        onAwake() {
+            this.bar = this.getChildByName("bar");
+            this.imgmask = this.bar.mask;
+        }
+    }
+
+    class CommonRadioGroup extends Laya.Sprite {
+        constructor() {
+            super();
+        }
+        onAwake() {
+            this.checkIndex = 0;
+        }
+        get checkIndex() {
+            return this.checkNum;
+        }
+        set checkIndex(index) {
+            this.childChecked_index(index);
+        }
+        childChecked_index(index) {
+            let child = this.getChildAt(index);
+            this.childChecked(child);
+        }
+        childChecked(child) {
+            for (let i = 0; i < this.numChildren; i++) {
+                let forChild = this.getChildAt(i);
+                if (forChild != child)
+                    forChild.checked = false;
+                else {
+                    forChild.checked = true;
+                    this.checkNum = i;
+                }
+            }
+        }
+    }
+
+    class CommonRadio extends Laya.Sprite {
+        constructor() {
+            super();
+            this.isCheck = false;
+        }
+        set checked(ischeck) {
+            this.isCheck = ischeck;
+            this.unSelect.visible = !ischeck;
+            this.selected.visible = ischeck;
+        }
+        get checked() {
+            return this.isCheck;
+        }
+        onAwake() {
+            this.unSelect = this.getChildByName("unSelect");
+            this.selected = this.getChildByName("selected");
+            this.checked = false;
+            this.on(Laya.Event.CLICK, this, () => {
+                if (this.parent) {
+                    this.parent.childChecked(this);
+                }
+            });
+        }
+    }
+
+    class network {
+        constructor() {
+            this.eList = new Array();
+            this.types = {};
+            this.byte = new Laya.Byte();
+            this.byte.endian = Laya.Byte.LITTLE_ENDIAN;
+            this.socket = new Laya.Socket();
+            this.socket.endian = Laya.Byte.LITTLE_ENDIAN;
+            this.connect();
+        }
+        static getinstance() {
+            if (this.instance == null)
+                this.instance = new network();
+            return this.instance;
+        }
+        addNetEvent(type, handler) {
+            this.types[type] = handler;
+        }
+        removeEvent(type) {
+            if (this.types[type])
+                delete this.types[type];
+        }
+        register(type, ui, caller) {
+        }
+        unregister(type) {
+            this.removeEvent(type + "init");
+            this.removeEvent(type + "enter");
+            this.removeEvent(type + "leave");
+        }
+        connect() {
+            this.socket.connectByUrl("ws://localhost:8989");
+            this.socket.on(Laya.Event.OPEN, this, this.openHandler);
+            this.socket.on(Laya.Event.MESSAGE, this, this.receiveHandler);
+            this.socket.on(Laya.Event.CLOSE, this, this.closeHandler);
+            this.socket.on(Laya.Event.ERROR, this, this.errorHandler);
+        }
+        openHandler(event = null) {
+            Laya.timer.frameLoop(1, this, () => {
+                if (!this.types || this.eList.length == 0)
+                    return;
+                while (this.eList.length) {
+                    this.types[this.eList[0]];
+                    this.eList.shift();
+                }
+            });
+        }
+        receiveHandler(msg = null) {
+            console.log(msg);
+            this.eList.push(msg);
+        }
+        closeHandler(e = null) {
+        }
+        errorHandler(e = null) {
+        }
+        sendMsg(type, data) {
+        }
+    }
+
+    var TimeLine = Laya.TimeLine;
+    var Event = Laya.Event;
+    class PublicFun {
+        constructor() {
+            this.timeLine = new TimeLine();
+            this.viewList = [];
+        }
+        static getinstance() {
+            if (this.instance == null)
+                this.instance = new PublicFun();
+            return this.instance;
+        }
+        showAlert(node, back) {
+            if (!node.getChildByName("back_gray")) {
+                let rect = new Laya.Sprite();
+                rect.graphics.drawRect(0, 0, Laya.stage.width, Laya.stage.height, "#333333");
+                rect.name = "back_gray";
+                rect.zOrder = -9999999;
+                rect.alpha = 0.3;
+                node.addChild(rect);
+            }
+            this.viewList.push(node);
+            this.startAlert(node);
+        }
+        startAlert(node) {
+            this.setCenter(node);
+            let x = Laya.stage.width / 2;
+            let y = Laya.stage.height / 2;
+            node.visible = true;
+            node.active = true;
+            node.x = x;
+            node.y = y;
+            node.scaleX = 0;
+            node.scaleY = 0;
+            this.timeLine = new TimeLine();
+            this.timeLine.addLabel("turnRight", 0).to(node, { scaleX: 1.1, scaleY: 1.1 }, 200, null, 0)
+                .addLabel("turnLeft", 0).to(node, { scaleX: 1, scaleY: 1 }, 100, null, 0);
+            this.timeLine.play(0, false);
+            this.timeLine.on(Event.COMPLETE, this, this.onComplete);
+            this.timeLine.on(Event.LABEL, this, this.onLabel);
+        }
+        hideAlert(node, completeFun) {
+            this.timeLine = new TimeLine();
+            this.timeLine.addLabel("turnRight", 0).to(node, { scaleX: 1.1, scaleY: 1.1 }, 200, null, 0)
+                .addLabel("turnDown", 0).to(node, { scaleX: 0, scaleY: 0 }, 200, null, 0);
+            this.timeLine.play(0, false);
+            this.timeLine.on(Event.COMPLETE, this, () => {
+                node.active = false;
+                node.visible = false;
+                completeFun && completeFun();
+                let view = this.viewList.pop();
+                view && view.onHide && view.onHide();
+            });
+        }
+        setCenter(node) {
+            let rect = node.getBounds();
+            node.pivotX = (rect.width || node.width) / 2;
+            node.pivotY = (rect.height || node.height) / 2;
+            node.x += node.pivotX;
+            node.y += node.pivotY;
+        }
+        onComplete() {
+        }
+        onLabel(label) {
+        }
+        selectionAdmission(node) {
+            this.setCenter(node);
+            node.x = Laya.stage.width + node.width;
+            Laya.Tween.to(node, { x: Laya.stage.width / 2 }, 300);
+        }
+        getRecvPos(target) {
+            let x = Math.random() * (target.width - 20) + 10;
+            let y = Math.random() * (target.height - 20) + 10;
+            return { x, y };
+        }
+    }
+
+    var Handler = Laya.Handler;
+    class SceneManager {
+        constructor() {
+            this.sceneList = {};
+            this.init();
+        }
+        ;
+        static getinstance() {
+            if (this.instance == null)
+                this.instance = new SceneManager();
+            return this.instance;
+        }
+        rigesterScene(name, param) {
+            this.sceneList[name] = param;
+        }
+        init() {
+            this.rigesterScene("Login", { url: "./Login/Login.scene" });
+        }
+        changeScene(name, loadPage, removeCur = true) {
+            loadPage.onAwake = () => {
+                Laya.Scene.open;
+                Laya.Scene.load(this.sceneList[name].url, Handler.create(this, (scene) => {
+                    if (this.curScene) {
+                        this.curScene.destroy();
+                    }
+                    Laya.timer.once(500, this, () => {
+                        Laya.Scene.root.addChild(scene);
+                        this.curScene = scene;
+                        loadPage.removeSelf();
+                    });
+                }), Handler.create(this, (e) => {
+                    loadPage.progress.percent = (e * 100);
+                }, null, false));
+            };
+            Laya.stage.addChild(loadPage);
+        }
+    }
+
+    class userInfoData {
+        constructor() {
+            this.id = 888889;
+            this.money = 675412;
+            this.nickName = "啦啦啦";
+            this.diamond = 45623;
+            this.safeMoney = 6541;
+        }
+        static getinstance() {
+            if (this.instance == null)
+                this.instance = new userInfoData();
+            return this.instance;
+        }
+    }
+
+    class base {
+        constructor() {
+            this.netWork = network.getinstance();
+            this.publicFun = PublicFun.getinstance();
+            this.sceneManager = SceneManager.getinstance();
+            this.userInfo = userInfoData.getinstance();
+        }
+        static getinstance() {
+            if (this.instance == null)
+                this.instance = new base();
+            return this.instance;
+        }
+    }
+    var Base = base.getinstance();
+
+    var Event$1 = Laya.Event;
+    var Tween = Laya.Tween;
+    class ActionButton extends Laya.Button {
+        constructor(res) {
+            super(res);
+            this.on(Event$1.MOUSE_DOWN, this, () => {
+                Tween.to(this, { scaleX: 0.9, scaleY: 0.9 }, 100);
+            });
+            this.on(Event$1.MOUSE_UP, this, () => {
+                Tween.to(this, { scaleX: 1, scaleY: 1 }, 100);
+            });
+            this.on(Event$1.MOUSE_OUT, this, () => {
+                Tween.to(this, { scaleX: 1, scaleY: 1 }, 100);
+            });
+        }
+        onAwake() {
+            this.stateNum = 1;
+            Base.publicFun.setCenter(this);
+        }
+    }
+
+    class CommonCheck extends Laya.Sprite {
+        constructor() {
+            super();
+            this.isCheck = false;
+        }
+        set checked(ischeck) {
+            this.isCheck = ischeck;
+            this.unSelect.visible = !ischeck;
+            this.selected.visible = ischeck;
+            this.changeHandle(ischeck);
+        }
+        get checked() {
+            return this.isCheck;
+        }
+        changeHandle(check) {
+        }
+        onAwake() {
+            this.unSelect = this.getChildByName("unSelect");
+            this.selected = this.getChildByName("selected");
+            this.checked = false;
+            this.on(Laya.Event.CLICK, this, () => {
+                this.checked = !this.isCheck;
+            });
+        }
+    }
+
     var REG = Laya.ClassUtils.regClass;
     var ui;
     (function (ui) {
@@ -51,46 +374,6 @@
         REG("ui.RoomHallUI", RoomHallUI);
     })(ui || (ui = {}));
     (function (ui) {
-        var Bull;
-        (function (Bull) {
-            class BullGameUI extends Laya.Scene {
-                constructor() { super(); }
-                createChildren() {
-                    super.createChildren();
-                    this.loadScene("Bull/BullGame");
-                }
-            }
-            Bull.BullGameUI = BullGameUI;
-            REG("ui.Bull.BullGameUI", BullGameUI);
-            class BullLoadingUI extends Laya.View {
-                constructor() { super(); }
-                createChildren() {
-                    super.createChildren();
-                    this.loadScene("Bull/BullLoading");
-                }
-            }
-            Bull.BullLoadingUI = BullLoadingUI;
-            REG("ui.Bull.BullLoadingUI", BullLoadingUI);
-        })(Bull = ui.Bull || (ui.Bull = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Bull;
-        (function (Bull) {
-            var Ruels;
-            (function (Ruels) {
-                class RoomRuleUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Bull/Ruels/RoomRule");
-                    }
-                }
-                Ruels.RoomRuleUI = RoomRuleUI;
-                REG("ui.Bull.Ruels.RoomRuleUI", RoomRuleUI);
-            })(Ruels = Bull.Ruels || (Bull.Ruels = {}));
-        })(Bull = ui.Bull || (ui.Bull = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
         var Common;
         (function (Common) {
             class PopUpUI extends Laya.View {
@@ -103,6 +386,414 @@
             Common.PopUpUI = PopUpUI;
             REG("ui.Common.PopUpUI", PopUpUI);
         })(Common = ui.Common || (ui.Common = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsBull;
+        (function (GameAthleticsBull) {
+            class BullGameUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsBull/BullGame");
+                }
+            }
+            GameAthleticsBull.BullGameUI = BullGameUI;
+            REG("ui.GameAthleticsBull.BullGameUI", BullGameUI);
+            class BullLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsBull/BullLoading");
+                }
+            }
+            GameAthleticsBull.BullLoadingUI = BullLoadingUI;
+            REG("ui.GameAthleticsBull.BullLoadingUI", BullLoadingUI);
+        })(GameAthleticsBull = ui.GameAthleticsBull || (ui.GameAthleticsBull = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsBull;
+        (function (GameAthleticsBull) {
+            var Ruels;
+            (function (Ruels) {
+                class RoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsBull/Ruels/RoomRule");
+                    }
+                }
+                Ruels.RoomRuleUI = RoomRuleUI;
+                REG("ui.GameAthleticsBull.Ruels.RoomRuleUI", RoomRuleUI);
+            })(Ruels = GameAthleticsBull.Ruels || (GameAthleticsBull.Ruels = {}));
+        })(GameAthleticsBull = ui.GameAthleticsBull || (ui.GameAthleticsBull = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsFiftyK;
+        (function (GameAthleticsFiftyK) {
+            class FiveTenKloadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsFiftyK/FiveTenKloading");
+                }
+            }
+            GameAthleticsFiftyK.FiveTenKloadingUI = FiveTenKloadingUI;
+            REG("ui.GameAthleticsFiftyK.FiveTenKloadingUI", FiveTenKloadingUI);
+            class FiveTenKSelectionUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsFiftyK/FiveTenKSelection");
+                }
+            }
+            GameAthleticsFiftyK.FiveTenKSelectionUI = FiveTenKSelectionUI;
+            REG("ui.GameAthleticsFiftyK.FiveTenKSelectionUI", FiveTenKSelectionUI);
+        })(GameAthleticsFiftyK = ui.GameAthleticsFiftyK || (ui.GameAthleticsFiftyK = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsFiftyK;
+        (function (GameAthleticsFiftyK) {
+            var Ruels;
+            (function (Ruels) {
+                class FiftyRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsFiftyK/Ruels/FiftyRoomRule");
+                    }
+                }
+                Ruels.FiftyRoomRuleUI = FiftyRoomRuleUI;
+                REG("ui.GameAthleticsFiftyK.Ruels.FiftyRoomRuleUI", FiftyRoomRuleUI);
+            })(Ruels = GameAthleticsFiftyK.Ruels || (GameAthleticsFiftyK.Ruels = {}));
+        })(GameAthleticsFiftyK = ui.GameAthleticsFiftyK || (ui.GameAthleticsFiftyK = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsFiveArching;
+        (function (GameAthleticsFiveArching) {
+            class FiveArchingloadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsFiveArching/FiveArchingloading");
+                }
+            }
+            GameAthleticsFiveArching.FiveArchingloadingUI = FiveArchingloadingUI;
+            REG("ui.GameAthleticsFiveArching.FiveArchingloadingUI", FiveArchingloadingUI);
+        })(GameAthleticsFiveArching = ui.GameAthleticsFiveArching || (ui.GameAthleticsFiveArching = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsFiveArching;
+        (function (GameAthleticsFiveArching) {
+            var Ruels;
+            (function (Ruels) {
+                class FiveArchingRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsFiveArching/Ruels/FiveArchingRoomRule");
+                    }
+                }
+                Ruels.FiveArchingRoomRuleUI = FiveArchingRoomRuleUI;
+                REG("ui.GameAthleticsFiveArching.Ruels.FiveArchingRoomRuleUI", FiveArchingRoomRuleUI);
+            })(Ruels = GameAthleticsFiveArching.Ruels || (GameAthleticsFiveArching.Ruels = {}));
+        })(GameAthleticsFiveArching = ui.GameAthleticsFiveArching || (ui.GameAthleticsFiveArching = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsGoldenFlower;
+        (function (GameAthleticsGoldenFlower) {
+            class GoldenFlowerGameUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsGoldenFlower/GoldenFlowerGame");
+                }
+            }
+            GameAthleticsGoldenFlower.GoldenFlowerGameUI = GoldenFlowerGameUI;
+            REG("ui.GameAthleticsGoldenFlower.GoldenFlowerGameUI", GoldenFlowerGameUI);
+            class GoldenFlowerLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsGoldenFlower/GoldenFlowerLoading");
+                }
+            }
+            GameAthleticsGoldenFlower.GoldenFlowerLoadingUI = GoldenFlowerLoadingUI;
+            REG("ui.GameAthleticsGoldenFlower.GoldenFlowerLoadingUI", GoldenFlowerLoadingUI);
+        })(GameAthleticsGoldenFlower = ui.GameAthleticsGoldenFlower || (ui.GameAthleticsGoldenFlower = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsGoldenFlower;
+        (function (GameAthleticsGoldenFlower) {
+            var Rules;
+            (function (Rules) {
+                class GoldenFlowerRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsGoldenFlower/Rules/GoldenFlowerRoomRule");
+                    }
+                }
+                Rules.GoldenFlowerRoomRuleUI = GoldenFlowerRoomRuleUI;
+                REG("ui.GameAthleticsGoldenFlower.Rules.GoldenFlowerRoomRuleUI", GoldenFlowerRoomRuleUI);
+            })(Rules = GameAthleticsGoldenFlower.Rules || (GameAthleticsGoldenFlower.Rules = {}));
+        })(GameAthleticsGoldenFlower = ui.GameAthleticsGoldenFlower || (ui.GameAthleticsGoldenFlower = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsLandlord;
+        (function (GameAthleticsLandlord) {
+            class LandlordLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsLandlord/LandlordLoading");
+                }
+            }
+            GameAthleticsLandlord.LandlordLoadingUI = LandlordLoadingUI;
+            REG("ui.GameAthleticsLandlord.LandlordLoadingUI", LandlordLoadingUI);
+            class LandlordSelectionUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsLandlord/LandlordSelection");
+                }
+            }
+            GameAthleticsLandlord.LandlordSelectionUI = LandlordSelectionUI;
+            REG("ui.GameAthleticsLandlord.LandlordSelectionUI", LandlordSelectionUI);
+        })(GameAthleticsLandlord = ui.GameAthleticsLandlord || (ui.GameAthleticsLandlord = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsLandlord;
+        (function (GameAthleticsLandlord) {
+            var Rules;
+            (function (Rules) {
+                class LandlordRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsLandlord/Rules/LandlordRoomRule");
+                    }
+                }
+                Rules.LandlordRoomRuleUI = LandlordRoomRuleUI;
+                REG("ui.GameAthleticsLandlord.Rules.LandlordRoomRuleUI", LandlordRoomRuleUI);
+            })(Rules = GameAthleticsLandlord.Rules || (GameAthleticsLandlord.Rules = {}));
+        })(GameAthleticsLandlord = ui.GameAthleticsLandlord || (ui.GameAthleticsLandlord = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsRunsFast;
+        (function (GameAthleticsRunsFast) {
+            var Rules;
+            (function (Rules) {
+                class RunFastRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsRunsFast/Rules/RunFastRoomRule");
+                    }
+                }
+                Rules.RunFastRoomRuleUI = RunFastRoomRuleUI;
+                REG("ui.GameAthleticsRunsFast.Rules.RunFastRoomRuleUI", RunFastRoomRuleUI);
+            })(Rules = GameAthleticsRunsFast.Rules || (GameAthleticsRunsFast.Rules = {}));
+        })(GameAthleticsRunsFast = ui.GameAthleticsRunsFast || (ui.GameAthleticsRunsFast = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsRunsFast;
+        (function (GameAthleticsRunsFast) {
+            class RunsFastLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsRunsFast/RunsFastLoading");
+                }
+            }
+            GameAthleticsRunsFast.RunsFastLoadingUI = RunsFastLoadingUI;
+            REG("ui.GameAthleticsRunsFast.RunsFastLoadingUI", RunsFastLoadingUI);
+        })(GameAthleticsRunsFast = ui.GameAthleticsRunsFast || (ui.GameAthleticsRunsFast = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsTexas;
+        (function (GameAthleticsTexas) {
+            var Rules;
+            (function (Rules) {
+                class TexasRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsTexas/Rules/TexasRoomRule");
+                    }
+                }
+                Rules.TexasRoomRuleUI = TexasRoomRuleUI;
+                REG("ui.GameAthleticsTexas.Rules.TexasRoomRuleUI", TexasRoomRuleUI);
+            })(Rules = GameAthleticsTexas.Rules || (GameAthleticsTexas.Rules = {}));
+        })(GameAthleticsTexas = ui.GameAthleticsTexas || (ui.GameAthleticsTexas = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsTexas;
+        (function (GameAthleticsTexas) {
+            class TexasLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsTexas/TexasLoading");
+                }
+            }
+            GameAthleticsTexas.TexasLoadingUI = TexasLoadingUI;
+            REG("ui.GameAthleticsTexas.TexasLoadingUI", TexasLoadingUI);
+        })(GameAthleticsTexas = ui.GameAthleticsTexas || (ui.GameAthleticsTexas = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsThanchicken;
+        (function (GameAthleticsThanchicken) {
+            var Rules;
+            (function (Rules) {
+                class ThanchickenCreateroomUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsThanchicken/Rules/ThanchickenCreateroom");
+                    }
+                }
+                Rules.ThanchickenCreateroomUI = ThanchickenCreateroomUI;
+                REG("ui.GameAthleticsThanchicken.Rules.ThanchickenCreateroomUI", ThanchickenCreateroomUI);
+            })(Rules = GameAthleticsThanchicken.Rules || (GameAthleticsThanchicken.Rules = {}));
+        })(GameAthleticsThanchicken = ui.GameAthleticsThanchicken || (ui.GameAthleticsThanchicken = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsThanchicken;
+        (function (GameAthleticsThanchicken) {
+            class ThanChickenLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsThanchicken/ThanChickenLoading");
+                }
+            }
+            GameAthleticsThanchicken.ThanChickenLoadingUI = ThanChickenLoadingUI;
+            REG("ui.GameAthleticsThanchicken.ThanChickenLoadingUI", ThanChickenLoadingUI);
+        })(GameAthleticsThanchicken = ui.GameAthleticsThanchicken || (ui.GameAthleticsThanchicken = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsThirteenBets;
+        (function (GameAthleticsThirteenBets) {
+            var Rules;
+            (function (Rules) {
+                class ThirteenBetsRoomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsThirteenBets/Rules/ThirteenBetsRoomRule");
+                    }
+                }
+                Rules.ThirteenBetsRoomRuleUI = ThirteenBetsRoomRuleUI;
+                REG("ui.GameAthleticsThirteenBets.Rules.ThirteenBetsRoomRuleUI", ThirteenBetsRoomRuleUI);
+            })(Rules = GameAthleticsThirteenBets.Rules || (GameAthleticsThirteenBets.Rules = {}));
+        })(GameAthleticsThirteenBets = ui.GameAthleticsThirteenBets || (ui.GameAthleticsThirteenBets = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsThirteenBets;
+        (function (GameAthleticsThirteenBets) {
+            class ThirteenBetsloadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsThirteenBets/ThirteenBetsloading");
+                }
+            }
+            GameAthleticsThirteenBets.ThirteenBetsloadingUI = ThirteenBetsloadingUI;
+            REG("ui.GameAthleticsThirteenBets.ThirteenBetsloadingUI", ThirteenBetsloadingUI);
+        })(GameAthleticsThirteenBets = ui.GameAthleticsThirteenBets || (ui.GameAthleticsThirteenBets = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsThreeDuke;
+        (function (GameAthleticsThreeDuke) {
+            var Rules;
+            (function (Rules) {
+                class ThreeDukeRoomRuleUI extends Laya.Scene {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsThreeDuke/Rules/ThreeDukeRoomRule");
+                    }
+                }
+                Rules.ThreeDukeRoomRuleUI = ThreeDukeRoomRuleUI;
+                REG("ui.GameAthleticsThreeDuke.Rules.ThreeDukeRoomRuleUI", ThreeDukeRoomRuleUI);
+            })(Rules = GameAthleticsThreeDuke.Rules || (GameAthleticsThreeDuke.Rules = {}));
+        })(GameAthleticsThreeDuke = ui.GameAthleticsThreeDuke || (ui.GameAthleticsThreeDuke = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsThreeDuke;
+        (function (GameAthleticsThreeDuke) {
+            class ThreeDukeloadingUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsThreeDuke/ThreeDukeloading");
+                }
+            }
+            GameAthleticsThreeDuke.ThreeDukeloadingUI = ThreeDukeloadingUI;
+            REG("ui.GameAthleticsThreeDuke.ThreeDukeloadingUI", ThreeDukeloadingUI);
+        })(GameAthleticsThreeDuke = ui.GameAthleticsThreeDuke || (ui.GameAthleticsThreeDuke = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsTwentyone;
+        (function (GameAthleticsTwentyone) {
+            var Rules;
+            (function (Rules) {
+                class TwentyoneroomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsTwentyone/Rules/TwentyoneroomRule");
+                    }
+                }
+                Rules.TwentyoneroomRuleUI = TwentyoneroomRuleUI;
+                REG("ui.GameAthleticsTwentyone.Rules.TwentyoneroomRuleUI", TwentyoneroomRuleUI);
+            })(Rules = GameAthleticsTwentyone.Rules || (GameAthleticsTwentyone.Rules = {}));
+        })(GameAthleticsTwentyone = ui.GameAthleticsTwentyone || (ui.GameAthleticsTwentyone = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsTwentyone;
+        (function (GameAthleticsTwentyone) {
+            class TwentyOneloadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsTwentyone/TwentyOneloading");
+                }
+            }
+            GameAthleticsTwentyone.TwentyOneloadingUI = TwentyOneloadingUI;
+            REG("ui.GameAthleticsTwentyone.TwentyOneloadingUI", TwentyOneloadingUI);
+        })(GameAthleticsTwentyone = ui.GameAthleticsTwentyone || (ui.GameAthleticsTwentyone = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsTwoEight;
+        (function (GameAthleticsTwoEight) {
+            var Rules;
+            (function (Rules) {
+                class TwoEightroomRuleUI extends Laya.View {
+                    constructor() { super(); }
+                    createChildren() {
+                        super.createChildren();
+                        this.loadScene("GameAthleticsTwoEight/Rules/TwoEightroomRule");
+                    }
+                }
+                Rules.TwoEightroomRuleUI = TwoEightroomRuleUI;
+                REG("ui.GameAthleticsTwoEight.Rules.TwoEightroomRuleUI", TwoEightroomRuleUI);
+            })(Rules = GameAthleticsTwoEight.Rules || (GameAthleticsTwoEight.Rules = {}));
+        })(GameAthleticsTwoEight = ui.GameAthleticsTwoEight || (ui.GameAthleticsTwoEight = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameAthleticsTwoEight;
+        (function (GameAthleticsTwoEight) {
+            class TwoEightloadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameAthleticsTwoEight/TwoEightloading");
+                }
+            }
+            GameAthleticsTwoEight.TwoEightloadingUI = TwoEightloadingUI;
+            REG("ui.GameAthleticsTwoEight.TwoEightloadingUI", TwoEightloadingUI);
+        })(GameAthleticsTwoEight = ui.GameAthleticsTwoEight || (ui.GameAthleticsTwoEight = {}));
     })(ui || (ui = {}));
     (function (ui) {
         var GameCommonUI;
@@ -262,658 +953,186 @@
         })(GameCommonUI = ui.GameCommonUI || (ui.GameCommonUI = {}));
     })(ui || (ui = {}));
     (function (ui) {
-        var Games;
-        (function (Games) {
-            var BenzBmw;
-            (function (BenzBmw) {
-                class BankerUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Banker");
-                    }
+        var GameHundredsBenzBmw;
+        (function (GameHundredsBenzBmw) {
+            class BankerUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Banker");
                 }
-                BenzBmw.BankerUI = BankerUI;
-                REG("ui.Games.BenzBmw.BankerUI", BankerUI);
-                class BenzBmwloadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/BenzBmwloading");
-                    }
+            }
+            GameHundredsBenzBmw.BankerUI = BankerUI;
+            REG("ui.GameHundredsBenzBmw.BankerUI", BankerUI);
+            class BenzBmwloadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/BenzBmwloading");
                 }
-                BenzBmw.BenzBmwloadingUI = BenzBmwloadingUI;
-                REG("ui.Games.BenzBmw.BenzBmwloadingUI", BenzBmwloadingUI);
-                class ListMenuUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/ListMenu");
-                    }
+            }
+            GameHundredsBenzBmw.BenzBmwloadingUI = BenzBmwloadingUI;
+            REG("ui.GameHundredsBenzBmw.BenzBmwloadingUI", BenzBmwloadingUI);
+            class ListMenuUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/ListMenu");
                 }
-                BenzBmw.ListMenuUI = ListMenuUI;
-                REG("ui.Games.BenzBmw.ListMenuUI", ListMenuUI);
-                class loadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/loading");
-                    }
+            }
+            GameHundredsBenzBmw.ListMenuUI = ListMenuUI;
+            REG("ui.GameHundredsBenzBmw.ListMenuUI", ListMenuUI);
+            class loadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/loading");
                 }
-                BenzBmw.loadingUI = loadingUI;
-                REG("ui.Games.BenzBmw.loadingUI", loadingUI);
-                class PlayerUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Player");
-                    }
+            }
+            GameHundredsBenzBmw.loadingUI = loadingUI;
+            REG("ui.GameHundredsBenzBmw.loadingUI", loadingUI);
+            class PlayerUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Player");
                 }
-                BenzBmw.PlayerUI = PlayerUI;
-                REG("ui.Games.BenzBmw.PlayerUI", PlayerUI);
-                class PlayerlistUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Playerlist");
-                    }
+            }
+            GameHundredsBenzBmw.PlayerUI = PlayerUI;
+            REG("ui.GameHundredsBenzBmw.PlayerUI", PlayerUI);
+            class PlayerlistUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Playerlist");
                 }
-                BenzBmw.PlayerlistUI = PlayerlistUI;
-                REG("ui.Games.BenzBmw.PlayerlistUI", PlayerlistUI);
-                class RoomselectionUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Roomselection");
-                    }
+            }
+            GameHundredsBenzBmw.PlayerlistUI = PlayerlistUI;
+            REG("ui.GameHundredsBenzBmw.PlayerlistUI", PlayerlistUI);
+            class RoomselectionUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Roomselection");
                 }
-                BenzBmw.RoomselectionUI = RoomselectionUI;
-                REG("ui.Games.BenzBmw.RoomselectionUI", RoomselectionUI);
-                class RuleUI extends Laya.Dialog {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Rule");
-                    }
+            }
+            GameHundredsBenzBmw.RoomselectionUI = RoomselectionUI;
+            REG("ui.GameHundredsBenzBmw.RoomselectionUI", RoomselectionUI);
+            class RuleUI extends Laya.Dialog {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Rule");
                 }
-                BenzBmw.RuleUI = RuleUI;
-                REG("ui.Games.BenzBmw.RuleUI", RuleUI);
-                class SettingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Setting");
-                    }
+            }
+            GameHundredsBenzBmw.RuleUI = RuleUI;
+            REG("ui.GameHundredsBenzBmw.RuleUI", RuleUI);
+            class SettingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Setting");
                 }
-                BenzBmw.SettingUI = SettingUI;
-                REG("ui.Games.BenzBmw.SettingUI", SettingUI);
-                class SpeakUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Speak");
-                    }
+            }
+            GameHundredsBenzBmw.SettingUI = SettingUI;
+            REG("ui.GameHundredsBenzBmw.SettingUI", SettingUI);
+            class SpeakUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Speak");
                 }
-                BenzBmw.SpeakUI = SpeakUI;
-                REG("ui.Games.BenzBmw.SpeakUI", SpeakUI);
-                class TableUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Table");
-                    }
+            }
+            GameHundredsBenzBmw.SpeakUI = SpeakUI;
+            REG("ui.GameHundredsBenzBmw.SpeakUI", SpeakUI);
+            class TableUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Table");
                 }
-                BenzBmw.TableUI = TableUI;
-                REG("ui.Games.BenzBmw.TableUI", TableUI);
-                class TextfailureUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Textfailure");
-                    }
+            }
+            GameHundredsBenzBmw.TableUI = TableUI;
+            REG("ui.GameHundredsBenzBmw.TableUI", TableUI);
+            class TextfailureUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Textfailure");
                 }
-                BenzBmw.TextfailureUI = TextfailureUI;
-                REG("ui.Games.BenzBmw.TextfailureUI", TextfailureUI);
-                class victoryUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/victory");
-                    }
+            }
+            GameHundredsBenzBmw.TextfailureUI = TextfailureUI;
+            REG("ui.GameHundredsBenzBmw.TextfailureUI", TextfailureUI);
+            class WithdrawmoneyUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBenzBmw/Withdrawmoney");
                 }
-                BenzBmw.victoryUI = victoryUI;
-                REG("ui.Games.BenzBmw.victoryUI", victoryUI);
-                class WithdrawmoneyUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/BenzBmw/Withdrawmoney");
-                    }
-                }
-                BenzBmw.WithdrawmoneyUI = WithdrawmoneyUI;
-                REG("ui.Games.BenzBmw.WithdrawmoneyUI", WithdrawmoneyUI);
-            })(BenzBmw = Games.BenzBmw || (Games.BenzBmw = {}));
-        })(Games = ui.Games || (ui.Games = {}));
+            }
+            GameHundredsBenzBmw.WithdrawmoneyUI = WithdrawmoneyUI;
+            REG("ui.GameHundredsBenzBmw.WithdrawmoneyUI", WithdrawmoneyUI);
+        })(GameHundredsBenzBmw = ui.GameHundredsBenzBmw || (ui.GameHundredsBenzBmw = {}));
     })(ui || (ui = {}));
     (function (ui) {
-        var Games;
-        (function (Games) {
-            var Dice;
-            (function (Dice) {
-                class DiceUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Dice/Dice");
-                    }
+        var GameHundredsBull;
+        (function (GameHundredsBull) {
+            class HundredsBullUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsBull/HundredsBull");
                 }
-                Dice.DiceUI = DiceUI;
-                REG("ui.Games.Dice.DiceUI", DiceUI);
-            })(Dice = Games.Dice || (Games.Dice = {}));
-        })(Games = ui.Games || (ui.Games = {}));
+            }
+            GameHundredsBull.HundredsBullUI = HundredsBullUI;
+            REG("ui.GameHundredsBull.HundredsBullUI", HundredsBullUI);
+        })(GameHundredsBull = ui.GameHundredsBull || (ui.GameHundredsBull = {}));
     })(ui || (ui = {}));
     (function (ui) {
-        var Games;
-        (function (Games) {
-            var FiftyK;
-            (function (FiftyK) {
-                class FiveTenKloadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/FiftyK/FiveTenKloading");
-                    }
+        var GameHundredsDice;
+        (function (GameHundredsDice) {
+            class DiceUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsDice/Dice");
                 }
-                FiftyK.FiveTenKloadingUI = FiveTenKloadingUI;
-                REG("ui.Games.FiftyK.FiveTenKloadingUI", FiveTenKloadingUI);
-                class FiveTenKSelectionUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/FiftyK/FiveTenKSelection");
-                    }
+            }
+            GameHundredsDice.DiceUI = DiceUI;
+            REG("ui.GameHundredsDice.DiceUI", DiceUI);
+        })(GameHundredsDice = ui.GameHundredsDice || (ui.GameHundredsDice = {}));
+    })(ui || (ui = {}));
+    (function (ui) {
+        var GameHundredsFruit;
+        (function (GameHundredsFruit) {
+            class FruitLoadingUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsFruit/FruitLoading");
                 }
-                FiftyK.FiveTenKSelectionUI = FiveTenKSelectionUI;
-                REG("ui.Games.FiftyK.FiveTenKSelectionUI", FiveTenKSelectionUI);
-            })(FiftyK = Games.FiftyK || (Games.FiftyK = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var FiftyK;
-            (function (FiftyK) {
-                var Ruels;
-                (function (Ruels) {
-                    class FiftyRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/FiftyK/Ruels/FiftyRoomRule");
-                        }
-                    }
-                    Ruels.FiftyRoomRuleUI = FiftyRoomRuleUI;
-                    REG("ui.Games.FiftyK.Ruels.FiftyRoomRuleUI", FiftyRoomRuleUI);
-                })(Ruels = FiftyK.Ruels || (FiftyK.Ruels = {}));
-            })(FiftyK = Games.FiftyK || (Games.FiftyK = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var FiveArching;
-            (function (FiveArching) {
-                class FiveArchingloadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/FiveArching/FiveArchingloading");
-                    }
+            }
+            GameHundredsFruit.FruitLoadingUI = FruitLoadingUI;
+            REG("ui.GameHundredsFruit.FruitLoadingUI", FruitLoadingUI);
+            class FruitSelectionUI extends Laya.View {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsFruit/FruitSelection");
                 }
-                FiveArching.FiveArchingloadingUI = FiveArchingloadingUI;
-                REG("ui.Games.FiveArching.FiveArchingloadingUI", FiveArchingloadingUI);
-            })(FiveArching = Games.FiveArching || (Games.FiveArching = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var FiveArching;
-            (function (FiveArching) {
-                var Ruels;
-                (function (Ruels) {
-                    class FiveArchingRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/FiveArching/Ruels/FiveArchingRoomRule");
-                        }
-                    }
-                    Ruels.FiveArchingRoomRuleUI = FiveArchingRoomRuleUI;
-                    REG("ui.Games.FiveArching.Ruels.FiveArchingRoomRuleUI", FiveArchingRoomRuleUI);
-                })(Ruels = FiveArching.Ruels || (FiveArching.Ruels = {}));
-            })(FiveArching = Games.FiveArching || (Games.FiveArching = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Fruit;
-            (function (Fruit) {
-                class FruitLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Fruit/FruitLoading");
-                    }
+            }
+            GameHundredsFruit.FruitSelectionUI = FruitSelectionUI;
+            REG("ui.GameHundredsFruit.FruitSelectionUI", FruitSelectionUI);
+            class FruitTableUI extends Laya.Scene {
+                constructor() { super(); }
+                createChildren() {
+                    super.createChildren();
+                    this.loadScene("GameHundredsFruit/FruitTable");
                 }
-                Fruit.FruitLoadingUI = FruitLoadingUI;
-                REG("ui.Games.Fruit.FruitLoadingUI", FruitLoadingUI);
-                class FruitSelectionUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Fruit/FruitSelection");
-                    }
-                }
-                Fruit.FruitSelectionUI = FruitSelectionUI;
-                REG("ui.Games.Fruit.FruitSelectionUI", FruitSelectionUI);
-                class FruitTableUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Fruit/FruitTable");
-                    }
-                }
-                Fruit.FruitTableUI = FruitTableUI;
-                REG("ui.Games.Fruit.FruitTableUI", FruitTableUI);
-            })(Fruit = Games.Fruit || (Games.Fruit = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var GoldenFlower;
-            (function (GoldenFlower) {
-                class GoldenFlowerGameUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/GoldenFlower/GoldenFlowerGame");
-                    }
-                }
-                GoldenFlower.GoldenFlowerGameUI = GoldenFlowerGameUI;
-                REG("ui.Games.GoldenFlower.GoldenFlowerGameUI", GoldenFlowerGameUI);
-                class GoldenFlowerLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/GoldenFlower/GoldenFlowerLoading");
-                    }
-                }
-                GoldenFlower.GoldenFlowerLoadingUI = GoldenFlowerLoadingUI;
-                REG("ui.Games.GoldenFlower.GoldenFlowerLoadingUI", GoldenFlowerLoadingUI);
-            })(GoldenFlower = Games.GoldenFlower || (Games.GoldenFlower = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var GoldenFlower;
-            (function (GoldenFlower) {
-                var Rules;
-                (function (Rules) {
-                    class GoldenFlowerRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/GoldenFlower/Rules/GoldenFlowerRoomRule");
-                        }
-                    }
-                    Rules.GoldenFlowerRoomRuleUI = GoldenFlowerRoomRuleUI;
-                    REG("ui.Games.GoldenFlower.Rules.GoldenFlowerRoomRuleUI", GoldenFlowerRoomRuleUI);
-                })(Rules = GoldenFlower.Rules || (GoldenFlower.Rules = {}));
-            })(GoldenFlower = Games.GoldenFlower || (Games.GoldenFlower = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Landlord;
-            (function (Landlord) {
-                class LandlordLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Landlord/LandlordLoading");
-                    }
-                }
-                Landlord.LandlordLoadingUI = LandlordLoadingUI;
-                REG("ui.Games.Landlord.LandlordLoadingUI", LandlordLoadingUI);
-                class LandlordSelectionUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Landlord/LandlordSelection");
-                    }
-                }
-                Landlord.LandlordSelectionUI = LandlordSelectionUI;
-                REG("ui.Games.Landlord.LandlordSelectionUI", LandlordSelectionUI);
-            })(Landlord = Games.Landlord || (Games.Landlord = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Landlord;
-            (function (Landlord) {
-                var Rules;
-                (function (Rules) {
-                    class LandlordRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/Landlord/Rules/LandlordRoomRule");
-                        }
-                    }
-                    Rules.LandlordRoomRuleUI = LandlordRoomRuleUI;
-                    REG("ui.Games.Landlord.Rules.LandlordRoomRuleUI", LandlordRoomRuleUI);
-                })(Rules = Landlord.Rules || (Landlord.Rules = {}));
-            })(Landlord = Games.Landlord || (Games.Landlord = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var RunsFast;
-            (function (RunsFast) {
-                var Rules;
-                (function (Rules) {
-                    class RunFastRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/RunsFast/Rules/RunFastRoomRule");
-                        }
-                    }
-                    Rules.RunFastRoomRuleUI = RunFastRoomRuleUI;
-                    REG("ui.Games.RunsFast.Rules.RunFastRoomRuleUI", RunFastRoomRuleUI);
-                })(Rules = RunsFast.Rules || (RunsFast.Rules = {}));
-            })(RunsFast = Games.RunsFast || (Games.RunsFast = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var RunsFast;
-            (function (RunsFast) {
-                class RunsFastLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/RunsFast/RunsFastLoading");
-                    }
-                }
-                RunsFast.RunsFastLoadingUI = RunsFastLoadingUI;
-                REG("ui.Games.RunsFast.RunsFastLoadingUI", RunsFastLoadingUI);
-            })(RunsFast = Games.RunsFast || (Games.RunsFast = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Stud;
-            (function (Stud) {
-                class StudLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Stud/StudLoading");
-                    }
-                }
-                Stud.StudLoadingUI = StudLoadingUI;
-                REG("ui.Games.Stud.StudLoadingUI", StudLoadingUI);
-            })(Stud = Games.Stud || (Games.Stud = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var TenHalf;
-            (function (TenHalf) {
-                class TenHalfLoadingUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/TenHalf/TenHalfLoading");
-                    }
-                }
-                TenHalf.TenHalfLoadingUI = TenHalfLoadingUI;
-                REG("ui.Games.TenHalf.TenHalfLoadingUI", TenHalfLoadingUI);
-            })(TenHalf = Games.TenHalf || (Games.TenHalf = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Texas;
-            (function (Texas) {
-                var Rules;
-                (function (Rules) {
-                    class TexasRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/Texas/Rules/TexasRoomRule");
-                        }
-                    }
-                    Rules.TexasRoomRuleUI = TexasRoomRuleUI;
-                    REG("ui.Games.Texas.Rules.TexasRoomRuleUI", TexasRoomRuleUI);
-                })(Rules = Texas.Rules || (Texas.Rules = {}));
-            })(Texas = Games.Texas || (Games.Texas = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Texas;
-            (function (Texas) {
-                class TexasLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Texas/TexasLoading");
-                    }
-                }
-                Texas.TexasLoadingUI = TexasLoadingUI;
-                REG("ui.Games.Texas.TexasLoadingUI", TexasLoadingUI);
-            })(Texas = Games.Texas || (Games.Texas = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Thanchicken;
-            (function (Thanchicken) {
-                var Rules;
-                (function (Rules) {
-                    class ThanchickenCreateroomUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/Thanchicken/Rules/ThanchickenCreateroom");
-                        }
-                    }
-                    Rules.ThanchickenCreateroomUI = ThanchickenCreateroomUI;
-                    REG("ui.Games.Thanchicken.Rules.ThanchickenCreateroomUI", ThanchickenCreateroomUI);
-                })(Rules = Thanchicken.Rules || (Thanchicken.Rules = {}));
-            })(Thanchicken = Games.Thanchicken || (Games.Thanchicken = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Thanchicken;
-            (function (Thanchicken) {
-                class ThanChickenLoadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Thanchicken/ThanChickenLoading");
-                    }
-                }
-                Thanchicken.ThanChickenLoadingUI = ThanChickenLoadingUI;
-                REG("ui.Games.Thanchicken.ThanChickenLoadingUI", ThanChickenLoadingUI);
-            })(Thanchicken = Games.Thanchicken || (Games.Thanchicken = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var ThirteenBets;
-            (function (ThirteenBets) {
-                var Rules;
-                (function (Rules) {
-                    class ThirteenBetsRoomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/ThirteenBets/Rules/ThirteenBetsRoomRule");
-                        }
-                    }
-                    Rules.ThirteenBetsRoomRuleUI = ThirteenBetsRoomRuleUI;
-                    REG("ui.Games.ThirteenBets.Rules.ThirteenBetsRoomRuleUI", ThirteenBetsRoomRuleUI);
-                })(Rules = ThirteenBets.Rules || (ThirteenBets.Rules = {}));
-            })(ThirteenBets = Games.ThirteenBets || (Games.ThirteenBets = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var ThirteenBets;
-            (function (ThirteenBets) {
-                class ThirteenBetsloadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/ThirteenBets/ThirteenBetsloading");
-                    }
-                }
-                ThirteenBets.ThirteenBetsloadingUI = ThirteenBetsloadingUI;
-                REG("ui.Games.ThirteenBets.ThirteenBetsloadingUI", ThirteenBetsloadingUI);
-            })(ThirteenBets = Games.ThirteenBets || (Games.ThirteenBets = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var ThreeDuke;
-            (function (ThreeDuke) {
-                var Rules;
-                (function (Rules) {
-                    class ThreeDukeRoomRuleUI extends Laya.Scene {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/ThreeDuke/Rules/ThreeDukeRoomRule");
-                        }
-                    }
-                    Rules.ThreeDukeRoomRuleUI = ThreeDukeRoomRuleUI;
-                    REG("ui.Games.ThreeDuke.Rules.ThreeDukeRoomRuleUI", ThreeDukeRoomRuleUI);
-                })(Rules = ThreeDuke.Rules || (ThreeDuke.Rules = {}));
-            })(ThreeDuke = Games.ThreeDuke || (Games.ThreeDuke = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var ThreeDuke;
-            (function (ThreeDuke) {
-                class ThreeDukeloadingUI extends Laya.Scene {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/ThreeDuke/ThreeDukeloading");
-                    }
-                }
-                ThreeDuke.ThreeDukeloadingUI = ThreeDukeloadingUI;
-                REG("ui.Games.ThreeDuke.ThreeDukeloadingUI", ThreeDukeloadingUI);
-            })(ThreeDuke = Games.ThreeDuke || (Games.ThreeDuke = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Twentyone;
-            (function (Twentyone) {
-                var Rules;
-                (function (Rules) {
-                    class TwentyoneroomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/Twentyone/Rules/TwentyoneroomRule");
-                        }
-                    }
-                    Rules.TwentyoneroomRuleUI = TwentyoneroomRuleUI;
-                    REG("ui.Games.Twentyone.Rules.TwentyoneroomRuleUI", TwentyoneroomRuleUI);
-                })(Rules = Twentyone.Rules || (Twentyone.Rules = {}));
-            })(Twentyone = Games.Twentyone || (Games.Twentyone = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var Twentyone;
-            (function (Twentyone) {
-                class TwentyOneloadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/Twentyone/TwentyOneloading");
-                    }
-                }
-                Twentyone.TwentyOneloadingUI = TwentyOneloadingUI;
-                REG("ui.Games.Twentyone.TwentyOneloadingUI", TwentyOneloadingUI);
-            })(Twentyone = Games.Twentyone || (Games.Twentyone = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var TwoEight;
-            (function (TwoEight) {
-                var Rules;
-                (function (Rules) {
-                    class TwoEightroomRuleUI extends Laya.View {
-                        constructor() { super(); }
-                        createChildren() {
-                            super.createChildren();
-                            this.loadScene("Games/TwoEight/Rules/TwoEightroomRule");
-                        }
-                    }
-                    Rules.TwoEightroomRuleUI = TwoEightroomRuleUI;
-                    REG("ui.Games.TwoEight.Rules.TwoEightroomRuleUI", TwoEightroomRuleUI);
-                })(Rules = TwoEight.Rules || (TwoEight.Rules = {}));
-            })(TwoEight = Games.TwoEight || (Games.TwoEight = {}));
-        })(Games = ui.Games || (ui.Games = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
-        var Games;
-        (function (Games) {
-            var TwoEight;
-            (function (TwoEight) {
-                class TwoEightloadingUI extends Laya.View {
-                    constructor() { super(); }
-                    createChildren() {
-                        super.createChildren();
-                        this.loadScene("Games/TwoEight/TwoEightloading");
-                    }
-                }
-                TwoEight.TwoEightloadingUI = TwoEightloadingUI;
-                REG("ui.Games.TwoEight.TwoEightloadingUI", TwoEightloadingUI);
-            })(TwoEight = Games.TwoEight || (Games.TwoEight = {}));
-        })(Games = ui.Games || (ui.Games = {}));
+            }
+            GameHundredsFruit.FruitTableUI = FruitTableUI;
+            REG("ui.GameHundredsFruit.FruitTableUI", FruitTableUI);
+        })(GameHundredsFruit = ui.GameHundredsFruit || (ui.GameHundredsFruit = {}));
     })(ui || (ui = {}));
     (function (ui) {
         var Hall;
@@ -1195,20 +1414,6 @@
         })(Hall = ui.Hall || (ui.Hall = {}));
     })(ui || (ui = {}));
     (function (ui) {
-        var HundredsBull;
-        (function (HundredsBull) {
-            class HundredsBullUI extends Laya.Scene {
-                constructor() { super(); }
-                createChildren() {
-                    super.createChildren();
-                    this.loadScene("HundredsBull/HundredsBull");
-                }
-            }
-            HundredsBull.HundredsBullUI = HundredsBullUI;
-            REG("ui.HundredsBull.HundredsBullUI", HundredsBullUI);
-        })(HundredsBull = ui.HundredsBull || (ui.HundredsBull = {}));
-    })(ui || (ui = {}));
-    (function (ui) {
         var Login;
         (function (Login) {
             class accountLoginUI extends Laya.View {
@@ -1259,340 +1464,6 @@
         })(Login = ui.Login || (ui.Login = {}));
     })(ui || (ui = {}));
 
-    class APP_Loading extends ui.APP_LoadingUI {
-        constructor() {
-            super();
-        }
-        setPercent(perc) {
-            this.progress.percent = perc;
-        }
-    }
-
-    class CommonProgress extends Laya.Sprite {
-        constructor() {
-            super();
-            this.m_percent = 0;
-        }
-        get percent() {
-            return this.m_percent;
-        }
-        set percent(perc) {
-            this.m_percent = perc > 100 ? 100 : perc;
-            this.imgmask.width = this.width / 100 * this.m_percent;
-        }
-        onAwake() {
-            this.bar = this.getChildByName("bar");
-            this.imgmask = this.bar.mask;
-        }
-    }
-
-    class APP_Update extends ui.APP_UpdateUI {
-        constructor() {
-            super();
-        }
-        setPercent(perc) {
-            this.progress.percent = perc;
-        }
-    }
-
-    class CommonRadioGroup extends Laya.Sprite {
-        constructor() {
-            super();
-        }
-        onAwake() {
-            this.checkIndex = 0;
-        }
-        get checkIndex() {
-            return this.checkNum;
-        }
-        set checkIndex(index) {
-            this.childChecked_index(index);
-        }
-        childChecked_index(index) {
-            let child = this.getChildAt(index);
-            this.childChecked(child);
-        }
-        childChecked(child) {
-            for (let i = 0; i < this.numChildren; i++) {
-                let forChild = this.getChildAt(i);
-                if (forChild != child)
-                    forChild.checked = false;
-                else {
-                    forChild.checked = true;
-                    this.checkNum = i;
-                }
-            }
-        }
-    }
-
-    class CommonRadio extends Laya.Sprite {
-        constructor() {
-            super();
-            this.isCheck = false;
-        }
-        set checked(ischeck) {
-            this.isCheck = ischeck;
-            this.unSelect.visible = !ischeck;
-            this.selected.visible = ischeck;
-        }
-        get checked() {
-            return this.isCheck;
-        }
-        onAwake() {
-            this.unSelect = this.getChildByName("unSelect");
-            this.selected = this.getChildByName("selected");
-            this.checked = false;
-            this.on(Laya.Event.CLICK, this, () => {
-                if (this.parent) {
-                    this.parent.childChecked(this);
-                }
-            });
-        }
-    }
-
-    class network {
-        constructor() {
-            this.eList = new Array();
-            this.types = {};
-            this.byte = new Laya.Byte();
-            this.byte.endian = Laya.Byte.LITTLE_ENDIAN;
-            this.socket = new Laya.Socket();
-            this.socket.endian = Laya.Byte.LITTLE_ENDIAN;
-            this.connect();
-        }
-        static getinstance() {
-            if (this.instance == null)
-                this.instance = new network();
-            return this.instance;
-        }
-        addNetEvent(type, handler) {
-            this.types[type] = handler;
-        }
-        removeEvent(type) {
-            if (this.types[type])
-                delete this.types[type];
-        }
-        register(type, ui, caller) {
-            this.addNetEvent(type + "init", caller.GameEventLoadInitialization);
-            this.addNetEvent(type + "enter", caller.GameEventEnter);
-            this.addNetEvent(type + "leave", caller.GameEventLeave);
-        }
-        unregister(type) {
-            this.removeEvent(type + "init");
-            this.removeEvent(type + "enter");
-            this.removeEvent(type + "leave");
-        }
-        connect() {
-            this.socket.connectByUrl("ws://localhost:8989");
-            this.socket.on(Laya.Event.OPEN, this, this.openHandler);
-            this.socket.on(Laya.Event.MESSAGE, this, this.receiveHandler);
-            this.socket.on(Laya.Event.CLOSE, this, this.closeHandler);
-            this.socket.on(Laya.Event.ERROR, this, this.errorHandler);
-        }
-        openHandler(event = null) {
-            Laya.timer.frameLoop(1, this, () => {
-                if (!this.types || this.eList.length == 0)
-                    return;
-                while (this.eList.length) {
-                    this.types[this.eList[0]];
-                    this.eList.shift();
-                }
-            });
-        }
-        receiveHandler(msg = null) {
-            console.log(msg);
-            this.eList.push(msg);
-        }
-        closeHandler(e = null) {
-        }
-        errorHandler(e = null) {
-        }
-        sendMsg(type, data) {
-        }
-    }
-
-    var TimeLine = Laya.TimeLine;
-    var Event = Laya.Event;
-    class PublicFun {
-        constructor() {
-            this.timeLine = new TimeLine();
-            this.viewList = [];
-        }
-        static getinstance() {
-            if (this.instance == null)
-                this.instance = new PublicFun();
-            return this.instance;
-        }
-        showAlert(node, back) {
-            if (!node.getChildByName("back_gray")) {
-                let rect = new Laya.Sprite();
-                rect.graphics.drawRect(0, 0, Laya.stage.width, Laya.stage.height, "#333333");
-                rect.name = "back_gray";
-                rect.zOrder = -9999999;
-                rect.alpha = 0.3;
-                node.addChild(rect);
-            }
-            this.viewList.push(node);
-            this.startAlert(node);
-        }
-        startAlert(node) {
-            this.setCenter(node);
-            let x = Laya.stage.width / 2;
-            let y = Laya.stage.height / 2;
-            node.visible = true;
-            node.active = true;
-            node.x = x;
-            node.y = y;
-            node.scaleX = 0;
-            node.scaleY = 0;
-            this.timeLine = new TimeLine();
-            this.timeLine.addLabel("turnRight", 0).to(node, { scaleX: 1.1, scaleY: 1.1 }, 200, null, 0)
-                .addLabel("turnLeft", 0).to(node, { scaleX: 1, scaleY: 1 }, 100, null, 0);
-            this.timeLine.play(0, false);
-            this.timeLine.on(Event.COMPLETE, this, this.onComplete);
-            this.timeLine.on(Event.LABEL, this, this.onLabel);
-        }
-        hideAlert(node, completeFun) {
-            this.timeLine = new TimeLine();
-            this.timeLine.addLabel("turnRight", 0).to(node, { scaleX: 1.1, scaleY: 1.1 }, 200, null, 0)
-                .addLabel("turnDown", 0).to(node, { scaleX: 0, scaleY: 0 }, 200, null, 0);
-            this.timeLine.play(0, false);
-            this.timeLine.on(Event.COMPLETE, this, () => {
-                node.active = false;
-                node.visible = false;
-                completeFun && completeFun();
-                let view = this.viewList.pop();
-                view && view.onHide && view.onHide();
-            });
-        }
-        setCenter(node) {
-            let rect = node.getBounds();
-            node.pivotX = (rect.width || node.width) / 2;
-            node.pivotY = (rect.height || node.height) / 2;
-            node.x += node.pivotX;
-            node.y += node.pivotY;
-        }
-        onComplete() {
-        }
-        onLabel(label) {
-        }
-        selectionAdmission(node) {
-            this.setCenter(node);
-            node.x = Laya.stage.width + node.width / 2;
-            Laya.Tween.to(node, { x: Laya.stage.width / 2 }, 300);
-        }
-        getRecvPos(target) {
-            let x = Math.random() * (target.width - 20) + 10;
-            let y = Math.random() * (target.height - 20) + 10;
-            return { x, y };
-        }
-    }
-
-    var Handler = Laya.Handler;
-    class SceneManager {
-        constructor() {
-            this.sceneList = {};
-            this.init();
-        }
-        ;
-        static getinstance() {
-            if (this.instance == null)
-                this.instance = new SceneManager();
-            return this.instance;
-        }
-        rigesterScene(name, param) {
-            this.sceneList[name] = param;
-        }
-        init() {
-            this.rigesterScene("Login", { url: "./Login/Login.scene" });
-        }
-        changeScene(name, loadPage, removeCur = true) {
-            loadPage.onAwake = () => {
-                Laya.Scene.open;
-                Laya.Scene.load(this.sceneList[name].url, Handler.create(this, (scene) => {
-                    if (this.curScene) {
-                        this.curScene.destroy();
-                    }
-                    Laya.timer.once(500, this, () => {
-                        Laya.Scene.root.addChild(scene);
-                        this.curScene = scene;
-                        loadPage.removeSelf();
-                    });
-                }), Handler.create(this, (e) => {
-                    loadPage.progress.percent = (e * 100);
-                }, null, false));
-            };
-            Laya.stage.addChild(loadPage);
-        }
-    }
-
-    class userInfoData {
-        constructor() {
-            this.id = 888889;
-            this.money = 675412;
-            this.nickName = "啦啦啦";
-            this.diamond = 45623;
-            this.safeMoney = 6541;
-        }
-        static getinstance() {
-            if (this.instance == null)
-                this.instance = new userInfoData();
-            return this.instance;
-        }
-    }
-
-    class base {
-        constructor() {
-            this.netWork = network.getinstance();
-            this.publicFun = PublicFun.getinstance();
-            this.sceneManager = SceneManager.getinstance();
-            this.userInfo = userInfoData.getinstance();
-        }
-        static getinstance() {
-            if (this.instance == null)
-                this.instance = new base();
-            return this.instance;
-        }
-    }
-    var Base = base.getinstance();
-
-    var Event$1 = Laya.Event;
-    var Tween = Laya.Tween;
-    class ActionButton extends Laya.Button {
-        constructor(res) {
-            super(res);
-            this.on(Event$1.MOUSE_DOWN, this, () => {
-                Tween.to(this, { scaleX: 0.9, scaleY: 0.9 }, 100);
-            });
-            this.on(Event$1.MOUSE_UP, this, () => {
-                Tween.to(this, { scaleX: 1, scaleY: 1 }, 100);
-            });
-            this.on(Event$1.MOUSE_OUT, this, () => {
-                Tween.to(this, { scaleX: 1, scaleY: 1 }, 100);
-            });
-        }
-        onAwake() {
-            this.stateNum = 1;
-            Base.publicFun.setCenter(this);
-        }
-    }
-
-    class BetButton extends Laya.Script {
-        constructor() {
-            super();
-            this.backRes = "";
-            this.btnText = "";
-        }
-        onAwake() {
-            let btnBack = this.owner.getChildByName("btnBack");
-            let btnText = this.owner.getChildByName("btnText");
-            if (this.backRes)
-                btnBack.loadImage(this.backRes);
-            if (this.btnText)
-                btnText.text = this.btnText;
-        }
-    }
-
     var Handler$1 = Laya.Handler;
     var Tween$1 = Laya.Tween;
     class Chip extends ui.GameCommonUI.Athletics.ChipUI {
@@ -1612,6 +1483,106 @@
             Tween$1.to(this, { x: target.x, y: target.y }, 300, null, Handler$1.create(this, () => {
                 this.removeSelf();
             }));
+        }
+    }
+
+    class FlutterText extends ui.GameCommonUI.FlutterTextUI {
+        constructor(text) {
+            super();
+            this.text = text;
+        }
+        onAwake() {
+            this.number_text.text = this.text;
+        }
+        startAni() {
+            Laya.Tween.to(this, { y: this.y - 150, alpha: 0 }, 1500, null, Laya.Handler.create(this, () => {
+                this.removeSelf();
+            }));
+        }
+    }
+
+    var Event$2 = Laya.Event;
+    class GoldenFlowerGame extends ui.GameAthleticsGoldenFlower.GoldenFlowerGameUI {
+        constructor() {
+            super();
+        }
+        onAwake() {
+            this.putChip_btn.on(Event$2.CLICK, this, () => {
+                let user = this[`user_${Math.floor(Math.random() * 6)}`];
+                this.userChip(user);
+            });
+            this.changeCoin_btn.on(Event$2.CLICK, this, () => {
+                let user1 = this[`user_${Math.floor(Math.random() * 6)}`];
+                let user2 = this[`user_${Math.floor(Math.random() * 6)}`];
+                let rand = Math.floor(Math.random() * 100);
+                for (let i = 0; i < rand; i++) {
+                    this.userChip(user1);
+                }
+                this.showText(user1, "-" + rand);
+                setTimeout(() => {
+                    this.chipUser(user2);
+                    this.showText(user2, "+" + this.recv_panel.numChildren);
+                }, 1000);
+            });
+        }
+        showText(user, num) {
+            let text = new FlutterText(num);
+            user.addChild(text);
+            text.x = user.pivotX;
+            text.y = user.pivotY;
+            text.startAni();
+        }
+        userChip(user) {
+            let chip = new Chip();
+            chip.x = user.x - this.recv_panel.x;
+            chip.y = user.y - this.recv_panel.y;
+            this.recv_panel.addChild(chip);
+            chip.toTargerShow(Base.publicFun.getRecvPos(this.recv_panel), null);
+        }
+        chipUser(user) {
+            let target = { x: user.x - this.recv_panel.x, y: user.y - this.recv_panel.y };
+            for (let i = 0; i < this.recv_panel.numChildren; i++) {
+                this.recv_panel.getChildAt(i).toTargerHide(target);
+            }
+        }
+    }
+
+    class User extends ui.GameCommonUI.Athletics.UserUI {
+        constructor() {
+            super();
+        }
+        set nickName(data) {
+            this.UserName.text = data;
+            this.User_Nickname = data;
+        }
+        set avatarFrame(data) {
+            this.UserImage.loadImage(data);
+            this.User_AvatarFrame = data;
+        }
+        set role(data) {
+            this.User_Role = data;
+        }
+        set onLine(data) {
+            this.User_OnLine = data;
+        }
+        set ready(data) {
+            this.ShowReady.active = data;
+            this.User_Ready = data;
+        }
+        get nickName() {
+            return this.User_Nickname;
+        }
+        get avatarFrame() {
+            return this.User_AvatarFrame;
+        }
+        get role() {
+            return this.User_Role;
+        }
+        get onLine() {
+            return this.User_OnLine;
+        }
+        get ready() {
+            return this.User_Ready;
         }
     }
 
@@ -1656,6 +1627,22 @@
         }
         get sort() {
             return this.Prop_Sort;
+        }
+    }
+
+    class BetButton extends Laya.Script {
+        constructor() {
+            super();
+            this.backRes = "";
+            this.btnText = "";
+        }
+        onAwake() {
+            let btnBack = this.owner.getChildByName("btnBack");
+            let btnText = this.owner.getChildByName("btnText");
+            if (this.backRes)
+                btnBack.loadImage(this.backRes);
+            if (this.btnText)
+                btnText.text = this.btnText;
         }
     }
 
@@ -1727,61 +1714,22 @@
         }
     }
 
-    class User extends ui.GameCommonUI.Athletics.UserUI {
-        constructor() {
-            super();
-        }
-        set nickName(data) {
-            this.UserName.text = data;
-            this.User_Nickname = data;
-        }
-        set avatarFrame(data) {
-            this.UserImage.loadImage(data);
-            this.User_AvatarFrame = data;
-        }
-        set role(data) {
-            this.User_Role = data;
-        }
-        set onLine(data) {
-            this.User_OnLine = data;
-        }
-        set ready(data) {
-            this.ShowReady.active = data;
-            this.User_Ready = data;
-        }
-        get nickName() {
-            return this.User_Nickname;
-        }
-        get avatarFrame() {
-            return this.User_AvatarFrame;
-        }
-        get role() {
-            return this.User_Role;
-        }
-        get onLine() {
-            return this.User_OnLine;
-        }
-        get ready() {
-            return this.User_Ready;
-        }
-    }
-
     var Handler$5 = Laya.Handler;
-    var Event$2 = Laya.Event;
-    var BullRule = ui.Bull.Ruels.RoomRuleUI;
-    var LandlordRoomRule = ui.Games.Landlord.Rules.LandlordRoomRuleUI;
-    var ThreeDukeRoomRule = ui.Games.ThreeDuke.Rules.ThreeDukeRoomRuleUI;
-    var TwentyoneroomRule = ui.Games.Twentyone.Rules.TwentyoneroomRuleUI;
-    var TwoEightroomRule = ui.Games.TwoEight.Rules.TwoEightroomRuleUI;
+    var Event$3 = Laya.Event;
+    var BullRule = ui.GameAthleticsBull.Ruels.RoomRuleUI;
+    var LandlordRoomRule = ui.GameAthleticsLandlord.Rules.LandlordRoomRuleUI;
+    var ThreeDukeRoomRule = ui.GameAthleticsThreeDuke.Rules.ThreeDukeRoomRuleUI;
+    var TwentyoneroomRule = ui.GameAthleticsTwentyone.Rules.TwentyoneroomRuleUI;
+    var TwoEightroomRule = ui.GameAthleticsTwoEight.Rules.TwoEightroomRuleUI;
     class CommonCreatRoom extends ui.GameCommonUI.CommonCreatRoomUI {
         constructor() {
             super();
         }
         onAwake() {
-            this.close_btn.on(Event$2.CLICK, this, () => {
+            this.close_btn.on(Event$3.CLICK, this, () => {
                 Base.publicFun.hideAlert(this, () => { this.removeSelf(); });
             });
-            this.clear_btn.on(Event$2.CLICK, this, () => {
+            this.clear_btn.on(Event$3.CLICK, this, () => {
                 for (let index = 0; index < this.curRuleView.radios.numChildren; index++) {
                     this.curRuleView.radios.getChildAt(index).checkIndex = 0;
                 }
@@ -1791,7 +1739,7 @@
                     }
                 }
             });
-            this.confirm_btn.on(Event$2.CLICK, this, () => {
+            this.confirm_btn.on(Event$3.CLICK, this, () => {
                 let data = {
                     radios: [],
                     checks: []
@@ -1926,7 +1874,7 @@
                 let button = new ActionButton(list[i]);
                 button.visible = false;
                 sprite.addChild(button);
-                Laya.timer.once(50, this, () => {
+                Laya.timer.once(200, this, () => {
                     Base.publicFun.setCenter(button);
                     button.x = sprite.width / 2;
                     button.y = sprite.height / 2;
@@ -2141,23 +2089,8 @@
         }
     }
 
-    class FlutterText extends ui.GameCommonUI.FlutterTextUI {
-        constructor(text) {
-            super();
-            this.text = text;
-        }
-        onAwake() {
-            this.number_text.text = this.text;
-        }
-        startAni() {
-            Laya.Tween.to(this, { y: this.y - 150, alpha: 0 }, 1500, null, Laya.Handler.create(this, () => {
-                this.removeSelf();
-            }));
-        }
-    }
-
-    var Event$3 = Laya.Event;
-    class Banker extends ui.Games.BenzBmw.BankerUI {
+    var Event$4 = Laya.Event;
+    class Banker extends ui.GameHundredsBenzBmw.BankerUI {
         constructor() {
             super();
             this.money = 355444;
@@ -2165,16 +2098,16 @@
         onAwake() {
             this.slider = this.money_slider;
             this.money_text.text = this.money + "";
-            this.close_btn.on(Event$3.CLICK, this, () => {
+            this.close_btn.on(Event$4.CLICK, this, () => {
                 Base.publicFun.hideAlert(this);
             });
-            this.plus_btn.on(Event$3.CLICK, this, () => {
+            this.plus_btn.on(Event$4.CLICK, this, () => {
                 this.slider.percent = this.slider.percent + 1;
             });
-            this.reduce_btn.on(Event$3.CLICK, this, () => {
+            this.reduce_btn.on(Event$4.CLICK, this, () => {
                 this.slider.percent = this.slider.percent - 1;
             });
-            this.apply_btn.on(Event$3.CLICK, this, () => {
+            this.apply_btn.on(Event$4.CLICK, this, () => {
                 console.log(this.curSelectMoney);
             });
             this.slider.changeHandler = (percent) => {
@@ -2222,9 +2155,9 @@
         }
     }
 
-    var Event$4 = Laya.Event;
+    var Event$5 = Laya.Event;
     var Handler$6 = Laya.Handler;
-    class Player extends ui.Games.BenzBmw.PlayerUI {
+    class Player extends ui.GameHundredsBenzBmw.PlayerUI {
         constructor() {
             super();
         }
@@ -2236,10 +2169,10 @@
             this.player_list.array = data;
         }
         onAwake() {
-            this.close_btn.on(Event$4.CLICK, this, () => {
+            this.close_btn.on(Event$5.CLICK, this, () => {
                 Base.publicFun.hideAlert(this);
             });
-            this.confirm_btn.on(Event$4.CLICK, this, () => {
+            this.confirm_btn.on(Event$5.CLICK, this, () => {
                 Base.publicFun.hideAlert(this);
             });
             this.player_list.vScrollBarSkin = "";
@@ -2253,8 +2186,8 @@
         }
     }
 
-    var Event$5 = Laya.Event;
-    class Playerlist extends ui.Games.BenzBmw.PlayerlistUI {
+    var Event$6 = Laya.Event;
+    class Playerlist extends ui.GameHundredsBenzBmw.PlayerlistUI {
         constructor() {
             super();
         }
@@ -2273,57 +2206,42 @@
             }
         }
         onAwake() {
-            this.close_btn.on(Event$5.CLICK, this, () => {
+            this.close_btn.on(Event$6.CLICK, this, () => {
                 Base.publicFun.hideAlert(this);
             });
             this.playerList = [1, 2, 3, 4, 5];
         }
     }
 
-    var Event$6 = Laya.Event;
-    class Roomselection extends ui.Games.BenzBmw.RoomselectionUI {
+    var Event$7 = Laya.Event;
+    class Roomselection extends ui.GameHundredsBenzBmw.RoomselectionUI {
         constructor() {
             super();
         }
         onAwake() {
-            this.back_btn.on(Event$6.CLICK, this, () => {
+            this.back_btn.on(Event$7.CLICK, this, () => {
                 console.log("back");
             });
-            this.about_btn.on(Event$6.CLICK, this, () => {
+            this.about_btn.on(Event$7.CLICK, this, () => {
                 Base.publicFun.showAlert(this.rule_view);
             });
-            this.primary_btn.on(Event$6.CLICK, this, () => {
+            this.primary_btn.on(Event$7.CLICK, this, () => {
                 console.log("初级");
             });
-            this.intermediate_btn.on(Event$6.CLICK, this, () => {
+            this.intermediate_btn.on(Event$7.CLICK, this, () => {
                 console.log("中级");
             });
-            this.senior_btn.on(Event$6.CLICK, this, () => {
+            this.senior_btn.on(Event$7.CLICK, this, () => {
                 console.log("高级");
             });
-            this.quick_btn.on(Event$6.CLICK, this, () => {
+            this.quick_btn.on(Event$7.CLICK, this, () => {
                 console.log("快速开始");
             });
         }
     }
 
-    var Event$7 = Laya.Event;
-    class Rule extends ui.Games.BenzBmw.RuleUI {
-        constructor() {
-            super();
-        }
-        onAwake() {
-            this.close_btn.on(Event$7.CLICK, this, () => {
-                Base.publicFun.hideAlert(this);
-            });
-            this.confirm_btn.on(Event$7.CLICK, this, () => {
-                Base.publicFun.hideAlert(this);
-            });
-        }
-    }
-
     var Event$8 = Laya.Event;
-    class Setting extends ui.Games.BenzBmw.SettingUI {
+    class Rule extends ui.GameHundredsBenzBmw.RuleUI {
         constructor() {
             super();
         }
@@ -2332,6 +2250,21 @@
                 Base.publicFun.hideAlert(this);
             });
             this.confirm_btn.on(Event$8.CLICK, this, () => {
+                Base.publicFun.hideAlert(this);
+            });
+        }
+    }
+
+    var Event$9 = Laya.Event;
+    class Setting extends ui.GameHundredsBenzBmw.SettingUI {
+        constructor() {
+            super();
+        }
+        onAwake() {
+            this.close_btn.on(Event$9.CLICK, this, () => {
+                Base.publicFun.hideAlert(this);
+            });
+            this.confirm_btn.on(Event$9.CLICK, this, () => {
                 Base.publicFun.hideAlert(this);
             });
             this.bgm_check.changeHandle = (check) => {
@@ -2352,34 +2285,8 @@
         }
     }
 
-    class CommonCheck extends Laya.Sprite {
-        constructor() {
-            super();
-            this.isCheck = false;
-        }
-        set checked(ischeck) {
-            this.isCheck = ischeck;
-            this.unSelect.visible = !ischeck;
-            this.selected.visible = ischeck;
-            this.changeHandle(ischeck);
-        }
-        get checked() {
-            return this.isCheck;
-        }
-        changeHandle(check) {
-        }
-        onAwake() {
-            this.unSelect = this.getChildByName("unSelect");
-            this.selected = this.getChildByName("selected");
-            this.checked = false;
-            this.on(Laya.Event.CLICK, this, () => {
-                this.checked = !this.isCheck;
-            });
-        }
-    }
-
-    var Event$9 = Laya.Event;
-    class Table extends ui.Games.BenzBmw.TableUI {
+    var Event$a = Laya.Event;
+    class Table extends ui.GameHundredsBenzBmw.TableUI {
         constructor() {
             super();
             this.diraction = new Laya.Vector2();
@@ -2406,31 +2313,31 @@
             ];
         }
         onAwake() {
-            this.dazhong.on(Event$9.CLICK, this, () => {
+            this.dazhong.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[0];
             });
-            this.baoma.on(Event$9.CLICK, this, () => {
+            this.baoma.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[1];
             });
-            this.benchi.on(Event$9.CLICK, this, () => {
+            this.benchi.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[2];
             });
-            this.baoshijie.on(Event$9.CLICK, this, () => {
+            this.baoshijie.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[3];
             });
-            this.dabaoshijie.on(Event$9.CLICK, this, () => {
+            this.dabaoshijie.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[4];
             });
-            this.dabenchi.on(Event$9.CLICK, this, () => {
+            this.dabenchi.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[5];
             });
-            this.dabaoma.on(Event$9.CLICK, this, () => {
+            this.dabaoma.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[6];
             });
-            this.dadazhong.on(Event$9.CLICK, this, () => {
+            this.dadazhong.on(Event$a.CLICK, this, () => {
                 this.winPrice = this.winPriceList[7];
             });
-            this.go_btn.on(Event$9.CLICK, this, () => {
+            this.go_btn.on(Event$a.CLICK, this, () => {
                 this.stratMove();
             });
         }
@@ -2478,15 +2385,15 @@
         }
     }
 
-    var Event$a = Laya.Event;
-    class Dicetable extends ui.Games.Dice.DiceUI {
+    var Event$b = Laya.Event;
+    class Dicetable extends ui.GameHundredsDice.DiceUI {
         constructor() {
             super();
             this.tweenStop = false;
         }
         onAwake() {
-            this.play_btn.on(Event$a.CLICK, this, () => {
-                Base.sceneManager.changeScene("Login", new ui.Games.Twentyone.TwentyOneloadingUI());
+            this.play_btn.on(Event$b.CLICK, this, () => {
+                Base.sceneManager.changeScene("Login", new ui.GameAthleticsTwentyone.TwentyOneloadingUI());
             });
         }
         toLeft() {
@@ -2503,8 +2410,8 @@
         }
     }
 
-    var Event$b = Laya.Event;
-    class FruitTable extends ui.Games.Fruit.FruitTableUI {
+    var Event$c = Laya.Event;
+    class FruitTable extends ui.GameHundredsFruit.FruitTableUI {
         constructor() {
             super();
             this.fruitList = [];
@@ -2515,10 +2422,10 @@
                 this.fruitList.push(this.items_group.getChildAt(i));
                 Base.publicFun.setCenter(this.fruitList[i]);
             }
-            this.start_btn.on(Event$b.CLICK, this, () => {
+            this.start_btn.on(Event$c.CLICK, this, () => {
                 this.startAni();
             });
-            this.clear_btn.on(Event$b.CLICK, this, () => {
+            this.clear_btn.on(Event$c.CLICK, this, () => {
                 this.stopIndex = Math.floor((Math.random() * this.fruitList.length + 1));
                 console.log(this.stopIndex);
             });
@@ -2559,52 +2466,6 @@
                     this.changeOnce();
                 }
             });
-        }
-    }
-
-    var Event$c = Laya.Event;
-    class GoldenFlowerGame extends ui.Games.GoldenFlower.GoldenFlowerGameUI {
-        constructor() {
-            super();
-        }
-        onAwake() {
-            this.putChip_btn.on(Event$c.CLICK, this, () => {
-                let user = this[`user_${Math.floor(Math.random() * 6)}`];
-                this.userChip(user);
-            });
-            this.changeCoin_btn.on(Event$c.CLICK, this, () => {
-                let user1 = this[`user_${Math.floor(Math.random() * 6)}`];
-                let user2 = this[`user_${Math.floor(Math.random() * 6)}`];
-                let rand = Math.floor(Math.random() * 100);
-                for (let i = 0; i < rand; i++) {
-                    this.userChip(user1);
-                }
-                this.showText(user1, "-" + rand);
-                setTimeout(() => {
-                    this.chipUser(user2);
-                    this.showText(user2, "+" + this.recv_panel.numChildren);
-                }, 1000);
-            });
-        }
-        showText(user, num) {
-            let text = new FlutterText(num);
-            user.addChild(text);
-            text.x = user.pivotX;
-            text.y = user.pivotY;
-            text.startAni();
-        }
-        userChip(user) {
-            let chip = new Chip();
-            chip.x = user.x - this.recv_panel.x;
-            chip.y = user.y - this.recv_panel.y;
-            this.recv_panel.addChild(chip);
-            chip.toTargerShow(Base.publicFun.getRecvPos(this.recv_panel), null);
-        }
-        chipUser(user) {
-            let target = { x: user.x - this.recv_panel.x, y: user.y - this.recv_panel.y };
-            for (let i = 0; i < this.recv_panel.numChildren; i++) {
-                this.recv_panel.getChildAt(i).toTargerHide(target);
-            }
         }
     }
 
@@ -3593,19 +3454,19 @@
         }
         static init() {
             var reg = Laya.ClassUtils.regClass;
-            reg("script/Application/APP_Loading.ts", APP_Loading);
             reg("script/CommonProgress.ts", CommonProgress);
-            reg("script/Application/APP_Update.ts", APP_Update);
             reg("script/CommonRadioGroup.ts", CommonRadioGroup);
             reg("script/CommonRadio.ts", CommonRadio);
             reg("script/Button.ts", ActionButton);
+            reg("script/CommonCheck.ts", CommonCheck);
+            reg("script/Application/Game/GoldenFlower/GoldenFlowerGame.ts", GoldenFlowerGame);
+            reg("script/Application/Game/Common/User/User.ts", User);
+            reg("script/Application/Game/Common/Game/Prop.ts", Prop);
             reg("script/Application/Game/Common/Game/BetButton.ts", BetButton);
             reg("script/Application/Game/Common/Game/Chip.ts", Chip);
             reg("script/Application/Game/Common/Game/Deal.ts", Deal);
             reg("script/Application/Game/Common/Game/Flicker.ts", Flicker);
-            reg("script/Application/Game/Common/Game/Prop.ts", Prop);
             reg("script/Application/Game/Common/Game/TransAni.ts", TransAni);
-            reg("script/Application/Game/Common/User/User.ts", User);
             reg("script/Application/GameCommonUI/CommonCreatRoom.ts", CommonCreatRoom);
             reg("script/Application/GameCommonUI/CommonGameTypeSelection.ts", CommonGameTypeSelection);
             reg("script/Application/GameCommonUI/CommonSelectiion.ts", CommonSelectiion);
@@ -3617,11 +3478,9 @@
             reg("script/Application/Game/BenzBmw/Roomselection.ts", Roomselection);
             reg("script/Application/Game/BenzBmw/Rule.ts", Rule);
             reg("script/Application/Game/BenzBmw/Setting.ts", Setting);
-            reg("script/CommonCheck.ts", CommonCheck);
             reg("script/Application/Game/BenzBmw/Table.ts", Table);
             reg("script/Application/Game/Dice/DiceTable.ts", Dicetable);
             reg("script/Application/Game/Fruit/FruitTable.ts", FruitTable);
-            reg("script/Application/Game/GoldenFlower/GoldenFlowerGame.ts", GoldenFlowerGame);
             reg("script/Application/Hall/AgentPromotion/AgentPromotion.ts", AgentPromotion);
             reg("script/CommonTabButtons.ts", CommonTabButton);
             reg("script/Application/Hall/Announcement/Announcement.ts", Announcement);
@@ -3652,7 +3511,7 @@
     GameConfig.screenMode = "none";
     GameConfig.alignV = "top";
     GameConfig.alignH = "left";
-    GameConfig.startScene = "Games/Landlord/LandlordSelection.scene";
+    GameConfig.startScene = "GameCommonUI/CommonCreatRoom.scene";
     GameConfig.sceneRoot = "";
     GameConfig.debug = false;
     GameConfig.stat = false;

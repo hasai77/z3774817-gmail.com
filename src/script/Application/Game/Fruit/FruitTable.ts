@@ -1,7 +1,7 @@
 import { ui } from "../../../../ui/layaMaxUI";
 import Event = Laya.Event;
 import Base from "../../../../base/base"
-export default class FruitTable extends ui.Games.Fruit.FruitTableUI {
+export default class FruitTable extends ui.GameHundredsFruit.FruitTableUI {
     constructor() {
         super();
     }

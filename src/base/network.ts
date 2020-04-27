@@ -18,9 +18,9 @@ export default class network {
             delete this.types[type]
     }
     public register(type: string, ui: any, caller: Application.Game.GameEventModel): void {
-        this.addNetEvent(type + "init", caller.GameEventLoadInitialization);
-        this.addNetEvent(type + "enter", caller.GameEventEnter);
-        this.addNetEvent(type + "leave", caller.GameEventLeave);
+        // this.addNetEvent(type + "init", caller.GameEventLoadInitialization);
+        // this.addNetEvent(type + "enter", caller.GameEventEnter);
+        // this.addNetEvent(type + "leave", caller.GameEventLeave);
     }
     
     public unregister(type: string):void{

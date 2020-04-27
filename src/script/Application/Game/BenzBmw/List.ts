@@ -2,7 +2,7 @@ import Base from "../../../../base/base"
 import Event = Laya.Event;
 import { ui } from "../../../../ui/layaMaxUI";
 
-export default class List extends ui.Games.BenzBmw.ListUI {
+export default class List extends ui.GameHundredsBenzBmw.ListMenuUI {
     constructor() {
         super();
     }

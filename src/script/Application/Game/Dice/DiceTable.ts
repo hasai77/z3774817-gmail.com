@@ -3,7 +3,7 @@ import Base from "../../../../base/base"
 
 import Event = Laya.Event;
 
-export default class Dicetable extends ui.Games.Dice.DiceUI{
+export default class Dicetable extends ui.GameHundredsDice.DiceUI{
     constructor(){
         super();
     }
@@ -15,7 +15,7 @@ export default class Dicetable extends ui.Games.Dice.DiceUI{
 
        this.play_btn.on(Event.CLICK,this,()=>{
          
-        Base.sceneManager.changeScene("Login",new ui.Games.Twentyone.TwentyOneloadingUI())
+        Base.sceneManager.changeScene("Login",new ui.GameAthleticsTwentyone.TwentyOneloadingUI())
         //   this.dice_ani.index = 0;
         //   this.tweenStop = false;
         //   this.tweenSpeed = 200;

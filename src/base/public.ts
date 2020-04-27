@@ -74,7 +74,7 @@ export default class PublicFun {
 
     public selectionAdmission(node: Laya.Sprite): void {
         this.setCenter(node)
-        node.x = Laya.stage.width + node.width / 2;
+        node.x = Laya.stage.width + node.width ;
         Laya.Tween.to(node, { x: Laya.stage.width / 2 }, 300);
     }
     public getRecvPos(target: Laya.Sprite) {

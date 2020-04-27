@@ -2,18 +2,18 @@ import { ui } from "../../../ui/layaMaxUI";
 import Handler = Laya.Handler;
 import Event = Laya.Event;
 
-import BullRule = ui.Bull.Ruels.RoomRuleUI;
-import FiftyRoomRule = ui.Games.FiftyK.Ruels.FiftyRoomRuleUI;
-import FiveArchingRoomRule = ui.Games.FiveArching.Ruels.FiveArchingRoomRuleUI;
-import GoldenFlowerRoomRule = ui.Games.GoldenFlower.Rules.GoldenFlowerRoomRuleUI;
-import LandlordRoomRule = ui.Games.Landlord.Rules.LandlordRoomRuleUI;
-import RunFastRoomRule = ui.Games.RunsFast.Rules.RunFastRoomRuleUI;
-import TexasRoomRule = ui.Games.Texas.Rules.TexasRoomRuleUI;
-import ThanchickenCreateroom = ui.Games.Thanchicken.Rules.ThanchickenCreateroomUI;
-import ThirteenBetsRoomRule = ui.Games.ThirteenBets.Rules.ThirteenBetsRoomRuleUI;
-import ThreeDukeRoomRule = ui.Games.ThreeDuke.Rules.ThreeDukeRoomRuleUI;
-import TwentyoneroomRule = ui.Games.Twentyone.Rules.TwentyoneroomRuleUI;
-import TwoEightroomRule = ui.Games.TwoEight.Rules.TwoEightroomRuleUI;
+import BullRule = ui.GameAthleticsBull.Ruels.RoomRuleUI;
+import FiftyRoomRule = ui.GameAthleticsFiftyK.Ruels.FiftyRoomRuleUI;
+import FiveArchingRoomRule = ui.GameAthleticsFiveArching.Ruels.FiveArchingRoomRuleUI;
+import GoldenFlowerRoomRule = ui.GameAthleticsGoldenFlower.Rules.GoldenFlowerRoomRuleUI;
+import LandlordRoomRule = ui.GameAthleticsLandlord.Rules.LandlordRoomRuleUI;
+import RunFastRoomRule = ui.GameAthleticsRunsFast.Rules.RunFastRoomRuleUI;
+import TexasRoomRule = ui.GameAthleticsTexas.Rules.TexasRoomRuleUI;
+import ThanchickenCreateroom = ui.GameAthleticsThanchicken.Rules.ThanchickenCreateroomUI;
+import ThirteenBetsRoomRule = ui.GameAthleticsThirteenBets.Rules.ThirteenBetsRoomRuleUI;
+import ThreeDukeRoomRule = ui.GameAthleticsThreeDuke.Rules.ThreeDukeRoomRuleUI;
+import TwentyoneroomRule = ui.GameAthleticsTwentyone.Rules.TwentyoneroomRuleUI;
+import TwoEightroomRule = ui.GameAthleticsTwoEight.Rules.TwoEightroomRuleUI;
 
 import Base from "../../../base/base"
 import CommonRadioGroup from "../../CommonRadioGroup"
