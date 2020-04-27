@@ -2,9 +2,8 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":113,
     "searchKey":"Scene",
-    "props":{"width":1052,"sceneWidth":1052,"sceneHeight":440,"sceneColor":"#000000","height":440},
+    "props":{"width":1052,"sceneColor":"#000000","height":440},
     "nodeParent":-1,
     "maxID":114,
     "label":"Scene",
@@ -175,7 +174,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":13.5,"x":218,"texture":"ThreeDuke/Prompttext.png"},
+                    "props":{"y":13.5,"x":218,"texture":"ThreeDuke/Rules/Prompttext.png"},
                     "nodeParent":32,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -188,7 +187,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":15.25,"x":643,"texture":"ThreeDuke/Prohibited.png"},
+                    "props":{"y":15.25,"x":643,"texture":"ThreeDuke/Rules/Prohibited.png"},
                     "nodeParent":32,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -228,7 +227,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":12.5,"x":209,"texture":"ThreeDuke/gggfdgfg.png"},
+                    "props":{"y":12.5,"x":209,"texture":"ThreeDuke/Rules/gggfdgfg.png"},
                     "nodeParent":33,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -241,7 +240,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":8.5,"x":400,"texture":"ThreeDuke/Hundred.png"},
+                    "props":{"y":8.5,"x":400,"texture":"ThreeDuke/Rules/Hundred.png"},
                     "nodeParent":33,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -254,7 +253,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":10.25,"x":612,"texture":"ThreeDuke/Twohundred.png"},
+                    "props":{"y":10.25,"x":612,"texture":"ThreeDuke/Rules/Twohundred.png"},
                     "nodeParent":33,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -267,7 +266,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":10.5,"x":838,"texture":"ThreeDuke/Threehundred.png"},
+                    "props":{"y":10.5,"x":838,"texture":"ThreeDuke/Rules/Threehundred.png"},
                     "nodeParent":33,
                     "label":"Sprite",
                     "isDirectory":false,

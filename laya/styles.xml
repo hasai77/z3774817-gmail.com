@@ -173,195 +173,195 @@
    <item name="TeaHouse/TeaHousehallTrue.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="TeaHouse/VictoryRecord.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="TeaHouse/VictoryRecordFalse.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
-   <item name="GameCommon/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/CommonSelectiion/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="GameCommon/CommonCreatRoom/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="GameCommon/ProgressSlider/ProgressBar.png" type="ProgressBar" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="GameCommon/ProgressSlider/ProgressBarBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/BeautyOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Loading/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Loading/BeautyOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Loading/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="FiftyK/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiftyK/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="FiveArching/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Ad.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Background0.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Background2.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Fruit/Beauty1.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="GoldenFlower/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="GoldenFlower/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Loading/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Table/Ad.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Selection/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Selection/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Table/Background0.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Loading/Background2.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Selection/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Loading/Beauty1.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GoldenFlower/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="GoldenFlower/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="GoldenFlower/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="GoldenFlower/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GoldenFlower/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="GoldenFlower/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="GoldenFlower/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Primaryfield3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Primaryfield0.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Primaryfield22.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Intermediatefield3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Intermediatefield22.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Intermediatefield0.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Intermediate field0.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/HundredsThreeDuke.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/HundredsRedBlack.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/HundredsGoldenFlower.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/HundredsCow.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/DragonTiger.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Advancedfield3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Advancedfield22.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Advancedfield1.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Hundredsfpeople/Advancedfield0.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Landlord/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GoldenFlower/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Primaryfield3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Primaryfield0.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Primaryfield22.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Intermediatefield3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Intermediatefield22.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Intermediatefield0.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Intermediate field0.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/GameType/HundredsThreeDuke.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/GameType/HundredsRedBlack.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/GameType/HundredsGoldenFlower.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/GameType/HundredsCow.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/GameType/DragonTiger.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Advancedfield3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Advancedfield22.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Advancedfield1.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Hundredsfpeople/Selection/Advancedfield0.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Landlord/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Landlord/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Landlord/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Landlord/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Landlord/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Landlord/Loading/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Landlord/Createroom33.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Landlord/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Texas/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Texas/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Texas/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Landlord/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Texas/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Texas/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Texas/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Texas/MiddleBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Texas/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Texas/Texas.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Advancedfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Advancedfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/AlternateBankerThanChicken.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Texas/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Texas/Loading/Texas.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Advancedfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Advancedfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/GameType/AlternateBankerThanChicken.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Thanchicken/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Iconchicken.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Intermediatefield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Intermediatefield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Primaryfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Primaryfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/RobThanThanChicken.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Thanchicken/ThanThanChicken (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/BeautyFive.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/BeautyOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/BeautySix.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/BeautyThree.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/BeautyTwo.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/Chips.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/Cow.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/IntermediateField.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/LowlevelField5.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/IntermediateField4.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/SeniorField2.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Advancedfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Advancedfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Loading/Iconchicken.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Intermediatefield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Intermediatefield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Primaryfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Primaryfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/GameType/RobThanThanChicken.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Thanchicken/GameType/ThanThanChicken (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/GameType/BeautyFive.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/GameType/BeautyOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/GameType/BeautySix.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/GameType/BeautyThree.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/GameType/BeautyTwo.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Loading/Chips.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Loading/Cow.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/IntermediateField.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/LowlevelField5.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/IntermediateField4.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/SeniorField2.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Advancedfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Advancedfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="ThirteenBets/BottomOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/AlternateBankerThirteenBets (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/GameType/AlternateBankerThirteenBets (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="ThirteenBets/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="ThirteenBets/Bottom.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Intermediatefield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Intermediatefield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Primaryfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Primaryfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/RobThanThirteenBets.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThirteenBets/ThanThirteenBets (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Intermediatefield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Intermediatefield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Primaryfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Primaryfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/GameType/RobThanThirteenBets.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThirteenBets/GameType/ThanThirteenBets (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="ThirteenBets/load.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="ThirteenBets/loadone.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Advancedfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Intermediatefield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="FiveArching/Primaryfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Selection/Advancedfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Selection/Intermediatefield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiveArching/Selection/Primaryfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="FiveArching/load.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Advancedfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/LowlevelField2.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/LowlevelField3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/LowlevelField4.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/IntermediateField5.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/LowlevelField.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/IntermediateField3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/IntermediateField2.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Advancedfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Advancedfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Advancedfield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Advancedfield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/AlternateBankerTwentyOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Advancedfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/LowlevelField2.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/LowlevelField3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/LowlevelField4.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/IntermediateField5.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/LowlevelField.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/IntermediateField3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/IntermediateField2.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Advancedfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Advancedfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Advancedfield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Advancedfield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/GameType/AlternateBankerTwentyOne (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Twentyone/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Twentyone/Bottom.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Twentyone/BottomOne.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Twentyone/Createroom.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Intermediatefield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Intermediatefield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Intermediatefield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Intermediatefield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Intermediatefield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Intermediatefield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Intermediatefield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Intermediatefield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Twentyone/Loadbar.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/NoScoreBankerTwentyOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Primaryfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Primaryfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Primaryfield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Primaryfield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/RobThanTwentyOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/ScoreBankTwentyOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/ThanTwentyOne (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Twentyone/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/ThanThreeDuke (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/ScoreBankThreeDuke (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/RobThanThreeDuke (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Primaryfield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Primaryfield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Primaryfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Primaryfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/NoScoreBankerThreeDuke (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Intermediatefield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Intermediatefield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Intermediatefield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Intermediatefield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/GameType/NoScoreBankerTwentyOne (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Primaryfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Primaryfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Primaryfield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Primaryfield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/GameType/RobThanTwentyOne (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/GameType/ScoreBankTwentyOne (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/GameType/ThanTwentyOne (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Twentyone/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/GameType/ThanThreeDuke (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/GameType/ScoreBankThreeDuke (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/GameType/RobThanThreeDuke (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Primaryfield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Primaryfield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Primaryfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Primaryfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/GameType/NoScoreBankerThreeDuke (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Intermediatefield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Intermediatefield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Intermediatefield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Intermediatefield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="ThreeDuke/Createroom.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="ThreeDuke/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/AlternateBankerThreeDuke (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Advancedfield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Advancedfield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="ThreeDuke/Advancedfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Advancedfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Advancedfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Advancedfield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Advancedfield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/AlternateBankerTwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/GameType/AlternateBankerThreeDuke (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Advancedfield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Advancedfield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="ThreeDuke/Selection/Advancedfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Advancedfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Advancedfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Advancedfield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Advancedfield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/GameType/AlternateBankerTwoEight.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="TwoEight/Background frame.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Intermediatefield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Intermediatefield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Intermediatefield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Intermediatefield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Intermediatefield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/NoScoreBankerTwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Primaryfield (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Primaryfield (3).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Primaryfield (4).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Primaryfield (5).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Primaryfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/RobThanTwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/ScoreBankTwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/Text.png" type="Text" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/ThanTwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TwoEight/TwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Loading/Beauty.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Intermediatefield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Intermediatefield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Intermediatefield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Intermediatefield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/GameType/NoScoreBankerTwoEight.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Primaryfield (2).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Primaryfield (3).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Primaryfield (4).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Primaryfield (5).png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/GameType/RobThanTwoEight.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/GameType/ScoreBankTwoEight.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Rules/Text.png" type="Text" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/GameType/ThanTwoEight.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="TwoEight/Loading/TwoEight.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Roomselection/Advancedfield.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Background (2).jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="BenzBmw/Playerlist/Background (2).png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -404,10 +404,10 @@
    <item name="Recharge/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Recharge/Backgroundperson.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Cow/fgfgyhy.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/SeniorField5.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/SeniorField4.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/SeniorField3.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Cow/SeniorField.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/SeniorField5.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/SeniorField4.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/SeniorField3.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Cow/Selection/SeniorField.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Safe/InputAmountBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Safe/Hint.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Safe/DepositAmountBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -417,13 +417,13 @@
    <item name="Safe/ProgressBarBackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Safe/TopProgressBar.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Safe/TopStatusBar.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Stud/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Stud/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="Stud/Stud.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TenHalf/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TenHalf/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TenHalf/HalfLogo.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
-   <item name="TenHalf/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Stud/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Stud/Loading/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Stud/Loading/Stud.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TenHalf/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TenHalf/Loading/Character.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TenHalf/Loading/HalfLogo.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="TenHalf/Loading/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Set/Listbackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Set/OneVolumeSound_43.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
    <item name="Set/Onebackground.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
@@ -492,4 +492,18 @@
    <item name="Dice/record/title_shengfujil.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Dice/record/ui_history_block.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
    <item name="Common/Popup/Background.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="GameCommon/CommonSelectiion/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Table/people.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="RunFast/Loading/Background.jpg" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="RunFast/Loading/Boy.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="RunFast/Loading/Icon.png" type="Sprite" compress="0" pack="1" quality="80" props="" picType="0" scale="0"/>
+   <item name="RunFast/Selection/Intermediatefield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Selection/Intermediate.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Selection/Novice.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="FiftyK/Selection/Primary.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Selection/Blueseven.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Selection/Redseven.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="Fruit/Selection/Seven.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="RunFast/Selection/Advancedfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
+   <item name="RunFast/Selection/Primaryfield.png" type="Sprite" compress="0" pack="2" quality="80" props="" picType="0" scale="0"/>
 </res>

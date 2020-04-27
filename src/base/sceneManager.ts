@@ -33,7 +33,7 @@ export default class SceneManager {
                     })
                 }),
                 Handler.create(this, (e) => {
-                    loadPage.setPercent(e * 100);
+                    loadPage.progress.percent = (e * 100);
                 }, null, false))
         }
         Laya.stage.addChild(<any>loadPage)

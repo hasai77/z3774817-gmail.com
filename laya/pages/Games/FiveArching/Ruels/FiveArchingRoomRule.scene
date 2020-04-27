@@ -2,9 +2,8 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":100,
     "searchKey":"View",
-    "props":{"width":854,"sceneWidth":854,"sceneHeight":421,"sceneColor":"#000000","height":421},
+    "props":{"width":854,"sceneColor":"#000000","height":421},
     "nodeParent":-1,
     "maxID":101,
     "label":"View",
@@ -96,7 +95,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":9.5,"x":226,"texture":"FiveArching/ddddd.png"},
+                    "props":{"y":9.5,"x":226,"texture":"FiveArching/Rules/ddddd.png"},
                     "nodeParent":16,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -150,10 +149,10 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"y":357,"x":54},
+            "searchKey":"Sprite,checks,checks",
+            "props":{"y":357,"x":54,"var":"checks","name":"checks"},
             "nodeParent":2,
-            "label":"Sprite",
+            "label":"checks",
             "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
@@ -237,26 +236,13 @@
                             "child":[
                                 ]
                         }]
-                },
-                {
-                    "type":"Sprite",
-                    "searchKey":"Sprite",
-                    "props":{"y":9.5,"x":219,"texture":"FiveArching/limit.png"},
-                    "nodeParent":19,
-                    "label":"Sprite",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":75,
-                    "child":[
-                        ]
                 }]
         },
         {
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":9,"x":11,"texture":"FiveArching/Textlist.png"},
+            "props":{"y":9,"x":11,"texture":"FiveArching/Rules/Textlist.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -513,6 +499,20 @@
                                 }]
                         }]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":366,"x":273,"texture":"FiveArching/Rules/limit.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":75,
+            "child":[
+                ]
         }],
     "animations":[
         {

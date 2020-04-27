@@ -136,33 +136,11 @@ P 5FD17798 vscroll.png
 P DDDDFB9E vslider$bar.png
 P 01BAE7F5 vslider.png
 D Cow
-P C6C7A16E BeautyFive.png
-P D1CE0DED BeautyOne.png
-P 7C9685AB BeautySix.png
-P 2B2D09AE BeautyThree.png
-P 91ED7BDA BeautyTwo.png
-P 034A8985 Chips.png
-P 551165DF Cow.png
 P 0EB61E8D fgfgyhy.png
 P 56441EC2 GoldCoin.png
 P 771F65CD Hint.png
-P AB4DBA2F IntermediateField.png
-P 9FB150D0 IntermediateField2.png
-P F0E31C1A IntermediateField3.png
-P 055C4381 IntermediateField4.png
-P 7B9B81E7 IntermediateField5.png
-P 53E4318B LowlevelField.png
-P 27FEF528 LowlevelField2.png
-P 6E99948D LowlevelField3.png
-P 5E1F1836 LowlevelField4.png
-P AE8F5B52 LowlevelField5.png
 P B57D2B6C Ok.png
 P 9DDFA8DF Player.png
-P 932972CB SeniorField.png
-P 8D97F17E SeniorField2.png
-P 2D198676 SeniorField3.png
-P D4771F68 SeniorField4.png
-P 07FC8C3C SeniorField5.png
 D CustomerService
 P B171226F Avatar.png
 P 2890D743 Background.png
@@ -190,96 +168,13 @@ P A4702C1D Drcf_bg.png
 P E399F298 licationDissolution.png
 P A7105AE5 Ok.png
 D FiftyK
-P F4EFF1CF Advancedfield.png
-P 4EF4C0D9 Background.jpg
-P 593AF91B Beauty.png
-P C7895149 BeautyOne.png
 P 435AABA2 ButtonCreateRoom.png
-P 5B67FF57 FiveTenK.png
-P 14C43342 Icon.png
-P 645917B2 Intermediate.png
-P 32AAEE94 Intermediatefield.png
 P 7760256F MiddleBackground.png
-P 37816CAD Novice.png
 P 688DBC1B OK.png
-P 7FF5EC21 Primary.png
-P B4CA0C1F Primaryfield.png
 D FiveArching
-P 8F86ECFE Advancedfield (2).png
-P FD57D73D Advancedfield.png
-P 7750027E Background.jpg
-P 5D35A75B Background.png
-P 00C590C4 ButtonClear.png
-P 948B5A8F ButtonOK.png
-P 943AB7EE Can.png
-P 59099E72 Character.png
-P 0192E015 Creatroom.png
-P 7BCF4A24 ddddd.png
-P 2C53BE35 FiveArching.png
-P D9B6280B Intermediatefield (2).png
-P C8C1DDB5 Intermediatefield.png
-P DD2F7CBE limit.png
-P 45013487 Primaryfield (2).png
-P AC9085AE Primaryfield.png
-P ACCAC924 Textlist.png
-P AF365C9D ThreeArching.png
-P 4931ED04 Trophy.png
-P 2813958B Unavailable.png
 D Fruit
-P F3E75DE3 Ad.png
-P A98EFA55 Advanced field.png
-P 6EA94D01 Apple.png
-P 4A7C02C6 Apple1.png
-P 400EA0D2 Background frame.png
-P 290BE4CB Background.jpg
-P 06EF676A Background0.jpg
-P BE1501F4 Background2.jpg
-P F2AE58FF BAR.png
-P E982AEEC Beauty.png
-P 6D349BB4 Beauty1.png
-P 096BD497 Bell.png
-P 7104935C Betting.png
-P D404B22C Big.png
-P C1471623 Blueseven.png
-P 27286D2A ButtonApple.png
-P 991814E3 ButtonBAR.png
-P 6FE95CA6 ButtonBell.png
-P DBC57691 ButtonDoubleseven.png
-P 651B0625 ButtonMango.png
-P C0E561D2 ButtonOrange.png
-P 22E77DD0 ButtonStar.png
-P 0D9D667F ButtonStart.png
-P DF47F912 ButtonWatermelon.png
-P 2FF0D568 Digitalbackground.png
-P EFC772AF Doubleseven.png
-P 626915D0 Empty.png
-P 380E20C6 Fruit.png
-P FEC9431B Fullpressure.png
-P 967C7249 Gold.png
-P 73A1EFF9 Hold.png
-P 825284B0 Intermediate field.png
-P C57C8F7B lantern.png
-P 288FE9C9 Less.png
-P B1B8FA0E Lucky.png
-P 0EA7FD28 Mango.png
-P B490EC9E Numberbar.png
-P B257D704 OneLucky.png
-P 3935BF97 Orange.png
-R 256A5061 people.png
-P DB77FD05 Plus.png
-P DFEB00BF Primary field.png
-P 0D9437E7 Redseven.png
-P 105F32C6 Seven.png
-P D3585BD9 Small.png
-P 75EC0ECE Star.png
-P 351F5C64 ThreeBar.png
-P CAD50E70 Treasurechest.png
-P 7642C07D TwoBar.png
-P 9B8ABA1E Watermelon.png
-P 5BF17F77 Win.png
 D GameCommon
 P D269B99B Article.png
-P D4FA0000 Background.jpg
 P EAF261F8 Background.png
 P 691DFA5C ClpseButton.png
 P 1AE6631B Game_Common_Background_CustomPlayer.png
@@ -292,15 +187,10 @@ P 7F4F6838 Listbackground.png
 P CD77CD9E Scoreboarddisplay.png
 D Games
 D GoldenFlower
-P 1606A7E1 Advancedfield.png
-P 07EDB149 Background.jpg
 P 435AABA2 ButtonCreateRoom.png
 P D5D7D446 ButtonCreateRoom3.png
-P 04B46DF7 GoldenFlower.png
 P 83EF3A39 Icon.png
-P 9A6C4FCC Intermediatefield.png
 P E2961F26 MiddleBackground.png
-P 354C3456 Primaryfield.png
 D Hall
 P EE4DEF91 Add.png
 P A7A3320F Background strip.png
@@ -342,23 +232,6 @@ P D8B8C3E9 ThreeArching.png
 P DE52822E ThreeDuke.png
 P 4997FD33 TwoEight.png
 D Hundredsfpeople
-P 5B09FA56 Advancedfield0.png
-P 142E1D68 Advancedfield1.png
-P 9678FD11 Advancedfield22.png
-P 3F4F93FE Advancedfield3.png
-P 5E3E51CA DragonTiger.png
-P 962A48FA HundredsCow.png
-P 8FADD5CD HundredsGoldenFlower.png
-P 11E42500 HundredsRedBlack.png
-P 8A34ECA3 HundredsThreeDuke.png
-P B9E81A35 Intermediate field0.png
-P ED45D292 Intermediatefield0.png
-P BDBE5CDA Intermediatefield22.png
-P 2898B2E7 Intermediatefield3.png
-P 20B42D05 Primaryfield.png
-P F12F7314 Primaryfield0.png
-P 2BF4C027 Primaryfield22.png
-P 1D2A3A98 Primaryfield3.png
 D InvitationCode
 P 11AD3416 Background.png
 P A53199EA ButtonCancel.png
@@ -368,18 +241,10 @@ P 3045ABEB Digital.png
 P 96CFAD8F Invitation code.png
 P 700AF6B6 Text.png
 D Landlord
-P 9A99C9FE Advancedfield.png
 P 64FEB09E Background frame.png
-P 59012163 Background.jpg
 P 5581A4A5 ButtonCancel.png
 P F3F6FE47 ButtonOK.png
-P 4ECC583B Character.png
-P BC5F52AB CreateRoom.png
 P E7DB18D4 Createroom33.png
-P 8C15017C Intermediatefield.png
-P A2B30C9B Joinroom.png
-P D0938BAB Landlord.png
-R 07D6F1DA Primaryfield.png
 D Login
 P 96F91AEC AccountInputBackground.png
 P B91483F7 AccountLogin.png
@@ -489,17 +354,8 @@ P 4B65338F Ranking.png
 P 83B352E3 Start.png
 P 82F97DBB Teahouse.png
 D RunFast
-P 424EDD43 Advancedfield.png
 R 6D791896 Background frame.png
-R 0011A122 Background.jpg
-R 1F00C8BE Boy.png
 P 688DBC1B ButtonOK.png
-P AEA357C0 Createroom.png
-P 0DF5E9D0 Girl.png
-R 594F71F5 Icon.png
-R CF9E79A4 Intermediatefield.png
-P 763CE329 Primaryfield.png
-P F9D8E554 RunsFast.png
 D Safe
 P CD0B9B47 Add.png
 P 59B60172 AmountBackground (2).png
@@ -547,11 +403,6 @@ P 73B05657 Twobackground.png
 P 9FC79352 TwoDefault progress bar.png
 P FC024288 Yellowicon.png
 D Stud
-P B167A70E Background.jpg
-P 6885778A Character.png
-P D42A2B02 Image.png
-P 70DB7630 Redenvelope.png
-P 240E4244 Stud.png
 D TeaHouse
 P 1E51BFDF alphazero.png
 P 171B02C7 Arching.png
@@ -655,172 +506,34 @@ P 3F1CA67D Twolisttext background.png.png
 R 66584719 VictoryRecord.png
 R D494530C VictoryRecordFalse.png
 D TenHalf
-P B442B4DA Background.jpg
-P EEBA28CA Character.png
-P F782BCD9 HalfLogo.png
-P F0C7F731 Icon.png
 D Texas
-P 6AA00FD5 Advancedfield.png
-P D6D86668 Background.jpg
 P 5581A4A5 Cancel.png
-P D6928FAB Intermediatefield.png
 P D633ECAE MiddleBackground.png
 P F3F6FE47 OK.png
-P 4836C033 Primaryfield.png
-P BF7C8719 Texas.png
 D Thanchicken
-P 19E925C1 Advancedfield (2).png
-P A0C958AC Advancedfield (3).png
-P 4E0066B6 Advancedfield.png
-P D96E5514 AlternateBankerThanchicken (2).png
-P D83EE9B8 AlternateBankerThanChicken.png
 P 34A5B972 Background frame.png
-P 12479615 Background.jpg
 P 855C03D3 ButtonClear.png
 P 688DBC1B ButtonOK.png
 P CA40FC36 Createroom.png
-P 1990AB06 Iconchicken.png
-P FC5374D3 Intermediatefield (2).png
-P 2F6EE705 Intermediatefield (3).png
-P 019BE66B Intermediatefield.png
-P 5CCA5533 Primaryfield (2).png
-P 60AE9CF7 Primaryfield (3).png
-P D0284679 Primaryfield.png
-P CBDE62FB RobThanThanchicken (2).png
-P 456C2A4A RobThanThanChicken.png
 P ACCAC924 Textlist.png
-P BE420DC6 Thanchicken.png
-P 2919F82D ThanThanChicken (2).png
-P D4DCFC18 ThanThanchicken.png
 D ThirteenBets
-P 8D439E3C Advancedfield (2).png
-P D410CD78 Advancedfield (3).png
-P 9610B8E0 Advancedfield.png
-P 4FC54663 AlternateBankerThirteenBets (2).png
 P C2A382AC Background frame.png
-P 827ED581 Background.jpg
 P 688DBC1B ButtonOK.png
 P 640D9C74 Createroom.png
-P 248AF579 Intermediatefield (2).png
-P 516B74B3 Intermediatefield (3).png
-P 2A2E8A2F Intermediatefield.png
-P D3D0E258 Primaryfield (2).png
-P AF515CEC Primaryfield (3).png
-P 765BCA84 Primaryfield.png
-P 9CD851EB RobThanThirteenBets.png
-P 57F12930 Text.png
-P 7BCF4A24 TextIntroduction.png
-P 0879BC66 ThanThirteenBets (2).png
-P 9A7E1F52 ThirteenBets.png
 D ThreeDuke
-P 26A66C42 1.PNG
-P FE93B71A 3.png
-P 297FABA7 Advancedfield (2).png
-P 17EE4FE6 Advancedfield (3).png
-P A33891D8 Advancedfield (4).png
-P 27C2A3A5 Advancedfield (5).png
-P F6BA3E0B Advancedfield.png
-P 3D4CA205 AlternateBankerThreeDuke (2).png
 P C2A382AC Background frame.png
-P ABF13F70 Background.jpg
 P 9DC34B13 Createroom.png
-P 58177E53 gggfdgfg.png
-P A6F091D0 Hundred.png
-P FE4175B8 Intermediatefield (2).png
-P 945F2FD7 Intermediatefield (3).png
-P 14E7E4CB Intermediatefield (4).png
-P A88F94E8 Intermediatefield (5).png
-P 69A0933B Intermediatefield.png
-P 0C072644 NoScoreBankerThreeDuke (2).png
 P 688DBC1B Ok.png
-P DA5D649D Primaryfield (2).png
-P 6DCB80F9 Primaryfield (3).png
-P 1D6B68FE Primaryfield (4).png
-P E38B4E92 Primaryfield (5).png
-P 8D9E0BCF Primaryfield.png
-P 511482A5 Prohibited.png
-P 17BAFACD Prompttext.png
-P 4755F1E4 RobThanThreeDuke (2).png
-P 03EAFAA3 ScoreBankThreeDuke (2).png
-P EA948E1B ThanThreeDuke (2).png
-P 9DE4D359 ThreeDuke (2).png
-P 5FC74CC8 Threehundred.png
-P F2615D34 Twohundred.png
 D Twentyone
-P 44CF9020 Advancedfield (2).png
-P 3FA2D9DA Advancedfield (3).png
-P EAE1CCF6 Advancedfield (4).png
-P 72357C73 Advancedfield (5).png
-P ECD47BAE Advancedfield.png
-P 3D30528C AlternateBankerTwentyOne (2).png
 P 5B0D4373 Background frame.png
-P 259FCF3C Background.jpg
 P 855C03D3 ButtonClear.png
 P 688DBC1B ButtonOK.png
 P 70860DCA Createroom.png
-P 320F5E12 Intermediatefield (2).png
-P 2FC0BE73 Intermediatefield (3).png
-P 1F52C364 Intermediatefield (4).png
-P 8815200D Intermediatefield (5).png
-P D8BC1226 Intermediatefield.png
-P 2E21235D NoScoreBankerTwentyOne (2).png
-P D2D1B386 Primaryfield (2).png
-P 8B8717D8 Primaryfield (3).png
-P D1AE8E77 Primaryfield (4).png
-P F4FE448A Primaryfield (5).png
-P 14EF0431 Primaryfield.png
-P 192DCD0E RobThanTwentyOne (2).png
-P 8F715078 ScoreBankTwentyOne (2).png
 P C0FA7D85 Text.png
-P 943AB7EE TextAvailable.png
-P DD2F7CBE Textlimit.png
-P 2813958B TextNo.png
-P 7BCF4A24 Textprompt.png
-P 10808DE3 ThanTwentyOne (2).png
-P 8C7724C7 TwentyOne.png
 D TwoEight
-P EE2F069C 1.png
-P E7CB6B4E 100.png
-P D9113C16 15.png
-P 5746DE7E 20.png
-P 0557F403 200.png
-P 13F141A2 30.png
-P 8160CA34 5.png
-P 7179C4E6 50.png
-P 8771A0BD 666.png
-P E1BDE5B1 80.png
-P E7A3D711 AA.png
-P 9DED7F02 Advancedfield (2).png
-P 000D2FB1 Advancedfield (3).png
-P C81B2A7A Advancedfield (4).png
-P EEB299D6 Advancedfield (5).png
-P E0963B3F Advancedfield.png
-P 0325F1DD AlternateBankerTwoEight.png
 P 13AE4B0E Background frame.png
-P 5C8BC767 Background.jpg
-P 288CEC56 Beauty.png
-P 2D8C2F2A Bet.png
 P 73434E54 ButtonOK.png
 P BF87B1DD Createroom.png
-P 6FC9D8D8 dgfg.png
-P 56702600 fsdfd.png
-P F340E98D Intermediatefield (2).png
-P 91AC736C Intermediatefield (3).png
-P 4629BDBE Intermediatefield (4).png
-P 111EFE73 Intermediatefield (5).png
-P CA6EFE19 Intermediatefield.png
-P 980F7A68 NO.png
-P CCB208EE NoScoreBankerTwoEight.png
-P 3E068682 Primaryfield (2).png
-P D340A896 Primaryfield (3).png
-P 3F90F247 Primaryfield (4).png
-P 19B840FE Primaryfield (5).png
-P CFD85553 Primaryfield.png
-P C5055BAB RobThanTwoEight.png
-P A2305148 ScoreBankTwoEight.png
-P B1E0F106 Text.png
-P EFD4A101 ThanTwoEight.png
-P AC38421A TwoEight.png
 D UserInfo
 P CE8C5604 Avatar.png
 P DA296464 Background.png
@@ -995,6 +708,31 @@ P 7989EEBB TextWithdrawmoney.png
 D Common/Popup
 P EAF261F8 Background.png
 P 691DFA5C CloseButton.png
+D Cow/GameType
+P C6C7A16E BeautyFive.png
+P D1CE0DED BeautyOne.png
+P 7C9685AB BeautySix.png
+P 2B2D09AE BeautyThree.png
+P 91ED7BDA BeautyTwo.png
+D Cow/Loading
+P 034A8985 Chips.png
+P 551165DF Cow.png
+D Cow/Selection
+R AB4DBA2F IntermediateField.png
+R 9FB150D0 IntermediateField2.png
+R F0E31C1A IntermediateField3.png
+R 055C4381 IntermediateField4.png
+R 7B9B81E7 IntermediateField5.png
+R 53E4318B LowlevelField.png
+R 27FEF528 LowlevelField2.png
+R 6E99948D LowlevelField3.png
+R 5E1F1836 LowlevelField4.png
+R AE8F5B52 LowlevelField5.png
+R 932972CB SeniorField.png
+R 8D97F17E SeniorField2.png
+R 2D198676 SeniorField3.png
+R D4771F68 SeniorField4.png
+R 07FC8C3C SeniorField5.png
 D Dice/animation
 P 5C0F6743 1.png
 P 34AA4DDD 10.png
@@ -1029,6 +767,90 @@ R 179FA8EB cn_xiao.png
 R C1EC0CCC cn_xiao_s.png
 R 40DA12D8 title_shengfujil.png
 R 1D56E3C1 ui_history_block.png
+D FiftyK/Loading
+P 4EF4C0D9 Background.jpg
+P 593AF91B Beauty.png
+P C7895149 BeautyOne.png
+P 5B67FF57 FiveTenK.png
+P 14C43342 Icon.png
+D FiftyK/Selection
+R F4EFF1CF Advancedfield.png
+R 645917B2 Intermediate.png
+R 32AAEE94 Intermediatefield.png
+R 37816CAD Novice.png
+R 7FF5EC21 Primary.png
+R B4CA0C1F Primaryfield.png
+D FiveArching/Loading
+P 7750027E Background.jpg
+P 59099E72 Character.png
+D FiveArching/Rules
+P 943AB7EE Can.png
+P 7BCF4A24 ddddd.png
+P DD2F7CBE limit.png
+P ACCAC924 Textlist.png
+P 4931ED04 Trophy.png
+P 2813958B Unavailable.png
+D FiveArching/Selection
+R 8F86ECFE Advancedfield (2).png
+R FD57D73D Advancedfield.png
+R D9B6280B Intermediatefield (2).png
+R C8C1DDB5 Intermediatefield.png
+R 45013487 Primaryfield (2).png
+R AC9085AE Primaryfield.png
+D Fruit/Loading
+P 4A7C02C6 Apple1.png
+P BE1501F4 Background2.jpg
+P 6D349BB4 Beauty1.png
+P 380E20C6 Fruit.png
+P C57C8F7B lantern.png
+P CAD50E70 Treasurechest.png
+D Fruit/Selection
+P A98EFA55 Advanced field.png
+P 400EA0D2 Background frame.png
+P 290BE4CB Background.jpg
+P E982AEEC Beauty.png
+R C1471623 Blueseven.png
+P 825284B0 Intermediate field.png
+P DFEB00BF Primary field.png
+R 0D9437E7 Redseven.png
+R 105F32C6 Seven.png
+D Fruit/Table
+P F3E75DE3 Ad.png
+P 6EA94D01 Apple.png
+P 06EF676A Background0.jpg
+P F2AE58FF BAR.png
+P 096BD497 Bell.png
+P 7104935C Betting.png
+P D404B22C Big.png
+P 27286D2A ButtonApple.png
+P 991814E3 ButtonBAR.png
+P 6FE95CA6 ButtonBell.png
+P DBC57691 ButtonDoubleseven.png
+P 651B0625 ButtonMango.png
+P C0E561D2 ButtonOrange.png
+P 22E77DD0 ButtonStar.png
+P 0D9D667F ButtonStart.png
+P DF47F912 ButtonWatermelon.png
+P 2FF0D568 Digitalbackground.png
+P EFC772AF Doubleseven.png
+P 626915D0 Empty.png
+P FEC9431B Fullpressure.png
+P 967C7249 Gold.png
+P 73A1EFF9 Hold.png
+P 288FE9C9 Less.png
+P B1B8FA0E Lucky.png
+P 0EA7FD28 Mango.png
+P B490EC9E Numberbar.png
+P B257D704 OneLucky.png
+P 3935BF97 Orange.png
+P 256A5061 people.png
+P DB77FD05 Plus.png
+P D3585BD9 Small.png
+P 75EC0ECE Star.png
+P 351F5C64 ThreeBar.png
+P 7642C07D TwoBar.png
+P 9B8ABA1E Watermelon.png
+P 5BF17F77 Win.png
 D GameCommon/BetButton
 P C52513F7 Game_Common_Button_0.png
 P C57DC217 Game_Common_Button_1.png
@@ -1060,6 +882,8 @@ P 00CAD331 FixedBankerBackground.png
 P 15E4C98B MiddleBackground.png
 P ACEB9DAA RoomCardOne.png
 P D0EBEC04 RoomCardTwo.png
+D GameCommon/CommonSelectiion
+P D4FA0000 Background.jpg
 D GameCommon/HandredsBet
 R B26A683B 1.png
 R B9C43C6A 10.png
@@ -1175,6 +999,42 @@ P 20BB44F1 Top_Background.png
 P C4E0E17B UserInfo_Background.png
 D Games/HunDredsBull
 R 6474FCFD Table_Background.png
+D GoldenFlower/Loading
+P 07EDB149 Background.jpg
+P 04B46DF7 GoldenFlower.png
+D GoldenFlower/Selection
+R 1606A7E1 Advancedfield.png
+R 9A6C4FCC Intermediatefield.png
+R 354C3456 Primaryfield.png
+D Hundredsfpeople/GameType
+R 5E3E51CA DragonTiger.png
+R 962A48FA HundredsCow.png
+R 8FADD5CD HundredsGoldenFlower.png
+R 11E42500 HundredsRedBlack.png
+R 8A34ECA3 HundredsThreeDuke.png
+D Hundredsfpeople/Selection
+R 5B09FA56 Advancedfield0.png
+R 142E1D68 Advancedfield1.png
+R 9678FD11 Advancedfield22.png
+R 3F4F93FE Advancedfield3.png
+R B9E81A35 Intermediate field0.png
+R ED45D292 Intermediatefield0.png
+R BDBE5CDA Intermediatefield22.png
+R 2898B2E7 Intermediatefield3.png
+R 20B42D05 Primaryfield.png
+R F12F7314 Primaryfield0.png
+R 2BF4C027 Primaryfield22.png
+R 1D2A3A98 Primaryfield3.png
+D Landlord/Loading
+P 59012163 Background.jpg
+P 4ECC583B Character.png
+P D0938BAB Landlord.png
+D Landlord/Selection
+R 9A99C9FE Advancedfield.png
+P BC5F52AB CreateRoom.png
+R 8C15017C Intermediatefield.png
+P A2B30C9B Joinroom.png
+R 07D6F1DA Primaryfield.png
 D Login/AccountLogin
 P 2F2CD5C3 Account.png
 P 0AF79592 Beauty6.png
@@ -1198,3 +1058,177 @@ P 83427C80 QrCode.png
 P 3320C3C2 QrCodeBackground.png
 P CDD1C951 VerificationCodeBackground.png
 P F705E2B0 WechatLogin.png
+D RunFast/Loading
+P 0011A122 Background.jpg
+P 1F00C8BE Boy.png
+P AEA357C0 Createroom.png
+P 0DF5E9D0 Girl.png
+P 594F71F5 Icon.png
+P F9D8E554 RunsFast.png
+D RunFast/Selection
+R 424EDD43 Advancedfield.png
+R CF9E79A4 Intermediatefield.png
+R 763CE329 Primaryfield.png
+D Stud/Loading
+P B167A70E Background.jpg
+P 6885778A Character.png
+P D42A2B02 Image.png
+P 70DB7630 Redenvelope.png
+P 240E4244 Stud.png
+D TenHalf/Loading
+P B442B4DA Background.jpg
+P EEBA28CA Character.png
+P F782BCD9 HalfLogo.png
+P F0C7F731 Icon.png
+D Texas/Loading
+P D6D86668 Background.jpg
+P BF7C8719 Texas.png
+D Texas/Selection
+R 6AA00FD5 Advancedfield.png
+R D6928FAB Intermediatefield.png
+R 4836C033 Primaryfield.png
+D Thanchicken/GameType
+R D83EE9B8 AlternateBankerThanChicken.png
+R 456C2A4A RobThanThanChicken.png
+R 2919F82D ThanThanChicken (2).png
+D Thanchicken/Loading
+P 12479615 Background.jpg
+P 1990AB06 Iconchicken.png
+P BE420DC6 Thanchicken.png
+D Thanchicken/Selection
+R 19E925C1 Advancedfield (2).png
+R A0C958AC Advancedfield (3).png
+R 4E0066B6 Advancedfield.png
+R FC5374D3 Intermediatefield (2).png
+R 2F6EE705 Intermediatefield (3).png
+R 019BE66B Intermediatefield.png
+R 5CCA5533 Primaryfield (2).png
+R 60AE9CF7 Primaryfield (3).png
+R D0284679 Primaryfield.png
+D ThirteenBets/GameType
+R 4FC54663 AlternateBankerThirteenBets (2).png
+R 9CD851EB RobThanThirteenBets.png
+R 0879BC66 ThanThirteenBets (2).png
+D ThirteenBets/Loading
+P 827ED581 Background.jpg
+P 9A7E1F52 ThirteenBets.png
+D ThirteenBets/Rules
+P 57F12930 Text.png
+P 7BCF4A24 TextIntroduction.png
+D ThirteenBets/Selection
+R 8D439E3C Advancedfield (2).png
+R D410CD78 Advancedfield (3).png
+R 9610B8E0 Advancedfield.png
+R 248AF579 Intermediatefield (2).png
+R 516B74B3 Intermediatefield (3).png
+R 2A2E8A2F Intermediatefield.png
+R D3D0E258 Primaryfield (2).png
+R AF515CEC Primaryfield (3).png
+R 765BCA84 Primaryfield.png
+D ThreeDuke/GameType
+R 3D4CA205 AlternateBankerThreeDuke (2).png
+R 0C072644 NoScoreBankerThreeDuke (2).png
+R 4755F1E4 RobThanThreeDuke (2).png
+R 03EAFAA3 ScoreBankThreeDuke (2).png
+R EA948E1B ThanThreeDuke (2).png
+D ThreeDuke/Loading
+P ABF13F70 Background.jpg
+P 9DE4D359 ThreeDuke (2).png
+D ThreeDuke/Rules
+P 26A66C42 1.PNG
+P FE93B71A 3.png
+P 58177E53 gggfdgfg.png
+P A6F091D0 Hundred.png
+P 511482A5 Prohibited.png
+P 17BAFACD Prompttext.png
+P 5FC74CC8 Threehundred.png
+P F2615D34 Twohundred.png
+D ThreeDuke/Selection
+R 297FABA7 Advancedfield (2).png
+R 17EE4FE6 Advancedfield (3).png
+R A33891D8 Advancedfield (4).png
+R 27C2A3A5 Advancedfield (5).png
+R F6BA3E0B Advancedfield.png
+R FE4175B8 Intermediatefield (2).png
+R 945F2FD7 Intermediatefield (3).png
+R 14E7E4CB Intermediatefield (4).png
+R A88F94E8 Intermediatefield (5).png
+R 69A0933B Intermediatefield.png
+R DA5D649D Primaryfield (2).png
+R 6DCB80F9 Primaryfield (3).png
+R 1D6B68FE Primaryfield (4).png
+R E38B4E92 Primaryfield (5).png
+R 8D9E0BCF Primaryfield.png
+D Twentyone/GameType
+R 3D30528C AlternateBankerTwentyOne (2).png
+R 2E21235D NoScoreBankerTwentyOne (2).png
+R 192DCD0E RobThanTwentyOne (2).png
+R 8F715078 ScoreBankTwentyOne (2).png
+R 10808DE3 ThanTwentyOne (2).png
+D Twentyone/Loading
+P 259FCF3C Background.jpg
+P 8C7724C7 TwentyOne.png
+D Twentyone/Rules
+P 943AB7EE TextAvailable.png
+P DD2F7CBE Textlimit.png
+P 2813958B TextNo.png
+P 7BCF4A24 Textprompt.png
+D Twentyone/Selection
+R 44CF9020 Advancedfield (2).png
+R 3FA2D9DA Advancedfield (3).png
+R EAE1CCF6 Advancedfield (4).png
+R 72357C73 Advancedfield (5).png
+R ECD47BAE Advancedfield.png
+R 320F5E12 Intermediatefield (2).png
+R 2FC0BE73 Intermediatefield (3).png
+R 1F52C364 Intermediatefield (4).png
+R 8815200D Intermediatefield (5).png
+R D8BC1226 Intermediatefield.png
+R D2D1B386 Primaryfield (2).png
+R 8B8717D8 Primaryfield (3).png
+R D1AE8E77 Primaryfield (4).png
+R F4FE448A Primaryfield (5).png
+R 14EF0431 Primaryfield.png
+D TwoEight/GameType
+R 0325F1DD AlternateBankerTwoEight.png
+R CCB208EE NoScoreBankerTwoEight.png
+R C5055BAB RobThanTwoEight.png
+R A2305148 ScoreBankTwoEight.png
+R EFD4A101 ThanTwoEight.png
+D TwoEight/Loading
+P 5C8BC767 Background.jpg
+P 288CEC56 Beauty.png
+P AC38421A TwoEight.png
+D TwoEight/Rules
+P EE2F069C 1.png
+P E7CB6B4E 100.png
+P D9113C16 15.png
+P 5746DE7E 20.png
+P 0557F403 200.png
+P 13F141A2 30.png
+P 8160CA34 5.png
+P 7179C4E6 50.png
+P 8771A0BD 666.png
+P E1BDE5B1 80.png
+P E7A3D711 AA.png
+P 2D8C2F2A Bet.png
+P 6FC9D8D8 dgfg.png
+P 56702600 fsdfd.png
+P 980F7A68 NO.png
+P B1E0F106 Text.png
+D TwoEight/Selection
+R 9DED7F02 Advancedfield (2).png
+R 000D2FB1 Advancedfield (3).png
+R C81B2A7A Advancedfield (4).png
+R EEB299D6 Advancedfield (5).png
+R E0963B3F Advancedfield.png
+R F340E98D Intermediatefield (2).png
+R 91AC736C Intermediatefield (3).png
+R 4629BDBE Intermediatefield (4).png
+R 111EFE73 Intermediatefield (5).png
+R CA6EFE19 Intermediatefield.png
+R 3E068682 Primaryfield (2).png
+R D340A896 Primaryfield (3).png
+R 3F90F247 Primaryfield (4).png
+R 19B840FE Primaryfield (5).png
+R CFD85553 Primaryfield.png

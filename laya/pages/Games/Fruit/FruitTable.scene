@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":35,
-    "selecteID":33,
+    "selectedBox":2,
+    "selecteID":3,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Game/Fruit/FruitTable.ts","height":1080},
     "nodeParent":-1,
-    "maxID":70,
+    "maxID":71,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":0,"x":-14,"texture":"Fruit/Background0.jpg"},
+            "props":{"y":0,"x":-14,"texture":"Fruit/Table/Background0.jpg"},
             "nodeParent":2,
             "label":"Sprite",
             "isOpen":false,
@@ -30,7 +30,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":179,"x":635,"texture":"Fruit/Win.png"},
+                    "props":{"y":179,"x":635,"texture":"Fruit/Table/Win.png"},
                     "nodeParent":3,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -43,7 +43,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":179,"x":1248,"texture":"Fruit/Hold.png"},
+                    "props":{"y":179,"x":1248,"texture":"Fruit/Table/Hold.png"},
                     "nodeParent":3,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -56,7 +56,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":178,"x":734,"texture":"Fruit/Gold.png"},
+                    "props":{"y":178,"x":734,"texture":"Fruit/Table/Gold.png"},
                     "nodeParent":3,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -69,7 +69,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":179,"x":1348,"texture":"Fruit/Gold.png"},
+                    "props":{"y":179,"x":1348,"texture":"Fruit/Table/Gold.png"},
                     "nodeParent":3,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -82,11 +82,11 @@
         },
         {
             "x":15,
-            "type":"List",
-            "searchKey":"List",
+            "type":"Sprite",
+            "searchKey":"Sprite",
             "props":{"y":825,"x":423},
             "nodeParent":2,
-            "label":"List",
+            "label":"Sprite",
             "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
@@ -96,11 +96,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"stateNum":"1","skin":"Fruit/ButtonApple.png","runtime":"script/Button.ts"},
+                    "props":{"stateNum":"1","skin":"Fruit/Table/ButtonApple.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":4,
                     "child":[
@@ -109,11 +109,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":121,"stateNum":"1","skin":"Fruit/ButtonOrange.png","runtime":"script/Button.ts"},
+                    "props":{"x":121,"stateNum":"1","skin":"Fruit/Table/ButtonOrange.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":5,
                     "child":[
@@ -122,11 +122,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":242,"stateNum":"1","skin":"Fruit/ButtonMango.png","runtime":"script/Button.ts"},
+                    "props":{"x":242,"stateNum":"1","skin":"Fruit/Table/ButtonMango.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":6,
                     "child":[
@@ -135,11 +135,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":363,"stateNum":"1","skin":"Fruit/ButtonBell.png","runtime":"script/Button.ts"},
+                    "props":{"x":363,"stateNum":"1","skin":"Fruit/Table/ButtonBell.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":7,
                     "child":[
@@ -148,11 +148,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":484,"stateNum":"1","skin":"Fruit/ButtonWatermelon.png","runtime":"script/Button.ts"},
+                    "props":{"x":484,"stateNum":"1","skin":"Fruit/Table/ButtonWatermelon.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":8,
                     "child":[
@@ -161,11 +161,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":607,"stateNum":"1","skin":"Fruit/ButtonStar.png","runtime":"script/Button.ts"},
+                    "props":{"x":607,"stateNum":"1","skin":"Fruit/Table/ButtonStar.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":9,
                     "child":[
@@ -174,11 +174,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":730,"stateNum":"1","skin":"Fruit/ButtonDoubleseven.png","runtime":"script/Button.ts"},
+                    "props":{"x":730,"stateNum":"1","skin":"Fruit/Table/ButtonDoubleseven.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":10,
                     "child":[
@@ -187,11 +187,11 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"x":849,"stateNum":"1","skin":"Fruit/ButtonBAR.png","runtime":"script/Button.ts"},
+                    "props":{"x":849,"stateNum":"1","skin":"Fruit/Table/ButtonBAR.png","runtime":"script/Button.ts"},
                     "nodeParent":12,
                     "label":"Button",
                     "isDirectory":false,
-                    "isAniNode":false,
+                    "isAniNode":true,
                     "hasChild":false,
                     "compId":11,
                     "child":[
@@ -202,7 +202,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":384,"x":564,"texture":"Fruit/Ad.png"},
+            "props":{"y":384,"x":564,"texture":"Fruit/Table/Ad.png"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -228,7 +228,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"texture":"Fruit/Numberbar.png"},
+                    "props":{"texture":"Fruit/Table/Numberbar.png"},
                     "nodeParent":23,
                     "label":"Sprite",
                     "isOpen":false,
@@ -240,7 +240,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":7,"x":8,"texture":"Fruit/Gold.png"},
+                            "props":{"y":7,"x":8,"texture":"Fruit/Table/Gold.png"},
                             "nodeParent":17,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -254,7 +254,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":68,"texture":"Fruit/Small.png"},
+                    "props":{"y":68,"texture":"Fruit/Table/Small.png"},
                     "nodeParent":23,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -267,7 +267,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":66,"x":155,"texture":"Fruit/Big.png"},
+                    "props":{"y":66,"x":155,"texture":"Fruit/Table/Big.png"},
                     "nodeParent":23,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -280,7 +280,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":212,"x":152,"stateNum":"1","skin":"Fruit/Less.png","runtime":"script/Button.ts"},
+                    "props":{"y":212,"x":152,"stateNum":"1","skin":"Fruit/Table/Less.png","runtime":"script/Button.ts"},
                     "nodeParent":23,
                     "label":"Button",
                     "isDirectory":false,
@@ -293,7 +293,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":212,"stateNum":"1","skin":"Fruit/Plus.png","runtime":"script/Button.ts"},
+                    "props":{"y":212,"stateNum":"1","skin":"Fruit/Table/Plus.png","runtime":"script/Button.ts"},
                     "nodeParent":23,
                     "label":"Button",
                     "isDirectory":false,
@@ -320,7 +320,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":55,"x":-17,"texture":"Fruit/Betting.png"},
+                    "props":{"y":55,"x":-17,"texture":"Fruit/Table/Betting.png"},
                     "nodeParent":24,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -333,7 +333,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":162,"x":157,"stateNum":"1","skin":"Fruit/Less.png","runtime":"script/Button.ts"},
+                    "props":{"y":162,"x":157,"stateNum":"1","skin":"Fruit/Table/Less.png","runtime":"script/Button.ts"},
                     "nodeParent":24,
                     "label":"Button",
                     "isDirectory":false,
@@ -346,7 +346,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":159,"x":-8,"stateNum":"1","skin":"Fruit/Plus.png","runtime":"script/Button.ts"},
+                    "props":{"y":159,"x":-8,"stateNum":"1","skin":"Fruit/Table/Plus.png","runtime":"script/Button.ts"},
                     "nodeParent":24,
                     "label":"Button",
                     "isDirectory":false,
@@ -364,17 +364,16 @@
             "props":{"y":902,"x":1380.5},
             "nodeParent":2,
             "label":"Sprite",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":35,
             "child":[
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":11.5,"stateNum":"1","skin":"Fruit/Fullpressure.png","runtime":"script/Button.ts","name":""},
+                    "props":{"y":11.5,"stateNum":"1","skin":"Fruit/Table/Fullpressure.png","runtime":"script/Button.ts","name":""},
                     "nodeParent":35,
                     "label":"Button",
                     "isDirectory":false,
@@ -385,10 +384,9 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,clear_btn,clear_btn",
-                    "props":{"y":11.5,"x":106,"var":"clear_btn","stateNum":"1","skin":"Fruit/Empty.png","runtime":"script/Button.ts","name":"clear_btn"},
+                    "props":{"y":11.5,"x":106,"var":"clear_btn","stateNum":"1","skin":"Fruit/Table/Empty.png","runtime":"script/Button.ts","name":"clear_btn"},
                     "nodeParent":35,
                     "label":"clear_btn",
                     "isDirectory":false,
@@ -399,10 +397,9 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,start_btn,start_btn",
-                    "props":{"y":-0.5,"x":226,"var":"start_btn","stateNum":"1","skin":"Fruit/ButtonStart.png","runtime":"script/Button.ts","name":"start_btn"},
+                    "props":{"y":-0.5,"x":226,"var":"start_btn","stateNum":"1","skin":"Fruit/Table/ButtonStart.png","runtime":"script/Button.ts","name":"start_btn"},
                     "nodeParent":35,
                     "label":"start_btn",
                     "isOpen":false,
@@ -430,7 +427,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-1,"x":1,"texture":"Fruit/Apple.png"},
+                    "props":{"y":-1,"x":1,"texture":"Fruit/Table/Apple.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -443,7 +440,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":2,"x":113,"texture":"Fruit/BAR.png"},
+                    "props":{"y":2,"x":113,"texture":"Fruit/Table/BAR.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -456,7 +453,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":3,"x":228,"texture":"Fruit/Mango.png"},
+                    "props":{"y":3,"x":228,"texture":"Fruit/Table/Mango.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -469,7 +466,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":3,"x":344,"texture":"Fruit/OneLucky.png"},
+                    "props":{"y":3,"x":344,"texture":"Fruit/Table/OneLucky.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -482,7 +479,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":3,"x":463,"texture":"Fruit/Orange.png"},
+                    "props":{"y":3,"x":463,"texture":"Fruit/Table/Orange.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -495,7 +492,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":3,"x":579,"texture":"Fruit/Star.png"},
+                    "props":{"y":3,"x":579,"texture":"Fruit/Table/Star.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -508,7 +505,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":2,"x":694,"texture":"Fruit/ThreeBar.png"},
+                    "props":{"y":2,"x":694,"texture":"Fruit/Table/ThreeBar.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -521,7 +518,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":2,"x":808,"texture":"Fruit/TwoBar.png"},
+                    "props":{"y":2,"x":808,"texture":"Fruit/Table/TwoBar.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -534,7 +531,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":113,"x":807,"texture":"Fruit/Doubleseven.png"},
+                    "props":{"y":113,"x":807,"texture":"Fruit/Table/Doubleseven.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -547,7 +544,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":220,"x":809,"texture":"Fruit/Bell.png"},
+                    "props":{"y":220,"x":809,"texture":"Fruit/Table/Bell.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -560,7 +557,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":331,"x":810,"texture":"Fruit/Watermelon.png"},
+                    "props":{"y":331,"x":810,"texture":"Fruit/Table/Watermelon.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -573,7 +570,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":441,"x":810,"texture":"Fruit/Watermelon.png"},
+                    "props":{"y":441,"x":810,"texture":"Fruit/Table/Watermelon.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -586,7 +583,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":442,"x":697,"texture":"Fruit/TwoBar.png"},
+                    "props":{"y":442,"x":697,"texture":"Fruit/Table/TwoBar.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -599,7 +596,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":440,"x":583,"texture":"Fruit/ThreeBar.png"},
+                    "props":{"y":440,"x":583,"texture":"Fruit/Table/ThreeBar.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -612,7 +609,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":442,"x":465,"texture":"Fruit/Star.png"},
+                    "props":{"y":442,"x":465,"texture":"Fruit/Table/Star.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -625,7 +622,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":445,"x":346,"texture":"Fruit/Orange.png"},
+                    "props":{"y":445,"x":346,"texture":"Fruit/Table/Orange.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -638,7 +635,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":444,"x":230,"texture":"Fruit/OneLucky.png"},
+                    "props":{"y":444,"x":230,"texture":"Fruit/Table/OneLucky.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -651,7 +648,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":442,"x":115,"texture":"Fruit/Mango.png"},
+                    "props":{"y":442,"x":115,"texture":"Fruit/Table/Mango.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -664,7 +661,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":443,"x":3,"texture":"Fruit/Lucky.png"},
+                    "props":{"y":443,"x":3,"texture":"Fruit/Table/Lucky.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -677,7 +674,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":333,"x":1,"texture":"Fruit/Doubleseven.png"},
+                    "props":{"y":333,"x":1,"texture":"Fruit/Table/Doubleseven.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -690,7 +687,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":218,"x":0,"texture":"Fruit/Bell.png"},
+                    "props":{"y":218,"x":0,"texture":"Fruit/Table/Bell.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -703,7 +700,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":109,"x":0,"texture":"Fruit/BAR.png"},
+                    "props":{"y":109,"x":0,"texture":"Fruit/Table/BAR.png"},
                     "nodeParent":69,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -713,6 +710,20 @@
                     "child":[
                         ]
                 }]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":302,"x":-14,"texture":"Fruit/Table/people.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":70,
+            "child":[
+                ]
         }],
     "animations":[
         {

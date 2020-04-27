@@ -2,7 +2,6 @@
 import APP_Loading from "./script/Application/APP_Loading"
 import CommonProgress from "./script/CommonProgress"
 import APP_Update from "./script/Application/APP_Update"
-import CowLoading from "./script/Application/Game/Cow/CowLoading"
 import CommonRadioGroup from "./script/CommonRadioGroup"
 import CommonRadio from "./script/CommonRadio"
 import Button from "./script/Button"
@@ -13,6 +12,9 @@ import Flicker from "./script/Application/Game/Common/Game/Flicker"
 import Prop from "./script/Application/Game/Common/Game/Prop"
 import TransAni from "./script/Application/Game/Common/Game/TransAni"
 import User from "./script/Application/Game/Common/User/User"
+import CommonCreatRoom from "./script/Application/GameCommonUI/CommonCreatRoom"
+import CommonGameTypeSelection from "./script/Application/GameCommonUI/CommonGameTypeSelection"
+import CommonSelectiion from "./script/Application/GameCommonUI/CommonSelectiion"
 import FlutterText from "./script/Application/Game/Common/Game/FlutterText"
 import Banker from "./script/Application/Game/BenzBmw/Banker"
 import CommonSlider from "./script/CommonSlider"
@@ -24,25 +26,8 @@ import Setting from "./script/Application/Game/BenzBmw/Setting"
 import CommonCheck from "./script/CommonCheck"
 import Table from "./script/Application/Game/BenzBmw/Table"
 import DiceTable from "./script/Application/Game/Dice/DiceTable"
-import FiveTenKloading from "./script/Application/Game/FiftyK/FiveTenKloading"
-import FiveTenKSelection from "./script/Application/Game/FiftyK/FiveTenKSelection"
-import FiveArchingselection from "./script/Application/Game/FiveArching/FiveArchingselection"
-import FruitLoading from "./script/Application/Game/Fruit/FruitLoading"
-import FruitSelection from "./script/Application/Game/Fruit/FruitSelection"
 import FruitTable from "./script/Application/Game/Fruit/FruitTable"
 import GoldenFlowerGame from "./script/Application/Game/GoldenFlower/GoldenFlowerGame"
-import ThirteenBets from "./script/Application/Game/ThirteenBets/ThirteenBets"
-import ThirteenBetsLoading from "./script/Application/Game/ThirteenBets/ThirteenBetsLoading"
-import ThirteenBetsSelection from "./script/Application/Game/ThirteenBets/ThirteenBetsSelection"
-import ThreeDuke from "./script/Application/Game/ThreeDuke/ThreeDuke"
-import ThreeDukeLoading from "./script/Application/Game/ThreeDuke/ThreeDukeLoading"
-import ThreeDukeSelection from "./script/Application/Game/ThreeDuke/ThreeDukeSelection"
-import Twentyone from "./script/Application/Game/Twentyone/Twentyone"
-import TwentyoneLoading from "./script/Application/Game/Twentyone/TwentyoneLoading"
-import TwentyoneSelection from "./script/Application/Game/Twentyone/TwentyoneSelection"
-import TwoEight from "./script/Application/Game/TwoEight/TwoEight"
-import TwoEightLoading from "./script/Application/Game/TwoEight/TwoEightLoading"
-import TwoEightSelection from "./script/Application/Game/TwoEight/TwoEightSelection"
 import AgentPromotion from "./script/Application/Hall/AgentPromotion/AgentPromotion"
 import CommonTabButtons from "./script/CommonTabButtons"
 import Announcement from "./script/Application/Hall/Announcement/Announcement"
@@ -75,7 +60,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="top";
     static alignH:string="left";
-    static startScene:any="Games/GoldenFlower/GoldenFlowerGame.scene";
+    static startScene:any="Games/Landlord/LandlordSelection.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
@@ -87,7 +72,6 @@ export default class GameConfig{
         reg("script/Application/APP_Loading.ts",APP_Loading);
         reg("script/CommonProgress.ts",CommonProgress);
         reg("script/Application/APP_Update.ts",APP_Update);
-        reg("script/Application/Game/Cow/CowLoading.ts",CowLoading);
         reg("script/CommonRadioGroup.ts",CommonRadioGroup);
         reg("script/CommonRadio.ts",CommonRadio);
         reg("script/Button.ts",Button);
@@ -98,6 +82,9 @@ export default class GameConfig{
         reg("script/Application/Game/Common/Game/Prop.ts",Prop);
         reg("script/Application/Game/Common/Game/TransAni.ts",TransAni);
         reg("script/Application/Game/Common/User/User.ts",User);
+        reg("script/Application/GameCommonUI/CommonCreatRoom.ts",CommonCreatRoom);
+        reg("script/Application/GameCommonUI/CommonGameTypeSelection.ts",CommonGameTypeSelection);
+        reg("script/Application/GameCommonUI/CommonSelectiion.ts",CommonSelectiion);
         reg("script/Application/Game/Common/Game/FlutterText.ts",FlutterText);
         reg("script/Application/Game/BenzBmw/Banker.ts",Banker);
         reg("script/CommonSlider.ts",CommonSlider);
@@ -109,25 +96,8 @@ export default class GameConfig{
         reg("script/CommonCheck.ts",CommonCheck);
         reg("script/Application/Game/BenzBmw/Table.ts",Table);
         reg("script/Application/Game/Dice/DiceTable.ts",DiceTable);
-        reg("script/Application/Game/FiftyK/FiveTenKloading.ts",FiveTenKloading);
-        reg("script/Application/Game/FiftyK/FiveTenKSelection.ts",FiveTenKSelection);
-        reg("script/Application/Game/FiveArching/FiveArchingselection.ts",FiveArchingselection);
-        reg("script/Application/Game/Fruit/FruitLoading.ts",FruitLoading);
-        reg("script/Application/Game/Fruit/FruitSelection.ts",FruitSelection);
         reg("script/Application/Game/Fruit/FruitTable.ts",FruitTable);
         reg("script/Application/Game/GoldenFlower/GoldenFlowerGame.ts",GoldenFlowerGame);
-        reg("script/Application/Game/ThirteenBets/ThirteenBets.ts",ThirteenBets);
-        reg("script/Application/Game/ThirteenBets/ThirteenBetsLoading.ts",ThirteenBetsLoading);
-        reg("script/Application/Game/ThirteenBets/ThirteenBetsSelection.ts",ThirteenBetsSelection);
-        reg("script/Application/Game/ThreeDuke/ThreeDuke.ts",ThreeDuke);
-        reg("script/Application/Game/ThreeDuke/ThreeDukeLoading.ts",ThreeDukeLoading);
-        reg("script/Application/Game/ThreeDuke/ThreeDukeSelection.ts",ThreeDukeSelection);
-        reg("script/Application/Game/Twentyone/Twentyone.ts",Twentyone);
-        reg("script/Application/Game/Twentyone/TwentyoneLoading.ts",TwentyoneLoading);
-        reg("script/Application/Game/Twentyone/TwentyoneSelection.ts",TwentyoneSelection);
-        reg("script/Application/Game/TwoEight/TwoEight.ts",TwoEight);
-        reg("script/Application/Game/TwoEight/TwoEightLoading.ts",TwoEightLoading);
-        reg("script/Application/Game/TwoEight/TwoEightSelection.ts",TwoEightSelection);
         reg("script/Application/Hall/AgentPromotion/AgentPromotion.ts",AgentPromotion);
         reg("script/CommonTabButtons.ts",CommonTabButtons);
         reg("script/Application/Hall/Announcement/Announcement.ts",Announcement);

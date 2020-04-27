@@ -1,6 +1,6 @@
 import { ui } from "../../../../ui/layaMaxUI";
 import Base from "../../../../base/base"
-import loading from "../Cow/CowLoading"
+
 import Event = Laya.Event;
 
 export default class Dicetable extends ui.Games.Dice.DiceUI{
@@ -15,7 +15,7 @@ export default class Dicetable extends ui.Games.Dice.DiceUI{
 
        this.play_btn.on(Event.CLICK,this,()=>{
          
-        Base.sceneManager.changeScene("Login",new loading())
+        Base.sceneManager.changeScene("Login",new ui.Games.Twentyone.TwentyOneloadingUI())
         //   this.dice_ani.index = 0;
         //   this.tweenStop = false;
         //   this.tweenSpeed = 200;

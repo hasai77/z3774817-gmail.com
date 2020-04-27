@@ -207,4 +207,18 @@
    <item name="Bull/BullLoading.scene" props="" ifExport="分离模式" aName=""/>
    <item name="Games/GoldenFlower/GoldenFlowerGame.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameCommonUI/FlutterText.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Bull/Ruels/RoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/FiftyK/Ruels/FiftyRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/FiveArching/Ruels/FiveArchingRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/GoldenFlower/Rules/GoldenFlowerRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Landlord/Rules/LandlordRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/RunsFast/Rules/RunFastRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Texas/Rules/TexasRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Thanchicken/Rules/ThanchickenCreateroom.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/ThirteenBets/Rules/ThirteenBetsRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/ThreeDuke/Rules/ThreeDukeRoomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/Twentyone/Rules/TwentyoneroomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Games/TwoEight/Rules/TwoEightroomRule.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/CommonGameTypeSelection.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/CommonGameTypeSelection.scene" props="" ifExport="分离模式" aName=""/>
 </page>

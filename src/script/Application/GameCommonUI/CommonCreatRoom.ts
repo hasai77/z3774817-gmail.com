@@ -1,19 +1,96 @@
-import { ui } from "../../ui/layaMaxUI";
+import { ui } from "../../../ui/layaMaxUI";
 import Handler = Laya.Handler;
 import Event = Laya.Event;
 
+import BullRule = ui.Bull.Ruels.RoomRuleUI;
+import FiftyRoomRule = ui.Games.FiftyK.Ruels.FiftyRoomRuleUI;
+import FiveArchingRoomRule = ui.Games.FiveArching.Ruels.FiveArchingRoomRuleUI;
+import GoldenFlowerRoomRule = ui.Games.GoldenFlower.Rules.GoldenFlowerRoomRuleUI;
+import LandlordRoomRule = ui.Games.Landlord.Rules.LandlordRoomRuleUI;
+import RunFastRoomRule = ui.Games.RunsFast.Rules.RunFastRoomRuleUI;
+import TexasRoomRule = ui.Games.Texas.Rules.TexasRoomRuleUI;
+import ThanchickenCreateroom = ui.Games.Thanchicken.Rules.ThanchickenCreateroomUI;
+import ThirteenBetsRoomRule = ui.Games.ThirteenBets.Rules.ThirteenBetsRoomRuleUI;
+import ThreeDukeRoomRule = ui.Games.ThreeDuke.Rules.ThreeDukeRoomRuleUI;
+import TwentyoneroomRule = ui.Games.Twentyone.Rules.TwentyoneroomRuleUI;
+import TwoEightroomRule = ui.Games.TwoEight.Rules.TwoEightroomRuleUI;
 
-
-
-
-
+import Base from "../../../base/base"
+import CommonRadioGroup from "../../CommonRadioGroup"
+import CommonCheck from "../../CommonCheck"
 export default class CommonCreatRoom extends ui.GameCommonUI.CommonCreatRoomUI {
     constructor() {
         super()
     }
+    private curRuleView: any;
     onAwake() {
+        this.close_btn.on(Event.CLICK,this,()=>{
+            Base.publicFun.hideAlert(this,()=>{this.removeSelf()})
+        })
+        this.clear_btn.on(Event.CLICK,this,()=>{
+            for (let index = 0; index < this.curRuleView.radios.numChildren; index++) {
+                (<CommonRadioGroup>this.curRuleView.radios.getChildAt(index)).checkIndex =0;
+            }
+            if(this.curRuleView.checks){
+                for (let index = 0; index < this.curRuleView.checks.numChildren; index++) {
+                    (<CommonCheck>this.curRuleView.checks.getChildAt(index)).checked = false;
+                }
+            }
+        })
+        this.confirm_btn.on(Event.CLICK,this,()=>{
+            let data = {
+                radios:[],
+                checks:[]
+            }
+            for (let index = 0; index < this.curRuleView.radios.numChildren; index++) {
+                let checkIndex = (<CommonRadioGroup>this.curRuleView.radios.getChildAt(index)).checkIndex;
+                data.radios.push(checkIndex)
+            }
+            if(this.curRuleView.checks){
+                for (let index = 0; index < this.curRuleView.checks.numChildren; index++) {
+                    let checked = (<CommonCheck>this.curRuleView.checks.getChildAt(index)).checked;
+                    data.checks.push(checked)
+                }
+            }
+            console.log(data)
+        })
+        this.tabButtons_list.selectEnable = true;
         this.tabButtons_list.renderHandler = new Handler(this, this.updateItem);
-        this.tabButtons_list.selectHandler = new Handler(this, this.onSelect,null,false);
+        this.tabButtons_list.selectHandler = new Handler(this, this.onSelect, null, false);
+        this.tabButtons_list.vScrollBarSkin = "";
+        this.tabButtons_list.elasticEnabled = true;
+        this.setArray([{
+            name: "牛牛",
+            ruleView: BullRule,
+        }, {
+            name: "斗地主",
+            ruleView: LandlordRoomRule,
+        }, {
+            name: "三公",
+            ruleView: ThreeDukeRoomRule,
+        }, {
+            name: "二八",
+            ruleView: TwoEightroomRule,
+        }, {
+            name: "21点",
+            ruleView: TwentyoneroomRule,
+        }, {
+            name: "牛牛",
+            ruleView: BullRule,
+        }, {
+            name: "斗地主",
+            ruleView: LandlordRoomRule,
+        }, {
+            name: "三公",
+            ruleView: ThreeDukeRoomRule,
+        }, {
+            name: "二八",
+            ruleView: TwoEightroomRule,
+        }, {
+            name: "21点",
+            ruleView: TwentyoneroomRule,
+        },])
+        this.tabButtons_list.selectedIndex = 0;
     }
     private setArray(list): void {
         this.tabButtons_list.array = list;
@@ -23,12 +100,25 @@ export default class CommonCreatRoom extends ui.GameCommonUI.CommonCreatRoomUI {
         let unselect = <Laya.Sprite>cell.getChildByName("unselect");
         let selected_text = <Laya.Text>cell.getChildByName("selected_text");
         let unselect_text = <Laya.Text>cell.getChildByName("unselect_text");
-        selected_text.text =  this.tabButtons_list.array[index].name;
-        unselect_text.text =  this.tabButtons_list.array[index].name;
-       
+        selected_text.text = this.tabButtons_list.array[index].name;
+        unselect_text.text = this.tabButtons_list.array[index].name;
+        selected.visible = this.tabButtons_list.array[index].show;
+        selected_text.visible = this.tabButtons_list.array[index].show;
+
+        unselect.visible = !this.tabButtons_list.array[index].show;
+        unselect_text.visible = !this.tabButtons_list.array[index].show;
+
     }
     private onSelect(index: number): void {
         console.log("当前选择的索引：" + index);
+        for (let i = 0; i < this.tabButtons_list.array.length; i++) {
+            this.tabButtons_list.array[i].show = false
+        }
+        this.tabButtons_list.array[index].show = true;
+        if (this.curRuleView)
+            this.curRuleView.removeSelf();
+        this.curRuleView = new (this.tabButtons_list.array[index].ruleView)();
+        this.rule_group.addChild(this.curRuleView)
         // let selected = <Laya.Sprite>cell.getChildByName("selected");
         // let unselect = <Laya.Sprite>cell.getChildByName("unselect");
         // let selected_text = <Laya.Text>cell.getChildByName("selected_text");

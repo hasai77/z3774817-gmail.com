@@ -2,9 +2,8 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":20,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Game/FiftyK/FiveTenKSelection.ts","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","height":1080},
     "nodeParent":-1,
     "maxID":21,
     "label":"View",
@@ -14,20 +13,6 @@
     "hasChild":true,
     "compId":2,
     "child":[
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite",
-            "props":{"y":0,"x":0,"texture":"GameCommon/Background.jpg"},
-            "nodeParent":2,
-            "label":"Sprite",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ]
-        },
         {
             "x":15,
             "type":"Sprite",
@@ -44,7 +29,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":-0.5,"stateNum":"1","skin":"FiftyK/Primaryfield.png","runtime":"script/Button.ts"},
+                    "props":{"y":-0.5,"stateNum":"1","skin":"FiftyK/Selection/Primaryfield.png","runtime":"script/Button.ts"},
                     "nodeParent":20,
                     "label":"Button",
                     "isOpen":false,
@@ -56,7 +41,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":398,"x":49,"texture":"FiftyK/Novice.png"},
+                            "props":{"y":398,"x":49,"texture":"FiftyK/Selection/Novice.png"},
                             "nodeParent":4,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -83,7 +68,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":-0.5,"x":586,"stateNum":"1","skin":"FiftyK/Intermediatefield.png","runtime":"script/Button.ts"},
+                    "props":{"y":-0.5,"x":586,"stateNum":"1","skin":"FiftyK/Selection/Intermediatefield.png","runtime":"script/Button.ts"},
                     "nodeParent":20,
                     "label":"Button",
                     "isOpen":false,
@@ -95,7 +80,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":396,"x":53,"texture":"FiftyK/Primary.png"},
+                            "props":{"y":396,"x":53,"texture":"FiftyK/Selection/Primary.png"},
                             "nodeParent":6,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -122,7 +107,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":0.5,"x":1178,"stateNum":"1","skin":"FiftyK/Advancedfield.png","runtime":"script/Button.ts"},
+                    "props":{"y":0.5,"x":1178,"stateNum":"1","skin":"FiftyK/Selection/Advancedfield.png","runtime":"script/Button.ts"},
                     "nodeParent":20,
                     "label":"Button",
                     "isOpen":false,
@@ -134,7 +119,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":397,"x":49,"texture":"FiftyK/Intermediate.png"},
+                            "props":{"y":397,"x":49,"texture":"FiftyK/Selection/Intermediate.png"},
                             "nodeParent":5,
                             "label":"Sprite",
                             "isDirectory":false,

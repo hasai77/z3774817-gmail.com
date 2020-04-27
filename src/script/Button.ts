@@ -1,11 +1,11 @@
 
 import Event = Laya.Event;
 import Tween = Laya.Tween;
+import base from "../base/base";
 export default class ActionButton extends Laya.Button {
-    constructor() {
-        super()
+    constructor(res?) {
+        super(res)
 
-        
         this.on(Event.MOUSE_DOWN, this, () => {
             Tween.to(this, { scaleX: 0.9, scaleY: 0.9 }, 100)
         })
@@ -17,10 +17,7 @@ export default class ActionButton extends Laya.Button {
         })
     }
     onAwake() {
-        this.pivotX = this.width / 2;
-        this.pivotY = this.height / 2;
-   
-        this.x += this.pivotX;
-        this.y += this.pivotY;
+        this.stateNum = 1;
+        base.publicFun.setCenter(this);
     }
 }
