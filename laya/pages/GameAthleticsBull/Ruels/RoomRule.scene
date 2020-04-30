@@ -398,7 +398,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":0,"x":138,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":0,"x":138,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":133,
                     "label":"Sprite",
                     "isOpen":false,
@@ -489,7 +489,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":117,"x":138,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":117,"x":138,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":133,
                     "label":"Sprite",
                     "isOpen":false,
@@ -541,7 +541,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":230,"x":138,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":230,"x":138,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":133,
                     "label":"Sprite",
                     "isOpen":false,
@@ -710,7 +710,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":352,"x":138,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":352,"x":138,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":133,
                     "label":"Sprite",
                     "isOpen":false,
@@ -840,7 +840,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":477,"x":138,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":477,"x":138,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":133,
                     "label":"Sprite",
                     "isOpen":null,

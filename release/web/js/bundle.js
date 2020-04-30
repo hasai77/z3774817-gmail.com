@@ -516,11 +516,11 @@
         }
         static init() {
             var reg = Laya.ClassUtils.regClass;
-            reg("script/Application/Game/Common/Game/Prop.ts", Prop);
-            reg("script/Application/Hall/Hall.ts", Hall);
-            reg("script/Button.ts", ActionButton);
+            reg("Application/Game/Common/AthleticsGame/Prop.ts", Prop);
+            reg("Application/Hall/Hall.ts", Hall);
+            reg("Application/GameCommon/widget/Button.ts", ActionButton);
             reg("script/login.ts", login);
-            reg("script/playScene.ts", playScene);
+            reg("Application/playScene.ts", playScene);
         }
     }
     GameConfig.width = 1920;

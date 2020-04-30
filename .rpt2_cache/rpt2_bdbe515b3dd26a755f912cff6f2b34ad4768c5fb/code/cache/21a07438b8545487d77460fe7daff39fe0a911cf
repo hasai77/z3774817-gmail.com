@@ -1,6 +1,0 @@
-{
-  "code": "import { ui } from \"../../../../../ui/layaMaxUI\";\r\nexport default class PropList extends ui.Common.Game.PropListUI {\r\n    constructor() {\r\n        super();\r\n        this.propIndex = 0;\r\n    }\r\n    onAwake() {\r\n    }\r\n    propCard(list) {\r\n        this.propIndex = 0;\r\n        Laya.timer.loop(300, this, this.animateTimeBased);\r\n    }\r\n    animateTimeBased() {\r\n        this[`card_${this.propIndex}`].prop_leftToRight(\"pockCard/20.png\");\r\n        this.propIndex++;\r\n        if (this.propIndex > 4)\r\n            Laya.timer.clear(this, this.animateTimeBased);\r\n    }\r\n}\r\n",
-  "references": [
-    "C:/Users/Administrator/Documents/majiang/src/ui/layaMaxUI.ts"
-  ]
-}

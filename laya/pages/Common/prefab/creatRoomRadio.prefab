@@ -3,7 +3,7 @@
     "type":"Sprite",
     "selectedBox":37,
     "searchKey":"Sprite,creatRoomRadio",
-    "props":{"y":0,"x":0,"width":58,"runtime":"script/CommonRadio.ts","presetID":1,"preset":"laya/pages/Common/prefab/creatRoomRadio.prefab","name":"creatRoomRadio","isPresetRoot":true,"height":60},
+    "props":{"y":0,"x":0,"width":58,"runtime":"Application/GameCommon/widget/CommonRadio.ts","presetID":1,"preset":"laya/pages/Common/prefab/creatRoomRadio.prefab","name":"creatRoomRadio","isPresetRoot":true,"height":60},
     "nodeParent":-1,
     "maxID":40,
     "label":"creatRoomRadio",

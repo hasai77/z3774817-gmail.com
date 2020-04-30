@@ -58,7 +58,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -126,7 +126,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -194,7 +194,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -262,7 +262,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -330,7 +330,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -398,7 +398,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -466,7 +466,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -534,7 +534,7 @@
                 {
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},

@@ -29,7 +29,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":-0.5,"stateNum":"1","skin":"FiftyK/Selection/Primaryfield.png","runtime":"script/Button.ts"},
+                    "props":{"y":-0.5,"stateNum":"1","skin":"FiftyK/Selection/Primaryfield.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":20,
                     "label":"Button",
                     "isOpen":false,
@@ -68,7 +68,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":-0.5,"x":586,"stateNum":"1","skin":"FiftyK/Selection/Intermediatefield.png","runtime":"script/Button.ts"},
+                    "props":{"y":-0.5,"x":586,"stateNum":"1","skin":"FiftyK/Selection/Intermediatefield.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":20,
                     "label":"Button",
                     "isOpen":false,
@@ -107,7 +107,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":0.5,"x":1178,"stateNum":"1","skin":"FiftyK/Selection/Advancedfield.png","runtime":"script/Button.ts"},
+                    "props":{"y":0.5,"x":1178,"stateNum":"1","skin":"FiftyK/Selection/Advancedfield.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":20,
                     "label":"Button",
                     "isOpen":false,

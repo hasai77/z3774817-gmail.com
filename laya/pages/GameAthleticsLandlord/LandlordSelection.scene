@@ -43,7 +43,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"stateNum":"1","skin":"Landlord/Selection/Primaryfield.png","runtime":"script/Button.ts"},
+                    "props":{"stateNum":"1","skin":"Landlord/Selection/Primaryfield.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":9,
                     "label":"Button",
                     "isDirectory":false,
@@ -56,7 +56,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":3,"x":419,"stateNum":"1","skin":"Landlord/Selection/Intermediatefield.png","runtime":"script/Button.ts"},
+                    "props":{"y":3,"x":419,"stateNum":"1","skin":"Landlord/Selection/Intermediatefield.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":9,
                     "label":"Button",
                     "isDirectory":false,
@@ -69,7 +69,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":3,"x":839,"stateNum":"1","skin":"Landlord/Selection/Advancedfield.png","runtime":"script/Button.ts","name":""},
+                    "props":{"y":3,"x":839,"stateNum":"1","skin":"Landlord/Selection/Advancedfield.png","runtime":"Application/GameCommon/widget/Button.ts","name":""},
                     "nodeParent":9,
                     "label":"Button",
                     "isDirectory":false,
@@ -82,7 +82,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":3,"x":1265,"stateNum":"1","skin":"Landlord/Selection/CreateRoom.png","runtime":"script/Button.ts","name":""},
+                    "props":{"y":3,"x":1265,"stateNum":"1","skin":"Landlord/Selection/CreateRoom.png","runtime":"Application/GameCommon/widget/Button.ts","name":""},
                     "nodeParent":9,
                     "label":"Button",
                     "isDirectory":false,
@@ -95,7 +95,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button",
-                    "props":{"y":305,"x":1265,"stateNum":"1","skin":"Landlord/Selection/Joinroom.png","runtime":"script/Button.ts"},
+                    "props":{"y":305,"x":1265,"stateNum":"1","skin":"Landlord/Selection/Joinroom.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":9,
                     "label":"Button",
                     "isDirectory":false,

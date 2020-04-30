@@ -3,7 +3,7 @@
     "type":"Sprite",
     "selectedBox":80,
     "searchKey":"Sprite,BmwCheck",
-    "props":{"y":0,"x":0,"width":143,"runtime":"script/CommonCheck.ts","presetID":1,"preset":"laya/pages/GameHundredsBenzBmw/BmwCheck.prefab","name":"BmwCheck","isPresetRoot":true,"height":80},
+    "props":{"y":0,"x":0,"width":143,"runtime":"Application/GameCommon/widget/CommonRadio.ts","presetID":1,"preset":"laya/pages/GameHundredsBenzBmw/BmwCheck.prefab","name":"BmwCheck","isPresetRoot":true,"height":80},
     "nodeParent":-1,
     "maxID":83,
     "label":"BmwCheck",

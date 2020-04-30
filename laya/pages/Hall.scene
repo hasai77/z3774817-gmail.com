@@ -4,7 +4,7 @@
     "selectedBox":2,
     "selecteID":40,
     "searchKey":"Scene",
-    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Hall/Hall.ts","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"Application/Hall/Hall.ts","height":1080},
     "nodeParent":-1,
     "maxID":54,
     "label":"Scene",
@@ -216,7 +216,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":-10,"x":0,"texture":"Hall/Hundred games.png","runtime":"script/Button.ts"},
+                    "props":{"y":-10,"x":0,"texture":"Hall/Hundred games.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":24,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -241,7 +241,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-27,"x":0,"texture":"Hall/DragonTiger.png","runtime":"script/Button.ts"},
+                            "props":{"y":-27,"x":0,"texture":"Hall/DragonTiger.png","runtime":"Application/GameCommon/widget/Button.ts"},
                             "nodeParent":26,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -254,7 +254,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":12,"x":439,"texture":"Hall/FiveArching.png","runtime":"script/Button.ts"},
+                            "props":{"y":12,"x":439,"texture":"Hall/FiveArching.png","runtime":"Application/GameCommon/widget/Button.ts"},
                             "nodeParent":26,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -267,7 +267,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":0,"x":911,"texture":"Hall/FiveTenK.png","runtime":"script/Button.ts"},
+                            "props":{"y":0,"x":911,"texture":"Hall/FiveTenK.png","runtime":"Application/GameCommon/widget/Button.ts"},
                             "nodeParent":26,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -280,7 +280,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":4,"x":1024,"texture":"Hall/Fruit.png","runtime":"script/Button.ts"},
+                            "props":{"y":4,"x":1024,"texture":"Hall/Fruit.png","runtime":"Application/GameCommon/widget/Button.ts"},
                             "nodeParent":26,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -293,7 +293,7 @@
                         {
                             "type":"Sprite",
                             "searchKey":"Sprite",
-                            "props":{"y":-14,"x":473,"texture":"Hall/GoldenFlower.png","runtime":"script/Button.ts"},
+                            "props":{"y":-14,"x":473,"texture":"Hall/GoldenFlower.png","runtime":"Application/GameCommon/widget/Button.ts"},
                             "nodeParent":26,
                             "label":"Sprite",
                             "isDirectory":false,
@@ -321,7 +321,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":45,"x":1345,"texture":"Hall/Setting.png","runtime":"script/Button.ts"},
+                    "props":{"y":45,"x":1345,"texture":"Hall/Setting.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":5,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -334,7 +334,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite,combat,combat",
-                    "props":{"y":45,"x":469,"var":"combat","texture":"Hall/Record.png","runtime":"script/Button.ts","name":"combat"},
+                    "props":{"y":45,"x":469,"var":"combat","texture":"Hall/Record.png","runtime":"Application/GameCommon/widget/Button.ts","name":"combat"},
                     "nodeParent":5,
                     "label":"combat",
                     "isDirectory":false,
@@ -347,7 +347,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":32,"x":1050,"texture":"Hall/Message.png","runtime":"script/Button.ts"},
+                    "props":{"y":32,"x":1050,"texture":"Hall/Message.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":5,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -360,7 +360,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":45,"x":782,"texture":"Hall/Customer service.png","runtime":"script/Button.ts"},
+                    "props":{"y":45,"x":782,"texture":"Hall/Customer service.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":5,
                     "label":"Sprite",
                     "isDirectory":false,
@@ -373,7 +373,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite,market,market",
-                    "props":{"y":23,"x":73,"var":"market","texture":"Hall/Mall.png","runtime":"script/Button.ts","name":"market"},
+                    "props":{"y":23,"x":73,"var":"market","texture":"Hall/Mall.png","runtime":"Application/GameCommon/widget/Button.ts","name":"market"},
                     "nodeParent":5,
                     "label":"market",
                     "isDirectory":false,
@@ -447,7 +447,7 @@
                     "x":30,
                     "type":"Script",
                     "switchAble":true,
-                    "source":"src/script/Application/Game/Common/Game/BetButton.ts",
+                    "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
                     "searchKey":"Script,BetButton",
                     "removeAble":true,
                     "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},

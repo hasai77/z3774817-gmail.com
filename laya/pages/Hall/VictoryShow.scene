@@ -539,7 +539,7 @@
             "x":15,
             "type":"Button",
             "searchKey":"Button,close_btn,close_btn",
-            "props":{"y":204,"x":1363.5,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+            "props":{"y":204,"x":1363.5,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"Application/GameCommon/widget/Button.ts","name":"close_btn"},
             "nodeParent":2,
             "label":"close_btn",
             "isDirectory":false,

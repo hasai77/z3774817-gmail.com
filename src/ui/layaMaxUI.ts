@@ -442,6 +442,16 @@ export module ui.GameCommonUI.Athletics {
         }
     }
     REG("ui.GameCommonUI.Athletics.PropUI",PropUI);
+    export class PropListUI extends Laya.View {
+		public CardList_list:Laya.List;
+		public propType_text:laya.display.Text;
+        constructor(){ super()}
+        createChildren():void {
+            super.createChildren();
+            this.loadScene("GameCommonUI/Athletics/PropList");
+        }
+    }
+    REG("ui.GameCommonUI.Athletics.PropListUI",PropListUI);
     export class RobUI extends Laya.Scene {
         constructor(){ super()}
         createChildren():void {

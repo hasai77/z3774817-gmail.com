@@ -490,7 +490,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"x":1,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":182,
                     "label":"Sprite",
                     "isOpen":null,
@@ -581,7 +581,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":116,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":116,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":182,
                     "label":"Sprite",
                     "isOpen":null,
@@ -672,7 +672,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":230,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":230,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":182,
                     "label":"Sprite",
                     "isOpen":null,
@@ -763,7 +763,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":335,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":335,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":182,
                     "label":"Sprite",
                     "isOpen":null,
@@ -854,7 +854,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":439,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":439,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":182,
                     "label":"Sprite",
                     "isOpen":null,
@@ -1140,7 +1140,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":531,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":531,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":182,
                     "label":"Sprite",
                     "isOpen":null,

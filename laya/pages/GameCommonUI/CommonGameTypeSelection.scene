@@ -4,7 +4,7 @@
     "selectedBox":2,
     "selecteID":8,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/GameCommonUI/CommonGameTypeSelection.ts","height":642},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"Application/GameCommonUI/CommonGameTypeSelection.ts","height":642},
     "nodeParent":-1,
     "maxID":9,
     "label":"View",

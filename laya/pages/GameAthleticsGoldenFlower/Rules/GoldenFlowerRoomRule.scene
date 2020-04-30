@@ -399,7 +399,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"x":2,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"x":2,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":88,
                     "label":"Sprite",
                     "isOpen":null,
@@ -490,7 +490,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":111,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":111,"x":1,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":88,
                     "label":"Sprite",
                     "isOpen":null,
@@ -659,7 +659,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":269,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":269,"x":1,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":88,
                     "label":"Sprite",
                     "isOpen":null,
@@ -789,7 +789,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":363,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":363,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":88,
                     "label":"Sprite",
                     "isOpen":null,
@@ -919,7 +919,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":473,"x":1,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":473,"x":1,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":88,
                     "label":"Sprite",
                     "isOpen":null,

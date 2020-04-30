@@ -1,6 +1,0 @@
-{
-  "code": "import { ui } from \"../../../../../ui/layaMaxUI\";\r\nvar Handler = Laya.Handler;\r\nvar Tween = Laya.Tween;\r\nexport default class Prop extends ui.Common.Game.PropUI {\r\n    constructor() {\r\n        super();\r\n    }\r\n    prop_leftToRight(image) {\r\n        Tween.to(this.card, { scaleX: 0 }, 300, null, Handler.create(this, () => {\r\n            this.card.texture = image;\r\n            Tween.to(this.card, { scaleX: 1 }, 300);\r\n        }));\r\n    }\r\n    prop_topToDown(image) {\r\n        Tween.to(this.card, { scaleY: 0 }, 300, null, Handler.create(this, () => {\r\n            this.card.texture = image;\r\n            Tween.to(this.card, { scaleY: 1 }, 300);\r\n        }));\r\n    }\r\n}\r\n",
-  "references": [
-    "C:/Users/Administrator/Documents/majiang/src/ui/layaMaxUI.ts"
-  ]
-}

@@ -175,7 +175,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":52,
                     "label":"Sprite",
                     "isOpen":null,
@@ -266,7 +266,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":115,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":115,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":52,
                     "label":"Sprite",
                     "isOpen":null,
@@ -357,7 +357,7 @@
                 {
                     "type":"Sprite",
                     "searchKey":"Sprite",
-                    "props":{"y":230,"runtime":"script/CommonRadioGroup.ts"},
+                    "props":{"y":230,"runtime":"Application/GameCommon/widget/CommonRadioGroup.ts"},
                     "nodeParent":52,
                     "label":"Sprite",
                     "isOpen":null,

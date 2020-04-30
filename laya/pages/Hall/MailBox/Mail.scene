@@ -2,9 +2,8 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":3,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Hall/MailBox/Mail.ts","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"Application/Hall/Mall/Mall.ts","height":1080},
     "nodeParent":-1,
     "maxID":60,
     "label":"View",
@@ -83,7 +82,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button,cancel_btn,cancel_btn",
-                    "props":{"y":640,"x":818,"var":"cancel_btn","stateNum":"1","skin":"MailBox/MessageContentBack button.png","runtime":"script/Button.ts","name":"cancel_btn"},
+                    "props":{"y":640,"x":818,"var":"cancel_btn","stateNum":"1","skin":"MailBox/MessageContentBack button.png","runtime":"Application/GameCommon/widget/Button.ts","name":"cancel_btn"},
                     "nodeParent":3,
                     "label":"cancel_btn",
                     "isDirectory":false,
@@ -96,7 +95,7 @@
                 {
                     "type":"Button",
                     "searchKey":"Button,confirm_btn,confirm_btn",
-                    "props":{"y":640,"x":291,"var":"confirm_btn","stateNum":"1","skin":"MailBox/MessageContentConfirm button.png","runtime":"script/Button.ts","name":"confirm_btn"},
+                    "props":{"y":640,"x":291,"var":"confirm_btn","stateNum":"1","skin":"MailBox/MessageContentConfirm button.png","runtime":"Application/GameCommon/widget/Button.ts","name":"confirm_btn"},
                     "nodeParent":3,
                     "label":"confirm_btn",
                     "isDirectory":false,
@@ -122,7 +121,6 @@
             "compId":36,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"texture":"MailBox/PrivateMessageBackground.png"},
@@ -136,10 +134,9 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,tabButtons,tabButtons",
-                    "props":{"y":95,"x":31,"var":"tabButtons","runtime":"script/CommonTabButtons.ts","name":"tabButtons"},
+                    "props":{"y":95,"x":31,"var":"tabButtons","runtime":"Application/GameCommon/widget/CommonTabButtons.ts","name":"tabButtons"},
                     "nodeParent":36,
                     "label":"tabButtons",
                     "isOpen":false,
@@ -288,7 +285,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"List",
                     "searchKey":"List,msg_list,msg_list",
                     "props":{"y":95,"x":341,"width":1136,"var":"msg_list","name":"msg_list","height":668},
@@ -301,7 +297,6 @@
                     "compId":44,
                     "child":[
                         {
-                            "x":45,
                             "type":"Box",
                             "searchKey":"Box",
                             "props":{"y":-3,"x":0,"renderType":"render"},
@@ -314,7 +309,6 @@
                             "compId":57,
                             "child":[
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":3,"texture":"MailBox/List Background.png"},
@@ -329,7 +323,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite,notread_image",
                                     "props":{"y":3,"texture":"MailBox/DidnotreceiveIcon.png","name":"notread_image"},
@@ -343,7 +336,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite,readed_image",
                                     "props":{"y":-2,"x":3,"texture":"MailBox/ReceiveIcon.png","name":"readed_image"},
@@ -358,7 +350,6 @@
                                     "$HIDDEN":false
                                 },
                                 {
-                                    "x":60,
                                     "type":"Text",
                                     "searchKey":"Text,msgName_text",
                                     "props":{"y":27,"x":100,"width":170,"valign":"middle","text":"私信消息","name":"msgName_text","height":45,"fontSize":35,"font":"Microsoft YaHei","color":"#E6B0E8"},
@@ -372,7 +363,6 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Text",
                                     "searchKey":"Text,date_text",
                                     "props":{"y":28,"x":684,"width":252,"valign":"middle","text":"2019.3.3","name":"date_text","height":45,"fontSize":35,"font":"Microsoft YaHei","color":"#E6B0E8"},
@@ -386,10 +376,9 @@
                                         ]
                                 },
                                 {
-                                    "x":60,
                                     "type":"Button",
                                     "searchKey":"Button,lookup_btn",
-                                    "props":{"y":12,"x":923,"stateNum":"1","skin":"MailBox/PrivateMessageCheckbutton.png","runtime":"script/Button.ts","name":"lookup_btn"},
+                                    "props":{"y":12,"x":923,"stateNum":"1","skin":"MailBox/PrivateMessageCheckbutton.png","runtime":"Application/GameCommon/widget/Button.ts","name":"lookup_btn"},
                                     "nodeParent":57,
                                     "label":"lookup_btn",
                                     "isDirectory":false,
@@ -406,7 +395,7 @@
             "x":15,
             "type":"Button",
             "searchKey":"Button,close_btn,close_btn",
-            "props":{"y":97,"x":1607,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"script/Button.ts","name":"close_btn"},
+            "props":{"y":97,"x":1607,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"Application/GameCommon/widget/Button.ts","name":"close_btn"},
             "nodeParent":2,
             "label":"close_btn",
             "isDirectory":false,

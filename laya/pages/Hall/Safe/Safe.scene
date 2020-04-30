@@ -1,10 +1,9 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":86,
-    "selecteID":135,
+    "selectedBox":2,
     "searchKey":"View",
-    "props":{"width":1920,"sceneColor":"#000000","runtime":"script/Application/Hall/Safe/Safe.ts","height":1080},
+    "props":{"width":1920,"sceneColor":"#000000","runtime":"Application/Hall/Safe/Safe.ts","height":1080},
     "nodeParent":-1,
     "maxID":141,
     "label":"View",
@@ -45,7 +44,7 @@
                     "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,tabButtons,tabButtons",
-                    "props":{"y":83,"x":24,"var":"tabButtons","runtime":"script/CommonTabButtons.ts","name":"tabButtons"},
+                    "props":{"y":83,"x":24,"var":"tabButtons","runtime":"Application/GameCommon/widget/CommonTabButtons.ts","name":"tabButtons"},
                     "nodeParent":4,
                     "label":"tabButtons",
                     "isOpen":false,
@@ -405,7 +404,7 @@
                     "x":30,
                     "type":"Button",
                     "searchKey":"Button,close_btn",
-                    "props":{"y":-22,"x":1222,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"script/Button.ts"},
+                    "props":{"y":-22,"x":1222,"var":"close_btn","stateNum":"1","skin":"GameCommon/ClpseButton.png","runtime":"Application/GameCommon/widget/Button.ts"},
                     "nodeParent":4,
                     "label":"close_btn",
                     "isDirectory":false,
@@ -458,7 +457,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,reduce_btn,reduce_btn",
-                                    "props":{"y":102,"x":8,"var":"reduce_btn","stateNum":"1","skin":"Safe/Subtract.png","runtime":"script/Button.ts","name":"reduce_btn"},
+                                    "props":{"y":102,"x":8,"var":"reduce_btn","stateNum":"1","skin":"Safe/Subtract.png","runtime":"Application/GameCommon/widget/Button.ts","name":"reduce_btn"},
                                     "nodeParent":62,
                                     "label":"reduce_btn",
                                     "isDirectory":false,
@@ -471,7 +470,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,plus_btn,plus_btn",
-                                    "props":{"y":102,"x":574,"var":"plus_btn","stateNum":"1","skin":"Safe/Add.png","runtime":"script/Button.ts","name":"plus_btn"},
+                                    "props":{"y":102,"x":574,"var":"plus_btn","stateNum":"1","skin":"Safe/Add.png","runtime":"Application/GameCommon/widget/Button.ts","name":"plus_btn"},
                                     "nodeParent":62,
                                     "label":"plus_btn",
                                     "isDirectory":false,
@@ -484,7 +483,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,accessConfirm_btn,accessConfirm_btn",
-                                    "props":{"y":233,"x":8,"var":"accessConfirm_btn","stateNum":"1","skin":"Safe/MessageContentConfirm button.png","runtime":"script/Button.ts","name":"accessConfirm_btn"},
+                                    "props":{"y":233,"x":8,"var":"accessConfirm_btn","stateNum":"1","skin":"Safe/MessageContentConfirm button.png","runtime":"Application/GameCommon/widget/Button.ts","name":"accessConfirm_btn"},
                                     "nodeParent":62,
                                     "label":"accessConfirm_btn",
                                     "isDirectory":false,
@@ -497,7 +496,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,clearInput_btn,clearInput_btn",
-                                    "props":{"y":230,"x":378,"var":"clearInput_btn","stateNum":"1","skin":"Safe/Cancel.png","runtime":"script/Button.ts","name":"clearInput_btn"},
+                                    "props":{"y":230,"x":378,"var":"clearInput_btn","stateNum":"1","skin":"Safe/Cancel.png","runtime":"Application/GameCommon/widget/Button.ts","name":"clearInput_btn"},
                                     "nodeParent":62,
                                     "label":"clearInput_btn",
                                     "isDirectory":false,
@@ -577,7 +576,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,giveConfirm_btn,giveConfirm_btn",
-                                    "props":{"y":313,"x":83,"var":"giveConfirm_btn","stateNum":"1","skin":"Safe/ConfirmGift.png","runtime":"script/Button.ts","name":"giveConfirm_btn"},
+                                    "props":{"y":313,"x":83,"var":"giveConfirm_btn","stateNum":"1","skin":"Safe/ConfirmGift.png","runtime":"Application/GameCommon/widget/Button.ts","name":"giveConfirm_btn"},
                                     "nodeParent":87,
                                     "label":"giveConfirm_btn",
                                     "isDirectory":false,
@@ -590,7 +589,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,giveCancel_btn,giveCancel_btn",
-                                    "props":{"y":315,"x":452,"var":"giveCancel_btn","stateNum":"1","skin":"Safe/Cancel.png","runtime":"script/Button.ts","name":"giveCancel_btn"},
+                                    "props":{"y":315,"x":452,"var":"giveCancel_btn","stateNum":"1","skin":"Safe/Cancel.png","runtime":"Application/GameCommon/widget/Button.ts","name":"giveCancel_btn"},
                                     "nodeParent":87,
                                     "label":"giveCancel_btn",
                                     "isDirectory":false,
@@ -617,7 +616,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,giveRecords_btn,giveRecords_btn",
-                                    "props":{"y":0,"x":660,"var":"giveRecords_btn","stateNum":"1","skin":"Safe/GivingRecords.png","runtime":"script/Button.ts","name":"giveRecords_btn"},
+                                    "props":{"y":0,"x":660,"var":"giveRecords_btn","stateNum":"1","skin":"Safe/GivingRecords.png","runtime":"Application/GameCommon/widget/Button.ts","name":"giveRecords_btn"},
                                     "nodeParent":87,
                                     "label":"giveRecords_btn",
                                     "isDirectory":false,
@@ -644,7 +643,7 @@
                                 {
                                     "type":"Button",
                                     "searchKey":"Button,recordUser_btn,recordUser_btn",
-                                    "props":{"y":89,"x":660,"var":"recordUser_btn","stateNum":"1","skin":"Safe/Inquire.png","runtime":"script/Button.ts","name":"recordUser_btn"},
+                                    "props":{"y":89,"x":660,"var":"recordUser_btn","stateNum":"1","skin":"Safe/Inquire.png","runtime":"Application/GameCommon/widget/Button.ts","name":"recordUser_btn"},
                                     "nodeParent":87,
                                     "label":"recordUser_btn",
                                     "isDirectory":false,

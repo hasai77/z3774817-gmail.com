@@ -1,7 +1,0 @@
-{
-  "code": "import { ui } from \"./../ui/layaMaxUI\";\r\nimport base from \"../base/base\";\r\nvar Event = Laya.Event;\r\nexport default class login extends ui.loginUI {\r\n    constructor() {\r\n        super();\r\n        this.base = base.getinstance();\r\n    }\r\n    onAwake() {\r\n        this.loginAlert.visible = false;\r\n        this.login_change.on(Event.CLICK, this, this.changeHandler);\r\n        this.chage_ok.on(Event.CLICK, this, function () {\r\n            this.base.publicFun.hideAlert(this.loginAlert);\r\n        });\r\n    }\r\n    changeHandler(e) {\r\n        console.log(333333333);\r\n        this.base.publicFun.showAlert(this.loginAlert);\r\n    }\r\n}\r\n",
-  "references": [
-    "C:/Users/lenovo/Documents/3dmajiang/majiang/src/ui/layaMaxUI.ts",
-    "C:/Users/lenovo/Documents/3dmajiang/majiang/src/base/base.ts"
-  ]
-}

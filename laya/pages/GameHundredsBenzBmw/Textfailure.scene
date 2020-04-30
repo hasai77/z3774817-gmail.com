@@ -74,7 +74,7 @@
             "x":15,
             "type":"Button",
             "searchKey":"Button",
-            "props":{"y":198,"x":1591,"stateNum":"1","skin":"BenzBmw/Close.png","runtime":"script/Button.ts"},
+            "props":{"y":198,"x":1591,"stateNum":"1","skin":"BenzBmw/Close.png","runtime":"Application/GameCommon/widget/Button.ts"},
             "nodeParent":2,
             "label":"Button",
             "isDirectory":false,
