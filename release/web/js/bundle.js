@@ -516,7 +516,7 @@
         }
         static init() {
             var reg = Laya.ClassUtils.regClass;
-            reg("Application/Game/Common/AthleticsGame/Prop.ts", Prop);
+            reg("Application/GameCommon/widget/Prop.ts", Prop);
             reg("Application/Hall/Hall.ts", Hall);
             reg("Application/GameCommon/widget/Button.ts", ActionButton);
             reg("script/login.ts", login);

@@ -3,7 +3,7 @@
   "references": [
     "C:/Users/Administrator/Documents/majiang/src/ui/layaMaxUI.ts",
     "C:/Users/Administrator/Documents/majiang/src/base/base.ts",
-    "C:/Users/Administrator/Documents/majiang/src/Application/Game/Common/AthleticsGame/Chip.ts",
-    "C:/Users/Administrator/Documents/majiang/src/Application/Game/Common/AthleticsGame/FlutterText.ts"
+    "C:/Users/Administrator/Documents/majiang/src/Application/GameCommon/widget/Chip.ts",
+    "C:/Users/Administrator/Documents/majiang/src/Application/GameCommon/widget/FlutterText.ts"
   ]
 }

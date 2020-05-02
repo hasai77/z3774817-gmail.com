@@ -753,7 +753,7 @@
                         {
                             "type":"Script",
                             "switchAble":true,
-                            "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
+                            "source":"src/",
                             "searchKey":"Script,BetButton(lost)",
                             "removeAble":true,
                             "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
@@ -821,7 +821,7 @@
                         {
                             "type":"Script",
                             "switchAble":true,
-                            "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
+                            "source":"src/",
                             "searchKey":"Script,BetButton(lost)",
                             "removeAble":true,
                             "props":{"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},

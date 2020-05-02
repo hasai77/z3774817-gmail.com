@@ -17,6 +17,7 @@ export default class SceneManager {
     }
     private init(): void {
         this.rigesterScene("Login", { url: "./Login/Login.scene" })
+        this.rigesterScene("Hall", { url: "./Hall.scene" })
     }
     public changeScene(name, loadPage: any, removeCur: boolean = true): void {
         loadPage.onAwake = () => {

@@ -1,8 +1,8 @@
 import { ui } from "../../ui/layaMaxUI";
 import Base from "../../base/base"
 import Event = Laya.Event;
-import Chip from "../Game/Common/AthleticsGame/Chip";
-import FlutterText from "../Game/Common/AthleticsGame/FlutterText";
+import Chip from "../GameCommon/widget/Chip";
+import FlutterText from "../GameCommon/widget/FlutterText";
 export default class GoldenFlowerGame extends ui.GameAthleticsGoldenFlower.GoldenFlowerGameUI {
     constructor() {
         super()

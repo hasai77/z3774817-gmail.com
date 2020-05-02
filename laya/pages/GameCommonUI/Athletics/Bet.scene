@@ -17,10 +17,10 @@
         {
             "x":15,
             "type":"List",
-            "searchKey":"List",
-            "props":{"y":0,"x":0,"width":1410,"spaceY":50,"spaceX":90,"repeatY":2,"repeatX":4,"height":258},
+            "searchKey":"List,betBtn_list,betBtn_list",
+            "props":{"y":0,"x":0,"width":1410,"var":"betBtn_list","spaceY":50,"spaceX":90,"repeatY":2,"repeatX":4,"name":"betBtn_list","height":258},
             "nodeParent":2,
-            "label":"List",
+            "label":"betBtn_list",
             "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,

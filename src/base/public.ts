@@ -83,4 +83,18 @@ export default class PublicFun {
         let y = Math.random() * (target.height - 20) + 10
         return { x, y }
     }
+    public getMineIndex(list,mineId){
+        for(let i = 0;i<list.length,i++;){
+            if(list[i].id == mineId)
+                return i;
+        }
+        return-1;
+    }
+    public getPUserPos(myPos, OtherPos, maxPlayer){
+        let pos = OtherPos - myPos;
+        if (pos < 0) {
+            pos += maxPlayer
+        }
+        return pos;
+    }
 }

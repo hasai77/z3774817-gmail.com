@@ -1,10 +1,12 @@
 import { ui } from "../../ui/layaMaxUI";
-import Prop from "../Game/Common/Game/Prop"
-import PropList from "../Game/Common/Game/PropList"
+import Prop from "../GameCommon/widget/Prop"
+import PropList from "../GameCommon/widget/PropList"
+
 import ActionButton from "../GameCommon/widget/Button"
 import Event = Laya.Event;
 import Handler = Laya.Handler;
 export default class Hall extends ui.HallUI{
+    
     public card:Prop;
     public cardList:PropList;
     constructor(){

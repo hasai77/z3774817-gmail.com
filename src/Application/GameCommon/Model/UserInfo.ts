@@ -5,18 +5,27 @@ namespace Application {
             protected UserName: string
             protected UserPassword: string
             protected UserLastTime: number
+            protected UserHeader:string;
             protected UserClientType: string
             protected IsLogin: boolean
             protected Token: string
-
+            protected Ready:boolean;
+            PropList:Prop[];
             public GetUserID(): number {
                 return this.UserID
             }
 
+          
+
             public SetUserID(UserID: number) {
                 this.UserID = UserID
             }
-
+            public SetUserReady(Ready: boolean) {
+                this.Ready = Ready
+            }
+            public GetUserReady(): boolean {
+                return this.Ready
+            }
             public GetUserName(): string {
                 return this.UserName
             }
@@ -64,6 +73,16 @@ namespace Application {
             public SetToken(Token: string) {
                 this.Token = Token
             }
+            public GetUserHeader(): string {
+                return this.UserHeader
+            }
+
+            public SetUserHeader(header: string) {
+                this.UserHeader = header
+            }
+
+
+            
         }
     }
 }

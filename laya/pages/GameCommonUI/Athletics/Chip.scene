@@ -3,7 +3,7 @@
     "type":"View",
     "selectedBox":2,
     "searchKey":"View",
-    "props":{"width":50,"sceneColor":"#000000","runtime":"Application/Game/Common/AthleticsGame/Chip.ts","height":50},
+    "props":{"width":50,"sceneColor":"#000000","runtime":"Application/GameCommon/widget/Chip.ts","height":50},
     "nodeParent":-1,
     "maxID":4,
     "label":"View",

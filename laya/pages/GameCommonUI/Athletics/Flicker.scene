@@ -3,7 +3,7 @@
     "type":"View",
     "selectedBox":2,
     "searchKey":"View",
-    "props":{"width":200,"sceneColor":"#000000","runtime":"Application/Game/Common/AthleticsGame/Flicker.ts","height":200},
+    "props":{"width":200,"sceneColor":"#000000","runtime":"Application/GameCommon/widget/Flicker.ts","height":200},
     "nodeParent":-1,
     "maxID":5,
     "label":"View",

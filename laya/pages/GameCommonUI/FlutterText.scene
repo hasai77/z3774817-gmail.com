@@ -4,7 +4,7 @@
     "selectedBox":2,
     "selecteID":3,
     "searchKey":"View",
-    "props":{"width":143,"sceneWidth":143,"sceneHeight":80,"sceneColor":"#000000","runtime":"Application/Game/Common/AthleticsGame/FlutterText.ts","height":80},
+    "props":{"width":143,"sceneWidth":143,"sceneHeight":80,"sceneColor":"#000000","runtime":"Application/GameCommon/widget/FlutterText.ts","height":80},
     "nodeParent":-1,
     "maxID":4,
     "label":"View",

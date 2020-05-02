@@ -46,7 +46,7 @@
             "x":15,
             "type":"Script",
             "switchAble":true,
-            "source":"src/Application/Game/Common/AthleticsGame/BetButton.ts",
+            "source":"src/",
             "searchKey":"Script,BetButton",
             "removeAble":true,
             "props":{"y":-5,"x":0,"presetID":4,"preset":"laya/pages/GameCommonUI/perfab/BetButton.prefab"},
