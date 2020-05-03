@@ -1,5 +1,7 @@
 import { ui } from "../../../ui/layaMaxUI";
 import Event = Laya.Event;
+import Skeleton = Laya.Skeleton;
+import Handler = Laya.Handler
 import Deal from "../../GameCommon/widget/Deal";
 import UserPropList from "../../GameCommon/widget/UserPropList";
 import TransAni from "../../GameCommon/widget/TransAni";
@@ -30,7 +32,12 @@ export default class BullGame extends ui.GameAthleticsBull.BullGameUI{
                 userList[i].showText("6666")
             }
         })
-
         
+    }
+    private parseComplete() {
+        
+    }
+    private onError(){
+
     }
 }

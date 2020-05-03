@@ -11,6 +11,7 @@ export default  class Prop extends ui.GameCommonUI.Athletics.PropUI{
     private Prop_Number	:number = -2;//道具数字
     private Prop_Sort	:number;//道具排序
     public prop_leftToRight(image){
+      Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_DealCard.mp3");
         Tween.to(this.card,{scaleX:0},150, null, Handler.create(this,()=>{
             this.card.loadImage(image);
             Tween.to(this.card,{scaleX:1},150)
@@ -19,6 +20,7 @@ export default  class Prop extends ui.GameCommonUI.Athletics.PropUI{
 
    
     public prop_topToDown(image){
+      Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_DealCard.mp3");
         Tween.to(this.card,{scaleY:0},150, null, Handler.create(this,()=>{
             this.card.loadImage(image);
             Tween.to(this.card,{scaleY:1},150)

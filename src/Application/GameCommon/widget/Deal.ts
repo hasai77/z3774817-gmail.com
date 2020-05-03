@@ -30,6 +30,7 @@ export default class Deal extends ui.GameCommonUI.Athletics.DealUI {
         card.prop_Number = this.propDataArr[this.dealIndex]?this.propDataArr[this.dealIndex].GetPropNum():-1;
         this.addChild(card)
         // Base.publicFun.setCenter(card);
+        Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_DealCard.mp3");
         this.dealToUser(card, user);
 
         (++this.dealIndex >= total) && Laya.timer.clear(this, this.loopFun)

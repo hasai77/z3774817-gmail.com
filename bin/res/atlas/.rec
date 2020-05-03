@@ -708,6 +708,22 @@ P 7989EEBB TextWithdrawmoney.png
 D Common/Popup
 P EAF261F8 Background.png
 P 691DFA5C CloseButton.png
+D Cow/Animation
+P E1F2B00D Cow_Point_1.png
+R D2A25AC7 Cow_Point_1.sk
+R B5693564 Cow_Point_1_ske.json
+R E4BE2EEF Cow_Point_1_tex.json
+P E1F2B00D Cow_Point_1_tex.png
+P 95754FEB Cow_Point_2.png
+R 7AE6E728 Cow_Point_2.sk
+R 33857C7E Cow_Point_2_ske.json
+R 9ACC0179 Cow_Point_2_tex.json
+P 95754FEB Cow_Point_2_tex.png
+S 2079B35B Cow_Point_3.png
+R BC5D19A1 Cow_Point_3.sk
+R 7F96B6E8 Cow_Point_3_ske.json
+R B87F4435 Cow_Point_3_tex.json
+S 2079B35B Cow_Point_3_tex.png
 D Cow/GameType
 P C6C7A16E BeautyFive.png
 P D1CE0DED BeautyOne.png
@@ -733,6 +749,37 @@ R 8D97F17E SeniorField2.png
 R 2D198676 SeniorField3.png
 R D4771F68 SeniorField4.png
 R 07FC8C3C SeniorField5.png
+D Cow/sound
+R EA5AA966 bg.mp3
+R A5D06C2D boy_0.mp3
+R 5EB9123F boy_1.mp3
+R BC7E45BB boy_10.mp3
+R 94A67F66 boy_11.mp3
+R A3EF8F5A boy_12.mp3
+R 38D3FF1F boy_13.mp3
+R 611232E4 boy_2.mp3
+R F87F2459 boy_3.mp3
+R 1CF1AC3A boy_4.mp3
+R A2D4C4BB boy_5.mp3
+R 8688729B boy_6.mp3
+R FD37D797 boy_7.mp3
+R 4B4A1210 boy_8.mp3
+R 649EB219 boy_9.mp3
+R 9B0DC4A8 girl_0.mp3
+R 55EFD349 girl_1.mp3
+R 236993FB girl_10.mp3
+R FA6BA495 girl_11.mp3
+R 1BEA6710 girl_12.mp3
+R 2FCD1CAE girl_13.mp3
+R 98392035 girl_14.mp3
+R 3DF6C488 girl_2.mp3
+R 1E961F87 girl_3.mp3
+R 96135D2D girl_4.mp3
+R B31BDC90 girl_5.mp3
+R 7A74B923 girl_6.mp3
+R 2488534E girl_7.mp3
+R D28D1B0E girl_8.mp3
+R 161F18F6 girl_9.mp3
 D Dice/animation
 P 5C0F6743 1.png
 P 34AA4DDD 10.png
@@ -767,6 +814,8 @@ R 179FA8EB cn_xiao.png
 R C1EC0CCC cn_xiao_s.png
 R 40DA12D8 title_shengfujil.png
 R 1D56E3C1 ui_history_block.png
+D Dice/sound
+R 627A572B Than.mp3
 D FiftyK/Loading
 P 4EF4C0D9 Background.jpg
 P 593AF91B Beauty.png
@@ -971,6 +1020,13 @@ R 2AC6E4D6 9.png
 D GameCommon/Radio
 P E0480BBB ButtonOrange.png
 P 68B6E294 ButtonPurple.png
+D GameCommon/sound
+R 31CD1FEE countdown.mp3
+R 854B52C3 Game_Common_Button.mp3
+R 95393FFB Games_Common_Sound_Bet.mp3
+R F42854CE Games_Common_Sound_DealCard.mp3
+R 9F7E6B24 Games_Common_Sound_StartBet.mp3
+R C8DD4E2C Games_Common_Sound_StopBet.mp3
 D GameCommon/Time
 P FF48EE37 Game_Common_UI_CountdownAlarm.png
 D GameCommon/User
@@ -999,6 +1055,10 @@ P 20BB44F1 Top_Background.png
 P C4E0E17B UserInfo_Background.png
 D Games/HunDredsBull
 R 6474FCFD Table_Background.png
+D GoldenFlower/Animation
+R C3A80FDE GameGoldenFlowerPoints_0_ske.json
+R 78A47F87 GameGoldenFlowerPoints_0_tex.json
+R F2A445AA GameGoldenFlowerPoints_0_tex.png
 D GoldenFlower/Loading
 P 07EDB149 Background.jpg
 P 04B46DF7 GoldenFlower.png
@@ -1069,6 +1129,16 @@ D RunFast/Selection
 R 424EDD43 Advancedfield.png
 R CF9E79A4 Intermediatefield.png
 R 763CE329 Primaryfield.png
+D Stud/Animation
+R 4F520C43 GameStud_Points_0_ske.json
+R CA933B89 GameStud_Points_0_tex.json
+P 69EEF9BA GameStud_Points_0_tex.png
+R 15E72AAA GameStud_Points_1_ske.json
+R 07C8609B GameStud_Points_1_tex.json
+P F6FF2C09 GameStud_Points_1_tex.png
+R BB431F38 GameStud_Points_2_ske.json
+R 87D776F3 GameStud_Points_2_tex.json
+R C34C5CD1 GameStud_Points_2_tex.png
 D Stud/Loading
 P B167A70E Background.jpg
 P 6885778A Character.png
@@ -1087,6 +1157,7 @@ D Texas/Selection
 R 6AA00FD5 Advancedfield.png
 R D6928FAB Intermediatefield.png
 R 4836C033 Primaryfield.png
+D Thanchicken/Animation
 D Thanchicken/GameType
 R D83EE9B8 AlternateBankerThanChicken.png
 R 456C2A4A RobThanThanChicken.png
@@ -1159,6 +1230,7 @@ R 6DCB80F9 Primaryfield (3).png
 R 1D6B68FE Primaryfield (4).png
 R E38B4E92 Primaryfield (5).png
 R 8D9E0BCF Primaryfield.png
+D Twentyone/Animation
 D Twentyone/GameType
 R 3D30528C AlternateBankerTwentyOne (2).png
 R 2E21235D NoScoreBankerTwentyOne (2).png

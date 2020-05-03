@@ -25,9 +25,11 @@ export default class TransAni extends ui.GameCommonUI.Athletics.TansAniUI{
     }
     public startBet():void{
         this.doAction("GameCommon/BetStatus/Game_Common_HintStartBetting.png");
+        Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_StartBet.mp3");
     }
     public stopBet():void{
         this.doAction("GameCommon/BetStatus/Game_Common_HintStopBetting.png");
+        Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_StopBet.mp3");
     }
     public setImage(image):void{
         this.image.loadImage(image)

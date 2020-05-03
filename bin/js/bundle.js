@@ -1376,6 +1376,10 @@
                 }
             });
         }
+        parseComplete() {
+        }
+        onError() {
+        }
     }
 
     class FlutterText extends ui.GameCommonUI.FlutterTextUI {
@@ -1574,12 +1578,14 @@
             this.Prop_Number = -2;
         }
         prop_leftToRight(image) {
+            Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_DealCard.mp3");
             Tween.to(this.card, { scaleX: 0 }, 150, null, Handler$2.create(this, () => {
                 this.card.loadImage(image);
                 Tween.to(this.card, { scaleX: 1 }, 150);
             }));
         }
         prop_topToDown(image) {
+            Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_DealCard.mp3");
             Tween.to(this.card, { scaleY: 0 }, 150, null, Handler$2.create(this, () => {
                 this.card.loadImage(image);
                 Tween.to(this.card, { scaleY: 1 }, 150);
@@ -1635,6 +1641,7 @@
             let user = userList[this.dealIndex % leng];
             card.prop_Number = this.propDataArr[this.dealIndex] ? this.propDataArr[this.dealIndex].GetPropNum() : -1;
             this.addChild(card);
+            Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_DealCard.mp3");
             this.dealToUser(card, user);
             (++this.dealIndex >= total) && Laya.timer.clear(this, this.loopFun);
         }
@@ -1707,9 +1714,11 @@
         }
         startBet() {
             this.doAction("GameCommon/BetStatus/Game_Common_HintStartBetting.png");
+            Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_StartBet.mp3");
         }
         stopBet() {
             this.doAction("GameCommon/BetStatus/Game_Common_HintStopBetting.png");
+            Laya.SoundManager.playSound("GameCommon/sound/Games_Common_Sound_StopBet.mp3");
         }
         setImage(image) {
             this.image.loadImage(image);
@@ -1778,6 +1787,7 @@
             super(res);
             this.on(Event$2.MOUSE_DOWN, this, () => {
                 Tween$3.to(this, { scaleX: 0.9, scaleY: 0.9 }, 100);
+                Laya.SoundManager.playSound("GameCommon/sound/Game_Common_Button.mp3");
             });
             this.on(Event$2.MOUSE_UP, this, () => {
                 Tween$3.to(this, { scaleX: 1, scaleY: 1 }, 100);
@@ -1785,6 +1795,9 @@
             this.on(Event$2.MOUSE_OUT, this, () => {
                 Tween$3.to(this, { scaleX: 1, scaleY: 1 }, 100);
             });
+        }
+        onComplete() {
+            console.log("播放完成");
         }
         onAwake() {
             this.stateNum = 1;
@@ -3672,7 +3685,7 @@
     GameConfig.screenMode = "none";
     GameConfig.alignV = "top";
     GameConfig.alignH = "left";
-    GameConfig.startScene = "GameAthleticsBull/BullGame.scene";
+    GameConfig.startScene = "APP_Loading.scene";
     GameConfig.sceneRoot = "";
     GameConfig.debug = false;
     GameConfig.stat = false;
