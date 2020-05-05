@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":30,
+    "selectedBox":28,
+    "selecteID":71,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"Application/GameAthleticsBull/Event/BullGame.ts","height":1080},
     "nodeParent":-1,
-    "maxID":123,
+    "maxID":125,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -18,7 +18,7 @@
             "x":15,
             "type":"Sprite",
             "searchKey":"Sprite",
-            "props":{"y":0,"x":0,"texture":"Games/GameThanChicken/table_bg.jpg"},
+            "props":{"y":0,"x":0,"texture":"GameCommon/table_bg.jpg"},
             "nodeParent":2,
             "label":"Sprite",
             "isDirectory":false,
@@ -35,13 +35,14 @@
             "props":{"y":11,"x":59,"visible":true,"var":"users","name":"users"},
             "nodeParent":2,
             "label":"users",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":28,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "selectedBox":13,
                     "searchKey":"Sprite",
@@ -165,7 +166,7 @@
                             "type":"UIView",
                             "source":"GameCommonUI/Athletics/PropList.scene",
                             "searchKey":"UIView",
-                            "props":{"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserBottom.prefab"},
+                            "props":{"y":64,"x":17,"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserBottom.prefab"},
                             "nodeParent":38,
                             "label":"prop_list",
                             "isDirectory":false,
@@ -199,6 +200,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "selectedBox":14,
                     "selecteID":13,
@@ -323,7 +325,7 @@
                             "type":"UIView",
                             "source":"GameCommonUI/Athletics/PropList.scene",
                             "searchKey":"UIView",
-                            "props":{"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserLeft.prefab"},
+                            "props":{"y":15.5,"x":191,"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserLeft.prefab"},
                             "nodeParent":48,
                             "label":"prop_list",
                             "isDirectory":false,
@@ -357,6 +359,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "selectedBox":13,
                     "selecteID":12,
@@ -481,7 +484,7 @@
                             "type":"UIView",
                             "source":"GameCommonUI/Athletics/PropList.scene",
                             "searchKey":"UIView",
-                            "props":{"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserTop.prefab"},
+                            "props":{"y":190,"x":11,"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserTop.prefab"},
                             "nodeParent":51,
                             "label":"prop_list",
                             "isDirectory":false,
@@ -515,6 +518,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "selectedBox":13,
                     "selecteID":12,
@@ -639,7 +643,7 @@
                             "type":"UIView",
                             "source":"GameCommonUI/Athletics/PropList.scene",
                             "searchKey":"UIView",
-                            "props":{"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserTop.prefab"},
+                            "props":{"y":194,"x":20.5,"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserTop.prefab"},
                             "nodeParent":56,
                             "label":"prop_list",
                             "isDirectory":false,
@@ -673,6 +677,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "selectedBox":13,
                     "selecteID":12,
@@ -797,7 +802,7 @@
                             "type":"UIView",
                             "source":"GameCommonUI/Athletics/PropList.scene",
                             "searchKey":"UIView",
-                            "props":{"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserTop.prefab"},
+                            "props":{"y":194,"x":20.5,"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserTop.prefab"},
                             "nodeParent":61,
                             "label":"prop_list",
                             "isDirectory":false,
@@ -831,6 +836,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "selectedBox":14,
                     "selecteID":13,
@@ -955,7 +961,7 @@
                             "type":"UIView",
                             "source":"GameCommonUI/Athletics/PropList.scene",
                             "searchKey":"UIView",
-                            "props":{"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserRight.prefab"},
+                            "props":{"y":25,"x":37,"presetID":5,"preset":"laya/pages/GameCommonUI/perfab/UserRight.prefab"},
                             "nodeParent":71,
                             "label":"prop_list",
                             "isDirectory":false,
@@ -1002,7 +1008,8 @@
             "hasChild":false,
             "compId":35,
             "child":[
-                ]
+                ],
+            "$HIDDEN":true
         },
         {
             "x":15,
@@ -1050,7 +1057,7 @@
             "compId":30,
             "child":[
                 ],
-            "$HIDDEN":false
+            "$HIDDEN":true
         },
         {
             "x":15,

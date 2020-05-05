@@ -1,7 +1,7 @@
 import { ui } from "../../ui/layaMaxUI";
 import Base from "../../base/base"
 import Event = Laya.Event; 
-export default class VictoryShow extends ui.Common.VictoryShowUI{
+export default class VictoryShow extends ui.Hall.VictoryShowUI{
     constructor(){
         super();
     }

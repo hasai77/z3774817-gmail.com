@@ -46,7 +46,7 @@ export default class CustomerService extends ui.Hall.CustomerService.CustomerSer
 
         say_text.text = data.text;
         let rect = say_text.getBounds();
-        console.log(rect.width)
+  
         if (rect.width >= this.maxWidch) {
             say_text.width = this.maxWidch;
             say_text.wordWrap = true;

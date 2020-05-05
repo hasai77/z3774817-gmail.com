@@ -96,6 +96,7 @@ P DA44A2DC Symbol.png
 P 8016A482 Text.png
 P 76786242 TextONE.png
 D Common
+P 8095C719 Backgroundstrip.png
 D comp
 P 316AD948 btn_close.png
 P 5B258D17 button.png
@@ -183,9 +184,14 @@ P B943182E Game_Common_Coin_DefaultCoin.png
 P 61422478 Game_Common_Return.png
 P C0D1B750 Game_Common_UI_Gold.png
 P 8BEAAAD7 Game_Common_UI_GoldBOX.png
+P A01AE006 Help.png
 P 7F4F6838 Listbackground.png
+P 0DF43926 PlacePropBox.png
 P CD77CD9E Scoreboarddisplay.png
-D Games
+P 8D90C7AD SoundOff.png
+P B1708416 SoundOn.png
+P 7F9EC8D0 table_bg.jpg
+P 84C88BD1 table_bg.png
 D GoldenFlower
 P 435AABA2 ButtonCreateRoom.png
 P D5D7D446 ButtonCreateRoom3.png
@@ -195,23 +201,14 @@ D Hall
 P EE4DEF91 Add.png
 P A7A3320F Background strip.png
 P ED64F702 Background.jpg
-P 2DD2534C BenzBmw.png
 P 12EF9A5E Blank_panel.png
 P DBAB551D Bottom.png
 P DBDF6FD8 BottomONE.png
 P 1AF55D37 Customer service.png
 P 2C251D88 Dividingline.png
-P 5529C9C9 DragonTiger.png
-P A15546E7 FiveArching.png
-P E2D842D1 FiveTenK.png
-P B8C6B6C7 Fruit.png
 P 56441EC2 Gold.png
-P 1337C9EA GoldenFlower.png
 P 771F65CD Horn.png
 P CB745169 Hundred games.png
-P A859E1AE HundredsCow.png
-P D7B6D9FD HundredsGoldenFlower.png
-P 3E705A86 HundredsRedBlack.png
 P 4B2CE450 Invitation code.png
 P C7A49A75 Landlord.png
 P 68C315C5 Mall.png
@@ -220,17 +217,46 @@ P D91C338B Message.png
 P FEDA0CE6 progress$bar.png
 P 105D0CCC progress.png
 P BF833D2D Record.png
-P 4AB35838 RobThancow.png
-P 87D3C970 RunsFast.png
 P D1EEF02A Setting.png
-P 44AC1298 Stud.png
-P C3A659B5 TenHalf.png
-P 24D947C4 Texas.png
-P D9DCEF0A ThanChicken.png
-P EE334529 ThirteenBets.png
-P D8B8C3E9 ThreeArching.png
-P DE52822E ThreeDuke.png
-P 4997FD33 TwoEight.png
+R AD0B33FC 三公.png
+R 3B55FE2B 二八杠.png
+R D105DE99 五十K.png
+R D50952AE 亲友圈.png
+R 79DD456B 十三水.png
+R 1281552B 大联盟.png
+R 52804FED 奔驰宝马.png
+R D359BC0B 广州麻将.png
+R 34378CB6 德州扑克.png
+R CFB8553B 打拱.png
+R 34569E30 排位.png
+R F9CE5A40 斗地主.png
+R 1285F5DA 梭哈.png
+R A30DE154 武汉麻将.png
+R FB557D6F 比鸡.png
+R 9101BCC4 水果机.png
+R 07FA0CBB 深林舞会.png
+R A29C0859 港式五张.png
+R 8ADC685A 炸金花.png
+R F3D76D61 牌九.png
+R 2FB017DF 牛牛.png
+R E7E974E5 百人三公.png
+R 2371EE3E 百人二八杠.png
+R 836CD732 百人十三水.png
+R 2FD42926 百人德州.png
+R C885A295 百人梭哈.png
+R 847FBC3C 百人比鸡.png
+R 8F037C17 百人港式五张.png
+R 5C4774D6 百人炸金花.png
+R 9D8801A3 百人牌九.png
+R D1EE25EE 百人牛牛.png
+R A692CF82 百人骰宝.png
+R D861A438 百家乐.png
+R AC33659E 茶楼.png
+R 533748F5 营口麻将.png
+R A947AFA3 血战骰宝.png
+R 0F0998BF 跑得快.png
+R BD15D4D5 龙虎斗.png
+D HundredsBaccarat
 D Hundredsfpeople
 D InvitationCode
 P 11AD3416 Background.png
@@ -507,9 +533,7 @@ R 66584719 VictoryRecord.png
 R D494530C VictoryRecordFalse.png
 D TenHalf
 D Texas
-P 5581A4A5 Cancel.png
 P D633ECAE MiddleBackground.png
-P F3F6FE47 OK.png
 D Thanchicken
 P 34A5B972 Background frame.png
 P 855C03D3 ButtonClear.png
@@ -707,18 +731,20 @@ D BenzBmw/Withdrawmoney
 P 7989EEBB TextWithdrawmoney.png
 D Common/Popup
 P EAF261F8 Background.png
+P 5581A4A5 Cancel.png
 P 691DFA5C CloseButton.png
+P F3F6FE47 OK.png
 D Cow/Animation
-P E1F2B00D Cow_Point_1.png
-R D2A25AC7 Cow_Point_1.sk
+R E1F2B00D Cow_Point_1.png
+R 0DE39C3B Cow_Point_1.sk
 R B5693564 Cow_Point_1_ske.json
 R E4BE2EEF Cow_Point_1_tex.json
-P E1F2B00D Cow_Point_1_tex.png
-P 95754FEB Cow_Point_2.png
+R E1F2B00D Cow_Point_1_tex.png
+R 95754FEB Cow_Point_2.png
 R 7AE6E728 Cow_Point_2.sk
 R 33857C7E Cow_Point_2_ske.json
 R 9ACC0179 Cow_Point_2_tex.json
-P 95754FEB Cow_Point_2_tex.png
+R 95754FEB Cow_Point_2_tex.png
 S 2079B35B Cow_Point_3.png
 R BC5D19A1 Cow_Point_3.sk
 R 7F96B6E8 Cow_Point_3_ske.json
@@ -955,6 +981,19 @@ R 06B39297 7.png
 R 59B588B0 8.png
 R A3813AA2 9.png
 P 0307ED3C Check.png
+D GameCommon/Hundreds
+P 4E0DAB09 Add_Button.png
+P D70A27FF Apply_Background.png
+P DC54A10E Bet_Background.png
+P C5CFA6F5 Chart_Button.png
+P D9D77D3B Close_Button.png
+P 8A031D12 DownBack_Button.png
+P C3397C7C Other_Player_Background.png
+P FCF4D100 Subtract_Button.png
+P 6474FCFD Table_Background.png
+P 20BB44F1 Top_Background.png
+P E065CC31 UpBanker_Button.png
+P C4E0E17B UserInfo_Background.png
 D GameCommon/ProgressSlider
 P 81B3C375 Icon.png
 P 42476F1C Loadtext.png
@@ -1042,23 +1081,12 @@ P 581D381B Game_Common_UserState_Failed.png
 P C23B1159 Game_Common_UserState_Giveup.png
 P DDD5F8E2 Game_Common_UserState_Look.png
 P BE612F15 Ok.png
-D Games/GameThanChicken
-P 0DF43926 PlacePropBox.png
-R 7F9EC8D0 table_bg.jpg
-R 84C88BD1 table_bg.png
-D Games/Hundreds
-P D70A27FF Apply_Background.png
-P DC54A10E Bet_Background.png
-P C3397C7C Other_Player_Background.png
-P 6B7EF8A4 Time_Background.png
-P 20BB44F1 Top_Background.png
-P C4E0E17B UserInfo_Background.png
-D Games/HunDredsBull
-R 6474FCFD Table_Background.png
 D GoldenFlower/Animation
-R C3A80FDE GameGoldenFlowerPoints_0_ske.json
-R 78A47F87 GameGoldenFlowerPoints_0_tex.json
-R F2A445AA GameGoldenFlowerPoints_0_tex.png
+R F2A445AA GameGoldenFlower_Points_0.png
+R 69632361 GameGoldenFlower_Points_0.sk
+R 1AE8656A GameGoldenFlower_Points_0_ske.json
+R 4FB37AC6 GameGoldenFlower_Points_0_tex.json
+R F2A445AA GameGoldenFlower_Points_0_tex.png
 D GoldenFlower/Loading
 P 07EDB149 Background.jpg
 P 04B46DF7 GoldenFlower.png
@@ -1066,6 +1094,17 @@ D GoldenFlower/Selection
 R 1606A7E1 Advancedfield.png
 R 9A6C4FCC Intermediatefield.png
 R 354C3456 Primaryfield.png
+D HundredsBaccarat/Animation
+R 839883F8 HundredsBaccarat_Points_0.png
+R A5744D51 HundredsBaccarat_Points_0.sk
+R 9D5E0E69 HundredsBaccarat_Points_0_ske.json
+R AFB6747E HundredsBaccarat_Points_0_tex.json
+R 839883F8 HundredsBaccarat_Points_0_tex.png
+R 1094BCDF HundredsBaccarat_Points_1.png
+R 74F6F00F HundredsBaccarat_Points_1.sk
+R AAA5F525 HundredsBaccarat_Points_1_ske.json
+R 71F647DD HundredsBaccarat_Points_1_tex.json
+R 1094BCDF HundredsBaccarat_Points_1_tex.png
 D Hundredsfpeople/GameType
 R 5E3E51CA DragonTiger.png
 R 962A48FA HundredsCow.png
@@ -1130,12 +1169,18 @@ R 424EDD43 Advancedfield.png
 R CF9E79A4 Intermediatefield.png
 R 763CE329 Primaryfield.png
 D Stud/Animation
+R 69EEF9BA GameStud_Points_0.png
+R 260BAA1B GameStud_Points_0.sk
 R 4F520C43 GameStud_Points_0_ske.json
 R CA933B89 GameStud_Points_0_tex.json
-P 69EEF9BA GameStud_Points_0_tex.png
+R 69EEF9BA GameStud_Points_0_tex.png
+R F6FF2C09 GameStud_Points_1.png
+R 476619B4 GameStud_Points_1.sk
 R 15E72AAA GameStud_Points_1_ske.json
 R 07C8609B GameStud_Points_1_tex.json
-P F6FF2C09 GameStud_Points_1_tex.png
+R F6FF2C09 GameStud_Points_1_tex.png
+R C34C5CD1 GameStud_Points_2.png
+R 537801DE GameStud_Points_2.sk
 R BB431F38 GameStud_Points_2_ske.json
 R 87D776F3 GameStud_Points_2_tex.json
 R C34C5CD1 GameStud_Points_2_tex.png
@@ -1145,11 +1190,48 @@ P 6885778A Character.png
 P D42A2B02 Image.png
 P 70DB7630 Redenvelope.png
 P 240E4244 Stud.png
+D TenHalf/Animation
+R 1E969E06 GameTenHalf_Points_0.png
+R 7021D0D3 GameTenHalf_Points_0.sk
+R A81B5DB2 GameTenHalf_Points_0_ske.json
+R A63EA8D6 GameTenHalf_Points_0_tex.json
+R 1E969E06 GameTenHalf_Points_0_tex.png
+P 77E95141 GameTenHalf_Points_1.png
+R EB1DEB13 GameTenHalf_Points_1.sk
+R 3748134D GameTenHalf_Points_1_ske.json
+R 3761A230 GameTenHalf_Points_1_tex.json
+R 77E95141 GameTenHalf_Points_1_tex.png
+P BD61FE5A GameTenHalf_Points_2.png
+R 5F33779F GameTenHalf_Points_2.sk
+R 6B41BC0D GameTenHalf_Points_2_ske.json
+R 064060F5 GameTenHalf_Points_2_tex.json
+R BD61FE5A GameTenHalf_Points_2_tex.png
+P C2444DF2 GameTenHalf_Points_3.png
+R 7B77AA0F GameTenHalf_Points_3.sk
+R 71161055 GameTenHalf_Points_3_ske.json
+R 1BCE81BB GameTenHalf_Points_3_tex.json
+R C2444DF2 GameTenHalf_Points_3_tex.png
+R 2C1CA42F GameTenHalf_Points_4.png
+R 2785B732 GameTenHalf_Points_4.sk
+R 31618AF5 GameTenHalf_Points_4_ske.json
+R A054D7FD GameTenHalf_Points_4_tex.json
+R 2C1CA42F GameTenHalf_Points_4_tex.png
 D TenHalf/Loading
 P B442B4DA Background.jpg
 P EEBA28CA Character.png
 P F782BCD9 HalfLogo.png
 P F0C7F731 Icon.png
+D Texas/Animation
+R B7ED8315 GameTexasHoldem_Points_0.png
+R 7230A8B2 GameTexasHoldem_Points_0.sk
+R 2263B2EE GameTexasHoldem_Points_0_ske.json
+R 5B8DA27F GameTexasHoldem_Points_0_tex.json
+R B7ED8315 GameTexasHoldem_Points_0_tex.png
+R 270EEA87 GameTexasHoldem_Points_1.png
+R 6B45FE60 GameTexasHoldem_Points_1.sk
+R F7F0572B GameTexasHoldem_Points_1_ske.json
+R 7F07C92A GameTexasHoldem_Points_1_tex.json
+R 270EEA87 GameTexasHoldem_Points_1_tex.png
 D Texas/Loading
 P D6D86668 Background.jpg
 P BF7C8719 Texas.png
@@ -1158,6 +1240,26 @@ R 6AA00FD5 Advancedfield.png
 R D6928FAB Intermediatefield.png
 R 4836C033 Primaryfield.png
 D Thanchicken/Animation
+R 51F80E31 ThanChicken_Points_0.png
+R 8CEEC701 ThanChicken_Points_0.sk
+R 5F7087C5 ThanChicken_Points_0_ske.json
+R 201D627F ThanChicken_Points_0_tex.json
+R 51F80E31 ThanChicken_Points_0_tex.png
+R 31176A3A ThanChicken_Points_1.png
+R 76851594 ThanChicken_Points_1.sk
+R 164B43E5 ThanChicken_Points_1_ske.json
+R 3B640E11 ThanChicken_Points_1_tex.json
+R 31176A3A ThanChicken_Points_1_tex.png
+R A84DF6A0 ThanChicken_Points_2.png
+R C8F4F68E ThanChicken_Points_2.sk
+R 1EB05973 ThanChicken_Points_2_ske.json
+R F95337C9 ThanChicken_Points_2_tex.json
+R A84DF6A0 ThanChicken_Points_2_tex.png
+R 0CE2B8A1 ThanChicken_Points_3.png
+R 36D8FA5A ThanChicken_Points_3.sk
+R D1CF3C33 ThanChicken_Points_3_ske.json
+R 279EA038 ThanChicken_Points_3_tex.json
+R 0CE2B8A1 ThanChicken_Points_3_tex.png
 D Thanchicken/GameType
 R D83EE9B8 AlternateBankerThanChicken.png
 R 456C2A4A RobThanThanChicken.png
@@ -1176,6 +1278,27 @@ R 019BE66B Intermediatefield.png
 R 5CCA5533 Primaryfield (2).png
 R 60AE9CF7 Primaryfield (3).png
 R D0284679 Primaryfield.png
+D ThirteenBets/Animation
+R BE8E5382 ThirteenBets_Points1.png
+R 6DCABFFC ThirteenBets_Points1.sk
+R 2FE8C54A ThirteenBets_Points1_ske.json
+R BBCF2523 ThirteenBets_Points1_tex.json
+R BE8E5382 ThirteenBets_Points1_tex.png
+R 9536E8AB ThirteenBets_Points2.png
+R 2544BE24 ThirteenBets_Points2.sk
+R 8AD97218 ThirteenBets_Points2_ske.json
+R EB3B76F0 ThirteenBets_Points2_tex.json
+R 9536E8AB ThirteenBets_Points2_tex.png
+R 4C5A28BF ThirteenBets_Points3.png
+R 2A387342 ThirteenBets_Points3.sk
+R 27F9AAFD ThirteenBets_Points3_ske.json
+R 1ECE54A3 ThirteenBets_Points3_tex.json
+R 4C5A28BF ThirteenBets_Points3_tex.png
+S 2B4225C2 ThirteenBets_Points4.png
+R 864E6C30 ThirteenBets_Points4.sk
+R 243BFF48 ThirteenBets_Points4_ske.json
+R AAF6D482 ThirteenBets_Points4_tex.json
+S 2B4225C2 ThirteenBets_Points4_tex.png
 D ThirteenBets/GameType
 R 4FC54663 AlternateBankerThirteenBets (2).png
 R 9CD851EB RobThanThirteenBets.png
@@ -1196,6 +1319,22 @@ R 2A2E8A2F Intermediatefield.png
 R D3D0E258 Primaryfield (2).png
 R AF515CEC Primaryfield (3).png
 R 765BCA84 Primaryfield.png
+D ThreeDuke/Animation
+R B738D356 GameThreeDuke_Points_0.png
+R 48842772 GameThreeDuke_Points_0.sk
+R 6B0814BC GameThreeDuke_Points_0_ske.json
+R 8D0FA827 GameThreeDuke_Points_0_tex.json
+R B738D356 GameThreeDuke_Points_0_tex.png
+R D4D827EA GameThreeDuke_Points_1.png
+R 0DE4E2FB GameThreeDuke_Points_1.sk
+R FE5E117E GameThreeDuke_Points_1_ske.json
+R 57DB701F GameThreeDuke_Points_1_tex.json
+R D4D827EA GameThreeDuke_Points_1_tex.png
+R B5B4B51C GameThreeDuke_Points_2.png
+R A1FE6880 GameThreeDuke_Points_2.sk
+R 9C7290E8 GameThreeDuke_Points_2_ske.json
+R 37B6C2B7 GameThreeDuke_Points_2_tex.json
+R B5B4B51C GameThreeDuke_Points_2_tex.png
 D ThreeDuke/GameType
 R 3D4CA205 AlternateBankerThreeDuke (2).png
 R 0C072644 NoScoreBankerThreeDuke (2).png
@@ -1231,6 +1370,26 @@ R 1D6B68FE Primaryfield (4).png
 R E38B4E92 Primaryfield (5).png
 R 8D9E0BCF Primaryfield.png
 D Twentyone/Animation
+R 46E198CD GameBlackJack_Points_0.png
+R EE771EFC GameBlackJack_Points_0.sk
+R 8A2D631E GameBlackJack_Points_0_ske.json
+R E32C862C GameBlackJack_Points_0_tex.json
+R 46E198CD GameBlackJack_Points_0_tex.png
+R 4B57196E GameBlackJack_Points_1.png
+R 492BA309 GameBlackJack_Points_1.sk
+R C9E99F70 GameBlackJack_Points_1_ske.json
+R DA439B41 GameBlackJack_Points_1_tex.json
+R 4B57196E GameBlackJack_Points_1_tex.png
+R 6CC086C7 GameBlackJack_Points_2_.png
+R 2F075347 GameBlackJack_Points_2_.sk
+R C322784D GameBlackJack_Points_2__ske.json
+R 91C31E7F GameBlackJack_Points_2__tex.json
+R 6CC086C7 GameBlackJack_Points_2__tex.png
+R BA0977E0 GameBlackJack_Points_3.png
+R A9A7111F GameBlackJack_Points_3.sk
+R 34002344 GameBlackJack_Points_3_ske.json
+R CFE9DA32 GameBlackJack_Points_3_tex.json
+R BA0977E0 GameBlackJack_Points_3_tex.png
 D Twentyone/GameType
 R 3D30528C AlternateBankerTwentyOne (2).png
 R 2E21235D NoScoreBankerTwentyOne (2).png
@@ -1261,6 +1420,17 @@ R 8B8717D8 Primaryfield (3).png
 R D1AE8E77 Primaryfield (4).png
 R F4FE448A Primaryfield (5).png
 R 14EF0431 Primaryfield.png
+D TwoEight/Animation
+R 839883F8 GameTwoEight_Points_0.png
+R 970EE540 GameTwoEight_Points_0.sk
+R DF87B7B2 GameTwoEight_Points_0_ske.json
+R 0C123E09 GameTwoEight_Points_0_tex.json
+R 839883F8 GameTwoEight_Points_0_tex.png
+R 1094BCDF GameTwoEight_Points_1.png
+R F071B1DB GameTwoEight_Points_1.sk
+R 189DA9D3 GameTwoEight_Points_1_ske.json
+R D0F7548A GameTwoEight_Points_1_tex.json
+R 1094BCDF GameTwoEight_Points_1_tex.png
 D TwoEight/GameType
 R 0325F1DD AlternateBankerTwoEight.png
 R CCB208EE NoScoreBankerTwoEight.png

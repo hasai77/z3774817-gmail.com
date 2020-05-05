@@ -23,6 +23,7 @@ export default class PropList extends ui.GameCommonUI.Athletics.PropListUI {
         return this.CardList_list.localToGlobal(new Laya.Point(curCard.x, curCard.y));
     }
     public initCard(): void {
+      
         this.CardList_list.array = [-2, -2, -2, -2, -2]
         this.currentDeal = 0;
         this.propIndex = 0;

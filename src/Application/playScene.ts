@@ -30,7 +30,7 @@ export default class playScene extends ui.playSceneUI {
     private _ray: Laya.Ray;
     private _outHitResult: Laya.HitResult;
     private point: Laya.Vector2 = new Laya.Vector2();
-    private _scene: Laya.Scene3D;
+    private _scene3D: Laya.Scene3D;
 
 
     constructor() {
@@ -114,7 +114,7 @@ export default class playScene extends ui.playSceneUI {
 
     public init(scene: Laya.Scene3D): void {
         this._camera = scene.getChildByName("Main Camera") as Laya.Camera;
-        this._scene = scene
+        this._scene3D = scene
 
         scene.getChildByName("骰子").active = false;
         let pengDown = scene.getChildByName("pengDown");
@@ -232,7 +232,7 @@ export default class playScene extends ui.playSceneUI {
         this._camera.viewportPointToRay(this.point, this._ray);
         //拿到射线碰撞的物体
         console.log(this._ray)
-        this._scene.physicsSimulation.rayCast(this._ray, this._outHitResult);
+        this._scene3D.physicsSimulation.rayCast(this._ray, this._outHitResult);
         //如果碰撞到物体
         if (this._outHitResult.succeeded) {
             let index = this._outHitResult.collider.owner["index"];

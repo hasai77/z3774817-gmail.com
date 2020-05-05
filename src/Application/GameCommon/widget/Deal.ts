@@ -10,7 +10,8 @@ export default class Deal extends ui.GameCommonUI.Athletics.DealUI {
     }
     private dealIndex: number;
     private propDataArr: Application.GameCommonModel.Prop[];
-    public startDeal(userList: UserPropList[], total, userInfoList?: Array<Application.GameCommonModel.UserInfo>): void {
+    public startDeal(userList: any[], total, userInfoList?: Array<Application.GameCommonModel.UserInfo>): void {
+        this.visible = true;
         let leng = userList.length;
         this.dealIndex = 0;
         this.propDataArr = [];
@@ -24,7 +25,7 @@ export default class Deal extends ui.GameCommonUI.Athletics.DealUI {
 
         Laya.timer.loop(50, this, this.loopFun, [userList, leng, total]);
     }
-    private loopFun(userList: UserPropList[], leng: number, total: number): void {
+    private loopFun(userList: any[], leng: number, total: number): void {
         let card = new Prop();
         let user = userList[this.dealIndex % leng]
         card.prop_Number = this.propDataArr[this.dealIndex]?this.propDataArr[this.dealIndex].GetPropNum():-1;
@@ -35,8 +36,9 @@ export default class Deal extends ui.GameCommonUI.Athletics.DealUI {
 
         (++this.dealIndex >= total) && Laya.timer.clear(this, this.loopFun)
     }
-    private dealToUser(card: Prop, user: UserPropList, speed: number = 300): void {
-        let pos: Laya.Point = user.curtDealPos
+    private dealToUser(card: Prop, user: any, speed: number = 300): void {
+        let pos: Laya.Point = user.curDealPos
+      
         Tween.to(card, { x: pos.x, y: pos.y }, speed, null, Handler.create(this, () => {
             user.recvCard(card.prop_Number)
             card.removeSelf()

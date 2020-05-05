@@ -1,49 +1,19 @@
 import { ui } from "../../ui/layaMaxUI";
 import base from "../../base/base";
 import ActionButton from "../GameCommon/widget/Button"
-var resList = {
-    Thanchicken: [
-        "Thanchicken/GameType/AlternateBankerThanChicken.png",
-        "Thanchicken/GameType/RobThanThanChicken.png",
-        "Thanchicken/GameType/ThanThanChicken (2).png",
-    ],
-    ThirteenBets: [
-        "ThirteenBets/GameType/ThanThirteenBets (2).png",
-        "ThirteenBets/GameType/RobThanThirteenBets.png",
-        "ThirteenBets/GameType/AlternateBankerThirteenBets (2).png",
-    ],
-    ThreeDuke: [
-        "ThreeDuke/GameType/ThanThreeDuke (2).png",
-        "ThreeDuke/GameType/ScoreBankThreeDuke (2).png",
-        "ThreeDuke/GameType/RobThanThreeDuke (2).png",
-        "ThreeDuke/GameType/NoScoreBankerThreeDuke (2).png",
-        "ThreeDuke/GameType/AlternateBankerThreeDuke (2).png"
-    ],
-    TwentyOne: [
-        "Twentyone/GameType/ThanTwentyOne (2).png",
-        "Twentyone/GameType/ScoreBankTwentyOne (2).png",
-        "Twentyone/GameType/RobThanTwentyOne (2).png",
-        "Twentyone/GameType/NoScoreBankerTwentyOne (2).png",
-        "Twentyone/GameType/AlternateBankerTwentyOne (2).png",
-    ],
-    TwoEight: [
-        "TwoEight/GameType/AlternateBankerTwoEight.png",
-        "TwoEight/GameType/NoScoreBankerTwoEight.png",
-        "TwoEight/GameType/RobThanTwoEight.png",
-        "TwoEight/GameType/ScoreBankTwoEight.png",
-        "TwoEight/GameType/ThanTwoEight.png",
-    ]
-}
+
 export default class CommonGameTypeSelection extends ui.GameCommonUI.CommonGameTypeSelectionUI {
     constructor() {
         super()
     }
     private clickHandle: any;
     private list: any;
+    private originX:number;
     onAwake() {
-        base.publicFun.selectionAdmission(this);
+      this.originX = this.x;
     }
     public setImages(list: any, clickHandle: any) {
+        this.removeChildren(0,this.numChildren-1)
         let width = this.width / list.length;
 
         for (let i = 0; i < list.length; i++) {
@@ -68,7 +38,15 @@ export default class CommonGameTypeSelection extends ui.GameCommonUI.CommonGameT
             button.on(Laya.Event.CLICK, this, () => {
                 clickHandle(i)
             })
-           
+            this.x = Laya.stage.width +200
+            Laya.Tween.to(this, { x: this.originX }, 300);
         }
+       
+    }
+    public hideSelf(call?):void{
+        Laya.Tween.to(this, { x:  Laya.stage.width +200 }, 300,null,Laya.Handler.create(this,()=>{
+            this.visible = false;
+            call&&call()
+        }));
     }
 }

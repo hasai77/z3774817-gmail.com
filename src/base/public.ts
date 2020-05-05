@@ -1,5 +1,7 @@
 import TimeLine = Laya.TimeLine;
 import Event = Laya.Event;
+import CommonPopup from "../Application/GameCommonUI/CommonPopup";
+import CommonTaost from "../Application/GameCommonUI/CommonToast";
 export default class PublicFun {
     constructor() {
 
@@ -57,7 +59,33 @@ export default class PublicFun {
             view && view.onHide && view.onHide();
         });
     }
-
+    public showConfirm(str:string,callBack?):void{
+       
+        let box = new CommonPopup(str,callBack);
+        let self = this;
+        box.onAwake = function(){
+            this.setText(str);
+            this.close_btn.on(Event.CLICK,this,()=>{
+                self.hideAlert(this,()=>this.removeSelf())
+            })
+            this.cancel_btn.on(Event.CLICK,this,()=>{
+                self.hideAlert(this,()=>this.removeSelf())
+            })
+            this.confirm_btn.on(Event.CLICK,this,()=>{
+                this.callBack&&this.callBack();
+                self.hideAlert(this,()=>this.removeSelf())
+            })
+            let isHide = (this.callBack!=null);
+ 
+            this.confirm_btn.visible = isHide;
+            this.cancel_btn.visible = isHide;
+        }
+        Laya.stage.addChild(box)
+        this.showAlert(box)
+    }
+    public showTaost(str:string):void{
+        Laya.stage.addChild(new CommonTaost(str))
+    }
     public setCenter(node: Laya.Sprite): void {
         let rect = node.getBounds()
         node.pivotX = (rect.width||node.width) / 2;
@@ -71,16 +99,36 @@ export default class PublicFun {
     private onLabel(label: String): void {
         // console.log("LabelName:" + label);
     }
+    public  getWorldScale(target) {
+        let x = target.scaleX;
+        let y = target.scaleY;
+        let parent = target.parent
+        while (parent != Laya.stage) {
+          x *= parent.scaleX;
+          y *= parent.scaleY;
+          parent = parent.parent
+        }
+        return { x, y }
+      }
+  
+  
+      public  getWorldPos(target) {
+        let x = target.x;
+        let y = target.y;
+        let parent = target.parent
+        while (parent != Laya.stage) {
+          x += parent.x;
+          y += parent.y;
+          parent = parent.parent
+        }
+        return { x, y }
+      }
 
-    public selectionAdmission(node: Laya.Sprite): void {
-        this.setCenter(node)
-        node.x = Laya.stage.width + node.width ;
-        Laya.Tween.to(node, { x: Laya.stage.width / 2 }, 300);
-    }
+   
     public getRecvPos(target: Laya.Sprite) {
 
-        let x = Math.random() * (target.width - 20) + 10;
-        let y = Math.random() * (target.height - 20) + 10
+        let x = Math.random() * (target.width - 20) -20;
+        let y = Math.random() * (target.height - 20) -20
         return { x, y }
     }
     public getMineIndex(list,mineId){

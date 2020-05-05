@@ -29,6 +29,7 @@ export default class CommonTabButton extends Laya.Sprite {
             unselect.visible = !isShow;
             unselect_text.visible = !isShow;
         }
+        Laya.SoundManager.playSound("GameCommon/sound/Game_Common_Button.mp3");
         this.changeHandle(index)
     }
     public changeHandle(index:number){

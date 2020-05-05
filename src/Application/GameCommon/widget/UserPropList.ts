@@ -29,7 +29,7 @@ export default class UserPropList extends Laya.Sprite {
         text.y = this.userInfo.pivotY;
         text.startAni()
     }
-    public get curtDealPos():any{
+    public get curDealPos():any{
         return this.prop_list.curDealPos;
     }
     public Init():void{

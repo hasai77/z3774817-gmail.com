@@ -237,4 +237,8 @@
    <item name="GameAthleticsTwoEight/Rules/TwoEightroomRule.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameAthleticsTwoEight/TwoEightloading.scene" props="" ifExport="分离模式" aName=""/>
    <item name="GameAthleticsTwentyone/TwentyOneloading.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameAthleticsGoldenFlower/GameGoldenFlowerGame.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="GameCommonUI/HundredGame/NumChip.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Hall/Hall.scene" props="" ifExport="分离模式" aName=""/>
+   <item name="Common/Toast.scene" props="" ifExport="分离模式" aName=""/>
 </page>
